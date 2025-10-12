@@ -26,35 +26,37 @@ export class TwyneAbout extends LitElement {
   firstUpdated() {
     const coverImage = document.querySelector('#cover-image')
     if (!coverImage) return
-
-    gsap.to(coverImage, {
-      scrollTrigger: {
-        trigger: '#about',
-        start: 'top 20%',
-        end: 'bottom 20%',
-        scrub: 2,
-      },
-      y: '-5rem',
-      ease: 'none',
+    
+    gsap.matchMedia().add('(min-width: 1024px)', () => {
+      gsap.to(coverImage, {
+        scrollTrigger: {
+          trigger: '#about',
+          start: 'top 20%',
+          end: 'bottom 20%',
+          scrub: 2,
+        },
+        y: '-5rem',
+        ease: 'none',
+      })
     })
   }
 
   render() {
     return html` <div
       id="about"
-      class="relative grid grid-cols-2 overflow-hidden rounded-4xl bg-linear-to-b from-zinc-900 to-zinc-950"
+      class="relative grid xl:grid-cols-2 overflow-hidden xl:rounded-4xl bg-linear-to-b from-zinc-900 to-zinc-950"
     >
       <div
-        class="absolute h-px w-full bg-linear-to-r from-transparent via-zinc-800 to-transparent xl:block"
+        class="absolute h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent xl:block"
       ></div>
-      <div class="flex flex-col xl:p-16">
-        <p class="text-default mb-4 text-balance -mt-2">
+      <div class="flex flex-col xl:p-16 p-6">
+        <p class="text-default mb-4 text-balance xl:-mt-2">
           ${unsafeHTML(i18next.t('twyne.about.p2'))}
         </p>
         <p class="text-default text-pretty">
           ${unsafeHTML(i18next.t('twyne.about.p1'))}
         </p>
-        <ul class="mt-auto text-[.75rem] leading-none *:py-6 2xl:text-[1rem] *:border-b *:border-zinc-800">
+        <ul class="hidden xl:block mt-auto text-[.75rem] leading-none *:py-6 2xl:text-[1rem] *:border-b *:border-zinc-800">
           <li class="flex justify-between align-baseline">
             <span> ${i18next.t('twyne.about.details.company')} </span>
             <span class="text-right text-zinc-100">
@@ -77,7 +79,7 @@ export class TwyneAbout extends LitElement {
             <span>
               ${i18next.t('twyne.about.details.contributions')}
             </span>
-            <span class="flex gap-2 text-right text-zinc-100">
+            <span class="flex flex-col xl:flex-row align-baseline gap-2 text-right text-zinc-100">
               ${i18next.t('twyne.about.details.contribution1')}
               <span class="text-zinc-500">/</span>
               ${i18next.t('twyne.about.details.contribution2')}
@@ -91,7 +93,7 @@ export class TwyneAbout extends LitElement {
         <img
           src="${d1}"
           id="cover-image"
-          class="absolute left-16 top-16 max-w-none flex-none rounded-ss-lg border-t border-zinc-800 shadow-[0px_24px_24px_0px_black]"
+          class="absolute xl:left-16 xl:top-16 left-6 top-0 xl:max-w-none flex-none xl:rounded-ss-lg rounded-ss-md border-t border-zinc-800 shadow-[0px_24px_24px_0px_black]"
         />
         <progressive-blur
           class="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-zinc-950 to-transparent"

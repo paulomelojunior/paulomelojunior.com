@@ -1,12 +1,12 @@
-import { gsap } from 'gsap'
 import i18next from '../../i18n'
 import { html, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { ThemeMixin } from '../../store/theme'
-import home from './home.png'
-@customElement('menu-container')
+import home from './imgs/home.png'
+import { gsap } from 'gsap'
 
-export class MenuContainer extends ThemeMixin(LitElement) {
+@customElement('twyne-menu')
+export class TwyneMenu extends ThemeMixin(LitElement) {
   @property({ type: Boolean }) more = false
   @property({ type: String }) lang = i18next.language
 
@@ -90,15 +90,19 @@ export class MenuContainer extends ThemeMixin(LitElement) {
         toggleActions: 'play none none reverse',
         scrub: 2,
       },
-      outline: '1px solid hsla(0 0 100% / 0.075)',
+      outline: '1px solid hsla(0 0 100% / 0.05)',
       padding: '0 0 0 0',
     })
+  }
+
+  getPreviousPage() {
+    window.location.href = '/'
   }
 
   render() {
     return html`
       <header
-        class="fixed inset-x-0 z-40 w-full bg-linear-to-b from-zinc-950 backdrop-blur to-zinc-950/20 xl:fixed py-2"
+        class="absolute inset-x-0 z-40 hidden w-full bg-linear-to-b from-zinc-950 backdrop-blur to-zinc-950/80 backdrop-saturate-200 xl:fixed xl:block py-2"
       >
         <div class="container xl:grid flex items-center xl:grid-cols-3">
           <nav class="xl:hidden">
@@ -110,9 +114,9 @@ export class MenuContainer extends ThemeMixin(LitElement) {
               </li>
               <li>
                 <mobile-item
-                  href="/last-project"
-                  label="Last project"
-                  index="twyne.io"
+                  href="/"
+                  label="Home"
+                  index="pmjr.cc"
                 ></mobile-item>
               </li>
               <li>
@@ -137,23 +141,26 @@ export class MenuContainer extends ThemeMixin(LitElement) {
                 ></mobile-item>
               </li>
             </ul>
-          </nav>  
-          <div
-            class="size-12 p-3 cursor-pointer transition-background duration-500 items-center justify-center *:opacity-75 *:hover:opacity-100 hover:bg-zinc-950 xl:hidden"
-          >
-            <img
-              src="${home}"
-              class="transition-opacity duration-500"
-              title="Back to homepage"
-            />
+          </nav>
+          <div class="flex items-center">
+            <button
+              @click=${() => this.getPreviousPage()}
+              class="size-12 p-3 cursor-pointer transition-background duration-500 items-center justify-center *:opacity-75 *:hover:opacity-100 hover:bg-zinc-950"
+            >
+              <img
+                src="${home}"
+                class="transition-opacity duration-500"
+                title="Back to homepage"
+              />
+            </button>
+            <mail-button
+              @click=${() => this.copyEmail()}
+              @mouseleave=${() => this.copyEmailReset()}
+              label="hello@pmjr.cc"
+              class="hidden xl:flex"
+              hover="${this.lang === 'en' ? 'Click to copy' : 'Copiar e-mail'}"
+            ></mail-button>
           </div>
-          <mail-button
-            @click=${() => this.copyEmail()}
-            @mouseleave=${() => this.copyEmailReset()}
-            label="hello@pmjr.cc"
-            class="hidden xl:flex"
-            hover="${this.lang === 'en' ? 'Click to copy' : 'Copiar e-mail'}"
-          ></mail-button>
           <button
             class="menu-toggle xl:hidden ms-auto me-4 ${this.more ? 'menu-toggle--close' : ''}"
             @click=${() => this.toggleMore()}
@@ -166,20 +173,26 @@ export class MenuContainer extends ThemeMixin(LitElement) {
             <ul id="anchors" class="hidden xl:flex justify-end px-0 xl:px-20">
               <li class="flex-1">
                 <menu-item
-                  href="#section-praxis"
-                  label="${i18next.t('menu.praxis')}"
+                  href="#goal"
+                  label="${i18next.t('twyne.menu.goal')}"
                 ></menu-item>
               </li>
               <li class="flex-1">
                 <menu-item
-                  href="#section-journey"
-                  label="${i18next.t('menu.journey')}"
+                  href="#proposal"
+                  label="${i18next.t('twyne.menu.proposal')}"
                 ></menu-item>
               </li>
               <li class="flex-1">
                 <menu-item
-                  href="#section-connect"
-                  label="${i18next.t('menu.connect')}"
+                  href="#impact"
+                  label="${i18next.t('twyne.menu.impact')}"
+                ></menu-item>
+              </li>
+              <li class="flex-1">
+                <menu-item
+                  href="#mobile"
+                  label="${i18next.t('twyne.menu.mobile')}"
                 ></menu-item>
               </li>
             </ul>

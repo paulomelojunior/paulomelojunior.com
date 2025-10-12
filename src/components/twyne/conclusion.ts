@@ -87,7 +87,7 @@ export class TwyneConclusion extends LitElement {
   private renderContent(): unknown {
     return html`
       <h2
-        class="mb-4 mt-16 font-semibold uppercase leading-none tracking-[0.05em] xl:text-[0.75rem] dark:text-zinc-500"
+        class="mb-4 mt-16 font-semibold uppercase leading-none tracking-[0.05em] text-[0.75rem] dark:text-zinc-500"
       >
         ${i18next.t('twyne.conclusion.t1')}
       </h2>
@@ -100,7 +100,7 @@ export class TwyneConclusion extends LitElement {
   render() {
     return html`
       <section id="conclusion">
-        <div class="container grid grid-cols-4 pt-32">
+        <div class="container xl:grid grid-cols-4 pt-24 xl:pt-32 px-6">
           <div
             class="relative col-span-2 col-start-2 flex aspect-square flex-col items-center justify-center gap-8 text-balance text-center text-[1.25rem] leading-loose text-zinc-300 2xl:text-[1.5rem]"
           >

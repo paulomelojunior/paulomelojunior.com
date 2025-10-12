@@ -75,7 +75,8 @@ export class MobileLoading extends LitElement {
     gsap.set(mainContent, { y: '5rem', opacity: 0 })
     gsap.to(overlay, {
       opacity: 0,
-      y: 20,
+      scale: 2,
+      filter: 'blur(1rem)',
       duration: 0.4,
       force3D: true,
       onComplete: () => {
@@ -104,13 +105,13 @@ export class MobileLoading extends LitElement {
       class="fixed top-0 z-100 h-svh w-full bg-zinc-950"
     >
       <div
-        class="container mx-5 mt-auto flex h-full items-end gap-4 pb-32 xl:mx-auto"
+        class="container flex h-full items-center justify-center gap-4 flex-col"
       >
         <div class="saturate-50">
           ${unsafeHTML(`${spin}`)}
         </div>
         <span
-          class="animate-pulse text-[.75rem] uppercase leading-10 tracking-[.05em] text-zinc-50"
+          class="hidden animate-pulse text-[.75rem] uppercase leading-10 tracking-[.05em] text-zinc-50"
         >
           ${this.lang === 'pt' ? html`Carregando...` : html`Loading...`}
         </span>

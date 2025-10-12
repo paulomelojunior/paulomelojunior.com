@@ -89,7 +89,7 @@ export class MenuContainer extends ThemeMixin(LitElement) {
             <ul id="anchors" class="flex bg-zinc-950 overflow-hidden fixed inset-0 flex-col justify-center gap-4 w-dvw transition-all duration-500 ${this.more ? 'h-dvh' : 'h-0'}">
               <li>
                 <mobile-item
-                  href="/twyne"
+                  href="/last-project"
                   label="${i18next.t('menu.twyne')}"
                 ></mobile-item>
               </li>

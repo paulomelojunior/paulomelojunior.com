@@ -52,7 +52,7 @@ export class ProjectsIfficient extends LitElement {
         ${i18next.t('ifficient.description2')}
       </p>
       <a
-        href="/twyne"
+        href="/last-project"
         class="cta-button inline-flex items-center gap-4 mt-6 px-6"
       >
         ${i18next.t('ifficient.cta')}

@@ -105,13 +105,13 @@ export class JourneySection extends ThemeMixin(LitElement) {
       >
         ${i18next.t('journey.t0')}
       </h2>
-      <div class="flex items-center justify-end order-1 xl:order-0 px-5 xl:px-20 2xl:px-32">
+      <div class="flex items-center xl:justify-end order-1 xl:order-0 px-5 xl:px-20 2xl:px-32">
         <a
           href="/Paulo Melo Jr. - Currículo.pdf"
           target="_blank"
           class="cta-button flex items-center gap-4 rounded-full py-3 pe-4 ps-6 text-[1rem] leading-none"
         >
-          ${this.lang === 'en' ? 'Resume' : 'Currículo'}
+          ${this.lang === 'en' ? 'Download my resume' : 'Baixar meu currículo'}
           <svg
             alt="${this.lang === 'en' ? 'Download' : 'Baixar'}"
             width="20px"

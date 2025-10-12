@@ -8,6 +8,7 @@ import e2 from './imgs/e2.png'
 import e3 from './imgs/e3.png'
 import e4 from './imgs/e4.png'
 import e5 from './imgs/e5.png'
+import mask from './imgs/mask.png'
 
 @customElement('twyne-mobile')
 export class TwyneMobile extends LitElement {
@@ -83,7 +84,9 @@ export class TwyneMobile extends LitElement {
       </section>
       <style>
         .mobile-screen {
-          border-radius: 3rem;
+          mask-image: url(${mask});
+          mask-mode: luminance;
+          mask-size: cover;
         }
       </style>
     `

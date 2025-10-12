@@ -62,7 +62,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
     return html`
       <section id="section-praxis" class="bg-zinc-900">
         <div
-          class="relative mx-5 h-px bg-linear-to-r from-zinc-900 via-zinc-800 to-zinc-900"
+          class="relative mx-5 h-px bg-linear-to-r from-zinc-900 via-zinc-700 to-zinc-900"
         ></div>
         <div class="container">
           <marquee-element
@@ -70,7 +70,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
             items="Design Engineering, Product Design, UX & UI"
           ></marquee-element>
           <div
-            class="grid gap-16 overflow-x-hidden px-5 py-16 *:flex *:flex-col *:items-start *:justify-center *:gap-8 xl:grid-cols-2 xl:gap-24 xl:py-0 xl:*:flex-row *:xl:gap-12 *:xl:py-24 *:2xl:py-32"
+            class="grid gap-16 overflow-x-hidden px-5 py-16 *:flex *:items-start *:justify-center *:gap-5 xl:grid-cols-2 xl:gap-24 xl:py-0 xl:*:flex-row *:xl:gap-12 *:xl:py-24 *:2xl:py-32"
           >
             <div class="praxis">
               <svg
@@ -101,7 +101,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
               </svg>
               <div class="grid gap-2 xl:gap-0">
                 <h2
-                  class="text-[1.5rem] text-zinc-100 xl:text-[2rem] xl:leading-24 2xl:text-[2.5rem]"
+                  class="flex items-center text-[1.5rem] text-zinc-100 xl:text-[2rem] h-16 xl:leading-24 2xl:text-[2.5rem]"
                 >
                   ${i18next.t('praxis.t1')}
                 </h2>
@@ -127,7 +127,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
               </svg>
               <div class="grid gap-2 xl:gap-0">
                 <h2
-                  class="text-[1.5rem] text-zinc-100 xl:text-[2rem] xl:leading-24 2xl:text-[2.5rem]"
+                  class="flex items-center text-[1.5rem] text-zinc-100 xl:text-[2rem] h-16 xl:leading-24 2xl:text-[2.5rem]"
                 >
                   ${i18next.t('praxis.t2')}
                 </h2>
@@ -143,7 +143,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
             items="Design Engineering, Product Design, UX & UI"
           ></marquee-element>
           <div
-            class="relative mx-5 h-px bg-linear-to-r from-zinc-900 via-zinc-800 to-zinc-900"
+            class="relative mx-5 h-px bg-linear-to-r from-zinc-900 via-zinc-700 to-zinc-900"
           ></div>
         </div>
       </section>

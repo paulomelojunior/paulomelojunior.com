@@ -93,7 +93,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
               </div>
             </div>
             <h1
-              class="text-pretty bg-linear-to-r from-zinc-300 to-white bg-clip-text text-[2.5rem] leading-none tracking-[-0.04em] text-transparent xl:text-[3rem] 2xl:text-[4rem]"
+              class="text-pretty bg-linear-to-b/oklch from-zinc-300 to-zinc-50 bg-clip-text text-[2.5rem] leading-none pt-2 tracking-[-0.05em] xl:font-semibold xl:uppercase text-transparent xl:text-[3rem] 2xl:text-[4rem]"
             >
               <span class="block xl:hidden">
                 ${i18next.t('about.content.m1')}
@@ -110,7 +110,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
             </h1>
           </div>
           <div
-            class="relative mx-5 hidden h-px bg-linear-to-r from-black via-zinc-800 to-black xl:block"
+            class="relative mx-5 hidden h-px bg-linear-to-r from-black via-zinc-700 to-black xl:block"
             data-parallax-layer="1"
           ></div>
           <div

@@ -57,9 +57,9 @@ export class FooterSection extends LitElement {
     if (!navList) return
 
     const navItems = {
-      cosmos: {
-        label: 'Cosmos',
-        url: 'https://cosmos.so/hackyoto',
+      email: {
+        label: 'Email',
+        url: 'mailto:hello@pmjr.cc',
       },
       github: {
         label: 'GitHub',
@@ -69,10 +69,6 @@ export class FooterSection extends LitElement {
         label: 'LinkedIn',
         url: 'https://linkedin.com/in/paulomelojunior/',
       },
-      email: {
-        label: 'Email',
-        url: 'mailto:hello@pmjr.cc',
-      },
     }
 
     const navValues = Object.values(navItems)
@@ -80,7 +76,7 @@ export class FooterSection extends LitElement {
     navValues.forEach((e, i) => {
       const indexStr = (i + 1).toString().padStart(2, '0')
       const navItem = `
-				<div class="border-b border-brand-300 dark:border-zinc-900 xl:border-0">
+				<div class="border-b border-brand-300 dark:border-zinc-800 xl:border-0">
 					<a target="_blank" class="menu-item h-20 xl:h-16 px-5 pt-1 flex items-center text-brand-900 dark:text-zinc-100 relative" rel="noopener noreferrer" href="${e.url}">
 						${e.label}
 						<div class="absolute flex items-center px-5 pt-1 inset-0 xl:rounded-full text-brand-200 dark:text-zinc-950">
@@ -112,35 +108,22 @@ export class FooterSection extends LitElement {
             class="flex flex-1 flex-col flex-wrap gap-0 text-[2rem] tracking-[-0.04em] xl:flex-row xl:items-baseline xl:justify-center xl:gap-4 2xl:text-[2.5rem]"
           >
             <span
-              class="flex h-20 items-center px-5 text-brand-600 xl:p-0 dark:text-zinc-600"
+              class="flex h-20 items-center px-5 text-brand-600 xl:p-0 dark:text-zinc-600 me-5"
             >
               ${i18next.t('connect.title')}
             </span>
             <span
-              class="absolute right-5 ml-5 flex h-20 items-center self-center stroke-brand-400 xl:relative xl:right-auto xl:h-auto xl:px-2"
+              class="hidden xl:flex items-center self-center relative px-2"
             >
               <img src="${logo}" class="size-12" alt="pmjr.cc" />
             </span>
           </div>
         </div>
-        <div
-          
-          class="absolute inset-x-0 bottom-0 hidden bg-zinc-950 text-zinc-600 xl:z-50 xl:block"
-        >
-          <div
-            class="container flex items-center justify-center px-5 font-mono text-[.75rem] font-semibold uppercase leading-none"
-          >
-            <a
-              href="https://github.com/paulomelojunior/pmjr.cc"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="copyright *:hover:text-zinc-300 h-12 flex items-center justify-center gap-2"
-              id="copyright"
-            >
-              MIT License <span class="transition-colors duration-500">Copyright</span> 2025, pmjr.cc
-            </a>
+        <div class="absolute z-50 inset-x-0 bottom-0 h-12 w-full flex items-center gap-2 justify-center px-5 font-mono text-[.625rem] font-semibold uppercase bg-zinc-900 xl:bg-zinc-950 tracking-[0.1em]">
+            <span> [c] 2025 pmjr.cc </span>
+            <span class="text-zinc-600"> / </span>
+            <span> Made by a human being </span>
           </div>
-        </div>
       </footer>
     `
   }

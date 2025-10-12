@@ -73,9 +73,27 @@
     <script type="module" src="src/main.ts"></script>
   </head>
   <body class="relative">
-    <!-- <mobile-loading min-ms="0"></mobile-loading> -->
     <div id="noise" class="opacity-5"></div>
-    <menu-container></menu-container>
+    <script>
+      window.indexScrollItems = [
+        {
+          label: "Praxis",
+          url: "#section-praxis",
+        },
+        {
+          label: "Journey", 
+          url: "#section-journey",
+        },
+        {
+          label: "Connect",
+          url: "#section-connect",
+        },
+      ]
+    </script>
+    <menu-container
+      items=${indexScrollItems}	
+    >
+    </menu-container>
     <main>
       <hero-section></hero-section>
       <praxis-section></praxis-section>

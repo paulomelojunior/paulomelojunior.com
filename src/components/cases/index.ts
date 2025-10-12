@@ -39,14 +39,14 @@ export class CasesSection extends LitElement {
       <section id="cases" class="hidden xl:block">
         <div class="container">
           <div
-            class="hidden h-px w-full bg-linear-to-r from-transparent via-zinc-800 to-transparent xl:block"
+            class="hidden h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent xl:block"
           ></div>
           <div
             class="to-zinc-zinc-950 relative flex rounded-4xl from-zinc-900 xl:bg-linear-to-r 2xl:h-[512px]"
           >
             <div class="hidden w-2/3 justify-center xl:flex">
               <span
-                class="absolute bottom-0 left-0 flex gap-2 p-8 font-mono text-[.75rem] font-medium uppercase leading-none tracking-[.05em] text-zinc-700"
+                class="absolute bottom-0 left-0 flex gap-2 p-8 font-mono text-[.75rem] font-medium uppercase leading-none tracking-[.05em] text-zinc-600"
               >
                 2025 ${i18next.t('cases.project')}
               </span>
@@ -83,7 +83,7 @@ export class CasesSection extends LitElement {
                 ${i18next.t('cases.description')}
               </p>
               <a
-                href="/twyne"
+                href="/last-project"
                 class="cta-button flex items-center gap-3 self-center ps-6"
               >
                 ${i18next.t('cases.cta')}
@@ -105,7 +105,7 @@ export class CasesSection extends LitElement {
             </div>
           </div>
           <div
-            class="hidden h-px w-full bg-linear-to-r from-transparent via-zinc-800 to-transparent xl:block"
+            class="hidden h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent xl:block"
           ></div>
         </div>
       </section>

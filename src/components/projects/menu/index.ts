@@ -3,6 +3,7 @@ import { html, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { ThemeMixin } from '../../../store/theme'
 import goBack from './go-back.png'
+import gsap from 'gsap'
 
 @customElement('projects-menu')
 export class ProjectsMenu extends ThemeMixin(LitElement) {
@@ -71,6 +72,20 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
       }, delay)
     }
   }
+  
+  firstUpdated() {
+    // remove outline on top using gsap and scrollTrigge
+    gsap.to('header', {
+      scrollTrigger: {
+        trigger: 'header',
+        start: 'bottom top',
+        toggleActions: 'play none none reverse',
+        scrub: 2,
+      },
+      outline: '1px solid hsla(0 0 100% / 0.05)',
+      padding: '0 0 0 0',
+    })
+  }
 
   getPreviousPage() {
     window.location.href = '/'
@@ -80,7 +95,7 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
 
     return html`
       <header
-        class="absolute inset-x-0 z-40 hidden w-full bg-linear-to-b from-zinc-950 backdrop-blur to-zinc-950/80 backdrop-saturate-200 xl:fixed xl:block"
+        class="absolute inset-x-0 z-40 hidden w-full bg-linear-to-b from-zinc-950 backdrop-blur to-zinc-950/80 backdrop-saturate-200 xl:fixed xl:block py-2"
       >
         <div class="container grid items-center xl:grid-cols-3">
           <div class="flex items-center">
