@@ -22,7 +22,7 @@ export default defineConfig({
         404: '404.html',
         main: 'index.html',
         projects: 'projects.html',
-        twyne: 'twyne.html',
+        lastProject: 'last-project.html',
       },
       output: {
         hashCharacters: 'hex',

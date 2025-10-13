@@ -69,13 +69,31 @@
       src="https://cloud.umami.is/script.js"
       data-website-id="d44e261f-79ca-4f11-8d2c-954a118de644"
     ></script>
-    <script type="module" crossorigin src="/src/2ee9a0.js"></script>
-    <link rel="stylesheet" crossorigin href="/src/cde5c3.css">
+    <script type="module" crossorigin src="/src/617a42.js"></script>
+    <link rel="stylesheet" crossorigin href="/src/35b403.css">
   </head>
   <body class="relative">
-    <!-- <mobile-loading min-ms="0"></mobile-loading> -->
     <div id="noise" class="opacity-5"></div>
-    <menu-container></menu-container>
+    <script>
+      window.indexScrollItems = [
+        {
+          label: "Praxis",
+          url: "#section-praxis",
+        },
+        {
+          label: "Journey", 
+          url: "#section-journey",
+        },
+        {
+          label: "Connect",
+          url: "#section-connect",
+        },
+      ]
+    </script>
+    <menu-container
+      items=${indexScrollItems}	
+    >
+    </menu-container>
     <main>
       <hero-section></hero-section>
       <praxis-section></praxis-section>
