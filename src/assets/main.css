@@ -119,7 +119,7 @@
   
   .hero::before {
     position: absolute;
-    background: url('imgs/pattern-light.svg');
+    background: url('imgs/pattern.svg');
     content: '';
     height: 100vh;
     top: -2px;
@@ -140,12 +140,6 @@
     }
   }
   
-  @media (prefers-color-scheme: dark) {
-    .hero::before {
-      background-image: url('imgs/pattern.svg');
-    }
-  }
-
   /* Cases */
   .cases-content {
     position: relative;
