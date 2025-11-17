@@ -36,7 +36,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
         },
         stagger: 0.12,
         opacity: 0,
-        fill: this.dark ? 'var(--color-brand-500)' : 'var(--color-brand-400)',
+        fill: this.dark ? 'var(--color-brand-400)' : 'var(--color-brand-400)',
         drawSVG: false,
       })
     })
@@ -66,7 +66,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
         ></div>
         <div class="container">
           <marquee-element
-            star="fill-brand-500"
+            star="fill-brand-400"
             items="Design Engineering, Product Design, UX & UI"
           ></marquee-element>
           <div

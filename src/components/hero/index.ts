@@ -2,9 +2,9 @@ import { gsap } from 'gsap'
 import i18next from '../../i18n'
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import profile1x from './profile-1x.webp'
-import profile2x from './profile-2x.webp'
-import profile3x from './profile-3x.webp'
+import profile1x from './profile.webp'
+import profile2x from './profile.webp'
+import profile3x from './profile.webp'
 
 import { ThemeMixin } from '../../store/theme'
 
@@ -75,7 +75,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
                 decoding="async"
                 loading="eager"
                 alt="${i18next.t('about.picDescription')}"
-                class="h-16 rounded-full bg-zinc-900"
+                class="h-16 rounded-full bg-zinc-900 -rotate-2"
               />
               <div class="grid gap-2 leading-none">
                 <span class="text-[1.25rem] text-white"> Paulo Melo Jr. </span>

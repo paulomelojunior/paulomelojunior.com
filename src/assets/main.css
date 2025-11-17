@@ -21,20 +21,21 @@
   --font-sans--font-feature-settings: 'ss01';
 
   --font-mono: 'Geist Mono', monospace;
-
-  --color-brand-100: oklch(0.9 0.16 var(--brand));
-  --color-brand-200: oklch(0.8 0.16 var(--brand));
-  --color-brand-300: oklch(0.7 0.16 var(--brand));
-  --color-brand-400: oklch(0.6 0.16 var(--brand));
-  --color-brand-500: oklch(0.5 0.16 var(--brand));
-  --color-brand-600: oklch(0.4 0.16 var(--brand));
-  --color-brand-700: oklch(0.3 0.16 var(--brand));
-  --color-brand-800: oklch(0.2 0.16 var(--brand));
-  --color-brand-900: oklch(0.1 0.16 var(--brand));
-
+  
   --chroma: 0.01;
   --hue: 264;
   --brand: 264;
+  
+  --color-brand-100: oklch(0.9 0.2 var(--brand));
+  --color-brand-200: oklch(0.8 0.2 var(--brand));
+  --color-brand-300: oklch(0.7 0.2 var(--brand));
+  --color-brand-400: oklch(0.6 0.2 var(--brand));
+  --color-brand-500: oklch(0.5 0.2 var(--brand));
+  --color-brand-600: oklch(0.4 0.2 var(--brand));
+  --color-brand-700: oklch(0.3 0.2 var(--brand));
+  --color-brand-800: oklch(0.2 0.2 var(--brand));
+  --color-brand-900: oklch(0.1 0.2 var(--brand));
+
 
   --color-zinc-950: oklch(0 0 0);
   --color-zinc-900: oklch(0.16 0.005 var(--hue));
@@ -226,6 +227,19 @@
     color: var(--color-zinc-950);
     background-position: 0% 0%;
   }
+  
+  .cta-button--accent {
+    background-position: 0% 0%;
+    color: var(--color-zinc-950);
+  }
+  
+  .cta-button--accent:hover,
+  .cta-button--accent:focus,
+  .cta-button--accent:focus-within,
+  .cta-button--accent.active {
+    background-position: 0% 100%;
+    color: var(--color-zinc-50);
+  }
 
   /* Footer */
   .footer {
@@ -383,7 +397,7 @@
   }
 
   .praxis svg {
-    @apply fill-brand-400/0;
+    @apply fill-zinc-900;
   }
 
   /* Marquee */
