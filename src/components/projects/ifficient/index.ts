@@ -53,7 +53,7 @@ export class ProjectsIfficient extends LitElement {
       </p>
       <a
         href="/last-project"
-        class="cta-button inline-flex items-center gap-4 mt-6 px-6"
+        class="cta-button cta-button--accent inline-flex items-center gap-4 mt-6 px-6"
       >
         ${i18next.t('ifficient.cta')}
       </a>

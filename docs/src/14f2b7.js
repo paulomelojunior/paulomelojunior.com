@@ -322,7 +322,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
       </p>
       <a
         href="/last-project"
-        class="cta-button inline-flex items-center gap-4 mt-6 px-6"
+        class="cta-button cta-button--accent inline-flex items-center gap-4 mt-6 px-6"
       >
         ${_.t("ifficient.cta")}
       </a>
@@ -642,7 +642,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
             class="hidden h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent xl:block"
           ></div>
           <div
-            class="to-zinc-zinc-950 relative flex rounded-4xl from-zinc-900 xl:bg-linear-to-r 2xl:h-[512px]"
+            class="cases-background relative bg-gradient-to-b from-zinc-900 to-black flex rounded-4xl 2xl:h-[512px]"
           >
             <div class="hidden w-2/3 justify-center xl:flex">
               <span
@@ -670,7 +670,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
               </div>
             </div>
             <div
-              class="cases-content relative flex flex-1 flex-col p-20 text-center xl:aspect-square xl:rounded-r-4xl xl:backdrop-blur-sm 2xl:p-24"
+              class="cases-content relative flex flex-1 flex-col p-20 text-center xl:aspect-square xl:rounded-r-4xl 2xl:p-24"
             >
               <h2
                 class="text-[2.5rem] leading-none tracking-[-0.04em] text-zinc-100 2xl:text-[3rem]"
@@ -684,7 +684,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
               </p>
               <a
                 href="/last-project"
-                class="cta-button flex items-center gap-3 self-center ps-6"
+                class="cta-button cta-button--accent flex items-center gap-3 self-center ps-6"
               >
                 ${_.t("cases.cta")}
                 <svg

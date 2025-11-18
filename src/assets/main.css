@@ -140,16 +140,8 @@
       background-attachment: fixed;
     }
   }
-  
-  /* Cases */
-  .cases-content {
-    position: relative;
-    overflow: hidden;
-    border-block: none;
-  }
-  
-  .cases-content::before {
-    z-index: -1;
+
+  .cases-background::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -157,7 +149,7 @@
     background-repeat: repeat;
     background-position: top right;
     mask-image: radial-gradient(
-      circle at bottom center,
+      circle at top center,
       black,
       transparent 50%
     );
