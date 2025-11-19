@@ -2,7 +2,7 @@ import i18next from '../../i18n'
 import { html, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { ThemeMixin } from '../../store/theme'
-import home from './imgs/home.png'
+import goBack from './imgs/go-back.svg'
 import { gsap } from 'gsap'
 
 @customElement('twyne-menu')
@@ -143,14 +143,14 @@ export class TwyneMenu extends ThemeMixin(LitElement) {
             </ul>
           </nav>
           <div class="flex items-center">
-            <button
+          <button
               @click=${() => this.getPreviousPage()}
-              class="size-12 p-3 cursor-pointer transition-background duration-500 items-center justify-center *:opacity-75 *:hover:opacity-100 hover:bg-zinc-950"
+              class="flex size-12 p-3 cursor-pointer transition-background duration-500 items-center justify-center opacity-50 hover:opacity-100 hover:bg-zinc-800 rounded-xs"
+              title="Go back to homepage"
             >
               <img
-                src="${home}"
+                src="${goBack}"
                 class="transition-opacity duration-500"
-                title="Back to homepage"
               />
             </button>
             <mail-button

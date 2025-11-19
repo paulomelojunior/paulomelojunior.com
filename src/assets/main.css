@@ -28,14 +28,13 @@
   
   --color-brand-100: oklch(0.9 0.2 var(--brand));
   --color-brand-200: oklch(0.8 0.2 var(--brand));
-  --color-brand-300: oklch(0.7 0.2 var(--brand));
+  --color-brand-300: oklch(0.75 0.2 var(--brand));
   --color-brand-400: oklch(0.6 0.2 var(--brand));
   --color-brand-500: oklch(0.5 0.2 var(--brand));
   --color-brand-600: oklch(0.4 0.2 var(--brand));
   --color-brand-700: oklch(0.3 0.2 var(--brand));
   --color-brand-800: oklch(0.2 0.2 var(--brand));
   --color-brand-900: oklch(0.1 0.2 var(--brand));
-
 
   --color-zinc-950: oklch(0 0 0);
   --color-zinc-900: oklch(0.16 0.005 var(--hue));
@@ -57,7 +56,7 @@
 
 @layer base {
   ::selection {
-    @apply bg-brand-400 text-zinc-950;
+    @apply bg-brand-300 text-zinc-950;
   }
 
   button:not(:disabled),
@@ -192,10 +191,10 @@
     background-image: linear-gradient(
       to bottom,
       var(--color-zinc-50) 25%,
-      var(--color-brand-400) 25%,
-      var(--color-brand-400) 50%,
-      var(--color-brand-400) 50%,
-      var(--color-brand-400) 75%,
+      var(--color-brand-300) 25%,
+      var(--color-brand-300) 50%,
+      var(--color-brand-300) 50%,
+      var(--color-brand-300) 75%,
       var(--color-zinc-700) 75%
     );
     background-size: 100% 400%;
@@ -296,7 +295,7 @@
 
   /* Menu */
   .menu-item > div {
-    @apply bg-[linear-gradient(to_bottom,var(--color-zinc-100)_50%,var(--color-brand-400)_50%)];
+    @apply bg-[linear-gradient(to_bottom,var(--color-zinc-100)_50%,var(--color-brand-300)_50%)];
     background-size: 100% 200%;
     background-position: 0% 100%;
     transition:
@@ -385,7 +384,7 @@
   .praxis path {
     stroke-width: 2;
     vector-effect: non-scaling-stroke;
-    @apply stroke-brand-400;
+    @apply stroke-brand-300;
   }
 
   .praxis svg {
