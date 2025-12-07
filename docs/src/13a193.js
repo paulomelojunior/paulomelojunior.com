@@ -1427,7 +1427,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
             </span>
           </button>
           <nav>
-            <ul id="anchors" class="hidden xl:flex justify-end px-0 xl:px-20">
+            <ul id="anchors" class="hidden xl:flex justify-end px-0">
               <li class="flex-1">
                 <menu-item
                   href="#goal"
