@@ -231,9 +231,6 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
           <img class="col-span-2 row-span-2" src="${P0}" loading="lazy" />
           <img src="${T0}" loading="lazy" />
           <img src="${F0}" loading="lazy" />
-          <div class="col-span-3">
-            <allu-press></allu-press>
-          </div>
         </div>
       </div>
     `}createRenderRoot(){return this}};th([M({type:String})],Ta.prototype,"lang",2);Ta=th([oe("projects-allugator")],Ta);const M0="/src/39683d.webp",z0="/src/15c264.webp",R0="/src/295098.webp",j0="/src/778272.webp",I0="/src/50783c.webp";var N0=Object.defineProperty,B0=Object.getOwnPropertyDescriptor,ih=(s,e,t,i)=>{for(var n=i>1?void 0:i?B0(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&N0(e,t,n),n};let Oa=class extends Q{constructor(){super(...arguments),this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language}}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}renderDescription(){return`${_.t("damus.description1")}`}render(){const s=`

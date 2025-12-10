@@ -67,9 +67,6 @@ export class ProjectsAllugator extends LitElement {
           <img class="col-span-2 row-span-2" src="${social2}" loading="lazy" />
           <img src="${social4}" loading="lazy" />
           <img src="${social6}" loading="lazy" />
-          <div class="col-span-3">
-            <allu-press></allu-press>
-          </div>
         </div>
       </div>
     `
