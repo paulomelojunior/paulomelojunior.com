@@ -121,7 +121,7 @@ export class FooterSection extends LitElement {
           </div>
         </div>
         <div class="absolute z-50 inset-x-0 bottom-0 h-12 w-full flex items-center gap-2 justify-center px-5 font-mono text-[.625rem] font-semibold uppercase bg-zinc-900 xl:bg-zinc-950 tracking-[0.1em]">
-            <span> [c] 2025 pmjr.cc </span>
+            <span> [c] 2025 Paulo melo Jr. </span>
             <span class="text-zinc-600"> / </span>
             <span> Made by a human being </span>
           </div>

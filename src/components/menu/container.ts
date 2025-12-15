@@ -3,7 +3,6 @@ import i18next from '../../i18n'
 import { html, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { ThemeMixin } from '../../store/theme'
-import home from './home.png'
 @customElement('menu-container')
 
 export class MenuContainer extends ThemeMixin(LitElement) {
@@ -98,7 +97,7 @@ export class MenuContainer extends ThemeMixin(LitElement) {
   render() {
     return html`
       <header
-        class="fixed inset-x-0 z-40 w-full bg-linear-to-b from-zinc-950 backdrop-blur to-zinc-950/20 xl:fixed py-2"
+        class="fixed inset-x-0 z-40 w-full bg-linear-to-t from-zinc-950 backdrop-blur to-zinc-950/80 xl:fixed py-2"
       >
         <div class="container xl:grid flex items-center xl:grid-cols-3">
           <nav class="xl:hidden">
@@ -137,21 +136,12 @@ export class MenuContainer extends ThemeMixin(LitElement) {
                 ></mobile-item>
               </li>
             </ul>
-          </nav>  
-          <div
-            class="size-12 p-3 cursor-pointer transition-background duration-500 items-center justify-center *:opacity-75 *:hover:opacity-100 hover:bg-zinc-950 xl:hidden"
-          >
-            <img
-              src="${home}"
-              class="transition-opacity duration-500"
-              title="Back to homepage"
-            />
-          </div>
+          </nav>
           <mail-button
             @click=${() => this.copyEmail()}
             @mouseleave=${() => this.copyEmailReset()}
             label="hello@pmjr.cc"
-            class="hidden xl:flex"
+            class="ms-1.5"
             hover="${this.lang === 'en' ? 'Click to copy' : 'Copiar e-mail'}"
           ></mail-button>
           <button

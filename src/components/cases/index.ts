@@ -42,7 +42,7 @@ export class CasesSection extends LitElement {
             class="hidden h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent xl:block"
           ></div>
           <div
-            class="cases-background relative bg-gradient-to-b from-zinc-900 to-black flex rounded-4xl 2xl:h-[512px]"
+            class="cases-background relative bg-gradient-to-b from-zinc-900 to-zinc-950 flex rounded-4xl 2xl:h-[512px]"
           >
             <div class="hidden w-2/3 justify-center xl:flex">
               <span
@@ -53,7 +53,7 @@ export class CasesSection extends LitElement {
               <div class="absolute bottom-0 overflow-hidden pointer-events-none">
                 <img
                   loading="lazy"
-                  class="cases absolute w-[calc(1264px*0.8)] max-w-none drop-shadow-[0_5rem_5rem_black] 2xl:w-auto"
+                  class="cases absolute w-[calc(1264px*0.8)] max-w-none 2xl:w-auto"
                   src="${m1}"
                   width="1264"
                   height="720"
@@ -61,7 +61,7 @@ export class CasesSection extends LitElement {
                 />
                 <img
                   loading="lazy"
-                  class="cases w-[calc(1264px*0.8)] max-w-none drop-shadow-[0_5rem_5rem_black] 2xl:w-auto"
+                  class="cases w-[calc(1264px*0.8)] max-w-none 2xl:w-auto"
                   src="${m2}"
                   width="1264"
                   height="720"

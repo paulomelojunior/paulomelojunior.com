@@ -24,7 +24,7 @@
   
   --chroma: 0.01;
   --hue: 264;
-  --brand: 24;
+  --brand: 264;
   
   --color-brand-100: oklch(0.9 0.2 var(--brand));
   --color-brand-200: oklch(0.8 0.2 var(--brand));
@@ -36,9 +36,9 @@
   --color-brand-800: oklch(0.2 0.2 var(--brand));
   --color-brand-900: oklch(0.1 0.2 var(--brand));
 
-  --color-zinc-950: oklch(0 0 0);
-  --color-zinc-900: oklch(0.16 0.005 var(--hue));
-  --color-zinc-800: oklch(0.2 var(--chroma) var(--hue));
+  --color-zinc-950: oklch(0.125 0.005 var(--hue));
+  --color-zinc-900: oklch(0.175 0.005 var(--hue));
+  --color-zinc-800: oklch(0.225 var(--chroma) var(--hue));
   --color-zinc-700: oklch(0.3 var(--chroma) var(--hue));
   --color-zinc-600: oklch(0.4 var(--chroma) var(--hue));
   --color-zinc-500: oklch(0.5 var(--chroma) var(--hue));
@@ -325,9 +325,8 @@
   .menu-toggle span {
     line-height: 3rem;
     transition: 0.2s cubic-bezier(0.75, 0, 0.5, 1);
-    visibility: hidden;
-    opacity: 0;
     display: grid;
+    transform: translateX(-2rem);
   }
 
   .menu-toggle:hover span {

@@ -358,7 +358,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
       </div>
     `}createRenderRoot(){return this}};cs([M({type:String})],ir.prototype,"title",2);cs([M({type:String})],ir.prototype,"tags",2);cs([M({type:String})],ir.prototype,"year",2);cs([M({type:String})],ir.prototype,"contentHtml",2);ir=cs([oe("item-header")],ir);class hm{constructor(){this._dark=!0,this.listeners=new Set}get dark(){return this._dark}set dark(e){this._dark=e,document.documentElement.classList.toggle("dark",e),localStorage.setItem("theme",e?"dark":"light"),this.notifyListeners()}toggle(){this.dark=!this.dark}subscribe(e){this.listeners.add(e)}unsubscribe(e){this.listeners.delete(e)}notifyListeners(){this.listeners.forEach(e=>{e.requestUpdate()})}init(){const e=localStorage.getItem("theme");e&&(this._dark=e==="dark"),document.documentElement.classList.toggle("dark",this._dark)}}const vr=new hm,Cn=s=>class extends s{connectedCallback(){super.connectedCallback(),vr.subscribe(this)}disconnectedCallback(){super.disconnectedCallback(),vr.unsubscribe(this)}get dark(){return vr.dark}set dark(e){vr.dark=e}toggleTheme(){vr.toggle()}},fm="data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%2013L2%206.99999M2%206.99999L8%201M2%206.99999L14%206.99999'%20stroke='white'%20stroke-width='2'/%3e%3c/svg%3e";var pm=Object.defineProperty,gm=Object.getOwnPropertyDescriptor,kl=(s,e,t,i)=>{for(var n=i>1?void 0:i?gm(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&pm(e,t,n),n};let _o=class extends Cn(Q){constructor(){super(),this.more=!1,this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language};const s=localStorage.getItem("lang");s&&(this.lang=s,_.changeLanguage(s))}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}changeLang(){const e=_.language==="en"?"pt":"en";_.changeLanguage(e),localStorage.setItem("lang",e),this.lang=e}changeTheme(){this.toggleTheme()}copyEmail(){navigator.clipboard.writeText("hello@pmjr.cc").then(()=>{this.updateText(this.lang==="en"?"Copied!":"Copiado!",0)}).catch(e=>{alert(`Failed to copy email: ${e}`)})}copyEmailReset(){this.updateText(this.lang==="en"?"Click to copy":"Copiar e-mail",300)}updateText(s,e){const t=document.querySelector("mail-button span");t&&setTimeout(()=>{t.textContent=s},e)}firstUpdated(){ne.to("header",{scrollTrigger:{trigger:"header",start:"bottom top",toggleActions:"play none none reverse",scrub:2},outline:"1px solid hsla(0 0 100% / 0.05)",padding:"0 0 0 0"})}getPreviousPage(){window.location.href="/"}render(){return U`
       <header
-        class="absolute inset-x-0 z-40 hidden w-full bg-linear-to-b from-zinc-950 backdrop-blur to-zinc-950/80 backdrop-saturate-200 xl:fixed xl:block py-2"
+        class="absolute inset-x-0 z-40 hidden w-full bg-linear-to-t from-zinc-950 backdrop-blur to-zinc-950/80 backdrop-saturate-200 xl:fixed xl:block py-2"
       >
         <div class="container grid items-center xl:grid-cols-3">
           <div class="flex items-center">
@@ -638,7 +638,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
             class="hidden h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent xl:block"
           ></div>
           <div
-            class="cases-background relative bg-gradient-to-b from-zinc-900 to-black flex rounded-4xl 2xl:h-[512px]"
+            class="cases-background relative bg-gradient-to-b from-zinc-900 to-zinc-950 flex rounded-4xl 2xl:h-[512px]"
           >
             <div class="hidden w-2/3 justify-center xl:flex">
               <span
@@ -649,7 +649,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
               <div class="absolute bottom-0 overflow-hidden pointer-events-none">
                 <img
                   loading="lazy"
-                  class="cases absolute w-[calc(1264px*0.8)] max-w-none drop-shadow-[0_5rem_5rem_black] 2xl:w-auto"
+                  class="cases absolute w-[calc(1264px*0.8)] max-w-none 2xl:w-auto"
                   src="${Rm}"
                   width="1264"
                   height="720"
@@ -657,7 +657,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
                 />
                 <img
                   loading="lazy"
-                  class="cases w-[calc(1264px*0.8)] max-w-none drop-shadow-[0_5rem_5rem_black] 2xl:w-auto"
+                  class="cases w-[calc(1264px*0.8)] max-w-none 2xl:w-auto"
                   src="${jm}"
                   width="1264"
                   height="720"
@@ -745,7 +745,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
           </div>
         </div>
         <div class="absolute z-50 inset-x-0 bottom-0 h-12 w-full flex items-center gap-2 justify-center px-5 font-mono text-[.625rem] font-semibold uppercase bg-zinc-900 xl:bg-zinc-950 tracking-[0.1em]">
-            <span> [c] 2025 pmjr.cc </span>
+            <span> [c] 2025 Paulo melo Jr. </span>
             <span class="text-zinc-600"> / </span>
             <span> Made by a human being </span>
           </div>
@@ -841,7 +841,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
         <a
           href="/Paulo Melo Jr. - Currículo.pdf"
           target="_blank"
-          class="cta-button cta-button--accent flex items-center gap-4 rounded-full py-3 pe-4 ps-6 text-[1rem] leading-none"
+          class="cta-button cta-button--accent flex items-center gap-4 py-3 pe-4 ps-6 text-[1rem] leading-none"
         >
           ${this.lang==="en"?"Download my resume":"Baixar meu currículo"}
           <svg
@@ -925,9 +925,9 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
     >
       <div aria-hidden="true" class="${e}">${this.label}</div>
       ${this.label}
-    </a>`}createRenderRoot(){return this}};Po([M({type:String})],rs.prototype,"classNames",2);Po([M({type:String})],rs.prototype,"href",2);Po([M({type:String})],rs.prototype,"label",2);rs=Po([oe("menu-item")],rs);const t1="/src/bf8bfa.png";var i1=Object.defineProperty,n1=Object.getOwnPropertyDescriptor,Tl=(s,e,t,i)=>{for(var n=i>1?void 0:i?n1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&i1(e,t,n),n};let vo=class extends Cn(Q){constructor(){super(),this.more=!1,this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language};const s=localStorage.getItem("lang");s&&(this.lang=s,_.changeLanguage(s))}toggleMore(){this.more=!this.more}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}changeLang(){const e=_.language==="en"?"pt":"en";_.changeLanguage(e),localStorage.setItem("lang",e),this.lang=e}copyEmail(){navigator.clipboard.writeText("hello@pmjr.cc").then(()=>{this.updateText(this.lang==="en"?"Email copied!":"Email copiado!",0)}).catch(e=>{alert(`Failed to copy email: ${e}`)})}copyEmailReset(){this.updateText(this.lang==="en"?"Click to copy":"Copiar e-mail",300)}updateText(s,e){const t=document.querySelector("mail-button span");t&&setTimeout(()=>{t.textContent=s},e)}firstUpdated(){window.addEventListener("scroll",()=>{this.more=!1}),ne.to("header",{scrollTrigger:{trigger:"header",start:"bottom top",toggleActions:"play none none reverse",scrub:2},outline:"1px solid hsla(0 0 100% / 0.075)",padding:"0 0 0 0"})}render(){return U`
+    </a>`}createRenderRoot(){return this}};Po([M({type:String})],rs.prototype,"classNames",2);Po([M({type:String})],rs.prototype,"href",2);Po([M({type:String})],rs.prototype,"label",2);rs=Po([oe("menu-item")],rs);var t1=Object.defineProperty,i1=Object.getOwnPropertyDescriptor,Tl=(s,e,t,i)=>{for(var n=i>1?void 0:i?i1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&t1(e,t,n),n};let vo=class extends Cn(Q){constructor(){super(),this.more=!1,this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language};const s=localStorage.getItem("lang");s&&(this.lang=s,_.changeLanguage(s))}toggleMore(){this.more=!this.more}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}changeLang(){const e=_.language==="en"?"pt":"en";_.changeLanguage(e),localStorage.setItem("lang",e),this.lang=e}copyEmail(){navigator.clipboard.writeText("hello@pmjr.cc").then(()=>{this.updateText(this.lang==="en"?"Email copied!":"Email copiado!",0)}).catch(e=>{alert(`Failed to copy email: ${e}`)})}copyEmailReset(){this.updateText(this.lang==="en"?"Click to copy":"Copiar e-mail",300)}updateText(s,e){const t=document.querySelector("mail-button span");t&&setTimeout(()=>{t.textContent=s},e)}firstUpdated(){window.addEventListener("scroll",()=>{this.more=!1}),ne.to("header",{scrollTrigger:{trigger:"header",start:"bottom top",toggleActions:"play none none reverse",scrub:2},outline:"1px solid hsla(0 0 100% / 0.075)",padding:"0 0 0 0"})}render(){return U`
       <header
-        class="fixed inset-x-0 z-40 w-full bg-linear-to-b from-zinc-950 backdrop-blur to-zinc-950/20 xl:fixed py-2"
+        class="fixed inset-x-0 z-40 w-full bg-linear-to-t from-zinc-950 backdrop-blur to-zinc-950/80 xl:fixed py-2"
       >
         <div class="container xl:grid flex items-center xl:grid-cols-3">
           <nav class="xl:hidden">
@@ -966,21 +966,12 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
                 ></mobile-item>
               </li>
             </ul>
-          </nav>  
-          <div
-            class="size-12 p-3 cursor-pointer transition-background duration-500 items-center justify-center *:opacity-75 *:hover:opacity-100 hover:bg-zinc-950 xl:hidden"
-          >
-            <img
-              src="${t1}"
-              class="transition-opacity duration-500"
-              title="Back to homepage"
-            />
-          </div>
+          </nav>
           <mail-button
             @click=${()=>this.copyEmail()}
             @mouseleave=${()=>this.copyEmailReset()}
             label="hello@pmjr.cc"
-            class="hidden xl:flex"
+            class="ms-1.5"
             hover="${this.lang==="en"?"Click to copy":"Copiar e-mail"}"
           ></mail-button>
           <button
@@ -1027,7 +1018,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
           </div>
         </div>
       </header>
-    `}createRenderRoot(){return this}};Tl([M({type:Boolean})],vo.prototype,"more",2);Tl([M({type:String})],vo.prototype,"lang",2);vo=Tl([oe("menu-container")],vo);var r1=Object.defineProperty,s1=Object.getOwnPropertyDescriptor,hs=(s,e,t,i)=>{for(var n=i>1?void 0:i?s1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&r1(e,t,n),n};let rr=class extends Q{constructor(){super(...arguments),this.classNames="",this.icon="",this.label="",this.title=""}render(){const e=is("relative text-[.75rem] tracking-[0.05em] flex transition-all ps-3 pe-1 xl:pe-1.5 gap-2 h-8 xl:h-6 hover:h-8 rounded-full leading-8.5 xl:items-center hover:bg-zinc-100 hover:text-zinc-950 text-zinc-300 font-semibold stroke-zinc-300 hover:stroke-zinc-950 hover:fill-zinc-100",this.classNames);return U`
+    `}createRenderRoot(){return this}};Tl([M({type:Boolean})],vo.prototype,"more",2);Tl([M({type:String})],vo.prototype,"lang",2);vo=Tl([oe("menu-container")],vo);var n1=Object.defineProperty,r1=Object.getOwnPropertyDescriptor,hs=(s,e,t,i)=>{for(var n=i>1?void 0:i?r1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&n1(e,t,n),n};let rr=class extends Q{constructor(){super(...arguments),this.classNames="",this.icon="",this.label="",this.title=""}render(){const e=is("relative text-[.75rem] tracking-[0.05em] flex transition-all ps-3 pe-1 xl:pe-1.5 gap-2 h-8 xl:h-6 hover:h-8 rounded-full leading-8.5 xl:items-center hover:bg-zinc-100 hover:text-zinc-950 text-zinc-300 font-semibold stroke-zinc-300 hover:stroke-zinc-950 hover:fill-zinc-100",this.classNames);return U`
       <button class="${e}" title="${this.title}">
         ${this.label}
         <svg
@@ -1070,7 +1061,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
           ></path>
         </svg>
       </button>
-    `}createRenderRoot(){return this}};hs([M({type:String})],rr.prototype,"classNames",2);hs([M({type:String})],rr.prototype,"icon",2);hs([M({type:String})],rr.prototype,"label",2);hs([M({type:String})],rr.prototype,"title",2);rr=hs([oe("lang-button")],rr);var o1=Object.defineProperty,a1=Object.getOwnPropertyDescriptor,ko=(s,e,t,i)=>{for(var n=i>1?void 0:i?a1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&o1(e,t,n),n};let ss=class extends Q{constructor(){super(...arguments),this.href="",this.label="",this.hover=""}render(){const s=is("flex px-3 gap-2 text-zinc-50 tracking-[0.05em] text-[.75rem] uppercase items-center h-8 leading-12.5 rounded-full whitespace-nowrap font-medium");return U`<button class="menu-item group/item ${s} relative">
+    `}createRenderRoot(){return this}};hs([M({type:String})],rr.prototype,"classNames",2);hs([M({type:String})],rr.prototype,"icon",2);hs([M({type:String})],rr.prototype,"label",2);hs([M({type:String})],rr.prototype,"title",2);rr=hs([oe("lang-button")],rr);var s1=Object.defineProperty,o1=Object.getOwnPropertyDescriptor,ko=(s,e,t,i)=>{for(var n=i>1?void 0:i?o1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&s1(e,t,n),n};let ss=class extends Q{constructor(){super(...arguments),this.href="",this.label="",this.hover=""}render(){const s=is("flex px-3 gap-2 text-zinc-50 tracking-[0.05em] text-[.75rem] uppercase items-center h-8 leading-12.5 rounded-full whitespace-nowrap font-medium");return U`<button class="menu-item group/item ${s} relative">
       <div
         class="${s} pointer-events-none absolute inset-0 justify-center"
         aria-hidden="true"
@@ -1080,7 +1071,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
         </span>
       </div>
       ${this.label}
-    </button>`}createRenderRoot(){return this}};ko([M({type:String})],ss.prototype,"href",2);ko([M({type:String})],ss.prototype,"label",2);ko([M({type:String})],ss.prototype,"hover",2);ss=ko([oe("mail-button")],ss);var l1=Object.defineProperty,u1=Object.getOwnPropertyDescriptor,To=(s,e,t,i)=>{for(var n=i>1?void 0:i?u1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&l1(e,t,n),n};let os=class extends Q{constructor(){super(...arguments),this.href="",this.label="",this.index=""}render(){return U`<div class="border-b border-zinc-800 xl:border-0">
+    </button>`}createRenderRoot(){return this}};ko([M({type:String})],ss.prototype,"href",2);ko([M({type:String})],ss.prototype,"label",2);ko([M({type:String})],ss.prototype,"hover",2);ss=ko([oe("mail-button")],ss);var a1=Object.defineProperty,l1=Object.getOwnPropertyDescriptor,To=(s,e,t,i)=>{for(var n=i>1?void 0:i?l1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&a1(e,t,n),n};let os=class extends Q{constructor(){super(...arguments),this.href="",this.label="",this.index=""}render(){return U`<div class="border-b border-zinc-800 xl:border-0">
       <a class="text-[2rem] tracking-[-0.04em] menu-item h-20 xl:h-16 px-5 pt-1 flex items-center text-zinc-100 relative" rel="noopener noreferrer" href="${this.href}">
         ${this.label}
         <div class="absolute flex items-center px-5 pt-1 inset-0 xl:rounded-full text-zinc-950">
@@ -1090,7 +1081,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
           ${this.index}
         </span>
       </a>
-    </div>`}createRenderRoot(){return this}};To([M({type:String})],os.prototype,"href",2);To([M({type:String})],os.prototype,"label",2);To([M({type:String})],os.prototype,"index",2);os=To([oe("mobile-item")],os);var c1=Object.defineProperty,d1=Object.getOwnPropertyDescriptor,fh=(s,e,t,i)=>{for(var n=i>1?void 0:i?d1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&c1(e,t,n),n};let Ua=class extends Cn(Q){constructor(){super(...arguments),this.lang=_.language}connectedCallback(){super.connectedCallback(),_.on("languageChanged",()=>{this.lang=_.language})}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",()=>{this.lang=_.language})}firstUpdated(){this.renderRoot.querySelectorAll(".praxis svg").forEach(t=>{const i=t.querySelectorAll("path");ne.from(i,{scrollTrigger:{trigger:t,start:"0% 75%",toggleActions:"play none none reverse"},stagger:.12,opacity:0,fill:(this.dark,"var(--color-brand-300)"),drawSVG:!1})}),this.renderRoot.querySelectorAll(".praxis").forEach(t=>{ne.from(t.children,{scrollTrigger:{trigger:t.children,start:"0% 75%",toggleActions:"play none none reverse"},duration:.8,stagger:.1,x:"5rem",filter:"blur(.5rem)",opacity:i=>i===0?1:0})})}render(){return U`
+    </div>`}createRenderRoot(){return this}};To([M({type:String})],os.prototype,"href",2);To([M({type:String})],os.prototype,"label",2);To([M({type:String})],os.prototype,"index",2);os=To([oe("mobile-item")],os);var u1=Object.defineProperty,c1=Object.getOwnPropertyDescriptor,fh=(s,e,t,i)=>{for(var n=i>1?void 0:i?c1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&u1(e,t,n),n};let Ua=class extends Cn(Q){constructor(){super(...arguments),this.lang=_.language}connectedCallback(){super.connectedCallback(),_.on("languageChanged",()=>{this.lang=_.language})}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",()=>{this.lang=_.language})}firstUpdated(){this.renderRoot.querySelectorAll(".praxis svg").forEach(t=>{const i=t.querySelectorAll("path");ne.from(i,{scrollTrigger:{trigger:t,start:"0% 75%",toggleActions:"play none none reverse"},stagger:.12,opacity:0,fill:(this.dark,"var(--color-brand-300)"),drawSVG:!1})}),this.renderRoot.querySelectorAll(".praxis").forEach(t=>{ne.from(t.children,{scrollTrigger:{trigger:t.children,start:"0% 75%",toggleActions:"play none none reverse"},duration:.8,stagger:.1,x:"5rem",filter:"blur(.5rem)",opacity:i=>i===0?1:0})})}render(){return U`
       <section id="section-praxis" class="bg-zinc-900">
         <div
           class="relative mx-5 h-px bg-linear-to-r from-zinc-900 via-zinc-700 to-zinc-900"
@@ -1178,7 +1169,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
           ></div>
         </div>
       </section>
-    `}createRenderRoot(){return this}};fh([M({type:String})],Ua.prototype,"lang",2);Ua=fh([oe("praxis-section")],Ua);const h1="/src/4f3f0c.png";var f1=Object.defineProperty,p1=Object.getOwnPropertyDescriptor,ph=(s,e,t,i)=>{for(var n=i>1?void 0:i?p1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&f1(e,t,n),n};let Va=class extends Q{constructor(){super(...arguments),this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language}}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}firstUpdated(){const s=document.querySelector("#cover-image");s&&ne.matchMedia().add("(min-width: 1024px)",()=>{ne.to(s,{scrollTrigger:{trigger:"#about",start:"top 20%",end:"bottom 20%",scrub:2},y:"-5rem",ease:"none"})})}render(){return U` <div
+    `}createRenderRoot(){return this}};fh([M({type:String})],Ua.prototype,"lang",2);Ua=fh([oe("praxis-section")],Ua);const d1="/src/4f3f0c.png";var h1=Object.defineProperty,f1=Object.getOwnPropertyDescriptor,ph=(s,e,t,i)=>{for(var n=i>1?void 0:i?f1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&h1(e,t,n),n};let Va=class extends Q{constructor(){super(...arguments),this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language}}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}firstUpdated(){const s=document.querySelector("#cover-image");s&&ne.matchMedia().add("(min-width: 1024px)",()=>{ne.to(s,{scrollTrigger:{trigger:"#about",start:"top 20%",end:"bottom 20%",scrub:2},y:"-5rem",ease:"none"})})}render(){return U` <div
       id="about"
       class="relative grid xl:grid-cols-2 overflow-hidden xl:rounded-4xl bg-linear-to-b from-zinc-900 to-zinc-950"
     >
@@ -1227,7 +1218,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
       </div>
       <div class="relative flex aspect-square overflow-hidden">
         <img
-          src="${h1}"
+          src="${d1}"
           id="cover-image"
           class="absolute xl:left-16 xl:top-16 left-6 top-0 xl:max-w-none flex-none xl:rounded-ss-lg rounded-ss-md border-t border-zinc-800 shadow-[0px_24px_24px_0px_black]"
         />
@@ -1235,7 +1226,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
           class="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-zinc-950 to-transparent"
         ></progressive-blur>
       </div>
-    </div>`}createRenderRoot(){return this}};ph([M({type:String})],Va.prototype,"lang",2);Va=ph([oe("twyne-about")],Va);var g1=Object.defineProperty,m1=Object.getOwnPropertyDescriptor,gh=(s,e,t,i)=>{for(var n=i>1?void 0:i?m1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&g1(e,t,n),n};ne.registerPlugin(Z);let qa=class extends Q{constructor(){super(...arguments),this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language}}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange),this.cleanupAnimation()}setupSignatureAnimation(){if(!this.signElement)return;const s=this.signElement.querySelectorAll("path");this.animation=ne.from(s,{scrollTrigger:{trigger:this.signElement,start:"100% 100%",toggleActions:"play none none reverse"},duration:.75,stagger:.75,drawSVG:!1})}cleanupAnimation(){this.animation&&(this.animation.kill(),this.animation=void 0)}firstUpdated(s){this.signElement=this.querySelector("#sign"),this.setupSignatureAnimation()}renderSignature(){return U`
+    </div>`}createRenderRoot(){return this}};ph([M({type:String})],Va.prototype,"lang",2);Va=ph([oe("twyne-about")],Va);var p1=Object.defineProperty,g1=Object.getOwnPropertyDescriptor,gh=(s,e,t,i)=>{for(var n=i>1?void 0:i?g1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&p1(e,t,n),n};ne.registerPlugin(Z);let qa=class extends Q{constructor(){super(...arguments),this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language}}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange),this.cleanupAnimation()}setupSignatureAnimation(){if(!this.signElement)return;const s=this.signElement.querySelectorAll("path");this.animation=ne.from(s,{scrollTrigger:{trigger:this.signElement,start:"100% 100%",toggleActions:"play none none reverse"},duration:.75,stagger:.75,drawSVG:!1})}cleanupAnimation(){this.animation&&(this.animation.kill(),this.animation=void 0)}firstUpdated(s){this.signElement=this.querySelector("#sign"),this.setupSignatureAnimation()}renderSignature(){return U`
       <svg
         id="sign"
         class="rotate-21 stroke-zinc-600 mt-2"
@@ -1277,7 +1268,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
           </div>
         </div>
       </section>
-    `}createRenderRoot(){return this}};gh([M({type:String})],qa.prototype,"lang",2);qa=gh([oe("twyne-conclusion")],qa);var _1=Object.defineProperty,v1=Object.getOwnPropertyDescriptor,mh=(s,e,t,i)=>{for(var n=i>1?void 0:i?v1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&_1(e,t,n),n};let Wa=class extends Q{constructor(){super(...arguments),this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language}}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}render(){return U`
+    `}createRenderRoot(){return this}};gh([M({type:String})],qa.prototype,"lang",2);qa=gh([oe("twyne-conclusion")],qa);var m1=Object.defineProperty,_1=Object.getOwnPropertyDescriptor,mh=(s,e,t,i)=>{for(var n=i>1?void 0:i?_1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&m1(e,t,n),n};let Wa=class extends Q{constructor(){super(...arguments),this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language}}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}render(){return U`
       <section id="goal" class="container py-24 px-6 xl:p-24 2xl:p-32">
         <div class="xl:grid grid-cols-4 justify-center">
           <div
@@ -1299,10 +1290,10 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
           </div>
         </div>
       </section>
-    `}createRenderRoot(){return this}};mh([M({type:String})],Wa.prototype,"lang",2);Wa=mh([oe("twyne-goal")],Wa);const y1="/src/3d9806.svg";var b1=Object.defineProperty,x1=Object.getOwnPropertyDescriptor,_h=(s,e,t,i)=>{for(var n=i>1?void 0:i?x1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&b1(e,t,n),n};let Ya=class extends Q{constructor(){super(...arguments),this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language}}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}render(){return U`
+    `}createRenderRoot(){return this}};mh([M({type:String})],Wa.prototype,"lang",2);Wa=mh([oe("twyne-goal")],Wa);const v1="/src/3d9806.svg";var y1=Object.defineProperty,b1=Object.getOwnPropertyDescriptor,_h=(s,e,t,i)=>{for(var n=i>1?void 0:i?b1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&y1(e,t,n),n};let Ya=class extends Q{constructor(){super(...arguments),this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language}}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}render(){return U`
       <div class="flex flex-col items-start xl:gap-2 xl:px-14 px-5 py-16 pb-14 xl:pb-16">
         <div class="flex items-center gap-6">
-          <img src="${y1}" class=" hidden xl:block xl:h-14 xl:border-r border-zinc-900 pr-6" />
+          <img src="${v1}" class=" hidden xl:block xl:h-14 xl:border-r border-zinc-900 pr-6" />
           <h1
             class="xl:h-14 leading-none tracking-[-0.04em] text-[3rem] 2xl:text-[4rem] text-zinc-100"
           >
@@ -1310,7 +1301,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
           </h1>
         </div>
       </div>
-    `}createRenderRoot(){return this}};_h([M({type:String})],Ya.prototype,"lang",2);Ya=_h([oe("twyne-header")],Ya);var D1=Object.defineProperty,w1=Object.getOwnPropertyDescriptor,vh=(s,e,t,i)=>{for(var n=i>1?void 0:i?w1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&D1(e,t,n),n};let Xa=class extends Q{constructor(){super(...arguments),this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language}}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}render(){const s=_.t("twyne.impact.l1",{returnObjects:!0});return U`
+    `}createRenderRoot(){return this}};_h([M({type:String})],Ya.prototype,"lang",2);Ya=_h([oe("twyne-header")],Ya);var x1=Object.defineProperty,D1=Object.getOwnPropertyDescriptor,vh=(s,e,t,i)=>{for(var n=i>1?void 0:i?D1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&x1(e,t,n),n};let Xa=class extends Q{constructor(){super(...arguments),this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language}}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}render(){const s=_.t("twyne.impact.l1",{returnObjects:!0});return U`
       <div id="impact" class="container grid gap-10 xl:gap-16 px-6 pt-24 xl:px-24 xl:pt-32 2xl:px-32">
         <h2
           class="text-[2rem] xl:text-[2.5rem] leading-none tracking-[-.02em] 2xl:text-[3rem] text-zinc-100"
@@ -1354,9 +1345,9 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
               </li>`)}
         </ul>
       </div>
-    `}createRenderRoot(){return this}};vh([M({type:String})],Xa.prototype,"lang",2);Xa=vh([oe("twyne-impact")],Xa);const C1="data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%2013L2%206.99999M2%206.99999L8%201M2%206.99999L14%206.99999'%20stroke='white'%20stroke-width='2'/%3e%3c/svg%3e";var S1=Object.defineProperty,E1=Object.getOwnPropertyDescriptor,Ol=(s,e,t,i)=>{for(var n=i>1?void 0:i?E1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&S1(e,t,n),n};let yo=class extends Cn(Q){constructor(){super(),this.more=!1,this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language};const s=localStorage.getItem("lang");s&&(this.lang=s,_.changeLanguage(s))}toggleMore(){this.more=!this.more}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}changeLang(){const e=_.language==="en"?"pt":"en";_.changeLanguage(e),localStorage.setItem("lang",e),this.lang=e}copyEmail(){navigator.clipboard.writeText("hello@pmjr.cc").then(()=>{this.updateText(this.lang==="en"?"Email copied!":"Email copiado!",0)}).catch(e=>{alert(`Failed to copy email: ${e}`)})}copyEmailReset(){this.updateText(this.lang==="en"?"Click to copy":"Copiar e-mail",300)}updateText(s,e){const t=document.querySelector("mail-button span");t&&setTimeout(()=>{t.textContent=s},e)}firstUpdated(){window.addEventListener("scroll",()=>{this.more=!1}),ne.to("header",{scrollTrigger:{trigger:"header",start:"bottom top",toggleActions:"play none none reverse",scrub:2},outline:"1px solid hsla(0 0 100% / 0.05)",padding:"0 0 0 0"})}getPreviousPage(){window.location.href="/"}render(){return U`
+    `}createRenderRoot(){return this}};vh([M({type:String})],Xa.prototype,"lang",2);Xa=vh([oe("twyne-impact")],Xa);const w1="data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%2013L2%206.99999M2%206.99999L8%201M2%206.99999L14%206.99999'%20stroke='white'%20stroke-width='2'/%3e%3c/svg%3e";var C1=Object.defineProperty,S1=Object.getOwnPropertyDescriptor,Ol=(s,e,t,i)=>{for(var n=i>1?void 0:i?S1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&C1(e,t,n),n};let yo=class extends Cn(Q){constructor(){super(),this.more=!1,this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language};const s=localStorage.getItem("lang");s&&(this.lang=s,_.changeLanguage(s))}toggleMore(){this.more=!this.more}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}changeLang(){const e=_.language==="en"?"pt":"en";_.changeLanguage(e),localStorage.setItem("lang",e),this.lang=e}copyEmail(){navigator.clipboard.writeText("hello@pmjr.cc").then(()=>{this.updateText(this.lang==="en"?"Email copied!":"Email copiado!",0)}).catch(e=>{alert(`Failed to copy email: ${e}`)})}copyEmailReset(){this.updateText(this.lang==="en"?"Click to copy":"Copiar e-mail",300)}updateText(s,e){const t=document.querySelector("mail-button span");t&&setTimeout(()=>{t.textContent=s},e)}firstUpdated(){window.addEventListener("scroll",()=>{this.more=!1}),ne.to("header",{scrollTrigger:{trigger:"header",start:"bottom top",toggleActions:"play none none reverse",scrub:2},outline:"1px solid hsla(0 0 100% / 0.05)",padding:"0 0 0 0"})}getPreviousPage(){window.location.href="/"}render(){return U`
       <header
-        class="fixed inset-x-0 z-40 w-full bg-linear-to-b from-zinc-950 backdrop-blur to-zinc-950/80 backdrop-saturate-200 xl:fixed xl:block py-2"
+        class="fixed inset-x-0 z-40 w-full bg-linear-to-t from-zinc-950 backdrop-blur to-zinc-950/80 backdrop-saturate-200 xl:fixed xl:block py-2"
       >
         <div class="container xl:grid flex items-center xl:grid-cols-3">
           <nav class="xl:hidden">
@@ -1403,7 +1394,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
               title="Go back to homepage"
             >
               <img
-                src="${C1}"
+                src="${w1}"
                 class="transition-opacity duration-500"
               />
             </button>
@@ -1411,7 +1402,6 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
               @click=${()=>this.copyEmail()}
               @mouseleave=${()=>this.copyEmailReset()}
               label="hello@pmjr.cc"
-              class="hidden xl:flex"
               hover="${this.lang==="en"?"Click to copy":"Copiar e-mail"}"
             ></mail-button>
           </div>
@@ -1465,7 +1455,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
           </div>
         </div>
       </header>
-    `}createRenderRoot(){return this}};Ol([M({type:Boolean})],yo.prototype,"more",2);Ol([M({type:String})],yo.prototype,"lang",2);yo=Ol([oe("twyne-menu")],yo);const yh="/src/cef3d9.png",bh="/src/6f2cb8.png",xh="/src/6b0ed1.png",Dh="/src/b2e798.png",wh="/src/9bbc2e.png",$1="/src/ef0222.png";var P1=Object.defineProperty,k1=Object.getOwnPropertyDescriptor,Ch=(s,e,t,i)=>{for(var n=i>1?void 0:i?k1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&P1(e,t,n),n};let Ga=class extends Q{constructor(){super(...arguments),this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language}}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}firstUpdated(s){document.querySelectorAll("[data-parallax-screens]").forEach(e=>{let t=ne.timeline({scrollTrigger:{trigger:"#mobile-images",start:"0% 100%",end:"50% 100%",scrub:2}});[{layer:"1",y:"10%",opacity:0},{layer:"2",y:"20%",opacity:.5},{layer:"3",y:"30%",opacity:1}].forEach((n,r)=>{t.from(e.querySelectorAll(`[data-parallax-screens="${n.layer}"]`),{y:n.y,ease:"none",opacity:n.opacity},r===0?void 0:"<")})})}render(){return U`
+    `}createRenderRoot(){return this}};Ol([M({type:Boolean})],yo.prototype,"more",2);Ol([M({type:String})],yo.prototype,"lang",2);yo=Ol([oe("twyne-menu")],yo);const yh="/src/cef3d9.png",bh="/src/6f2cb8.png",xh="/src/6b0ed1.png",Dh="/src/b2e798.png",wh="/src/9bbc2e.png",E1="/src/ef0222.png";var $1=Object.defineProperty,P1=Object.getOwnPropertyDescriptor,Ch=(s,e,t,i)=>{for(var n=i>1?void 0:i?P1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&$1(e,t,n),n};let Ga=class extends Q{constructor(){super(...arguments),this.lang=_.language,this.handleLanguageChange=()=>{this.lang=_.language}}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}firstUpdated(s){document.querySelectorAll("[data-parallax-screens]").forEach(e=>{let t=ne.timeline({scrollTrigger:{trigger:"#mobile-images",start:"0% 100%",end:"50% 100%",scrub:2}});[{layer:"1",y:"10%",opacity:0},{layer:"2",y:"20%",opacity:.5},{layer:"3",y:"30%",opacity:1}].forEach((n,r)=>{t.from(e.querySelectorAll(`[data-parallax-screens="${n.layer}"]`),{y:n.y,ease:"none",opacity:n.opacity},r===0?void 0:"<")})})}render(){return U`
       <section id="mobile" class="mt-32 py-32">
         <h2
           class="mb-32 text-center text-[2.5rem] font-light leading-none tracking-[-.02em] 2xl:text-[3rem] text-zinc-100"
@@ -1486,12 +1476,12 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
       </section>
       <style>
         .mobile-screen {
-          mask-image: url(${$1});
+          mask-image: url(${E1});
           mask-mode: luminance;
           mask-size: cover;
         }
       </style>
-    `}createRenderRoot(){return this}};Ch([M({type:String})],Ga.prototype,"lang",2);Ga=Ch([oe("twyne-mobile")],Ga);var T1=Object.defineProperty,O1=Object.getOwnPropertyDescriptor,fs=(s,e,t,i)=>{for(var n=i>1?void 0:i?O1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&T1(e,t,n),n};let sr=class extends Q{constructor(){super(...arguments),this.lang=_.language,this.currentIndex=0,this.screens=[],this.updateMobScreens=()=>{},this.handleLanguageChange=()=>{this.lang=_.language}}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}firstUpdated(s){const e=document.querySelectorAll(".mob-carrossel img");this.currentIndex=0,this.screens=e,this.updateMobScreens=()=>{this.screens.forEach((n,r)=>{r===this.currentIndex?ne.to(n,{opacity:1,duration:.4,y:0,delay:.2,onStart:()=>n.classList.remove("invisible")}):ne.to(n,{opacity:0,duration:.4,y:100,onComplete:()=>n.classList.add("invisible")})})},this.updateMobScreens();const t=this.renderRoot.querySelector("button:first-of-type"),i=this.renderRoot.querySelector("button:last-of-type");t&&i&&(t.addEventListener("click",()=>{this.currentIndex=(this.currentIndex-1+this.screens.length)%this.screens.length,this.updateMobScreens()}),i.addEventListener("click",()=>{this.currentIndex=(this.currentIndex+1)%this.screens.length,this.updateMobScreens()}))}render(){return U`
+    `}createRenderRoot(){return this}};Ch([M({type:String})],Ga.prototype,"lang",2);Ga=Ch([oe("twyne-mobile")],Ga);var k1=Object.defineProperty,T1=Object.getOwnPropertyDescriptor,fs=(s,e,t,i)=>{for(var n=i>1?void 0:i?T1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&k1(e,t,n),n};let sr=class extends Q{constructor(){super(...arguments),this.lang=_.language,this.currentIndex=0,this.screens=[],this.updateMobScreens=()=>{},this.handleLanguageChange=()=>{this.lang=_.language}}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}firstUpdated(s){const e=document.querySelectorAll(".mob-carrossel img");this.currentIndex=0,this.screens=e,this.updateMobScreens=()=>{this.screens.forEach((n,r)=>{r===this.currentIndex?ne.to(n,{opacity:1,duration:.4,y:0,delay:.2,onStart:()=>n.classList.remove("invisible")}):ne.to(n,{opacity:0,duration:.4,y:100,onComplete:()=>n.classList.add("invisible")})})},this.updateMobScreens();const t=this.renderRoot.querySelector("button:first-of-type"),i=this.renderRoot.querySelector("button:last-of-type");t&&i&&(t.addEventListener("click",()=>{this.currentIndex=(this.currentIndex-1+this.screens.length)%this.screens.length,this.updateMobScreens()}),i.addEventListener("click",()=>{this.currentIndex=(this.currentIndex+1)%this.screens.length,this.updateMobScreens()}))}render(){return U`
       <section class="relative px-2 mt-24 xl:mt-32">
         <div class="container">
           <h2
@@ -1548,7 +1538,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
           </div>
         </div>
       </section>
-    `}createRenderRoot(){return this}};fs([M({type:String})],sr.prototype,"lang",2);fs([M({type:Number})],sr.prototype,"currentIndex",2);fs([M({type:Array})],sr.prototype,"screens",2);fs([M({type:Function})],sr.prototype,"updateMobScreens",2);sr=fs([oe("mobile-screens")],sr);const F1="/src/6ab55e.png",A1="/src/b0e17e.png",L1="/src/96ef6f.png",M1="/src/2bf8a7.png",z1="/src/2eab02.png",R1="/src/a54df0.png",j1="/src/b3d826.png",I1="/src/adef9e.png",N1="/src/120066.png",B1="/src/908f2c.png",H1="/src/20a18e.png";var U1=Object.defineProperty,V1=Object.getOwnPropertyDescriptor,Sh=(s,e,t,i)=>{for(var n=i>1?void 0:i?V1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&U1(e,t,n),n};ne.registerPlugin(Z);let Ka=class extends Q{constructor(){super(...arguments),this.lang=_.language,this.componentAnimations=[],this.handleLanguageChange=()=>{this.lang=_.language}}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange),this.cleanupAnimations()}setupComponentAnimations(){this.renderRoot.querySelectorAll("img").forEach(e=>{const t=ne.from(e,{scrollTrigger:{trigger:e,start:"0% 100%",end:"0% 50%",toggleActions:"play none none reverse"},scale:1,opacity:0,filter:"blur(1rem)",duration:1,y:"20%"});this.componentAnimations.push(t)})}cleanupAnimations(){this.componentAnimations.forEach(s=>{s&&s.kill()}),this.componentAnimations=[]}firstUpdated(){this.setupComponentAnimations()}renderProposalList(){const s=_.t("twyne.proposal.l1",{returnObjects:!0});return U`
+    `}createRenderRoot(){return this}};fs([M({type:String})],sr.prototype,"lang",2);fs([M({type:Number})],sr.prototype,"currentIndex",2);fs([M({type:Array})],sr.prototype,"screens",2);fs([M({type:Function})],sr.prototype,"updateMobScreens",2);sr=fs([oe("mobile-screens")],sr);const O1="/src/6ab55e.png",F1="/src/b0e17e.png",A1="/src/96ef6f.png",L1="/src/2bf8a7.png",M1="/src/2eab02.png",z1="/src/a54df0.png",R1="/src/b3d826.png",j1="/src/adef9e.png",I1="/src/120066.png",N1="/src/908f2c.png",B1="/src/20a18e.png";var H1=Object.defineProperty,U1=Object.getOwnPropertyDescriptor,Sh=(s,e,t,i)=>{for(var n=i>1?void 0:i?U1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&H1(e,t,n),n};ne.registerPlugin(Z);let Ka=class extends Q{constructor(){super(...arguments),this.lang=_.language,this.componentAnimations=[],this.handleLanguageChange=()=>{this.lang=_.language}}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange),this.cleanupAnimations()}setupComponentAnimations(){this.renderRoot.querySelectorAll("img").forEach(e=>{const t=ne.from(e,{scrollTrigger:{trigger:e,start:"0% 100%",end:"0% 50%",toggleActions:"play none none reverse"},scale:1,opacity:0,filter:"blur(1rem)",duration:1,y:"20%"});this.componentAnimations.push(t)})}cleanupAnimations(){this.componentAnimations.forEach(s=>{s&&s.kill()}),this.componentAnimations=[]}firstUpdated(){this.setupComponentAnimations()}renderProposalList(){const s=_.t("twyne.proposal.l1",{returnObjects:!0});return U`
       <ul
         class="text-default leading-loose 2xl:text-[1.25rem] text-zinc-100"
       >
@@ -1565,14 +1555,14 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
         <div class="flex gap-4">
           <div class="hidden xl:flex flex-col gap-4">
             <img
-              src="${z1}"
+              src="${M1}"
               height="425"
               width="216"
               loading="lazy"
               alt="Component B1"
             />
             <img
-              src="${j1}"
+              src="${R1}"
               height="216"
               width="216"
               loading="lazy"
@@ -1580,7 +1570,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
             />
           </div>
           <img
-            src="${R1}"
+            src="${z1}"
             height="660"
             width="560"
             loading="lazy"
@@ -1589,21 +1579,21 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
         </div>
         <div class="hidden xl:flex gap-4">
           <img
-            src="${H1}"
+            src="${B1}"
             height="218"
             width="280"
             loading="lazy"
             alt="Component B7"
           />
           <img
-            src="${N1}"
+            src="${I1}"
             height="218"
             width="240"
             loading="lazy"
             alt="Component B5"
           />
           <img
-            src="${B1}"
+            src="${N1}"
             height="218"
             width="240"
             loading="lazy"
@@ -1611,7 +1601,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
           />
         </div>
         <img
-          src="${I1}"
+          src="${j1}"
           height="448"
           width="792"
           loading="lazy"
@@ -1621,28 +1611,28 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
     `}renderComponentColumn(){return U`
       <div class="grid gap-2 xl:gap-4">
         <img
-          src="${F1}"
+          src="${O1}"
           height="264"
           width="480"
           loading="lazy"
           alt="Component A1"
         />
         <img
-          src="${A1}"
+          src="${F1}"
           height="248"
           width="480"
           loading="lazy"
           alt="Component A2"
         />
         <img
-          src="${L1}"
+          src="${A1}"
           height="492"
           width="480"
           loading="lazy"
           alt="Component A3"
         />
         <img
-          src="${M1}"
+          src="${L1}"
           height="296"
           width="480"
           loading="lazy"
@@ -1682,24 +1672,24 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
         ${this.renderComponentsSection()}
         <twyne-impact></twyne-impact>
       </section>
-    `}createRenderRoot(){return this}};Sh([M({type:String})],Ka.prototype,"lang",2);Ka=Sh([oe("twyne-proposal")],Ka);const q1="/src/2f4591.png",W1="/src/367502.png",Y1="/src/14eeca.png";var X1=Object.defineProperty,G1=Object.getOwnPropertyDescriptor,ps=(s,e,t,i)=>{for(var n=i>1?void 0:i?G1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&X1(e,t,n),n};let or=class extends Q{constructor(){super(...arguments),this.lang=_.language,this.currentIndex=0,this.screens=[],this.updateScreens=()=>{},this.handleLanguageChange=()=>{this.lang=_.language}}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}firstUpdated(s){const e=document.querySelectorAll(".carrossel img");this.currentIndex=0,this.screens=e,this.updateScreens=()=>{this.screens.forEach((n,r)=>{r===this.currentIndex?ne.to(n,{opacity:1,duration:.4,y:0,delay:.2,onStart:()=>n.classList.remove("invisible")}):ne.to(n,{opacity:0,duration:.4,y:100,onComplete:()=>n.classList.add("invisible")})})},this.updateScreens();const t=this.renderRoot.querySelector("button:first-of-type"),i=this.renderRoot.querySelector("button:last-of-type");t&&i&&(t.addEventListener("click",()=>{this.currentIndex=(this.currentIndex-1+this.screens.length)%this.screens.length,this.updateScreens()}),i.addEventListener("click",()=>{this.currentIndex=(this.currentIndex+1)%this.screens.length,this.updateScreens()}))}render(){return U`
+    `}createRenderRoot(){return this}};Sh([M({type:String})],Ka.prototype,"lang",2);Ka=Sh([oe("twyne-proposal")],Ka);const V1="/src/2f4591.png",q1="/src/367502.png",W1="/src/14eeca.png";var Y1=Object.defineProperty,X1=Object.getOwnPropertyDescriptor,ps=(s,e,t,i)=>{for(var n=i>1?void 0:i?X1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&Y1(e,t,n),n};let or=class extends Q{constructor(){super(...arguments),this.lang=_.language,this.currentIndex=0,this.screens=[],this.updateScreens=()=>{},this.handleLanguageChange=()=>{this.lang=_.language}}connectedCallback(){super.connectedCallback(),_.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",this.handleLanguageChange)}firstUpdated(s){const e=document.querySelectorAll(".carrossel img");this.currentIndex=0,this.screens=e,this.updateScreens=()=>{this.screens.forEach((n,r)=>{r===this.currentIndex?ne.to(n,{opacity:1,duration:.4,y:0,delay:.2,onStart:()=>n.classList.remove("invisible")}):ne.to(n,{opacity:0,duration:.4,y:100,onComplete:()=>n.classList.add("invisible")})})},this.updateScreens();const t=this.renderRoot.querySelector("button:first-of-type"),i=this.renderRoot.querySelector("button:last-of-type");t&&i&&(t.addEventListener("click",()=>{this.currentIndex=(this.currentIndex-1+this.screens.length)%this.screens.length,this.updateScreens()}),i.addEventListener("click",()=>{this.currentIndex=(this.currentIndex+1)%this.screens.length,this.updateScreens()}))}render(){return U`
       <section class="relative mt-24 xl:mt-32">
         <div class="container">
           <div class="carrossel relative overflow-hidden">
             <img
-              src="${q1}"
+              src="${V1}"
               width="1728"
               height="976"
               class="relative rounded-[.5rem]"
             />
             <img
-              src="${W1}"
+              src="${q1}"
               width="1728"
               height="976"
               class="invisible absolute left-0 top-0 rounded-[.5rem]"
             />
             <img
-              src="${Y1}"
+              src="${W1}"
               width="1728"
               height="976"
               class="invisible absolute left-0 top-0 rounded-[.5rem]"
@@ -1732,7 +1722,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
           </div>
         </div>
       </section>
-    `}createRenderRoot(){return this}};ps([M({type:String})],or.prototype,"lang",2);ps([M({type:Number})],or.prototype,"currentIndex",2);ps([M({type:Array})],or.prototype,"screens",2);ps([M({type:Function})],or.prototype,"updateScreens",2);or=ps([oe("twyne-screens")],or);const K1=`<style>\r
+    `}createRenderRoot(){return this}};ps([M({type:String})],or.prototype,"lang",2);ps([M({type:Number})],or.prototype,"currentIndex",2);ps([M({type:Array})],or.prototype,"screens",2);ps([M({type:Function})],or.prototype,"updateScreens",2);or=ps([oe("twyne-screens")],or);const G1=`<style>\r
     .spinning {\r
         animation: spinning .75s infinite linear;\r
         transform-origin: 50% 50%;\r
@@ -1757,7 +1747,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
 <path d="M20 1.50996e-07C20.2626 1.39515e-07 20.5227 0.0517317 20.7654 0.152241C21.008 0.25275 21.2285 0.400069 21.4142 0.585787C21.5999 0.771504 21.7472 0.991982 21.8478 1.23463C21.9483 1.47728 22 1.73736 22 2C22 2.26264 21.9483 2.52272 21.8478 2.76537C21.7472 3.00802 21.5999 3.2285 21.4142 3.41421C21.2285 3.59993 21.008 3.74725 20.7654 3.84776C20.5227 3.94827 20.2626 4 20 4L20 2L20 1.50996e-07Z" fill="white"/>\r
 <defs>\r
 <clipPath id="paint0_angular_1307_1673_clip_path"><path d="M40 20H36C36 28.8366 28.8366 36 20 36V40V44C33.2548 44 44 33.2548 44 20H40ZM20 40V36C11.1634 36 4 28.8366 4 20H0H-4C-4 33.2548 6.74517 44 20 44V40ZM0 20H4C4 11.1634 11.1634 4 20 4V0V-4C6.74517 -4 -4 6.74517 -4 20H0ZM20 0V4C28.8366 4 36 11.1634 36 20H40H44C44 6.74517 33.2548 -4 20 -4V0Z" mask="url(#path-1-inside-1_1307_1673)"/></clipPath></defs>\r
-</svg>`;var J1=Object.defineProperty,Z1=Object.getOwnPropertyDescriptor,Eh=(s,e,t,i)=>{for(var n=i>1?void 0:i?Z1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&J1(e,t,n),n};let Ja=class extends Q{constructor(){super(...arguments),this.minMs=500,this.mountedAt=0,this.finishTimeoutId=null,this.fallbackTimeoutId=null,this.isExiting=!1,this.onDomContentLoaded=()=>this.finishAfterMinTime(),this.onWindowLoad=()=>this.finishAfterMinTime()}connectedCallback(){super.connectedCallback(),this.setAttribute("aria-busy","true"),this.setAttribute("aria-live","polite"),this.mountedAt=performance.now(),document.readyState==="complete"||document.readyState==="interactive"?this.finishAfterMinTime():(document.addEventListener("DOMContentLoaded",this.onDomContentLoaded,{once:!0}),window.addEventListener("load",this.onWindowLoad,{once:!0}),this.fallbackTimeoutId=window.setTimeout(()=>this.finishAfterMinTime(),8e3))}disconnectedCallback(){super.disconnectedCallback(),document.removeEventListener("DOMContentLoaded",this.onDomContentLoaded),window.removeEventListener("load",this.onWindowLoad),this.finishTimeoutId&&(clearTimeout(this.finishTimeoutId),this.finishTimeoutId=null),this.fallbackTimeoutId&&(clearTimeout(this.fallbackTimeoutId),this.fallbackTimeoutId=null)}finishAfterMinTime(){const s=performance.now()-this.mountedAt,e=Math.max(0,this.minMs-s);this.finishTimeoutId=window.setTimeout(()=>this.exit(),e)}exit(){if(this.isExiting)return;this.isExiting=!0,this.finishTimeoutId&&(clearTimeout(this.finishTimeoutId),this.finishTimeoutId=null),this.fallbackTimeoutId&&(clearTimeout(this.fallbackTimeoutId),this.fallbackTimeoutId=null);const s=this.querySelector("#loading")||this,e=document.querySelector("main");ne.set(e,{y:"5rem",opacity:0}),ne.to(s,{opacity:0,scale:2,filter:"blur(1rem)",duration:.4,force3D:!0,onComplete:()=>{this.dispatchEvent(new CustomEvent("mobile-loading:done",{bubbles:!0,composed:!0})),ne.to(e,{y:0,opacity:1,duration:1,onComplete:()=>{e.removeAttribute("style")}}),this.remove()}})}render(){return U` <div
+</svg>`;var K1=Object.defineProperty,J1=Object.getOwnPropertyDescriptor,Eh=(s,e,t,i)=>{for(var n=i>1?void 0:i?J1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&K1(e,t,n),n};let Ja=class extends Q{constructor(){super(...arguments),this.minMs=500,this.mountedAt=0,this.finishTimeoutId=null,this.fallbackTimeoutId=null,this.isExiting=!1,this.onDomContentLoaded=()=>this.finishAfterMinTime(),this.onWindowLoad=()=>this.finishAfterMinTime()}connectedCallback(){super.connectedCallback(),this.setAttribute("aria-busy","true"),this.setAttribute("aria-live","polite"),this.mountedAt=performance.now(),document.readyState==="complete"||document.readyState==="interactive"?this.finishAfterMinTime():(document.addEventListener("DOMContentLoaded",this.onDomContentLoaded,{once:!0}),window.addEventListener("load",this.onWindowLoad,{once:!0}),this.fallbackTimeoutId=window.setTimeout(()=>this.finishAfterMinTime(),8e3))}disconnectedCallback(){super.disconnectedCallback(),document.removeEventListener("DOMContentLoaded",this.onDomContentLoaded),window.removeEventListener("load",this.onWindowLoad),this.finishTimeoutId&&(clearTimeout(this.finishTimeoutId),this.finishTimeoutId=null),this.fallbackTimeoutId&&(clearTimeout(this.fallbackTimeoutId),this.fallbackTimeoutId=null)}finishAfterMinTime(){const s=performance.now()-this.mountedAt,e=Math.max(0,this.minMs-s);this.finishTimeoutId=window.setTimeout(()=>this.exit(),e)}exit(){if(this.isExiting)return;this.isExiting=!0,this.finishTimeoutId&&(clearTimeout(this.finishTimeoutId),this.finishTimeoutId=null),this.fallbackTimeoutId&&(clearTimeout(this.fallbackTimeoutId),this.fallbackTimeoutId=null);const s=this.querySelector("#loading")||this,e=document.querySelector("main");ne.set(e,{y:"5rem",opacity:0}),ne.to(s,{opacity:0,scale:2,filter:"blur(1rem)",duration:.4,force3D:!0,onComplete:()=>{this.dispatchEvent(new CustomEvent("mobile-loading:done",{bubbles:!0,composed:!0})),ne.to(e,{y:0,opacity:1,duration:1,onComplete:()=>{e.removeAttribute("style")}}),this.remove()}})}render(){return U` <div
       id="loading"
       class="fixed top-0 z-100 h-svh w-full bg-zinc-950"
     >
@@ -1765,7 +1755,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
         class="container flex h-full items-center justify-center gap-4 flex-col"
       >
         <div class="saturate-50">
-          ${ci(`${K1}`)}
+          ${ci(`${G1}`)}
         </div>
         <span
           class="hidden animate-pulse text-[.75rem] uppercase leading-10 tracking-[.05em] text-zinc-50"
@@ -1773,4 +1763,4 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
           ${this.lang==="pt"?U`Carregando...`:U`Loading...`}
         </span>
       </div>
-    </div>`}createRenderRoot(){return this}};Eh([M({type:Number,attribute:"min-ms"})],Ja.prototype,"minMs",2);Ja=Eh([oe("mobile-loading")],Ja);function Rs(s){let e=document.querySelector(`meta[name="${s}"]`);return e||(e=document.createElement("meta"),e.setAttribute("name",s),document.head.appendChild(e)),e}function nc(s){let e=document.querySelector(`meta[property="${s}"]`);return e||(e=document.createElement("meta"),e.setAttribute("property",s),document.head.appendChild(e)),e}function Q1(s){const e=s.replace(/\/+$/,"")||"/";return e==="/"||e.endsWith("/index.html")?"home":e.endsWith("/projects")||e.endsWith("/projects.html")?"projects":e.endsWith("/glyphs")||e.endsWith("/glyphs.html")?"glyphs":e.endsWith("/twyne")||e.endsWith("/twyne.html")?"twyne":e.endsWith("/404")||e.endsWith("/404.html")?"404":"home"}function rc(s){const e=_.t.bind(_),t=e("seo.common.description"),i=e("seo.common.keywords");switch(s){case"projects":return{title:e("seo.projects.title"),description:t,keywords:[i,e("seo.projects.keywords")].filter(Boolean).join(", ")};case"glyphs":return{title:e("seo.glyphs.title"),description:t,keywords:[i,e("seo.glyphs.keywords")].filter(Boolean).join(", ")};case"twyne":return{title:e("seo.twyne.title"),description:t,keywords:[i,e("seo.twyne.keywords")].filter(Boolean).join(", ")};case"404":return{title:e("seo.404.title"),description:t,keywords:i};case"home":default:return{title:e("seo.home.title"),description:t,keywords:i}}}function sc(s){document.title=s.title,Rs("description").setAttribute("content",s.description),Rs("keywords").setAttribute("content",s.keywords),nc("og:title").setAttribute("content",s.title),nc("og:description").setAttribute("content",s.description),Rs("twitter:title").setAttribute("content",s.title),Rs("twitter:description").setAttribute("content",s.description)}function oc(){const s=Q1(window.location.pathname);sc(rc(s)),_.on("languageChanged",()=>{sc(rc(s))})}typeof window<"u"&&document.readyState!=="loading"?oc():typeof window<"u"&&document.addEventListener("DOMContentLoaded",()=>oc(),{once:!0});
+    </div>`}createRenderRoot(){return this}};Eh([M({type:Number,attribute:"min-ms"})],Ja.prototype,"minMs",2);Ja=Eh([oe("mobile-loading")],Ja);function Rs(s){let e=document.querySelector(`meta[name="${s}"]`);return e||(e=document.createElement("meta"),e.setAttribute("name",s),document.head.appendChild(e)),e}function nc(s){let e=document.querySelector(`meta[property="${s}"]`);return e||(e=document.createElement("meta"),e.setAttribute("property",s),document.head.appendChild(e)),e}function Z1(s){const e=s.replace(/\/+$/,"")||"/";return e==="/"||e.endsWith("/index.html")?"home":e.endsWith("/projects")||e.endsWith("/projects.html")?"projects":e.endsWith("/glyphs")||e.endsWith("/glyphs.html")?"glyphs":e.endsWith("/twyne")||e.endsWith("/twyne.html")?"twyne":e.endsWith("/404")||e.endsWith("/404.html")?"404":"home"}function rc(s){const e=_.t.bind(_),t=e("seo.common.description"),i=e("seo.common.keywords");switch(s){case"projects":return{title:e("seo.projects.title"),description:t,keywords:[i,e("seo.projects.keywords")].filter(Boolean).join(", ")};case"glyphs":return{title:e("seo.glyphs.title"),description:t,keywords:[i,e("seo.glyphs.keywords")].filter(Boolean).join(", ")};case"twyne":return{title:e("seo.twyne.title"),description:t,keywords:[i,e("seo.twyne.keywords")].filter(Boolean).join(", ")};case"404":return{title:e("seo.404.title"),description:t,keywords:i};case"home":default:return{title:e("seo.home.title"),description:t,keywords:i}}}function sc(s){document.title=s.title,Rs("description").setAttribute("content",s.description),Rs("keywords").setAttribute("content",s.keywords),nc("og:title").setAttribute("content",s.title),nc("og:description").setAttribute("content",s.description),Rs("twitter:title").setAttribute("content",s.title),Rs("twitter:description").setAttribute("content",s.description)}function oc(){const s=Z1(window.location.pathname);sc(rc(s)),_.on("languageChanged",()=>{sc(rc(s))})}typeof window<"u"&&document.readyState!=="loading"?oc():typeof window<"u"&&document.addEventListener("DOMContentLoaded",()=>oc(),{once:!0});

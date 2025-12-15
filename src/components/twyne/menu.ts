@@ -102,7 +102,7 @@ export class TwyneMenu extends ThemeMixin(LitElement) {
   render() {
     return html`
       <header
-        class="fixed inset-x-0 z-40 w-full bg-linear-to-b from-zinc-950 backdrop-blur to-zinc-950/80 backdrop-saturate-200 xl:fixed xl:block py-2"
+        class="fixed inset-x-0 z-40 w-full bg-linear-to-t from-zinc-950 backdrop-blur to-zinc-950/80 backdrop-saturate-200 xl:fixed xl:block py-2"
       >
         <div class="container xl:grid flex items-center xl:grid-cols-3">
           <nav class="xl:hidden">
@@ -157,7 +157,6 @@ export class TwyneMenu extends ThemeMixin(LitElement) {
               @click=${() => this.copyEmail()}
               @mouseleave=${() => this.copyEmailReset()}
               label="hello@pmjr.cc"
-              class="hidden xl:flex"
               hover="${this.lang === 'en' ? 'Click to copy' : 'Copiar e-mail'}"
             ></mail-button>
           </div>
