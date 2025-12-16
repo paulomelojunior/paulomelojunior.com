@@ -788,7 +788,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
               </div>
             </div>
             <h1
-              class="text-pretty bg-linear-to-b/oklch from-zinc-300 to-zinc-50 bg-clip-text text-[2.5rem] leading-none pt-2 tracking-[-0.05em] xl:font-semibold xl:uppercase text-transparent xl:text-[3rem] 2xl:text-[4rem]"
+              class="text-pretty bg-linear-to-t/oklch from-zinc-400 to-zinc-50 bg-clip-text text-[2.5rem] leading-none pt-2 tracking-[-0.04em] xl:font-medium xl:uppercase text-transparent xl:text-[3rem] 2xl:text-[4rem]"
             >
               <span class="block xl:hidden">
                 ${_.t("about.content.m1")}
@@ -1082,7 +1082,8 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
         </span>
       </a>
     </div>`}createRenderRoot(){return this}};To([M({type:String})],os.prototype,"href",2);To([M({type:String})],os.prototype,"label",2);To([M({type:String})],os.prototype,"index",2);os=To([oe("mobile-item")],os);var u1=Object.defineProperty,c1=Object.getOwnPropertyDescriptor,fh=(s,e,t,i)=>{for(var n=i>1?void 0:i?c1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&u1(e,t,n),n};let Ua=class extends Cn(Q){constructor(){super(...arguments),this.lang=_.language}connectedCallback(){super.connectedCallback(),_.on("languageChanged",()=>{this.lang=_.language})}disconnectedCallback(){super.disconnectedCallback(),_.off("languageChanged",()=>{this.lang=_.language})}firstUpdated(){this.renderRoot.querySelectorAll(".praxis svg").forEach(t=>{const i=t.querySelectorAll("path");ne.from(i,{scrollTrigger:{trigger:t,start:"0% 75%",toggleActions:"play none none reverse"},stagger:.12,opacity:0,fill:(this.dark,"var(--color-brand-300)"),drawSVG:!1})}),this.renderRoot.querySelectorAll(".praxis").forEach(t=>{ne.from(t.children,{scrollTrigger:{trigger:t.children,start:"0% 75%",toggleActions:"play none none reverse"},duration:.8,stagger:.1,x:"5rem",filter:"blur(.5rem)",opacity:i=>i===0?1:0})})}render(){return U`
-      <section id="section-praxis" class="bg-zinc-900">
+      <section class="bg-zinc-900 relative">
+        <div id="section-praxis" class="absolute w-full h-px -top-12"></div>
         <div
           class="relative mx-5 h-px bg-linear-to-r from-zinc-900 via-zinc-700 to-zinc-900"
         ></div>

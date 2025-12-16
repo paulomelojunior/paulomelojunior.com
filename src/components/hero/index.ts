@@ -93,7 +93,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
               </div>
             </div>
             <h1
-              class="text-pretty bg-linear-to-b/oklch from-zinc-300 to-zinc-50 bg-clip-text text-[2.5rem] leading-none pt-2 tracking-[-0.05em] xl:font-semibold xl:uppercase text-transparent xl:text-[3rem] 2xl:text-[4rem]"
+              class="text-pretty bg-linear-to-t/oklch from-zinc-400 to-zinc-50 bg-clip-text text-[2.5rem] leading-none pt-2 tracking-[-0.04em] xl:font-medium xl:uppercase text-transparent xl:text-[3rem] 2xl:text-[4rem]"
             >
               <span class="block xl:hidden">
                 ${i18next.t('about.content.m1')}

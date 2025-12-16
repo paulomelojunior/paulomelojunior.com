@@ -60,7 +60,8 @@ export class PraxisSection extends ThemeMixin(LitElement) {
 
   render() {
     return html`
-      <section id="section-praxis" class="bg-zinc-900">
+      <section class="bg-zinc-900 relative">
+        <div id="section-praxis" class="absolute w-full h-px -top-12"></div>
         <div
           class="relative mx-5 h-px bg-linear-to-r from-zinc-900 via-zinc-700 to-zinc-900"
         ></div>
