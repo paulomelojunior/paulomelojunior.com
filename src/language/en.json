@@ -209,5 +209,31 @@
     "404": {
       "title": "404 · Page not found · Paulo Melo"
     }
+  },
+  "links": {
+    "home": {
+      "label": "Home",
+      "url": "/"
+    },
+    "projects": {
+      "label": "Projects",
+      "url": "/projects"
+    },
+    "lastProject": {
+      "label": "Last project",
+      "url": "/last-project"
+    },
+    "github": {
+      "label": "GitHub",
+      "url": "https://github.com/paulomelojunior"
+    },
+    "linkedin": {
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/paulomelojunior/"
+    },
+    "email": {
+      "label": "Email",
+      "url": "mailto:hello@pmjr.cc"
+    }
   }
 }

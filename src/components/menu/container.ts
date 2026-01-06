@@ -116,22 +116,22 @@ export class MenuContainer extends ThemeMixin(LitElement) {
               </li>
               <li>
                 <mobile-item
-                  href="/"
-                  label="GitHub"
+                  href="${i18next.t('links.github.url')}"
+                  label="${i18next.t('links.github.label')}"
                   index="002"
                 ></mobile-item>
               </li>
               <li>
                 <mobile-item
-                  href="/"
-                  label="LinkedIn"
+                  href="${i18next.t('links.linkedin.url')}"
+                  label="${i18next.t('links.linkedin.label')}"
                   index="003"
                 ></mobile-item>
               </li>
               <li>
                 <mobile-item
-                  href="/"
-                  label="Email"
+                  href="${i18next.t('links.email.url')}"
+                  label="${i18next.t('links.email.label')}"
                   index="hello@pmjr.cc"
                 ></mobile-item>
               </li>
@@ -153,7 +153,7 @@ export class MenuContainer extends ThemeMixin(LitElement) {
             </span>
           </button>
           <nav>
-            <ul id="anchors" class="hidden xl:flex justify-end px-0 xl:px-20">
+            <ul id="anchors" class="hidden xl:flex justify-end px-0">
               <li class="flex-1">
                 <menu-item
                   href="#section-praxis"

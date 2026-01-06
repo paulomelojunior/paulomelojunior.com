@@ -48,11 +48,11 @@ export class ProjectsDamus extends LitElement {
           .contentHtml=${contentHtml}
         ></item-header>
         <div class="col-span-2 grid grid-cols-2 gap-4 *:rounded-[.5rem]">
-          <img src="${pic1}" loading="lazy" />
+          <img src="${pic1}" loading="lazy" class="border-2 border-zinc-800" />
           <img src="${pic2}" loading="lazy" />
           <img src="${pic3}" loading="lazy"/>
           <img src="${pic5}" loading="lazy"/>
-          <img class="col-span-2" src="${pic4}" loading="lazy"/>
+          <img class="col-span-2 border-2 border-zinc-800" src="${pic4}" loading="lazy"/>
         </div>
       </div>
     `

@@ -59,16 +59,16 @@ export class FooterSection extends LitElement {
 
     const navItems = {
       github: {
-        label: 'GitHub',
-        url: 'https://github.com/paulomelojunior',
+        label: i18next.t('links.github.label'),
+        url: i18next.t('links.github.url'),
       },
       linkedin: {
-        label: 'LinkedIn',
-        url: 'https://linkedin.com/in/paulomelojunior/',
+        label: i18next.t('links.linkedin.label'),
+        url: i18next.t('links.linkedin.url'),
       },
       email: {
-        label: 'Email',
-        url: 'mailto:hello@pmjr.cc',
+        label: i18next.t('links.email.label'),
+        url: i18next.t('links.email.url'),
       },
     }
 
@@ -114,7 +114,7 @@ export class FooterSection extends LitElement {
               ${i18next.t('connect.title')}
             </span>
             <span
-              class="hidden xl:flex items-center self-center relative px-2 stroke-brand-300"
+              class="hidden xl:flex items-center self-center relative px-2 stroke-brand-400"
             >
               ${unsafeHTML(`${logo}`)}
             </span>

@@ -64,7 +64,7 @@ export class ProjectsIfficient extends LitElement {
         <item-header title="${i18next.t('ifficient.title')}" tags="${i18next.t('ifficient.tags')}" .contentHtml=${contentHtml}></item-header>
         <div class="col-span-2 grid gap-4 *:rounded-[.75rem]">
           <div
-            class="relative group cursor-pointer aspect-video overflow-hidden border-2 border-zinc-900 before:hover:opacity-1 before:absolute before:inset-0 hover:before:bg-zinc-950/50 before:transition-colors before:duration-200"
+            class="relative group cursor-pointer aspect-video overflow-hidden border-2 border-zinc-800 before:hover:opacity-1 before:absolute before:inset-0 hover:before:bg-zinc-950/50 before:transition-colors before:duration-200"
             @click=${this.handleSeeFullPage}
           >
             <img id="ifficient-homepage" class="w-full" src="${p1}" />

@@ -4,8 +4,8 @@ import { gsap } from 'gsap'
 import spin from './loading.svg?raw'
 import { unsafeHTML } from 'lit/directives/unsafe-html.js'
 
-@customElement('mobile-loading')
-export class MobileLoading extends LitElement {
+@customElement('page-loading')
+export class PageLoading extends LitElement {
   @property({ type: Number, attribute: 'min-ms' }) minMs = 500
 
   private mountedAt = 0

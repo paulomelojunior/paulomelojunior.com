@@ -101,7 +101,7 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
           <div class="flex items-center">
             <button
               @click=${() => this.getPreviousPage()}
-              class="flex size-12 p-3 cursor-pointer transition-background duration-500 items-center justify-center opacity-50 hover:opacity-100 hover:bg-zinc-800 rounded-xs"
+              class="flex size-10 p-3 cursor-pointer transition-background duration-500 items-center justify-center opacity-50 hover:opacity-100 hover:bg-zinc-800 rounded-full"
               title="Go back to homepage"
             >
               <img

@@ -61,7 +61,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
     return {
       1: {
         hide: false,
-        custom: 'text-brand-300',
+        custom: 'text-brand-400',
         start: '2019',
         end: '2025',
         title: i18next.t('journey.t4'),

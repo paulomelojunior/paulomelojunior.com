@@ -114,7 +114,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
             data-parallax-layer="1"
           ></div>
           <div
-            class="grid px-5 xl:grid-cols-2 xl:gap-24"
+            class="grid px-5 xl:grid-cols-2 xl:gap-24 gap-6"
             data-parallax-layer="1"
           >
             <div class="xl:py-24 2xl:py-32">
@@ -125,7 +125,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
                 >${i18next.t('about.content.p1')}
               </p>
             </div>
-            <div class="hidden xl:block xl:py-24 2xl:py-32">
+            <div class="xl:py-24 2xl:py-32">
               <p class="text-default text-pretty">
                 <mark
                   class="inline-block bg-transparent text-zinc-50"

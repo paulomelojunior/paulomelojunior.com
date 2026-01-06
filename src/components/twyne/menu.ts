@@ -121,22 +121,22 @@ export class TwyneMenu extends ThemeMixin(LitElement) {
               </li>
               <li>
                 <mobile-item
-                  href="/"
-                  label="GitHub"
+                  href="${i18next.t('links.github.url')}"
+                  label="${i18next.t('links.github.label')}"
                   index="002"
                 ></mobile-item>
               </li>
               <li>
                 <mobile-item
-                  href="/"
-                  label="LinkedIn"
+                  href="${i18next.t('links.linkedin.url')}"
+                  label="${i18next.t('links.linkedin.label')}"
                   index="003"
                 ></mobile-item>
               </li>
               <li>
                 <mobile-item
-                  href="/"
-                  label="Email"
+                  href="${i18next.t('links.email.url')}"
+                  label="${i18next.t('links.email.label')}"
                   index="hello@pmjr.cc"
                 ></mobile-item>
               </li>
@@ -145,7 +145,7 @@ export class TwyneMenu extends ThemeMixin(LitElement) {
           <div class="flex items-center">
           <button
               @click=${() => this.getPreviousPage()}
-              class="flex size-12 p-3 cursor-pointer transition-background duration-500 items-center justify-center opacity-50 hover:opacity-100 hover:bg-zinc-800 rounded-xs"
+              class="flex size-10 p-3 cursor-pointer transition-background duration-500 items-center justify-center opacity-50 hover:opacity-100 hover:bg-zinc-800 rounded-full"
               title="Go back to homepage"
             >
               <img

@@ -61,12 +61,12 @@ export class ProjectsAllugator extends LitElement {
           .contentHtml=${contentHtml}
         ></item-header>
         <div class="col-span-2 grid grid-cols-3 gap-4 *:rounded-[.5rem]">
-          <img src="${social1}" loading="lazy" />
-          <img src="${social5}" loading="lazy" />
-          <img src="${social3}" loading="lazy" />
-          <img class="col-span-2 row-span-2" src="${social2}" loading="lazy" />
-          <img src="${social4}" loading="lazy" />
+          <img class="mix-blend-screen border-2 border-zinc-800" src="${social4}" loading="lazy" />
           <img src="${social6}" loading="lazy" />
+          <img src="${social1}" loading="lazy" />
+          <img class="col-span-2 row-span-2 mix-blend-screen" src="${social2}" loading="lazy" />
+          <img src="${social5}" loading="lazy" />
+          <img class="border-2 border-zinc-800" src="${social3}" loading="lazy" />
         </div>
       </div>
     `
