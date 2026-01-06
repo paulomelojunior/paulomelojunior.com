@@ -81,7 +81,7 @@ export class CasesSection extends LitElement {
                 ${i18next.t('cases.description')}
               </p>
               <a
-                href="/last-project"
+                href="${i18next.t('links.lastProject.url')}"
                 class="cta-button cta-button--accent flex items-center gap-3 self-center ps-6"
               >
                 ${i18next.t('cases.cta')}

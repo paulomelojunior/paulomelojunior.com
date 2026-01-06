@@ -109,8 +109,8 @@ export class MenuContainer extends ThemeMixin(LitElement) {
               </li>
               <li>
                 <mobile-item
-                  href="/last-project"
-                  label="Last project"
+                  href="${i18next.t('links.lastProject.url')}"
+                  label="${i18next.t('links.lastProject.label')}"
                   index="001"
                 ></mobile-item>
               </li>
@@ -175,7 +175,7 @@ export class MenuContainer extends ThemeMixin(LitElement) {
             </ul>
           </nav>
           <div class="hidden xl:flex items-center justify-end gap-2">
-            <a class="cta-button py-1.5 px-4 uppercase font-semibold text-[.75rem] tracking-[0.05em]" href="/projects">
+            <a class="cta-button py-1.5 px-4 uppercase font-semibold text-[.75rem] tracking-[0.05em]" href="${i18next.t('links.projects.url')}">
               ${i18next.t('featured.button')}
             </a>
             <div class="flex h-12 items-center justify-center px-1 xl:h-12">

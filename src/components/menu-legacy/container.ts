@@ -89,20 +89,20 @@ export class MenuContainer extends ThemeMixin(LitElement) {
             <ul id="anchors" class="flex bg-zinc-950 overflow-hidden fixed inset-0 flex-col justify-center gap-4 w-dvw transition-all duration-500 ${this.more ? 'h-dvh' : 'h-0'}">
               <li>
                 <mobile-item
-                  href="/last-project"
-                  label="${i18next.t('menu.twyne')}"
+                  href="${i18next.t('links.lastProject.url')}"
+                  label="${i18next.t('links.lastProject.label')}"
                 ></mobile-item>
               </li>
               <li>
                 <mobile-item
-                  href="/projects"
-                  label="${i18next.t('menu.projects')}"
+                  href="${i18next.t('links.projects.url')}"
+                  label="${i18next.t('links.projects.label')}"
                 ></mobile-item>
               </li>
               <li>
                 <mobile-item
-                  href="/"
-                  label="${i18next.t('menu.resume')}"
+                  href="${i18next.t('links.resume.url')}"
+                  label="${i18next.t('links.resume.label')}"
                 ></mobile-item>
               </li>
             </ul>
@@ -179,7 +179,7 @@ export class MenuContainer extends ThemeMixin(LitElement) {
             <span> Made by a human being </span>
           </div>
           <div class="hidden xl:flex items-center justify-end gap-2">
-            <a class="cta-button py-1.5 px-4 uppercase font-semibold text-[.75rem] tracking-[0.05em]" href="/projects">
+            <a class="cta-button py-1.5 px-4 uppercase font-semibold text-[.75rem] tracking-[0.05em]" href="${i18next.t('links.projects.url')}">
               ${i18next.t('featured.button')}
             </a>
             <div class="flex h-12 items-center justify-center px-1 xl:h-12">
