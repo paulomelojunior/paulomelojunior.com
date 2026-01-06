@@ -26,12 +26,11 @@ function ensureOg(property: string): HTMLMetaElement {
 	return el
 }
 
-function getPageKeyFromPath(pathname: string): 'home' | 'projects' | 'glyphs' | 'twyne' | '404' {
+function getPageKeyFromPath(pathname: string): 'home' | 'projects' | 'lastProject' | '404' {
 	const path = pathname.replace(/\/+$/, '') || '/'
 	if (path === '/' || path.endsWith('/index.html')) return 'home'
 	if (path.endsWith('/projects') || path.endsWith('/projects.html')) return 'projects'
-	if (path.endsWith('/glyphs') || path.endsWith('/glyphs.html')) return 'glyphs'
-	if (path.endsWith('/twyne') || path.endsWith('/twyne.html')) return 'twyne'
+	if (path.endsWith('/last-project') || path.endsWith('/last-project.html')) return 'lastProject'
 	if (path.endsWith('/404') || path.endsWith('/404.html')) return '404'
 	return 'home'
 }
@@ -48,17 +47,11 @@ function getSeoForPage(page: ReturnType<typeof getPageKeyFromPath>): SeoData {
 				description,
 				keywords: [commonKeywords, t('seo.projects.keywords') as string].filter(Boolean).join(', '),
 			}
-		case 'glyphs':
+		case 'lastProject':
 			return {
-				title: t('seo.glyphs.title') as string,
+				title: t('seo.lastProject.title') as string,
 				description,
-				keywords: [commonKeywords, t('seo.glyphs.keywords') as string].filter(Boolean).join(', '),
-			}
-		case 'twyne':
-			return {
-				title: t('seo.twyne.title') as string,
-				description,
-				keywords: [commonKeywords, t('seo.twyne.keywords') as string].filter(Boolean).join(', '),
+				keywords: [commonKeywords, t('seo.lastProject.keywords') as string].filter(Boolean).join(', '),
 			}
 		case '404':
 			return {

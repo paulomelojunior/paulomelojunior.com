@@ -192,22 +192,18 @@
       "keywords": "Paul M, Paulo Melo Jr, pmjr, digital product designer, product designer, interface designer, UI/UX, UX designer, UI designer, creative coder, front-end, frontend, web design, design system, GSAP, animations, motion design, branding, portfolio, Brazil, São Paulo, decentralized technologies, bitcoin, nostr"
     },
     "home": {
-      "title": "Paulo Melo · Designer and coder"
+      "title": "Paulo Melo Jr. · Designer and coder"
     },
     "projects": {
-      "title": "Featured projects · Paulo Melo",
+      "title": "Featured projects · Paulo Melo Jr.",
       "keywords": "archive, projects, case studies"
     },
-    "glyphs": {
-      "title": "Glyphs · Paulo Melo",
-      "keywords": "glyphs, symbols, special characters, unicode, copy symbols, icons"
-    },
-    "twyne": {
-      "title": "Twyne · Paulo Melo",
+    "lastProject": {
+      "title": "Twyne · Paulo Melo Jr.",
       "keywords": "twyne, case study, product design, ui/ux, onboarding, mobile, web, adtech, interactive marketing, lead generation"
     },
     "404": {
-      "title": "404 · Page not found · Paulo Melo"
+      "title": "404 · Page not found"
     }
   },
   "links": {
