@@ -31,30 +31,6 @@ function initGsap() {
       y: '10rem',
       stagger: 0.1,
     })
-
-    gsap.from('.cases', {
-      scrollTrigger: {
-        trigger: '#cases',
-        start: 'top 100%',
-        end: 'bottom 80%',
-        toggleActions: 'play none none reverse',
-        scrub: 2,
-      },
-      stagger: -0.1,
-      y: '10rem',
-    })
-  })
-
-  gsap.from('#menu > *', {
-    scrollTrigger: {
-      trigger: 'footer',
-      start: 'top 50%',
-      end: 'top 0%',
-      toggleActions: 'play none none reverse',
-    },
-    opacity: 0,
-    stagger: 0.1,
-    y: '5rem',
   })
 }
 

@@ -1,6 +1,6 @@
 import { gsap } from 'gsap'
 import i18next from '../../i18n'
-import { LitElement, html, PropertyValues } from 'lit'
+import { LitElement, html } from 'lit'
 import { unsafeHTML } from 'lit/directives/unsafe-html.js'
 import { customElement, property } from 'lit/decorators.js'
 import logo from './logo.svg?raw'
@@ -52,8 +52,8 @@ export class FooterSection extends LitElement {
     }
   }
 
-  protected firstUpdated(_changedProperties: PropertyValues): void {
-    const navList = document.querySelector('#menu')
+  protected firstUpdated() {
+    const navList = this.querySelector('#menu')
 
     if (!navList) return
 
@@ -92,6 +92,27 @@ export class FooterSection extends LitElement {
     })
 
     this.initScrambleText()
+    this.initMenuAnimation()
+  }
+
+  private initMenuAnimation() {
+    const footerElement = this.querySelector('footer')
+    const menuElement = this.querySelector('#menu')
+    const menuItems = this.querySelectorAll('#menu > *')
+    
+    if (footerElement && menuElement && menuItems.length > 0) {
+      gsap.from(Array.from(menuItems), {
+        scrollTrigger: {
+          trigger: footerElement,
+          start: 'top 50%',
+          end: 'top 0%',
+          toggleActions: 'play none none reverse',
+        },
+        opacity: 0,
+        stagger: 0.1,
+        y: '5rem',
+      })
+    }
   }
 
   render() {

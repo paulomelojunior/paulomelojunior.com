@@ -1,3 +1,4 @@
+import { gsap } from 'gsap'
 import i18next from '../../i18n'
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
@@ -20,6 +21,33 @@ export class CasesSection extends LitElement {
 
   private handleLanguageChange = () => {
     this.lang = i18next.language
+  }
+
+  private initAnimation() {
+    const casesElement = this.querySelector('#cases')
+    const casesImages = this.querySelectorAll('#cases .cases')
+    
+    if (casesElement && casesImages.length > 0) {
+      const mm = gsap.matchMedia()
+      
+      mm.add('(min-width: 1024px)', () => {
+        gsap.from(Array.from(casesImages), {
+          scrollTrigger: {
+            trigger: casesElement,
+            start: 'top 100%',
+            end: 'bottom 80%',
+            toggleActions: 'play none none reverse',
+            scrub: 2,
+          },
+          stagger: -0.1,
+          y: '10rem',
+        })
+      })
+    }
+  }
+
+  protected firstUpdated() {
+    this.initAnimation()
   }
 
   private renderTitle(title: string) {
