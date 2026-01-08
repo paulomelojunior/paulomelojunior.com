@@ -69,10 +69,10 @@ export class HeroSection extends ThemeMixin(LitElement) {
           class="container flex min-h-[calc(100svh-4rem)] flex-col justify-end pt-12 2xl:justify-end xl:pt-0"
         >
           <div
-            class="flex flex-col 2xl:items-center px-5 xl:pt-24 2xl:pt-32"
+            class="flex flex-col 2xl:items-center px-5 xl:pt-24 2xl:pt-32 my-auto"
             data-parallax-layer="1"
           >
-            <div class="flex items-center gap-4 mb-10 2xl:-ms-6">
+            <div class="flex items-center gap-4 mb-6 md:mb-10 2xl:-ms-6">
               <img
                 src="${profile1x}"
                 srcset="${profile1x} 64w, ${profile2x} 96w, ${profile3x} 128w"
@@ -116,7 +116,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
                 ${i18next.t('about.content.d2')}
               </span>
             </h1>
-            <div class="flex gap-2 pb-16 pt-12">
+            <div class="flex gap-2 pb-0 pt-10 md:pb-16 md:pt-12">
               <a
                 href="${i18next.t('links.lastProject.url')}"
                 class="cta-button cta-button--accent flex items-center gap-3 self-center px-6 outline-8 outline-zinc-950"
