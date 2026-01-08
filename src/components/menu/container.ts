@@ -3,8 +3,8 @@ import i18next from '../../i18n'
 import { html, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { ThemeMixin } from '../../store/theme'
-@customElement('menu-container')
 
+@customElement('menu-container')
 export class MenuContainer extends ThemeMixin(LitElement) {
   @property({ type: Boolean }) more = false
   @property({ type: String }) lang = i18next.language
@@ -153,7 +153,7 @@ export class MenuContainer extends ThemeMixin(LitElement) {
             </span>
           </button>
           <nav>
-            <ul id="anchors" class="hidden xl:flex justify-end px-0">
+            <ul id="anchors" class="hidden xl:flex justify-end xl:px-12">
               <li class="flex-1">
                 <menu-item
                   href="#section-praxis"

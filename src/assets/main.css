@@ -18,9 +18,8 @@
 
 @theme {
   --font-sans: 'Mona Sans', sans-serif;
-  --font-sans--font-feature-settings: 'ss01';
-
   --font-mono: 'Geist Mono', monospace;
+  --font-sans--font-feature-settings: 'ss01';
   
   --hue: 256;
   --brand: 256;
@@ -87,9 +86,11 @@
 
   /* Body */
   body {
-    @apply pt-[env(safe-area-inset-top)]
+    @apply
+      pt-[env(safe-area-inset-top)]
       bg-zinc-950
-      text-zinc-300;
+      text-zinc-300
+      subpixel-antialiased;
   }
 
   .text-default {
@@ -118,7 +119,7 @@
   
   .hero::before {
     position: absolute;
-    background: url('imgs/pattern.svg');
+    background: url('imgs/pattern.svg'), var(--color-brand-900);
     content: '';
     height: 100vh;
     top: -2px;
@@ -318,7 +319,7 @@
       background-position 0.2s cubic-bezier(0.75, 0, 0.5, 1),
       filter 0.2s cubic-bezier(0.75, 0, 0.5, 1);
     transition-delay: 0.2s, 0s;
-    border-radius: 0.125rem;
+    border-radius: 1rem;
   }
 
   .menu-item:hover > div,

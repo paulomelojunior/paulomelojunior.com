@@ -177,7 +177,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
     return html`
       <section id="section-journey">
         <div
-          class="xl:py-24 2xl:py-32 bg-[linear-gradient(var(--color-zinc-950),var(--color-zinc-950)_100%)]"
+          class="xl:py-24 2xl:py-32"
         >
           <div
             id="job"
