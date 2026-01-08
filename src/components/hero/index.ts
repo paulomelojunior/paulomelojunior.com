@@ -160,7 +160,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
             class="container grid grid-cols-12 items-end ps-5 sm:ps-0"
             data-parallax-layer="2"
           >
-            <div class="block sm:hidden xl:block col-span-12 xl:col-span-3">
+            <div class="hidden xl:block col-span-12 xl:col-span-3">
               <img src="${s1}" class="aspect-[4/3] sm:aspect-[1/1] w-full object-cover mask-b-from-50% sm:mask-r-from-50% object-top rounded-tl-lg" />
             </div>
             <div class="hidden sm:block col-span-8 xl:col-span-6">
