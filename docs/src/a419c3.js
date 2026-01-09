@@ -846,13 +846,13 @@ var Eh=Object.defineProperty;var kh=(s,e,t)=>e in s?Eh(s,e,{enumerable:!0,config
             data-parallax-layer="2"
           >
             <div class="hidden xl:block col-span-12 xl:col-span-3">
-              <img src="${Gm}" class="aspect-[4/3] sm:aspect-[1/1] w-full object-cover mask-b-from-50% sm:mask-r-from-50% object-top rounded-tl-lg" />
+              <img src="${Gm}" class="aspect-[4/3] sm:aspect-[1/1] w-full object-cover mask-b-from-0% sm:mask-r-from-50% object-top rounded-tl-lg" />
             </div>
             <div class="hidden sm:block col-span-8 xl:col-span-6">
-              <img src="${Km}" class="w-full object-cover object-top mask-b-from-50% rounded-t-lg" />
+              <img src="${Km}" class="w-full object-cover object-top mask-b-from-75% rounded-t-lg" />
             </div>
             <div class="hidden sm:block col-span-4 xl:col-span-3">
-              <img src="${Jm}" class="aspect-[1/1] w-full object-cover mask-b-from-50% mask-l-from-50% object-top rounded-tr-lg" />
+              <img src="${Jm}" class="aspect-[1/1] w-full object-cover mask-b-from-50% mask-l-from-0% object-top rounded-tr-lg" />
             </div>
           </div>
         </div>
