@@ -638,7 +638,7 @@ var Eh=Object.defineProperty;var kh=(s,e,t)=>e in s?Eh(s,e,{enumerable:!0,config
             class="hidden h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent xl:block"
           ></div>
           <div
-            class="cases-background relative bg-gradient-to-b from-zinc-900 flex rounded-4xl 2xl:h-[512px]"
+            class="cases-background relative bg-gradient-to-l from-zinc-900 flex rounded-4xl 2xl:h-[512px]"
           >
             <div class="hidden w-2/3 justify-center xl:flex">
               <span
@@ -678,7 +678,7 @@ var Eh=Object.defineProperty;var kh=(s,e,t)=>e in s?Eh(s,e,{enumerable:!0,config
               </p>
               <a
                 href="${m.t("links.lastProject.url")}"
-                class="cta-button cta-button--accent flex items-center gap-3 self-center ps-6"
+                class="cta-button cta-button--accent flex items-center gap-3 self-center ps-6 w-full justify-between"
               >
                 ${m.t("cases.cta")}
                 <svg
