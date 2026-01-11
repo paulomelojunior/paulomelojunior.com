@@ -319,7 +319,7 @@
       background-position 0.2s cubic-bezier(0.75, 0, 0.5, 1),
       filter 0.2s cubic-bezier(0.75, 0, 0.5, 1);
     transition-delay: 0.2s, 0s;
-    border-radius: 1rem;
+    border-radius: .125rem;
   }
 
   .menu-item:hover > div,

@@ -13,14 +13,16 @@
     "status": "Available for hiring",
     "picDescription": "An image of Paul M., a bearded man with short, dark hair. He is looking to the right with a thoughtful expression. He is wearing a plain t-shirt.",
     "content": {
-      "m1": "Product designer",
-      "m2": "and creative coder",
-      "d1": "Designer and coder crafting",
-      "d2": "future-ready digital interactions.",
+      "title": "Software designer",
+      "subtitle": "Crafting future-ready digital interactions.",
       "h1": "Enthusiast of decentralized technologies",
       "p1": ", driven by the open-source movement and other geeky stuff. Previously part of an interactive marketing company focused on lead generation from Denver, CO.",
       "h2": "Devoted to quality",
       "p2": ", I commit to continuous learning and professional development, staying abreast of emerging design trends tech advancements and best practices to deliver cutting-edge solutions."
+    },
+    "cta": {
+      "label": "Last project showcase",
+      "url": "/last-project"
     }
   },
   "praxis": {
@@ -56,8 +58,8 @@
     "title": "Reach out"
   },
   "featured": {
-    "title": "Featured <br> projects",
-    "button": "Projects"
+    "title": "Featured <br> works",
+    "button": "Featured works"
   },
   "twyne": {
     "menu": {
@@ -212,7 +214,7 @@
       "url": "/"
     },
     "projects": {
-      "label": "Projects",
+      "label": "Featured works",
       "url": "/projects"
     },
     "lastProject": {

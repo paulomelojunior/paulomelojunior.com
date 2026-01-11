@@ -13,14 +13,16 @@
     "status": "Disponível para contratação",
     "picDescription": "Uma foto de Paulo, um homem barbado com cabelos curtos e escuros. Ele está olhando para a direita com uma expressão pensativa. Ele usa uma camisa simples.",
     "content": {
-      "m1": "Product designer",
-      "m2": "e front-end coder",
-      "d1": "Designer e programador criando",
-      "d2": "experiências digitais para o futuro.",
+      "title": "Software designer",
+      "subtitle": "Criando experiências digitais prontas para o futuro.",
       "h1": "Entusiasta de tecnologias descentralizadas",
       "p1": " e valorizando soluções open-source. Recentemente atuei em uma empresa de marketing interativo especializada em geração de leads, com base em Denver, CO.",
       "h2": "Comprometido com a qualidade",
       "p2": " e o aprendizado contínuo, mantenho-me atualizado sobre tendências de design, avanços tecnológicos e as melhores práticas do setor para entregar soluções modernas e eficazes."
+    },
+    "cta": {
+      "label": "Showcase do último projeto",
+      "url": "/last-project"
     }
   },
   "praxis": {
@@ -58,7 +60,7 @@
   },
   "featured": {
     "title": "Projetos <br> em destaque",
-    "button": "Projetos"
+    "button": "Projetos destaque"
   },
   "twyne": {
     "menu": {

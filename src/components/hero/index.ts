@@ -66,13 +66,11 @@ export class HeroSection extends ThemeMixin(LitElement) {
     return html`
       <section class="hero" data-parallax-layers>
         <div
-          class="container flex min-h-[calc(100svh-4rem)] flex-col justify-end pt-12 2xl:justify-end xl:pt-0"
+          class="container flex flex-col justify-between min-h-[calc(100svh-4rem)] pt-16"
         >
-          <div
-            class="flex flex-col 2xl:items-center px-5 xl:pt-24 2xl:pt-32 my-auto"
-            data-parallax-layer="1"
-          >
-            <div class="flex items-center gap-4 mb-6 md:mb-10 2xl:-ms-6">
+          <div class="flex flex-col text-center items-center my-auto gap-12 px-5" data-parallax-layer="1">
+
+            <div class="flex flex-col xl:flex-row items-center gap-4 md:-mb-3">
               <img
                 src="${profile1x}"
                 srcset="${profile1x} 64w, ${profile2x} 96w, ${profile3x} 128w"
@@ -85,7 +83,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
                 alt="${i18next.t('about.picDescription')}"
                 class="rounded-full size-16 bg-zinc-900 -rotate-2 outline-4 outline-zinc-950"
               />
-              <div class="grid gap-2 leading-none">
+              <div class="grid gap-2 leading-none xl:text-left">
                 <span class="text-[1.25rem] text-white"> Paulo Melo Jr. </span>
                 <span class="flex items-center gap-2 text-[1rem]">
                   <span class="relative flex size-3">
@@ -100,32 +98,26 @@ export class HeroSection extends ThemeMixin(LitElement) {
                 </span>
               </div>
             </div>
-            <h1
-              class="text-pretty bg-linear-to-t/oklch from-zinc-200 to-zinc-50 bg-clip-text text-[2.5rem] leading-none tracking-[-0.06em] 2xl:text-center text-transparent xl:text-[3rem] 2xl:text-[4rem] xl:uppercase"
-            >
-              <span class="block md:hidden">
-                ${i18next.t('about.content.m1')}
-              </span>
-              <span class="block md:hidden">
-                ${i18next.t('about.content.m2')}
-              </span>
-              <span class="hidden md:block">
-                ${i18next.t('about.content.d1')}
-              </span>
-              <span class="hidden md:block">
-                ${i18next.t('about.content.d2')}
-              </span>
-            </h1>
-            <div class="flex gap-2 pb-0 pt-10 md:pb-16 md:pt-12">
+            
+            <div class="flex flex-col gap-4 md:gap-2">
+              <h1 class="text-pretty text-zinc-50 font-semibold text-[2.5rem] leading-none tracking-[-0.06em] xl:text-[3rem] 2xl:text-[4rem] uppercase">
+                ${i18next.t('about.content.title')}
+              </h1>
+              <h2 class="text-balance md:leading-none text-[1.25rem] xl:text-[1.5rem] 2xl:text-[2rem] text-zinc-200 tracking-[-0.02em] xl:font-light">
+                ${i18next.t('about.content.subtitle')}
+              </h2>
+            </div>
+
+            <div class="flex relative gap-2">
               <a
-                href="${i18next.t('links.lastProject.url')}"
+                href="${i18next.t('about.cta.url')}"
                 class="cta-button cta-button--accent flex items-center gap-3 self-center px-6 outline-8 outline-zinc-950"
               >
-                ${i18next.t('links.lastProject.label')}
+                ${i18next.t('about.cta.label')}
               </a>
               <a
                 href="#section-praxis"
-                class="rounded-full size-[44px] transition-color duration-200 bg-zinc-800 hover:bg-zinc-700 flex justify-center items-center outline-4 outline-zinc-950"
+                class="hidden xl:flex rounded-full size-[44px] transition-color duration-200 bg-zinc-800 hover:bg-zinc-700 justify-center items-center outline-4 outline-zinc-950"
                 title="Scroll page"
               >
                 <img
@@ -134,6 +126,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
                 />
               </a>
             </div>
+
           </div>
           <div
             class="hidden px-5 xl:grid-cols-2 xl:gap-24 gap-6"
