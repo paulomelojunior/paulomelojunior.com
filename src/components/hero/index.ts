@@ -68,9 +68,9 @@ export class HeroSection extends ThemeMixin(LitElement) {
         <div
           class="container flex flex-col justify-between min-h-[calc(100svh-4rem)] pt-16"
         >
-          <div class="flex flex-col md:items-center my-auto gap-12 px-5" data-parallax-layer="1">
+          <div class="flex flex-col items-center my-auto gap-16 md:gap-12 px-5" data-parallax-layer="1">
 
-            <div class="flex items-center gap-4 md:-mb-3">
+            <div class="flex items-center gap-4 -mb-2 md:-mb-3">
               <img
                 src="${profile1x}"
                 srcset="${profile1x} 64w, ${profile2x} 96w, ${profile3x} 128w"
@@ -101,7 +101,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
               </div>
             </div>
             
-            <div class="flex flex-col gap-4 md:gap-2 md:text-center">
+            <div class="flex flex-col gap-2 text-center">
               <h1 class="text-pretty text-zinc-50 font-semibold text-[2.5rem] leading-none tracking-[-0.06em] xl:text-[3rem] 2xl:text-[4rem] uppercase">
                 ${i18next.t('about.content.title')}
               </h1>
@@ -155,8 +155,8 @@ export class HeroSection extends ThemeMixin(LitElement) {
             class="container grid grid-cols-12 items-end ps-5 sm:ps-0"
             data-parallax-layer="2"
           >
-            <div class="hidden xl:block col-span-12 xl:col-span-3">
-              <img src="${s1}" class="aspect-[4/3] sm:aspect-[1/1] w-full object-cover mask-b-from-0% sm:mask-r-from-50% object-top rounded-tl-lg" />
+            <div class="hidden sm:hidden xl:block col-span-12 xl:col-span-3">
+              <img src="${s1}" class="aspect-[4/3] sm:aspect-[1/1] w-full object-cover mask-b-from-50% sm:mask-b-from-0% sm:mask-r-from-50% object-top rounded-tl-lg" />
             </div>
             <div class="hidden sm:block col-span-8 xl:col-span-6">
               <img src="${s2}" class="w-full object-cover object-top mask-b-from-75% rounded-t-lg" />

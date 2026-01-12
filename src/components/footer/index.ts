@@ -78,12 +78,12 @@ export class FooterSection extends LitElement {
       const indexStr = (i + 1).toString().padStart(2, '0')
       const navItem = `
 				<div class="border-b border-zinc-800 xl:border-0">
-					<a target="_blank" class="menu-item h-20 xl:h-16 px-5 pt-1 flex items-center text-zinc-100 relative" rel="noopener noreferrer" href="${e.url}">
+					<a target="_blank" class="menu-item h-20 xl:h-16 px-5 xl:pt-1 flex items-center text-zinc-100 relative" rel="noopener noreferrer" href="${e.url}">
 						${e.label}
 						<div class="absolute flex items-center px-5 pt-1 inset-0 xl:rounded-full text-zinc-950">
 							${e.label}
 						</div>
-						<span class="xl:hidden absolute opacity-50 right-6 bottom-6 font-mono text-[.75rem] tracking-[0.05em]">
+						<span class="xl:hidden absolute opacity-50 mix-blend-difference right-6 bottom-6 font-mono text-[.75rem] tracking-[0.05em]">
 							${e.label === 'Email' ? 'hello@pmjr.cc' : indexStr}
 						</span>
 					</a>
