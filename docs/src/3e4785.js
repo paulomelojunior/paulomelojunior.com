@@ -753,9 +753,9 @@ var Eh=Object.defineProperty;var kh=(s,e,t)=>e in s?Eh(s,e,{enumerable:!0,config
         <div
           class="container flex flex-col justify-between min-h-[calc(100svh-4rem)] pt-16"
         >
-          <div class="flex flex-col text-center items-center my-auto gap-12 px-5" data-parallax-layer="1">
+          <div class="flex flex-col md:items-center my-auto gap-12 px-5" data-parallax-layer="1">
 
-            <div class="flex flex-col xl:flex-row items-center gap-4 md:-mb-3">
+            <div class="flex items-center gap-4 md:-mb-3">
               <img
                 src="${tc}"
                 srcset="${tc} 64w, ${Ym} 96w, ${Xm} 128w"
@@ -766,11 +766,13 @@ var Eh=Object.defineProperty;var kh=(s,e,t)=>e in s?Eh(s,e,{enumerable:!0,config
                 decoding="async"
                 loading="eager"
                 alt="${m.t("about.picDescription")}"
-                class="rounded-full size-16 bg-zinc-900 -rotate-2 outline-4 outline-zinc-950"
+                class="rounded-full size-14 md:size-16 bg-zinc-900 outline-4 outline-zinc-950"
               />
-              <div class="grid gap-2 leading-none xl:text-left">
-                <span class="text-[1.25rem] text-white"> Paulo Melo Jr. </span>
-                <span class="flex items-center gap-2 text-[1rem]">
+              <div class="grid gap-2 leading-none">
+                <span class="md:text-[1.25rem] text-white">
+                  Paulo Melo Jr.
+                </span>
+                <span class="flex items-center gap-2 font-medium text-[.875rem] md:text-[1rem]">
                   <span class="relative flex size-3">
                     <span
                       class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400"
@@ -784,7 +786,7 @@ var Eh=Object.defineProperty;var kh=(s,e,t)=>e in s?Eh(s,e,{enumerable:!0,config
               </div>
             </div>
             
-            <div class="flex flex-col gap-4 md:gap-2">
+            <div class="flex flex-col gap-4 md:gap-2 md:text-center">
               <h1 class="text-pretty text-zinc-50 font-semibold text-[2.5rem] leading-none tracking-[-0.06em] xl:text-[3rem] 2xl:text-[4rem] uppercase">
                 ${m.t("about.content.title")}
               </h1>
