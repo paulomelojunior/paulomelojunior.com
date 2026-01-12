@@ -87,6 +87,9 @@ export class TwyneMobile extends LitElement {
           mask-image: url(${mask});
           mask-mode: luminance;
           mask-size: cover;
+          -webkit-mask-image: url(${mask});
+          -webkit-mask-mode: luminance;
+          -webkit-mask-size: cover;
         }
       </style>
     `
