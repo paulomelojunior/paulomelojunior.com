@@ -81,12 +81,12 @@ export class TwyneProposal extends LitElement {
 
     return html`
       <ul
-        class="text-default leading-loose 2xl:text-[1.25rem] text-zinc-100"
+        class="text-sm leading-loose 2xl:text-[1.25rem] text-zinc-100 flex flex-col gap-4 xl:gap-0"
       >
         ${proposalList.map(
           (item) => html`
             <li
-              class="flex items-center gap-2 before:-ms-2 xl:gap-4 before:text-default before:text-zinc-700 before:content-['✦']"
+              class="flex items-baseline gap-2 xl:gap-4 before:text-zinc-700 before:content-['✦'] text-balance"
             >
               ${item}
             </li>

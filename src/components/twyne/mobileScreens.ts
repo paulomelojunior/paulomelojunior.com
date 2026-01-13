@@ -8,6 +8,7 @@ import e2 from './imgs/e2.png'
 import e3 from './imgs/e3.png'
 import e4 from './imgs/e4.png'
 import e5 from './imgs/e5.png'
+import mask from './imgs/mask.png'
 
 @customElement('mobile-screens')
 export class Mobilecreens extends LitElement {
@@ -87,10 +88,20 @@ export class Mobilecreens extends LitElement {
       <section class="relative px-2 mt-24 xl:mt-32">
         <div class="container">
           <h2
-            class="mb-10 text-[2rem] text-center xl:text-[2.5rem] leading-none tracking-[-.02em] 2xl:text-[3rem] text-zinc-100"
+            class="mb-10 text-[2rem] text-center xl:text-[2.5rem] leading-normal tracking-[-.02em] 2xl:text-[3rem] text-zinc-100"
           >
             ${unsafeHTML(i18next.t('twyne.mobile.t1'))}
           </h2>
+          <style>
+            .mobile-screen {
+              mask-image: url(${mask});
+              mask-mode: luminance;
+              mask-size: cover;
+              -webkit-mask-image: url(${mask});
+              -webkit-mask-mode: luminance;
+              -webkit-mask-size: cover;
+            }
+          </style>
           <div class="mob-carrossel relative overflow-hidden">
             <img
               src="${e1}"

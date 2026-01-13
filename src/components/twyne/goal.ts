@@ -26,7 +26,7 @@ export class TwyneGoal extends LitElement {
       <section id="goal" class="container py-24 px-6 xl:p-24 2xl:p-32">
         <div class="xl:grid grid-cols-4 justify-center">
           <div
-            class="col-span-2 col-start-2 flex aspect-square flex-col justify-center"
+            class="col-span-2 col-start-2 flex xl:aspect-square flex-col justify-center"
           >
             <h2
               class="mb-10 text-[2rem] xl:text-[2.5rem] leading-none tracking-[-.02em] 2xl:text-[3rem] text-zinc-100"
@@ -34,11 +34,11 @@ export class TwyneGoal extends LitElement {
               ${i18next.t('twyne.goal.t1')}
             </h2>
             <p
-              class="mb-8 text-pretty text-default leading-loose"
+              class="mb-8 text-default leading-loose"
             >
               ${unsafeHTML(i18next.t('twyne.goal.p1'))}
             </p>
-            <p class="text-pretty text-default leading-loose">
+            <p class=" text-default leading-loose">
               ${i18next.t('twyne.goal.p2')}
             </p>
           </div>

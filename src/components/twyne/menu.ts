@@ -116,21 +116,21 @@ export class TwyneMenu extends ThemeMixin(LitElement) {
                 <mobile-item
                   href="/"
                   label="Home"
-                  index="001"
+                  index="01"
                 ></mobile-item>
               </li>
               <li>
                 <mobile-item
                   href="${i18next.t('links.github.url')}"
                   label="${i18next.t('links.github.label')}"
-                  index="002"
+                  index="02"
                 ></mobile-item>
               </li>
               <li>
                 <mobile-item
                   href="${i18next.t('links.linkedin.url')}"
                   label="${i18next.t('links.linkedin.label')}"
-                  index="003"
+                  index="03"
                 ></mobile-item>
               </li>
               <li>
@@ -140,6 +140,15 @@ export class TwyneMenu extends ThemeMixin(LitElement) {
                   index="hello@pmjr.cc"
                 ></mobile-item>
               </li>
+              <div class="absolute bottom-4 right-4">
+                <lang-button
+                  @click=${() => this.changeLang()}
+                  label=${this.lang === 'pt' ? `PT · BR` : `EN · US`}
+                  title="${this.lang === 'en'
+                    ? 'Mudar para português'
+                    : 'Change to english'}"
+                ></lang-button>
+              </div>
             </ul>
           </nav>
           <div class="flex items-center">

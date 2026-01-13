@@ -94,7 +94,8 @@
   }
 
   .text-default {
-    @apply text-sm/loose lg:text-base/loose 2xl:text-xl/loose;
+    @apply text-sm/loose lg:text-base/loose 2xl:text-xl/loose text-pretty;
+    orphans: 3;
   }
 
   /* Noise */

@@ -32,26 +32,25 @@ export class TwyneImpact extends LitElement {
         >
           ${unsafeHTML(i18next.t('twyne.impact.t1'))}
         </h2>
-
-        <div class="grid gap-6 xl:grid-cols-3">
-          <div class="grid gap-2 border-s border-zinc-800 ps-4 xl:ps-8">
-            <h3 class="text-[1.25rem] xl:text-[2rem] leading-none text-zinc-100">
+        <div class="grid gap-px xl:grid-cols-3 items-center rounded-4xl overflow-hidden -mb-2">
+          <div class="grid gap-2 text-center bg-zinc-900 py-12">
+            <h3 class="text-[2rem] font-semibold leading-none text-zinc-50 tracking-[-0.04em]">
               ${i18next.t('twyne.numbers.t1')}
             </h3>
             <p class="text-pretty text-base/none">
               ${i18next.t('twyne.numbers.p1')}
             </p>
           </div>
-          <div class="grid gap-2 border-s border-zinc-800 ps-4 xl:ps-8">
-            <h3 class="text-[1.25rem] xl:text-[2rem] leading-none text-zinc-100">
+          <div class="grid gap-2 text-center bg-zinc-900 py-12">
+            <h3 class="text-[2rem] font-semibold leading-none text-zinc-50 tracking-[-0.04em]">
               ${i18next.t('twyne.numbers.t2')}
             </h3>
             <p class="text-pretty text-base/none">
               ${i18next.t('twyne.numbers.p2')}
             </p>
           </div>
-          <div class="grid gap-2 border-s border-zinc-800 ps-4 xl:ps-8">
-            <h3 class="text-[1.25rem] xl:text-[2rem] leading-none text-zinc-100">
+          <div class="grid gap-2 text-center bg-zinc-900 py-12">
+            <h3 class="text-[2rem] font-semibold leading-none text-zinc-50 tracking-[-0.04em]">
               ${i18next.t('twyne.numbers.t3')}
             </h3>
             <p class="text-pretty text-base/none">
@@ -60,12 +59,12 @@ export class TwyneImpact extends LitElement {
           </div>
         </div>
         <ul
-          class="grid xl:grid-cols-2 gap-2 xl:gap-0"
+          class="text-sm leading-loose 2xl:text-[1.25rem] text-zinc-100 grid xl:grid-cols-2 gap-4 xl:gap-0"
         >
           ${items.map(
             (item) =>
               html`<li
-                class="flex items-baseline text-default gap-2 before:-ms-2 xl:gap-4 before:text-default text-pretty before:text-zinc-700 before:content-['✦']"
+                class="flex items-baseline gap-2 xl:gap-4 before:text-zinc-700 before:content-['✦'] text-balance"
               >
                 ${item}
               </li>`
