@@ -1,16 +1,16 @@
-import { gsap } from 'gsap'
-import i18next from '../../i18n'
-import { LitElement, html } from 'lit'
-import { customElement, property } from 'lit/decorators.js'
-import goBack from './go-back.svg'
-import profile1x from './legacy/profile-1x.webp'
-import profile2x from './legacy/profile-2x.webp'
-import profile3x from './legacy/profile-3x.webp'
-import s1 from './d1.png'
-import s2 from './d2.png'
-import s3 from './d3.png'
 
+import { customElement, property } from 'lit/decorators.js'
+import { gsap } from 'gsap'
+import { LitElement, html } from 'lit'
 import { ThemeMixin } from '../../store/theme'
+import i18next from '../../i18n'
+import arrow from './imgs/arrow.svg'
+import p1x from './imgs/profile-1x.webp'
+import p2x from './imgs/profile-2x.webp'
+import p3x from './imgs/profile-3x.webp'
+import s1 from './imgs/d1.webp'
+import s2 from './imgs/d2.webp'
+import s3 from './imgs/d3.webp'
 
 @customElement('hero-section')
 export class HeroSection extends ThemeMixin(LitElement) {
@@ -72,8 +72,8 @@ export class HeroSection extends ThemeMixin(LitElement) {
 
             <div class="flex items-center gap-4 -mb-2 md:-mb-3">
               <img
-                src="${profile1x}"
-                srcset="${profile1x} 64w, ${profile2x} 96w, ${profile3x} 128w"
+                src="${p1x}"
+                srcset="${p1x} 64w, ${p2x} 96w, ${p3x} 128w"
                 sizes="64px"
                 height="64"
                 width="64"
@@ -105,7 +105,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
               <h1 class="text-pretty text-zinc-50 font-semibold text-[2.5rem] leading-none tracking-[-0.06em] xl:text-[3rem] 2xl:text-[4rem] uppercase">
                 ${i18next.t('about.content.title')}
               </h1>
-              <h2 class="text-balance md:leading-none text-[1.25rem] xl:text-[1.5rem] 2xl:text-[2rem] text-zinc-200 tracking-[-0.02em] xl:font-light">
+              <h2 class="text-balance md:leading-none text-[1rem] xl:text-[1.5rem] text-zinc-200 tracking-[-0.02em] xl:font-light">
                 ${i18next.t('about.content.subtitle')}
               </h2>
             </div>
@@ -123,7 +123,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
                 title="Scroll page"
               >
                 <img
-                  src="${goBack}"
+                  src="${arrow}"
                   class="transition-opacity duration-500 -rotate-90"
                 />
               </a>
