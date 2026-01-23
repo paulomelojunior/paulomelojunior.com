@@ -26,13 +26,13 @@ export class TwyneImpact extends LitElement {
       returnObjects: true,
     }) as string[]
     return html`
-      <div id="impact" class="container grid gap-10 xl:gap-16 px-6 pt-24 xl:px-24 xl:pt-32 2xl:px-32">
+      <div id="impact" class="container grid gap-10 px-6 pt-24 xl:pt-32 xl:px-24 2xl:px-32">
         <h2
-          class="text-[2rem] xl:text-[2.5rem] leading-none tracking-[-.02em] 2xl:text-[3rem] text-zinc-100"
+          class="text-[2rem] lg:text-[2.5rem] leading-none tracking-[-.02em] 2xl:text-[3rem] text-zinc-100"
         >
           ${unsafeHTML(i18next.t('twyne.impact.t1'))}
         </h2>
-        <div class="grid gap-px xl:grid-cols-3 items-center rounded-4xl overflow-hidden -mb-2">
+        <div class="grid gap-px lg:grid-cols-3 items-center rounded-4xl overflow-hidden">
           <div class="grid gap-2 text-center bg-zinc-900 py-12">
             <h3 class="text-[2rem] font-semibold leading-none text-zinc-50 tracking-[-0.04em]">
               ${i18next.t('twyne.numbers.t1')}
@@ -59,12 +59,12 @@ export class TwyneImpact extends LitElement {
           </div>
         </div>
         <ul
-          class="text-sm leading-loose 2xl:text-[1.25rem] text-zinc-100 grid xl:grid-cols-2 gap-4 xl:gap-0"
+          class="text-sm leading-loose lg:text-base 2xl:text-[1.25rem] text-zinc-100 grid lg:grid-cols-2 gap-4 lg:gap-0"
         >
           ${items.map(
             (item) =>
               html`<li
-                class="flex items-baseline gap-2 xl:gap-4 before:text-zinc-700 before:content-['✦'] text-balance"
+                class="flex items-baseline gap-2 lg:gap-4 before:text-zinc-700 before:content-['✦'] text-balance"
               >
                 ${item}
               </li>`

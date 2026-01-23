@@ -119,7 +119,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
               </a>
               <a
                 href="#section-praxis"
-                class="hidden xl:flex rounded-full size-[44px] transition-color duration-200 bg-zinc-800 hover:bg-zinc-700 justify-center items-center outline-4 outline-zinc-950"
+                class="hidden lg:flex rounded-full size-[44px] transition-color duration-200 bg-zinc-800 hover:bg-zinc-700 justify-center items-center outline-4 outline-zinc-950"
                 title="Scroll page"
               >
                 <img

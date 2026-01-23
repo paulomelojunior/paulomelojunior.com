@@ -110,7 +110,7 @@
         "Redução de retrabalho no time de engenharia.",
         "Aumento na velocidade de onboarding de novos usuários.",
         "Base que suportou a adição de novos módulos sem atrito.",
-        "Fortalecimento da identidade do produto com uma UI moderna."
+        "Fortalecimento da identidade com uma UI moderna."
       ]
     },
     "numbers": {
@@ -135,7 +135,7 @@
   },
   "allugator": {
     "title": "Allugator",
-    "tags": "Design Partner, Branding, Early stage start-up",
+    "tags": "Design Partner, Start-up",
     "year": "2018",
     "description": "Atuando como designer generalista, contribuí com entregas-chave para o crescimento da startup em seu estágio inicial, da reformulação da identidade e comunicação da marca à evolução do produto digital.",
     "metrics": {
@@ -155,7 +155,7 @@
   },
   "damus": {
     "title": "Damus",
-    "tags": "Experimento, Rebranding, Design gráfico",
+    "tags": "Experimento, Rebranding",
     "year": "2024",
     "description1": "<a href='https://damus.io/' rel='noreferrer noopener' class='underline text-zinc-100' target='_blank' title='Site oficial do Damus'>Damus</a> é um cliente para a rede social descentralizada Nostr, disponível para iOS, iPad e macOS. Ele permite aos usuários postar textos, imagens, vídeos e GIFs, além de interagir com outros usuários através de envio de <a href='https://pt.wikipedia.org/wiki/Bitcoin' class='underline text-zinc-100' target='_blank' title='Satoshi, é a menor quantidade do sistema, representando 0,00000001 bitcoin, um centésimo de milionésimo de bitcoin.'>satoshis</a> e mensagens privadas criptografadas.",
     "description2": "O objetivo do Damus é oferecer uma alternativa às redes sociais tradicionais, com foco na liberdade de expressão e privacidade."
@@ -170,14 +170,14 @@
   },
   "multiplayer": {
     "title": "Orquestra Multiplayer",
-    "tags": "Voluntário, Produção, Visual Design",
+    "tags": "Voluntário, Visual Design",
     "year": "2017",
     "description1": "Criada por ex-alunos da Escola de Música da UFMG, a Multiplayer explorava trilhas sonoras de séries, filmes e jogos em seu repertório, ligando música erudita à cultura pop.",
     "description2": "Fui convidado a integrar o projeto como designer, cuidando da comunicação visual e prestando suporte na produção dos eventos.",
     "metrics": {
       "audience": {
-        "title": "+ 1600 pessoas em 2 apresentações",
-        "subtitle": "Luzes, Câmera, Multiplayer!  @ Cine Theatro Brasil"
+        "title": "1600 pessoas em 2 concertos",
+        "subtitle": "@ Cine Theatro Brasil"
       },
       "facebook": {
         "title": "4,7 mil seguidores",

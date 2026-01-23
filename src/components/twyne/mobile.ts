@@ -41,9 +41,11 @@ export class TwyneMobile extends LitElement {
           },
         })
         const layers = [
-          { layer: '1', y: '10%', opacity: 0 },
-          { layer: '2', y: '20%', opacity: 0.5 },
-          { layer: '3', y: '30%', opacity: 1 },
+          { layer: '1', y: '50%', opacity: 0 },
+          { layer: '2', y: '40%', opacity: 0 },
+          { layer: '3', y: '30%', opacity: 0 },
+          { layer: '4', y: '20%', opacity: 0 },
+          { layer: '5', y: '10%', opacity: 0 },
         ]
         layers.forEach((layerObj, idx) => {
           tl.from(
@@ -64,22 +66,22 @@ export class TwyneMobile extends LitElement {
 
   render() {
     return html`
-      <section id="mobile" class="mt-32 py-32">
+      <section id="mobile" class="mt-24 py-24 xl:mt-32 xl:py-32">
         <h2
-          class="mb-32 text-center text-[2.5rem] leading-normal tracking-[-.02em] 2xl:text-[3rem] text-zinc-100"
+          class="mb-16 xl:mb-32 text-center text-[2.5rem] leading-normal tracking-[-.02em] 2xl:text-[3rem] text-zinc-100"
         >
           ${unsafeHTML(i18next.t('twyne.mobile.t1'))}
         </h2>
         <div
           id="mobile-images"
-          class="mx-auto grid max-w-[1920px] grid-cols-5 items-center justify-center gap-4 px-4"
+          class="mx-auto grid max-w-[1920px] grid-cols-4 xl:grid-cols-5 items-center justify-center gap-4 px-4"
           data-parallax-screens
         >
-          <img src="${e2}" data-parallax-screens="1" class="mobile-screen" />
+          <img src="${e2}" data-parallax-screens="1" class="mobile-screen hidden xl:block" />
           <img src="${e1}" data-parallax-screens="2" class="mobile-screen" />
           <img src="${e3}" data-parallax-screens="3" class="mobile-screen" />
-          <img src="${e4}" data-parallax-screens="2" class="mobile-screen" />
-          <img src="${e5}" data-parallax-screens="1" class="mobile-screen" />
+          <img src="${e4}" data-parallax-screens="4" class="mobile-screen" />
+          <img src="${e5}" data-parallax-screens="5" class="mobile-screen" />
         </div>
       </section>
       <style>

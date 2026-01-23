@@ -40,7 +40,7 @@ export class ProjectsDamus extends LitElement {
     `
 
     return html`
-      <div id="damus" class="grid grid-cols-3 gap-16 py-16">
+      <div id="damus" class="grid grid-cols-3 py-16">
         <item-header
           title="${i18next.t('damus.title')}"
           tags="${i18next.t('damus.tags')}"

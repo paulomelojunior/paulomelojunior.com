@@ -95,9 +95,9 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
 
     return html`
       <header
-        class="absolute inset-x-0 z-40 hidden w-full bg-linear-to-t from-zinc-950 backdrop-blur to-zinc-950/80 backdrop-saturate-200 xl:fixed xl:block py-2"
+        class="absolute inset-x-0 z-40 hidden w-full bg-linear-to-t from-zinc-950 backdrop-blur to-zinc-950/80 backdrop-saturate-200 lg:fixed lg:block py-2"
       >
-        <div class="container grid items-center xl:grid-cols-3">
+        <div class="container grid items-center lg:grid-cols-3">
           <div class="flex items-center">
             <button
               @click=${() => this.getPreviousPage()}
@@ -145,7 +145,7 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
             </ul>
             <div
               id="copy"
-              class="absolute flex h-12 w-full items-center justify-center px-5 font-mono text-[.625rem] font-semibold uppercase xl:hidden bg-zinc-900"
+              class="absolute flex h-12 w-full items-center justify-center px-5 font-mono text-[.625rem] font-semibold uppercase lg:hidden bg-zinc-900"
             >
               <span> Copyright 2025 Paulo Melo Jr. </span>
             </div>

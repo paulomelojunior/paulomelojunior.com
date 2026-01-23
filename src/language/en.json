@@ -74,7 +74,7 @@
     "t2": "Twyne",
     "about": {
       "t1": "about",
-      "p1": "Developed by Ifficient, <span class='text-zinc-100'>Twyne is a robust software for lead management, optimization, and distribution, focused on monetization and real-time analytics.</span>",
+      "p1": "Developed by Ifficient, <span class='text-zinc-50'>Twyne is a robust software for lead management, optimization, and distribution, focused on monetization and real-time analytics.</span>",
       "p2": "Targeted at the B2B market, it serves a few clients in volume, but with high ticket value and demanding customization.",
       "details": {
         "company": "Company",
@@ -91,7 +91,7 @@
     },
     "goal": {
       "t1": "Goal",
-      "p1": "Tackling one of the biggest challenges in digital design: creating a <span class='text-zinc-100'>modular</span>, <span class='text-zinc-100'>scalable</span>, and <span class='text-zinc-100'>adaptable</span> interface for highly complex software, with constant growth in features and requirements.",
+      "p1": "Tackling one of the biggest challenges in digital design: creating a <span class='text-zinc-50'>modular</span>, <span class='text-zinc-50'>scalable</span>, and <span class='text-zinc-50'>adaptable</span> interface for highly complex software, with constant growth in features and requirements.",
       "p2": "The visual approach needed to balance performance, readability, and continuous evolution, without requiring a restart for every new feature. Delivering clarity and control even in dense flows."
     },
     "proposal": {
@@ -134,7 +134,7 @@
   },
   "allugator": {
     "title": "Allugator",
-    "tags": "Design Partner, Branding, Early stage start-up",
+    "tags": "Design Partner, Start-up",
     "year": "2018",
     "description": "Acting as a generalist designer, I contributed key deliverables for the startup's growth in its early stage, from rebranding and brand communication to digital product evolution.",
     "metrics": {
@@ -154,7 +154,7 @@
   },
   "damus": {
     "title": "Damus",
-    "tags": "Experiment, Rebranding, Graphic design",
+    "tags": "Experiment, Rebranding",
     "year": "2024",
     "description1": "<a href='https://damus.io/' rel='noreferrer noopener' class='underline text-zinc-100' target='_blank' title='Damus official website'>Damus</a> is a client for the decentralized social network Nostr, available for iOS, iPad, and macOS. It allows users to post text, images, videos, and GIFs, as well as interact with other users through the sending of <a href='https://en.wikipedia.org/wiki/Satoshi' class='underline text-zinc-100' target='_blank' title='Satoshi is the smallest unit of the system, representing 0.00000001 bitcoin, a hundredth of a millionth of a bitcoin.'>satoshis</a> and encrypted private messages.",
     "description2": "The goal of Damus is to offer an alternative to traditional social networks, focusing on freedom of expression and privacy."
@@ -169,14 +169,14 @@
   },
   "multiplayer": {
     "title": "Multiplayer Orchestra",
-    "tags": "Volunteer, Production, Visual Design",
+    "tags": "Volunteer, Visual Design",
     "year": "2017",
     "description1": "Created by former students of UFMG's School of Music, Multiplayer explored soundtracks from series, movies, and games in their repertoire, connecting classical music to pop culture.",
     "description2": "I was invited to join the project as a designer, taking care of visual communication and providing support in event production.",
     "metrics": {
       "audience": {
-        "title": "+ 1600 people in 2 presentations",
-        "subtitle": "Lights, Camera, Multiplayer! @ Cine Theatro Brasil"
+        "title": "1.6k people in 2 concerts",
+        "subtitle": "@ Cine Theatro Brasil"
       },
       "facebook": {
         "title": "4.7k followers",

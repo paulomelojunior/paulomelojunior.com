@@ -23,7 +23,7 @@ export class ProjectsFail extends LitElement {
   render() {
     return html`
       <div
-        class="hero flex h-dvh flex-col items-center justify-center gap-16 p-8 text-center text-[1.5rem] text-zinc-100 xl:hidden"
+        class="hero flex h-dvh flex-col items-center justify-center gap-16 p-8 text-center text-[1.5rem] text-zinc-100 lg:hidden"
       >
         Sorry, this page isn't available <br />
         for small screens yet.

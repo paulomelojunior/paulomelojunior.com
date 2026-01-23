@@ -60,7 +60,7 @@ export class ProjectsIfficient extends LitElement {
     `
 
     return html`
-      <div id="ifficient" class="grid grid-cols-3 gap-16 py-16">
+      <div id="ifficient" class="grid grid-cols-3 py-16">
         <item-header title="${i18next.t('ifficient.title')}" tags="${i18next.t('ifficient.tags')}" .contentHtml=${contentHtml}></item-header>
         <div class="col-span-2 grid gap-4 *:rounded-[.75rem]">
           <div

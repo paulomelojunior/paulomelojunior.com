@@ -44,34 +44,34 @@ export class TwyneAbout extends LitElement {
   render() {
     return html` <div
       id="about"
-      class="relative grid xl:grid-cols-2 overflow-hidden xl:rounded-4xl bg-linear-to-b from-zinc-900 to-zinc-950"
+      class="relative grid lg:grid-cols-2 overflow-hidden lg:rounded-4xl bg-linear-to-b from-zinc-900 to-zinc-950"
     >
       <div
-        class="absolute h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent xl:block"
+        class="absolute h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent lg:block"
       ></div>
-      <div class="flex flex-col xl:p-16 p-6">
-        <p class="text-default mb-4 text-balance xl:-mt-2">
+      <div class="flex flex-col lg:p-16 lg:pe-0 p-6">
+        <p class="text-default mb-4 text-balance lg:-mt-2">
           ${unsafeHTML(i18next.t('twyne.about.p2'))}
         </p>
         <p class="text-default text-pretty">
           ${unsafeHTML(i18next.t('twyne.about.p1'))}
         </p>
-        <ul class="hidden xl:block mt-auto text-[.75rem] leading-none *:py-6 2xl:text-[1rem] *:border-b *:border-zinc-800">
+        <ul class="hidden lg:block mt-auto text-[.75rem] leading-none *:py-4 lg:text-[1rem] *:border-b *:border-zinc-800">
           <li class="flex justify-between align-baseline">
             <span> ${i18next.t('twyne.about.details.company')} </span>
-            <span class="text-right text-zinc-100">
+            <span class="text-right text-zinc-50">
               ${i18next.t('twyne.about.details.companyValue')}
             </span>
           </li>
           <li class="flex justify-between align-baseline">
             <span> ${i18next.t('twyne.about.details.industry')} </span>
-            <span class="text-right text-zinc-100">
+            <span class="text-right text-zinc-50">
               ${i18next.t('twyne.about.details.industryValue')}
             </span>
           </li>
           <li class="flex justify-between align-baseline">
             <span> ${i18next.t('twyne.about.details.product')} </span>
-            <span class="text-right text-zinc-100">
+            <span class="text-right text-zinc-50">
               ${i18next.t('twyne.about.details.productValue')}
             </span>
           </li>
@@ -79,21 +79,27 @@ export class TwyneAbout extends LitElement {
             <span>
               ${i18next.t('twyne.about.details.contributions')}
             </span>
-            <span class="flex flex-col xl:flex-row align-baseline gap-2 text-right text-zinc-100">
-              ${i18next.t('twyne.about.details.contribution1')}
+            <span class="inline-flex align-baseline gap-2 text-right text-zinc-50">
+              <span>
+                ${i18next.t('twyne.about.details.contribution1')}
+              </span>
               <span class="text-zinc-500">/</span>
-              ${i18next.t('twyne.about.details.contribution2')}
-              <span class="text-zinc-500">/</span>
-              ${i18next.t('twyne.about.details.contribution3')}
+              <span class="hidden xl:flex">
+                ${i18next.t('twyne.about.details.contribution2')}
+              </span>
+              <span class="hidden xl:flex text-zinc-500">/</span>
+              <span>
+                ${i18next.t('twyne.about.details.contribution3')}
+              </span>
             </span>
           </li>
         </ul>
       </div>
-      <div class="relative flex aspect-square overflow-hidden">
+      <div class="relative flex aspect-square lg:aspect-[3/4] xl:aspect-square overflow-hidden">
         <img
           src="${d1}"
           id="cover-image"
-          class="absolute xl:left-16 xl:top-16 left-6 top-0 xl:max-w-none flex-none xl:rounded-ss-lg rounded-ss-md border-t border-zinc-800 shadow-[0px_24px_24px_0px_black]"
+          class="absolute lg:left-16 lg:top-16 left-6 top-0 lg:max-w-none flex-none lg:rounded-ss-lg rounded-ss-md border-t border-zinc-800 shadow-[0px_24px_24px_0px_black]"
         />
         <progressive-blur
           class="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-zinc-950 to-transparent"

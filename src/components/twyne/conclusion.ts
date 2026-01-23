@@ -100,7 +100,7 @@ export class TwyneConclusion extends LitElement {
   render() {
     return html`
       <section id="conclusion">
-        <div class="container xl:grid grid-cols-4 pt-24 xl:pt-32 px-6">
+        <div class="container lg:grid grid-cols-4 pt-24 lg:pt-32 px-6">
           <div
             class="relative col-span-2 col-start-2 flex aspect-square flex-col items-center justify-center gap-8 text-balance text-center text-[1.25rem] leading-loose text-zinc-300 2xl:text-[1.5rem]"
           >
