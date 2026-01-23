@@ -97,10 +97,10 @@ export class MenuContainer extends ThemeMixin(LitElement) {
   render() {
     return html`
       <header
-        class="fixed inset-x-0 z-40 w-full bg-linear-to-t from-zinc-950 backdrop-blur to-zinc-950/80 xl:fixed py-2"
+        class="fixed inset-x-0 z-40 w-full bg-linear-to-t from-zinc-950 backdrop-blur to-zinc-950/80 lg:fixed py-2"
       >
-        <div class="container xl:grid flex items-center xl:grid-cols-3">
-          <nav class="xl:hidden">
+        <div class="container lg:grid flex items-center lg:grid-cols-3">
+          <nav class="lg:hidden">
             <ul id="anchors" class="flex bg-zinc-950 overflow-hidden fixed inset-0 flex-col justify-center w-dvw *:transition-all duration-500 ${this.more ? 'h-dvh' : 'h-0 *:opacity-0'}">
               <li>
                 <span class="text-[2rem] tracking-[-0.04em] h-20 px-5 flex items-center text-zinc-500">
@@ -154,7 +154,7 @@ export class MenuContainer extends ThemeMixin(LitElement) {
             hover="${this.lang === 'en' ? 'Click to copy' : 'Copiar e-mail'}"
           ></mail-button>
           <button
-            class="menu-toggle xl:hidden ms-auto me-4 ${this.more ? 'menu-toggle--close' : ''}"
+            class="menu-toggle lg:hidden ms-auto me-4 ${this.more ? 'menu-toggle--close' : ''}"
             @click=${() => this.toggleMore()}
           >
             <span class="uppercase text-[.75rem] font-semibold">
@@ -162,7 +162,7 @@ export class MenuContainer extends ThemeMixin(LitElement) {
             </span>
           </button>
           <nav>
-            <ul id="anchors" class="hidden xl:flex justify-end xl:px-12">
+            <ul id="anchors" class="hidden lg:flex justify-end">
               <li class="flex-1">
                 <menu-item
                   href="#section-praxis"
@@ -183,11 +183,11 @@ export class MenuContainer extends ThemeMixin(LitElement) {
               </li>
             </ul>
           </nav>
-          <div class="hidden xl:flex items-center justify-end gap-2">
+          <div class="hidden lg:flex items-center justify-end gap-2">
             <a class="cta-button py-1.5 px-4 uppercase font-semibold text-[.75rem] tracking-[0.05em]" href="${i18next.t('links.projects.url')}">
               ${i18next.t('featured.button')}
             </a>
-            <div class="flex h-12 items-center justify-center px-1 xl:h-12">
+            <div class="flex h-12 items-center justify-center px-1 lg:h-12">
               <lang-button
                 @click=${() => this.changeLang()}
                 label=${this.lang === 'pt' ? `PT · BR` : `EN · US`}

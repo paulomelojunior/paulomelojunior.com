@@ -53,7 +53,7 @@ export class MenuItem extends LitElement {
 
   render() {
     const baseClasses = classNames(
-      `menu-item font-semibold relative tracking-[0.04em] flex justify-center h-8 px-4 text-zinc-400 text-[.75rem] uppercase xl:items-center`
+      `menu-item font-semibold relative tracking-[0.04em] flex justify-center h-8 px-4 text-zinc-400 text-[.75rem] uppercase items-center`
     )
 
     const fxClasses = classNames(
