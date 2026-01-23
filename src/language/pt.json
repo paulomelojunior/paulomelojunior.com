@@ -26,16 +26,16 @@
     }
   },
   "praxis": {
-    "t1": "Design no pensar.",
+    "t1": "Design no pensar",
     "p1": "Do insight à interface, projeto com foco nas pessoas. Unindo estética, propósito e tecnologia de ponta por meio do Design Thinking e Human-Centered Design.",
-    "t2": "Tecnologia para realizar.",
-    "p2": "Aprender com experts em tecnologia desde cedo tornou algoritmos parte do meu repertório, assim conecto design e engenharia para criar experiências refinadas."
+    "t2": "Tecnologia para realizar",
+    "p2": "Aprender com experts em tecnologia desde cedo tornou algoritmos parte do meu repertório, conecto design e engenharia para criar experiências refinadas."
   },
   "journey": {
     "t0": "Jornada",
 
     "t1": "Estagiário de <br class='block lg:hidden'> design",
-    "p1": "Durante meu estágio, tive a oportunidade de refinar e desenvolver habilidades em várias funções. Desenvolvimento HTML e CSS, iniciativas de marketing, design visual, branding e design UX/UI.",
+    "p1": "Durante meu estágio, aprofundei e refinei habilidades em desenvolvimento front-end, participei de iniciativas de marketing, e atuei em design visual, branding e UX/UI.",
     "m1": "",
 
     "t2": "Designer, <br class='block lg:hidden'> front-end coder",
