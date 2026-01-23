@@ -156,13 +156,28 @@ export class HeroSection extends ThemeMixin(LitElement) {
             data-parallax-layer="2"
           >
             <div class="hidden sm:hidden xl:block col-span-12 xl:col-span-3">
-              <img src="${s1}" class="aspect-[4/3] sm:aspect-[1/1] w-full object-cover mask-b-from-50% sm:mask-b-from-0% sm:mask-r-from-50% object-top rounded-tl-lg" />
-            </div>
+              <img
+                class="aspect-square w-full object-cover mask-b-from-50% sm:mask-b-from-0% sm:mask-r-from-50% object-top rounded-tl-lg"
+                src="${s1}"
+                height="384"
+                width="384"
+              />
+              </div>
             <div class="hidden sm:block col-span-8 xl:col-span-6">
-              <img src="${s2}" class="w-full object-cover object-top mask-b-from-75% rounded-t-lg" />
+              <img
+                class="w-full max-h-[432px] object-cover object-top mask-b-from-75% rounded-t-lg"
+                src="${s2}"
+                height="432"
+                width="768"
+              />
             </div>
             <div class="hidden sm:block col-span-4 xl:col-span-3">
-              <img src="${s3}" class="aspect-[1/1] w-full object-cover mask-b-from-50% mask-l-from-0% object-top rounded-tr-lg" />
+              <img
+                class="aspect-square w-full object-cover mask-b-from-50% mask-l-from-0% object-top rounded-tr-lg"
+                src="${s3}"
+                height="384"
+                width="384"
+              />
             </div>
           </div>
         </div>

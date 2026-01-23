@@ -77,13 +77,13 @@ export class FooterSection extends LitElement {
     navValues.forEach((e, i) => {
       const indexStr = (i + 1).toString().padStart(2, '0')
       const navItem = `
-				<div class="border-b border-zinc-800 xl:border-0">
-					<a target="_blank" class="menu-item h-20 xl:h-16 px-5 xl:pt-1 flex items-center text-zinc-100 relative" rel="noopener noreferrer" href="${e.url}">
+				<div class="border-b border-zinc-800 lg:border-0">
+					<a target="_blank" class="menu-item h-20 lg:h-16 px-5 lg:pt-1 flex items-center text-zinc-100 relative" rel="noopener noreferrer" href="${e.url}">
 						${e.label}
-						<div class="absolute flex items-center px-5 pt-1 inset-0 xl:rounded-full text-zinc-950">
+						<div class="absolute flex items-center px-5 pt-1 inset-0 lg:rounded-full text-zinc-950">
 							${e.label}
 						</div>
-						<span class="xl:hidden absolute opacity-50 mix-blend-difference right-6 bottom-6 font-mono text-[.75rem] tracking-[0.05em]">
+						<span class="lg:hidden absolute opacity-50 mix-blend-difference right-6 bottom-6 font-mono text-[.75rem] tracking-[0.05em]">
 							${e.label === 'Email' ? 'hello@pmjr.cc' : indexStr}
 						</span>
 					</a>
@@ -119,23 +119,23 @@ export class FooterSection extends LitElement {
     return html`
       <footer
         id="section-connect"
-        class="footer relative z-10 h-lvh overflow-hidden rounded-t-4xl before:content-none xl:before:content-['']"
+        class="footer relative z-10 h-lvh overflow-hidden rounded-t-4xl before:content-none lg:before:content-['']"
       >
         <div
           id="footerLinks"
-          class="relative z-10 flex h-full flex-1 items-center pb-24 xl:pb-0"
+          class="relative z-10 flex h-full flex-1 items-center pb-24 lg:pb-0"
         >
           <div
             id="menu"
-            class="flex flex-1 flex-col flex-wrap gap-0 text-[2rem] tracking-[-0.04em] xl:flex-row xl:items-baseline xl:justify-center xl:gap-4 2xl:text-[2.5rem]"
+            class="flex flex-1 flex-col flex-wrap gap-0 text-[2rem] tracking-[-0.04em] lg:flex-row lg:items-baseline lg:justify-center lg:gap-4 lg:text-[2.5rem]"
           >
             <span
-              class="flex h-20 items-center px-5 xl:p-0 text-zinc-600 me-5"
+              class="flex h-20 items-center px-5 lg:p-0 text-zinc-600 me-5"
             >
               ${i18next.t('connect.title')}
             </span>
             <span
-              class="hidden xl:flex items-center self-center relative px-2 stroke-brand-400"
+              class="hidden lg:flex items-center self-center relative px-2 stroke-brand-400"
             >
               ${unsafeHTML(`${logo}`)}
             </span>

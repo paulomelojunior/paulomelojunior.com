@@ -34,11 +34,11 @@
   "journey": {
     "t0": "Jornada",
 
-    "t1": "Estagiário de <br class='block xl:hidden'> design",
-    "p1": "Durante meu estágio, tive a oportunidade de refinar e desenvolver habilidades em várias funções. Desenvolvimento HTML e CSS, iniciativas de marketing, design visual, stoneing e design UX/UI.",
+    "t1": "Estagiário de <br class='block lg:hidden'> design",
+    "p1": "Durante meu estágio, tive a oportunidade de refinar e desenvolver habilidades em várias funções. Desenvolvimento HTML e CSS, iniciativas de marketing, design visual, branding e design UX/UI.",
     "m1": "",
 
-    "t2": "Designer, <br class='block xl:hidden'> front-end coder",
+    "t2": "Designer, <br class='block lg:hidden'> front-end coder",
     "p2": "Em colaboração multifacetada com gerentes e a equipe de desenvolvimento, redesenhamos com sucesso as interfaces e funcionalidades do software da empresa.",
     "m2": "Também desempenhei um papel fundamental na co-criação de uma plataforma que facilita a conexão de pessoas enfrentando questões legais com profissionais especializados.",
 
@@ -46,7 +46,7 @@
     "p3": "No início de 2018, exerci o papel de designer generalista, responsável por desenvolver e gerenciar todos os aspectos do design e saídas criativas para o projeto de produto.",
     "m3": "Na segunda metade do ano, colaborei com outra empresa para projetar uma biblioteca open-source de componentes de interface.",
 
-    "t4": "Lead designer, <br class='block xl:hidden'> UI engineer",
+    "t4": "Lead designer, <br class='block lg:hidden'> UI engineer",
     "p4": "Hoje responsável por redesenhar a plataforma avançada de gerenciamento de leads da empresa, usando componentes React para melhorar performance e escalabilidade."
   },
   "cases": {
@@ -192,7 +192,7 @@
   "seo": {
     "common": {
       "description": "Entusiasta de tecnologias descentralizadas, Paulo é designer e coder do Brasil. Aqui você encontra links para se conectar com ele.",
-      "keywords": "Paulo Melo Júnior, Paulo Melo Jr, Paul M, pmjr, designer de produto digital, product designer, designer de interface, UI/UX, UX designer, UI designer, creative coder, front-end, frontend, web design, design system, GSAP, animações, motion design, stoneing, portfólio, Brasil, São Paulo, tecnologias descentralizadas, bitcoin, nostr"
+      "keywords": "Paulo Melo Júnior, Paulo Melo Jr, Paul M, pmjr, designer de produto digital, product designer, designer de interface, UI/UX, UX designer, UI designer, creative coder, front-end, frontend, web design, design system, GSAP, animações, motion design, branding, portfólio, Brasil, São Paulo, tecnologias descentralizadas, bitcoin, nostr"
     },
     "home": {
       "title": "Paulo Melo Jr. · Designer and coder"

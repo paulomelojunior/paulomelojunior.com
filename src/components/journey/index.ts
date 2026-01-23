@@ -87,7 +87,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
         custom: undefined,
       },
       4: {
-        hide: true,
+        hide: false,
         start: '2015',
         end: '2016',
         title: i18next.t('journey.t1'),
@@ -105,7 +105,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
       >
         ${i18next.t('journey.t0')}
       </h2>
-      <div class="flex items-center xl:justify-end order-1 xl:order-0 px-5 xl:px-20 2xl:px-32">
+      <div class="flex items-center lg:justify-end order-1 lg:order-0 px-5 xl:px-20 2xl:px-32">
         <a
           href="/Paulo Melo Jr. - Currículo.pdf"
           target="_blank"
@@ -152,7 +152,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
         <h2 class="text-[1.5rem] 2xl:text-[2rem] xl:leading-none text-zinc-100">
           ${item.title}
         </h2>
-        <p class="text-sm/loose 2xl:text-base/loose text-pretty">
+        <p class="text-sm/loose lg:text-base/loose text-pretty">
           ${item.description}
         </p>
       </div>
@@ -177,11 +177,11 @@ export class JourneySection extends ThemeMixin(LitElement) {
     return html`
       <section id="section-journey">
         <div
-          class="xl:py-24 2xl:py-32"
+          class="lg:py-16 xl:py-24 2xl:py-32"
         >
           <div
             id="job"
-            class="container grid gap-y-16 overflow-hidden py-16 xl:grid-cols-2 xl:gap-y-32"
+            class="container grid gap-y-16 overflow-hidden py-16 lg:grid-cols-2 xl:gap-y-32"
           ></div>
         </div>
       </section>

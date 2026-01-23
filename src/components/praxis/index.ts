@@ -71,7 +71,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
             items="Design Engineering, Product Design, UX & UI"
           ></marquee-element>
           <div
-            class="grid gap-16 overflow-x-hidden px-5 py-16 *:flex *:items-start *:justify-center *:gap-5 xl:grid-cols-2 xl:gap-24 xl:py-0 xl:*:flex-row *:xl:gap-12 *:xl:py-24 *:2xl:py-32"
+            class="grid gap-16 overflow-x-hidden px-5 lg:px-0 py-16 *:flex *:items-start *:justify-center *:gap-5 lg:grid-cols-2 xl:gap-24 xl:py-0 xl:*:flex-row *:xl:gap-12 *:xl:py-24 *:2xl:py-32"
           >
             <div class="praxis">
               <svg
@@ -106,7 +106,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
                 >
                   ${i18next.t('praxis.t1')}
                 </h2>
-                <p class="text-default">
+                <p class="text-default text-balance">
                   ${i18next.t('praxis.p1')}
                 </p>
               </div>
@@ -132,7 +132,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
                 >
                   ${i18next.t('praxis.t2')}
                 </h2>
-                <p class="text-default">
+                <p class="text-default text-balance">
                   ${i18next.t('praxis.p2')}
                 </p>
               </div>
