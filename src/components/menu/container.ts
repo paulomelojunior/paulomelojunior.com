@@ -187,7 +187,7 @@ export class MenuContainer extends ThemeMixin(LitElement) {
             <a class="cta-button py-1.5 px-4 uppercase font-semibold text-[.75rem] tracking-[0.05em]" href="${i18next.t('links.projects.url')}">
               ${i18next.t('featured.button')}
             </a>
-            <div class="flex h-12 items-center justify-center px-1 lg:h-12">
+            <div class="flex h-12 items-center justify-center lg:h-12">
               <lang-button
                 @click=${() => this.changeLang()}
                 label=${this.lang === 'pt' ? `PT · BR` : `EN · US`}

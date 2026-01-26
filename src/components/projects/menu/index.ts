@@ -182,7 +182,7 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
                   ></path>
                 </svg>
               </a>
-              <div class="flex h-12 items-center justify-center px-1">
+              <div class="flex h-12 items-center justify-center">
                 <lang-button
                   @click=${() => this.changeLang()}
                   label=${this.lang === 'pt' ? `PT · BR` : `EN · US`}

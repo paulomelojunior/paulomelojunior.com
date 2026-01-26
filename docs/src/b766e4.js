@@ -265,7 +265,7 @@ var Th=Object.defineProperty;var Oh=(s,e,t)=>e in s?Th(s,e,{enumerable:!0,config
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
  */class Oa extends Q0{constructor(e){if(super(e),this.it=Re,e.type!==J0.CHILD)throw Error(this.constructor.directiveName+"() can only be used in child bindings")}render(e){if(e===Re||e==null)return this._t=void 0,this.it=e;if(e===Dn)return e;if(typeof e!="string")throw Error(this.constructor.directiveName+"() called with a non-string value");if(e===this.it)return this._t;this.it=e;const t=[e];return t.raw=t,this._t={_$litType$:this.constructor.resultType,strings:t,values:[]}}}Oa.directiveName="unsafeHTML",Oa.resultType=1;const ci=Z0(Oa);var em=Object.defineProperty,tm=Object.getOwnPropertyDescriptor,oh=(s,e,t,i)=>{for(var n=i>1?void 0:i?tm(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&em(e,t,n),n};let Aa=class extends Q{constructor(){super(...arguments),this.lang=m.language,this.handleLanguageChange=()=>{this.lang=m.language}}connectedCallback(){super.connectedCallback(),m.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),m.off("languageChanged",this.handleLanguageChange)}render(){return U`
-      <div class="pt-16 pb-4 xl:pb-8 px-3">
+      <div class="pt-16 pb-4 xl:pb-8">
         <div class="flex items-center gap-6">
           <h1
             class="text-[2.5rem] leading-none tracking-[-0.05em] lg:text-[3rem] 2xl:text-[4rem] text-zinc-100"
@@ -445,7 +445,7 @@ var Th=Object.defineProperty;var Oh=(s,e,t)=>e in s?Th(s,e,{enumerable:!0,config
                   ></path>
                 </svg>
               </a>
-              <div class="flex h-12 items-center justify-center px-1">
+              <div class="flex h-12 items-center justify-center">
                 <lang-button
                   @click=${()=>this.changeLang()}
                   label=${this.lang==="pt"?"PT · BR":"EN · US"}
@@ -562,25 +562,23 @@ var Th=Object.defineProperty;var Oh=(s,e,t)=>e in s?Th(s,e,{enumerable:!0,config
     `}createRenderRoot(){return this}};hs([M({type:String})],nr.prototype,"lang",2);hs([M({type:Number})],nr.prototype,"currentIndex",2);hs([M({type:Array})],nr.prototype,"screens",2);hs([M({type:Function})],nr.prototype,"updateScreens",2);nr=hs([oe("projects-screens")],nr);var Nm=Object.getOwnPropertyDescriptor,Bm=(s,e,t,i)=>{for(var n=i>1?void 0:i?Nm(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=o(n)||n);return n};let nc=class extends Cn(Q){render(){return U`
       <section class="container pt-12">
         <projects-header></projects-header>
-        <div class="px-3">
-          <projects-ifficient></projects-ifficient>
-          <div
-            class="xl:my-16 h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent xl:block"
-          ></div>
-          <projects-damus></projects-damus>
-          <div
-            class="xl:my-16 h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent xl:block"
-          ></div>
-          <projects-allugator></projects-allugator>
-          <div
-            class="xl:my-16 h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent xl:block"
-          ></div>
-          <projects-multiplayer></projects-multiplayer>
-          <div
-            class="mt-16 mb-32 h-px w-full bg-linear-to-r bg-transparent"
-          ></div>
-          <cases-section></cases-section>
-        </div>
+        <projects-ifficient></projects-ifficient>
+        <div
+          class="xl:my-16 h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent xl:block"
+        ></div>
+        <projects-damus></projects-damus>
+        <div
+          class="xl:my-16 h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent xl:block"
+        ></div>
+        <projects-allugator></projects-allugator>
+        <div
+          class="xl:my-16 h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent xl:block"
+        ></div>
+        <projects-multiplayer></projects-multiplayer>
+        <div
+          class="mt-16 mb-32 h-px w-full bg-linear-to-r bg-transparent"
+        ></div>
+        <cases-section></cases-section>
       </section>
     `}createRenderRoot(){return this}};nc=Bm([oe("projects-index")],nc);var Hm=Object.defineProperty,Um=Object.getOwnPropertyDescriptor,ch=(s,e,t,i)=>{for(var n=i>1?void 0:i?Um(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&Hm(e,t,n),n};let za=class extends Q{constructor(){super(...arguments),this.lang=m.language,this.handleLanguageChange=()=>{this.lang=m.language}}connectedCallback(){super.connectedCallback(),m.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),m.off("languageChanged",this.handleLanguageChange)}render(){return U`
       <div
@@ -759,7 +757,7 @@ var Th=Object.defineProperty;var Oh=(s,e,t)=>e in s?Th(s,e,{enumerable:!0,config
         <div
           class="container flex flex-col justify-between min-h-[calc(100svh-4rem)] pt-16"
         >
-          <div class="flex flex-col items-center my-auto gap-16 md:gap-12 px-5" data-parallax-layer="1">
+          <div class="flex flex-col items-center my-auto pt-12 pb-16 gap-16 md:gap-12" data-parallax-layer="1">
 
             <div class="flex items-center gap-4 -mb-2 md:-mb-3">
               <img
@@ -772,13 +770,13 @@ var Th=Object.defineProperty;var Oh=(s,e,t)=>e in s?Th(s,e,{enumerable:!0,config
                 decoding="async"
                 loading="eager"
                 alt="${m.t("about.picDescription")}"
-                class="rounded-full size-14 md:size-16 bg-zinc-900 outline-4 outline-zinc-950"
+                class="rounded-full size-14 2xl:size-16 bg-zinc-900 outline-4 outline-zinc-950"
               />
               <div class="grid gap-2 leading-none">
-                <span class="md:text-[1.25rem] text-white">
+                <span class="2xl:text-[1.25rem] text-white">
                   Paulo Melo Jr.
                 </span>
-                <span class="flex items-center gap-2 font-medium text-[.875rem] md:text-[1rem]">
+                <span class="flex items-center gap-2 font-medium text-[.875rem] 2xl:text-[1rem]">
                   <span class="relative flex size-3">
                     <span
                       class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400"
@@ -793,10 +791,10 @@ var Th=Object.defineProperty;var Oh=(s,e,t)=>e in s?Th(s,e,{enumerable:!0,config
             </div>
             
             <div class="flex flex-col gap-2 text-center">
-              <h1 class="text-pretty text-zinc-50 font-semibold text-[2.5rem] leading-none tracking-[-0.06em] xl:text-[3rem] 2xl:text-[4rem] uppercase">
+              <h1 class="text-pretty text-zinc-50 font-semibold text-[2.5rem] leading-none tracking-[-0.06em] xl:text-[2.75rem] 2xl:text-[4rem] uppercase">
                 ${m.t("about.content.title")}
               </h1>
-              <h2 class="text-balance md:leading-none text-[1rem] xl:text-[1.5rem] text-zinc-200 tracking-[-0.02em] xl:font-light">
+              <h2 class="text-balance leading-none text-[1rem] 2xl:text-[1.5rem] text-zinc-200 tracking-[-0.02em] xl:font-light">
                 ${m.t("about.content.subtitle")}
               </h2>
             </div>
@@ -1057,7 +1055,7 @@ var Th=Object.defineProperty;var Oh=(s,e,t)=>e in s?Th(s,e,{enumerable:!0,config
             <a class="cta-button py-1.5 px-4 uppercase font-semibold text-[.75rem] tracking-[0.05em]" href="${m.t("links.projects.url")}">
               ${m.t("featured.button")}
             </a>
-            <div class="flex h-12 items-center justify-center px-1 lg:h-12">
+            <div class="flex h-12 items-center justify-center lg:h-12">
               <lang-button
                 @click=${()=>this.changeLang()}
                 label=${this.lang==="pt"?"PT · BR":"EN · US"}
@@ -1507,7 +1505,7 @@ var Th=Object.defineProperty;var Oh=(s,e,t)=>e in s?Th(s,e,{enumerable:!0,config
             <a class="cta-button py-1.5 px-4 uppercase font-semibold text-[.75rem] tracking-[0.05em]" href="${m.t("links.projects.url")}">
               ${m.t("featured.button")}
             </a>
-            <div class="flex h-12 items-center justify-center px-1 lg:h-12">
+            <div class="flex h-12 items-center justify-center lg:h-12">
               <lang-button
                 @click=${()=>this.changeLang()}
                 label=${this.lang==="pt"?"PT · BR":"EN · US"}

@@ -16,25 +16,23 @@ export class ProjectsIndex extends ThemeMixin(LitElement) {
     return html`
       <section class="container pt-12">
         <projects-header></projects-header>
-        <div class="px-3">
-          <projects-ifficient></projects-ifficient>
-          <div
-            class="xl:my-16 h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent xl:block"
-          ></div>
-          <projects-damus></projects-damus>
-          <div
-            class="xl:my-16 h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent xl:block"
-          ></div>
-          <projects-allugator></projects-allugator>
-          <div
-            class="xl:my-16 h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent xl:block"
-          ></div>
-          <projects-multiplayer></projects-multiplayer>
-          <div
-            class="mt-16 mb-32 h-px w-full bg-linear-to-r bg-transparent"
-          ></div>
-          <cases-section></cases-section>
-        </div>
+        <projects-ifficient></projects-ifficient>
+        <div
+          class="xl:my-16 h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent xl:block"
+        ></div>
+        <projects-damus></projects-damus>
+        <div
+          class="xl:my-16 h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent xl:block"
+        ></div>
+        <projects-allugator></projects-allugator>
+        <div
+          class="xl:my-16 h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent xl:block"
+        ></div>
+        <projects-multiplayer></projects-multiplayer>
+        <div
+          class="mt-16 mb-32 h-px w-full bg-linear-to-r bg-transparent"
+        ></div>
+        <cases-section></cases-section>
       </section>
     `
   }

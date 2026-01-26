@@ -68,7 +68,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
         <div
           class="container flex flex-col justify-between min-h-[calc(100svh-4rem)] pt-16"
         >
-          <div class="flex flex-col items-center my-auto gap-16 md:gap-12 px-5" data-parallax-layer="1">
+          <div class="flex flex-col items-center my-auto pt-12 pb-16 gap-16 md:gap-12" data-parallax-layer="1">
 
             <div class="flex items-center gap-4 -mb-2 md:-mb-3">
               <img
@@ -81,13 +81,13 @@ export class HeroSection extends ThemeMixin(LitElement) {
                 decoding="async"
                 loading="eager"
                 alt="${i18next.t('about.picDescription')}"
-                class="rounded-full size-14 md:size-16 bg-zinc-900 outline-4 outline-zinc-950"
+                class="rounded-full size-14 2xl:size-16 bg-zinc-900 outline-4 outline-zinc-950"
               />
               <div class="grid gap-2 leading-none">
-                <span class="md:text-[1.25rem] text-white">
+                <span class="2xl:text-[1.25rem] text-white">
                   Paulo Melo Jr.
                 </span>
-                <span class="flex items-center gap-2 font-medium text-[.875rem] md:text-[1rem]">
+                <span class="flex items-center gap-2 font-medium text-[.875rem] 2xl:text-[1rem]">
                   <span class="relative flex size-3">
                     <span
                       class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400"
@@ -102,10 +102,10 @@ export class HeroSection extends ThemeMixin(LitElement) {
             </div>
             
             <div class="flex flex-col gap-2 text-center">
-              <h1 class="text-pretty text-zinc-50 font-semibold text-[2.5rem] leading-none tracking-[-0.06em] xl:text-[3rem] 2xl:text-[4rem] uppercase">
+              <h1 class="text-pretty text-zinc-50 font-semibold text-[2.5rem] leading-none tracking-[-0.06em] xl:text-[2.75rem] 2xl:text-[4rem] uppercase">
                 ${i18next.t('about.content.title')}
               </h1>
-              <h2 class="text-balance md:leading-none text-[1rem] xl:text-[1.5rem] text-zinc-200 tracking-[-0.02em] xl:font-light">
+              <h2 class="text-balance leading-none text-[1rem] 2xl:text-[1.5rem] text-zinc-200 tracking-[-0.02em] xl:font-light">
                 ${i18next.t('about.content.subtitle')}
               </h2>
             </div>
