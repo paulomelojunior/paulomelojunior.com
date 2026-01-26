@@ -34,18 +34,18 @@
   "journey": {
     "t0": "Journey",
 
-    "t1": "Design <br class='block lg:hidden'> intern",
+    "t1": "Design <br class='block md:hidden'> intern",
     "p1": "During my internship, I had the opportunity to refine and develop skills across various functions. HTML and CSS development, marketing initiatives, visual design, branding, and UX/UI design.",
 
-    "t2": "Designer, <br class='block lg:hidden'> front-end coder",
+    "t2": "Designer, <br class='block md:hidden'> front-end coder",
     "p2": "In multifaceted collaboration with managers and the development team, we successfully redesigned the interfaces and features of company's software.",
     "m2": "Also played a key role in co-creating a platform that facilitates connecting individuals facing legal issues with specialized professionals.",
 
-    "t3": "Visual and <br class='block lg:hidden'> product designer",
+    "t3": "Visual and <br class='block md:hidden'> product designer",
     "p3": "Early 2018, I held the role of a generalist designer, tasked with developing and managing all aspects of design and creative outputs for their product project.",
     "m3": "Second half of the year, I collaborated with another company to design an open-source library of interface components.",
 
-    "t4": "Lead designer, <br class='block lg:hidden'> UI engineer",
+    "t4": "Lead designer, <br class='block md:hidden'> UI engineer",
     "p4": "Today responsible for redesigning the company's advanced lead management platform, using React components to improve performance and scalability."
   },
   "cases": {
