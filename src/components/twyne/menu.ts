@@ -82,7 +82,7 @@ export class TwyneMenu extends ThemeMixin(LitElement) {
       this.more = false
     })
 
-    // remove outline on top using gsap and scrollTrigge
+    // remove outline on top using gsap and scrollTrigger
     gsap.to('header', {
       scrollTrigger: {
         trigger: 'header',
@@ -104,7 +104,7 @@ export class TwyneMenu extends ThemeMixin(LitElement) {
       <header
         class="fixed inset-x-0 z-40 w-full bg-linear-to-t from-zinc-950 backdrop-blur to-zinc-950/80 backdrop-saturate-200 lg:fixed lg:block py-2"
       >
-        <div class="container lg:grid flex items-center lg:grid-cols-3">
+        <div class="container lg:grid flex items-center lg:grid-cols-4">
           <nav class="lg:hidden">
             <ul id="anchors" class="flex bg-zinc-950 overflow-hidden fixed inset-0 flex-col justify-center w-dvw *:transition-all duration-500 ${this.more ? 'h-dvh' : 'h-0 *:opacity-0'}">
               <li>
@@ -177,30 +177,36 @@ export class TwyneMenu extends ThemeMixin(LitElement) {
               Menu
             </span>
           </button>
-          <nav>
-            <ul id="anchors" class="hidden lg:flex justify-end px-0">
-              <li class="flex-1">
+          <nav class="col-span-2">
+            <ul id="anchors" class="hidden lg:flex justify-center px-0">
+              <li class="spy-link">
                 <menu-item
                   href="#goal"
                   label="${i18next.t('twyne.menu.goal')}"
                 ></menu-item>
               </li>
-              <li class="flex-1">
+              <li class="spy-link">
                 <menu-item
                   href="#proposal"
                   label="${i18next.t('twyne.menu.proposal')}"
                 ></menu-item>
               </li>
-              <li class="flex-1">
+              <li class="spy-link">
                 <menu-item
                   href="#impact"
                   label="${i18next.t('twyne.menu.impact')}"
                 ></menu-item>
               </li>
-              <li class="flex-1">
+              <li class="spy-link">
                 <menu-item
                   href="#mobile"
                   label="${i18next.t('twyne.menu.mobile')}"
+                ></menu-item>
+              </li>
+              <li class="spy-link">
+                <menu-item
+                  href="#conclusion"
+                  label="${i18next.t('twyne.menu.final')}"
                 ></menu-item>
               </li>
             </ul>

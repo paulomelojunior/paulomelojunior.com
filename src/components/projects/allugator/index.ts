@@ -32,20 +32,20 @@ export class ProjectsAllugator extends LitElement {
       <p class="mb-3 text-[.875rem]">
         ${i18next.t('allugator.description')}
       </p>
-      <div class="my-3 grid gap-3 border-s border-zinc-800 ps-4">
-        <h3 class="text-[1.25rem] leading-none text-zinc-100">
+      <div class="my-3 grid gap-2">
+        <h3 class="text-[1.25rem] leading-none text-zinc-50">
           ${i18next.t('allugator.metrics.valuation.title')}
         </h3>
         <p class="text-[.875rem] leading-none">${i18next.t('allugator.metrics.valuation.subtitle')}</p>
       </div>
-      <div class="my-3 grid gap-3 border-s border-zinc-800 ps-4">
-        <h3 class="text-[1.25rem] leading-none text-zinc-100">
+      <div class="my-3 grid gap-2">
+        <h3 class="text-[1.25rem] leading-none text-zinc-50">
           ${i18next.t('allugator.metrics.users.title')}
         </h3>
         <p class="text-[.875rem] leading-none">${i18next.t('allugator.metrics.users.subtitle')}</p>
       </div>
-      <div class="my-3 grid gap-3 border-s border-zinc-800 ps-4">
-        <h3 class="text-[1.25rem] leading-none text-zinc-100">
+      <div class="my-3 grid gap-2">
+        <h3 class="text-[1.25rem] leading-none text-zinc-50">
           ${i18next.t('allugator.metrics.daily.title')}
         </h3>
         <p class="text-[.875rem] leading-none">${i18next.t('allugator.metrics.daily.subtitle')}</p>

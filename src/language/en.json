@@ -26,9 +26,9 @@
     }
   },
   "praxis": {
-    "t1": "Design in thinking.",
+    "t1": "Design in thinking",
     "p1": "From insight to interface, I design with people in mind. Merging aesthetics, purpose, and cutting-edge tech through Design Thinking and Human-Centered Design.",
-    "t2": "Technology to deliver.",
+    "t2": "Technology to deliver",
     "p2": "Learning from tech experts early on made algorithms a core part of my toolkit, bridging design and engineering to craft seamless, refined digital experiences."
   },
   "journey": {
@@ -68,7 +68,7 @@
       "proposal": "Proposal",
       "impact": "Impact",
       "mobile": "Mobile",
-      "conclusion": "Conclusion"
+      "final": "Final"
     },
     "t1": "Case study / 01",
     "t2": "Twyne",

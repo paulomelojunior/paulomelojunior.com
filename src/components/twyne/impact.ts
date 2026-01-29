@@ -28,7 +28,7 @@ export class TwyneImpact extends LitElement {
     return html`
       <div id="impact" class="container grid gap-10 px-6 pt-24 xl:pt-32 xl:px-24 2xl:px-32">
         <h2
-          class="text-[2rem] lg:text-[2.5rem] leading-none tracking-[-.02em] 2xl:text-[3rem] text-zinc-100"
+          class="text-[2rem] lg:text-[2.5rem] leading-none tracking-[-.02em] 2xl:text-[3rem] text-zinc-50"
         >
           ${unsafeHTML(i18next.t('twyne.impact.t1'))}
         </h2>
@@ -59,7 +59,7 @@ export class TwyneImpact extends LitElement {
           </div>
         </div>
         <ul
-          class="text-sm leading-loose lg:text-base 2xl:text-[1.25rem] text-zinc-100 grid lg:grid-cols-2 gap-4 lg:gap-0"
+          class="text-sm leading-loose lg:text-base 2xl:text-[1.25rem] text-zinc-50 grid lg:grid-cols-2 gap-4 lg:gap-0"
         >
           ${items.map(
             (item) =>

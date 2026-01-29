@@ -81,7 +81,7 @@ export class TwyneProposal extends LitElement {
 
     return html`
       <ul
-        class="leading-loose 2xl:text-[1.25rem] text-zinc-100 flex flex-col gap-4 lg:gap-0"
+        class="leading-loose 2xl:text-[1.25rem] text-zinc-50 flex flex-col gap-4 lg:gap-0"
       >
         ${proposalList.map(
           (item) => html`
@@ -228,7 +228,7 @@ export class TwyneProposal extends LitElement {
         ></div>
         <div class="container rounded-t-4xl px-6 pb-24 lg:py-24 2xl:p-32">
           <h2
-            class="mb-10 text-[2rem] lg:text-[2.5rem] leading-none tracking-[-.02em] 2xl:text-[3rem] text-zinc-100"
+            class="mb-10 text-[2rem] lg:text-[2.5rem] leading-none tracking-[-.02em] 2xl:text-[3rem] text-zinc-50"
           >
             ${i18next.t('twyne.proposal.t1')}
           </h2>

@@ -23,7 +23,7 @@ export class TwyneAbout extends LitElement {
     this.lang = i18next.language
   }
 
-  firstUpdated() {
+  private handleCoverImage() {
     const coverImage = document.querySelector('#cover-image')
     if (!coverImage) return
     
@@ -39,6 +39,10 @@ export class TwyneAbout extends LitElement {
         ease: 'none',
       })
     })
+  }
+
+  firstUpdated() {
+    this.handleCoverImage()
   }
 
   render() {

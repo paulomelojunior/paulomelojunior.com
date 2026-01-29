@@ -1,4 +1,5 @@
 import i18next from '../../i18n'
+import { gsap } from 'gsap'
 import { LitElement, PropertyValues, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
@@ -101,7 +102,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
   private createJourneyHeader(): string {
     return `
       <h2
-        class="text-pretty text-[2.5rem] leading-none tracking-[-0.04em] xl:text-[3rem] 2xl:text-[4rem] text-zinc-100 px-5 xl:px-20 2xl:px-32"
+        class="text-pretty text-[2.5rem] leading-none tracking-[-0.04em] xl:text-[3rem] 2xl:text-[4rem] text-zinc-50 px-5 xl:px-20 2xl:px-32"
       >
         ${i18next.t('journey.t0')}
       </h2>
@@ -149,7 +150,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
         <span class="font-mono text-[.75rem] leading-none font-medium tracking-[.05em] text-zinc-500 mb-2">
           ${item.start} &bull; <span${customClass}>${item.end}</span>
         </span>
-        <h2 class="text-[1.5rem] 2xl:text-[2rem] xl:leading-none text-zinc-100">
+        <h2 class="text-[1.5rem] 2xl:text-[2rem] xl:leading-none text-zinc-50">
           ${item.title}
         </h2>
         <p class="text-sm/loose lg:text-base/loose text-pretty">
@@ -157,6 +158,23 @@ export class JourneySection extends ThemeMixin(LitElement) {
         </p>
       </div>
     `
+  }
+
+  private handleJourneyItems() {
+    let mm = gsap.matchMedia()
+  
+    mm.add('(min-width: 1024px)', () => {
+      gsap.from('#job > *', {
+        scrollTrigger: {
+          trigger: '.job',
+          start: '0% 100%',
+          toggleActions: 'play none none reverse',
+        },
+        opacity: 0,
+        y: '10rem',
+        stagger: 0.1,
+      })
+    })
   }
 
   protected firstUpdated(_changedProperties: PropertyValues): void {
@@ -171,6 +189,8 @@ export class JourneySection extends ThemeMixin(LitElement) {
       const journeyItemHTML = this.createJourneyItemHTML(item)
       journeyElement.insertAdjacentHTML('beforeend', journeyItemHTML)
     })
+
+    this.handleJourneyItems()
   }
 
   render() {

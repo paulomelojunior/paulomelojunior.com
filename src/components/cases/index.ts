@@ -99,7 +99,7 @@ export class CasesSection extends LitElement {
               class="cases-content relative flex flex-1 flex-col p-20 text-center xl:aspect-square xl:rounded-r-4xl 2xl:p-24"
             >
               <h2
-                class="text-[2.5rem] leading-none tracking-[-0.04em] text-zinc-100 2xl:text-[3rem]"
+                class="text-[2.5rem] leading-none tracking-[-0.04em] text-zinc-50 2xl:text-[3rem]"
               >
                 ${this.renderTitle(i18next.t('cases.title'))}
               </h2>

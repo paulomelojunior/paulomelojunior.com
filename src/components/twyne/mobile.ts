@@ -68,7 +68,7 @@ export class TwyneMobile extends LitElement {
     return html`
       <section id="mobile" class="mt-24 py-24 xl:mt-32 xl:py-32">
         <h2
-          class="mb-16 xl:mb-32 text-center text-[2.5rem] leading-normal tracking-[-.02em] 2xl:text-[3rem] text-zinc-100"
+          class="mb-16 xl:mb-32 text-center text-[2.5rem] leading-normal tracking-[-.02em] 2xl:text-[3rem] text-zinc-50"
         >
           ${unsafeHTML(i18next.t('twyne.mobile.t1'))}
         </h2>

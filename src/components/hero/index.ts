@@ -29,6 +29,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
       this.lang = i18next.language
     })
   }
+  
   firstUpdated() {
     document
       .querySelectorAll('[data-parallax-layers]')
