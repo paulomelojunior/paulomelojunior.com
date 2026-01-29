@@ -457,6 +457,14 @@
     animation: marquee 56s linear infinite;
   }
 
+  .mobile-screen {
+    border-radius: 2rem;
+    mask-image: url('imgs/mask.png');
+    mask-mode: luminance;
+    mask-size: cover;
+    corner-shape: superellipse(1.5);
+  }
+
   /* Progressive Blur */
   .progressive-blur > * {
     --progressive-blur-direction: 180deg;

@@ -8,7 +8,6 @@ import e2 from './imgs/e2.png'
 import e3 from './imgs/e3.png'
 import e4 from './imgs/e4.png'
 import e5 from './imgs/e5.png'
-import mask from './imgs/mask.png'
 
 @customElement('twyne-mobile')
 export class TwyneMobile extends LitElement {
@@ -28,35 +27,38 @@ export class TwyneMobile extends LitElement {
     this.lang = i18next.language
   }
 
-  protected firstUpdated(_changedProperties: PropertyValues): void {
+  private screensMotion() {
     document
-      .querySelectorAll('[data-parallax-screens]')
+      .querySelectorAll('[data-parallax-layers]')
       .forEach((triggerElement) => {
         let tl = gsap.timeline({
           scrollTrigger: {
             trigger: '#mobile-images',
             start: '0% 100%',
-            end: '50% 100%',
-            scrub: 2,
+            end: '100% 0%',
+            scrub: 0,
           },
         })
         const layers = [
-          { layer: '1', y: '50%', opacity: 0 },
-          { layer: '2', y: '40%', opacity: 0 },
-          { layer: '3', y: '30%', opacity: 0 },
-          { layer: '4', y: '20%', opacity: 0 },
-          { layer: '5', y: '10%', opacity: 0 },
+          { layer: '1', ys: '30%', ye: '0%', opacity: .5 },
+          { layer: '2', ys: '20%', ye: '5%', opacity: .75 },
+          { layer: '3', ys: '10%', ye: '10%', opacity: 1 },
+          { layer: '4', ys: '20%', ye: '5%', opacity: .75 },
+          { layer: '5', ys: '30%', ye: '0%', opacity: .5 },
         ]
         layers.forEach((layerObj, idx) => {
-          tl.from(
+          tl.fromTo(
             triggerElement.querySelectorAll(
-              `[data-parallax-screens="${layerObj.layer}"]`
+              `[data-parallax-layer="${layerObj.layer}"]`
             ),
             {
-              y: layerObj.y,
-              ease: 'none',
+              y: layerObj.ys,
               opacity: layerObj.opacity,
-              // filter: 'blur(1rem)',
+            },
+            {
+              y: layerObj.ye,
+              opacity: 1,
+              ease: 'none'
             },
             idx === 0 ? undefined : '<'
           )
@@ -64,7 +66,10 @@ export class TwyneMobile extends LitElement {
       })
   }
 
-  render() {
+  protected firstUpdated(_changedProperties: PropertyValues): void {
+    this.screensMotion()
+  }
+  render() {    
     return html`
       <section id="mobile" class="mt-24 py-24 xl:mt-32 xl:py-32">
         <h2
@@ -74,26 +79,16 @@ export class TwyneMobile extends LitElement {
         </h2>
         <div
           id="mobile-images"
-          class="mx-auto grid max-w-[1920px] grid-cols-4 xl:grid-cols-5 items-center justify-center gap-4 px-4"
-          data-parallax-screens
+          class="mx-auto grid max-w-[1920px] grid-cols-5 items-center justify-center gap-4 px-4"
+          data-parallax-layers
         >
-          <img src="${e2}" data-parallax-screens="1" class="mobile-screen hidden xl:block" />
-          <img src="${e1}" data-parallax-screens="2" class="mobile-screen" />
-          <img src="${e3}" data-parallax-screens="3" class="mobile-screen" />
-          <img src="${e4}" data-parallax-screens="4" class="mobile-screen" />
-          <img src="${e5}" data-parallax-screens="5" class="mobile-screen" />
+          <img src="${e2}" data-parallax-layer="1" class="mobile-screen" />
+          <img src="${e1}" data-parallax-layer="2" class="mobile-screen" />
+          <img src="${e3}" data-parallax-layer="3" class="mobile-screen" />
+          <img src="${e4}" data-parallax-layer="4" class="mobile-screen" />
+          <img src="${e5}" data-parallax-layer="5" class="mobile-screen" />
         </div>
       </section>
-      <style>
-        .mobile-screen {
-          mask-image: url(${mask});
-          mask-mode: luminance;
-          mask-size: cover;
-          -webkit-mask-image: url(${mask});
-          -webkit-mask-mode: luminance;
-          -webkit-mask-size: cover;
-        }
-      </style>
     `
   }
 
