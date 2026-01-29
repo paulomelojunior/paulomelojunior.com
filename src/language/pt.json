@@ -76,7 +76,19 @@
     "about": {
       "t1": "O que é",
       "p1": "Desenvolvida pela Ifficient, <span class='text-zinc-100'>o Twyne é um software robusto de gestão, otimização e distribuição de leads, com foco em monetização e análise em tempo real.</span>",
-      "p2": "Voltada para o mercado B2B, atende poucos clientes em volume, mas com alto ticket médio e exigências elevadas de personalização."
+      "p2": "Voltada para o mercado B2B, atende poucos clientes em volume, mas com alto ticket médio e exigências elevadas de personalização.",
+      "details": {
+        "company": "Empresa",
+        "companyValue": "Ifficient",
+        "industry": "Mercado",
+        "industryValue": "AdTech",
+        "product": "Produto",
+        "productValue": "Software as a Service",
+        "contributions": "Contribuições",
+        "contribution1": "Product Design",
+        "contribution2": "Design System",
+        "contribution3": "UI Engineering"
+      }
     },
     "projectInfo": {
       "company": "Empresa",
