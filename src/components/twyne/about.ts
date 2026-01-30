@@ -60,7 +60,7 @@ export class TwyneAbout extends LitElement {
         <p class="text-default text-pretty">
           ${unsafeHTML(i18next.t('twyne.about.p1'))}
         </p>
-        <ul class="hidden lg:block mt-auto text-[.75rem] leading-none *:py-4 lg:text-[1rem] *:border-b *:border-zinc-800">
+        <ul class="hidden lg:block mt-auto text-[.75rem] leading-none *:py-6 lg:text-[1rem] *:border-b *:border-zinc-800">
           <li class="flex justify-between align-baseline">
             <span> ${i18next.t('twyne.about.details.company')} </span>
             <span class="text-right text-zinc-50">

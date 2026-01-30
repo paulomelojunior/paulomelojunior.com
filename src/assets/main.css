@@ -298,17 +298,10 @@
 
   #loading::before {
     position: absolute;
-    background: url('imgs/pattern.svg');
     content: '';
     height: 100vh;
     inset-inline: 0;
-    mask-image: radial-gradient(
-      circle at top center,
-      var(--color-zinc-950),
-      transparent 50%
-    );
     pointer-events: none;
-    background-attachment: local;
   }
 
   /* Menu */

@@ -212,7 +212,7 @@ export class TwyneMenu extends ThemeMixin(LitElement) {
             </ul>
           </nav>
           <div class="hidden lg:flex items-center justify-end gap-2">
-            <a class="cta-button py-1.5 px-4 uppercase font-semibold text-[.75rem] tracking-[0.05em]" href="${i18next.t('links.projects.url')}">
+            <a class="cta-button pt-[5px] pb-[7px] px-4 text-[.875rem]" href="${i18next.t('links.projects.url')}">
               ${i18next.t('featured.button')}
             </a>
             <div class="flex h-12 items-center justify-center lg:h-12">

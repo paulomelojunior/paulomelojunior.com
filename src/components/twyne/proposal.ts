@@ -127,6 +127,14 @@ export class TwyneProposal extends LitElement {
             class="w-[calc(560px*0.8)] xl:w-auto"
           />
         </div>
+        <img
+          src="${b4}"
+          height="448"
+          width="792"
+          loading="lazy"
+          alt="Component B4"
+          class="w-[calc(792px*0.8)] xl:w-auto"
+        />
         <div class="hidden lg:flex gap-4">
           <img
             src="${b7}"
@@ -153,14 +161,7 @@ export class TwyneProposal extends LitElement {
             class="w-[calc(240px*0.8)] xl:w-auto"
           />
         </div>
-        <img
-          src="${b4}"
-          height="448"
-          width="792"
-          loading="lazy"
-          alt="Component B4"
-          class="w-[calc(792px*0.8)] xl:w-auto"
-        />
+        
       </div>
     `
   }

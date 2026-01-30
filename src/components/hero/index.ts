@@ -69,7 +69,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
         <div
           class="container flex flex-col justify-between min-h-[calc(100svh-4rem)] pt-16"
         >
-          <div class="flex flex-col items-center my-auto pt-12 pb-16 gap-16 md:gap-12" data-parallax-layer="1">
+          <div class="flex flex-col items-center my-auto pt-12 pb-16 gap-10 md:gap-12" data-parallax-layer="1">
 
             <div class="flex items-center gap-4 -mb-2 md:-mb-3">
               <img
@@ -103,7 +103,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
             </div>
             
             <div class="flex flex-col gap-2 text-center">
-              <h1 class="text-pretty text-zinc-50 font-semibold text-[2.5rem] leading-none tracking-[-0.06em] xl:text-[2.75rem] 2xl:text-[4rem] uppercase">
+              <h1 class="text-pretty text-zinc-50 font-semibold text-[2rem] leading-none tracking-[-0.06em] xl:text-[2.75rem] 2xl:text-[4rem] uppercase">
                 ${i18next.t('about.content.title')}
               </h1>
               <h2 class="text-balance leading-none text-[1rem] 2xl:text-[1.5rem] text-zinc-200 tracking-[-0.02em] xl:font-light">
@@ -156,7 +156,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
             class="container grid grid-cols-12 items-end ps-5 sm:ps-0"
             data-parallax-layer="2"
           >
-            <div class="hidden sm:hidden xl:block col-span-12 xl:col-span-3">
+            <div class="block sm:hidden xl:block col-span-12 xl:col-span-3">
               <img
                 class="aspect-square w-full object-cover mask-b-from-50% sm:mask-b-from-0% sm:mask-r-from-50% object-top rounded-tl-lg"
                 src="${s1}"
