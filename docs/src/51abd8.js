@@ -380,26 +380,26 @@ var kd=Object.defineProperty;var Pd=(s,e,t)=>e in s?kd(s,e,{enumerable:!0,config
             ></mail-button>
           </div>
           <nav>
-            <ul id="anchors" class="flex justify-evenly">
-              <li class="flex-1">
+            <ul id="anchors" class="flex justify-center">
+              <li>
                 <menu-item
                   href="#ifficient"
                   label="Ifficient"
                 ></menu-item>
               </li>
-              <li class="flex-1">
+              <li>
                 <menu-item
                   href="#damus"
                   label="Damus"
                 ></menu-item>
               </li>
-              <li class="flex-1">
+              <li>
                 <menu-item
                   href="#allugator"
                   label="Allugator"
                 ></menu-item>
               </li>
-              <li class="flex-1">
+              <li>
                 <menu-item
                   href="#multiplayer"
                   label="Multiplayer"
@@ -416,34 +416,11 @@ var kd=Object.defineProperty;var Pd=(s,e,t)=>e in s?kd(s,e,{enumerable:!0,config
           <div class="flex justify-end">
             <div class="flex items-center justify-center gap-2">
               <a
-                class="cta-button flex items-center gap-2 uppercase font-semibold text-[.75rem] py-1.5 pe-2 tracking-[0.05em]"
+                class="cta-button flex items-center gap-2 pt-[5px] pb-[7px] text-[.875rem]"
                 href="/Paulo Melo Jr. - Currículo.pdf"
                 target="_blank"
               >
-                ${this.lang==="en"?"Resume":"Currículo"}
-                <svg
-                  alt="${this.lang==="en"?"Download":"Baixar"}"
-                  width="20px"
-                  height="20px"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12 13V22M12 22L15.5 18.5M12 22L8.5 18.5"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M20 17.6073C21.4937 17.0221 23 15.6889 23 13C23 9 19.6667 8 18 8C18 6 18 2 12 2C6 2 6 6 6 8C4.33333 8 1 9 1 13C1 15.6889 2.50628 17.0221 4 17.6073"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
+                ${this.lang==="en"?"Download resume":"Baixar currículo"}
               </a>
               <div class="flex h-12 items-center justify-center">
                 <lang-button
@@ -728,7 +705,7 @@ var kd=Object.defineProperty;var Pd=(s,e,t)=>e in s?kd(s,e,{enumerable:!0,config
       >
         <div
           id="footerLinks"
-          class="relative z-10 flex h-full flex-1 items-center pb-24 lg:pb-0"
+          class="relative z-10 flex h-full flex-1 items-center pb-16 lg:pb-0"
         >
           <div
             id="menu"
@@ -757,7 +734,7 @@ var kd=Object.defineProperty;var Pd=(s,e,t)=>e in s?kd(s,e,{enumerable:!0,config
         <div
           class="container flex flex-col justify-between min-h-[calc(100svh-4rem)] pt-16"
         >
-          <div class="flex flex-col items-center my-auto pt-12 pb-16 gap-16 md:gap-12" data-parallax-layer="1">
+          <div class="flex flex-col items-center my-auto pt-12 pb-16 gap-10 md:gap-12" data-parallax-layer="1">
 
             <div class="flex items-center gap-4 -mb-2 md:-mb-3">
               <img
@@ -791,7 +768,7 @@ var kd=Object.defineProperty;var Pd=(s,e,t)=>e in s?kd(s,e,{enumerable:!0,config
             </div>
             
             <div class="flex flex-col gap-2 text-center">
-              <h1 class="text-pretty text-zinc-50 font-semibold text-[2.5rem] leading-none tracking-[-0.06em] xl:text-[2.75rem] 2xl:text-[4rem] uppercase">
+              <h1 class="text-pretty text-zinc-50 font-semibold text-[2rem] leading-none tracking-[-0.06em] xl:text-[2.75rem] 2xl:text-[4rem] uppercase">
                 ${m.t("about.content.title")}
               </h1>
               <h2 class="text-balance leading-none text-[1rem] 2xl:text-[1.5rem] text-zinc-200 tracking-[-0.02em] xl:font-light">
@@ -844,7 +821,7 @@ var kd=Object.defineProperty;var Pd=(s,e,t)=>e in s?kd(s,e,{enumerable:!0,config
             class="container grid grid-cols-12 items-end ps-5 sm:ps-0"
             data-parallax-layer="2"
           >
-            <div class="hidden sm:hidden xl:block col-span-12 xl:col-span-3">
+            <div class="block sm:hidden xl:block col-span-12 xl:col-span-3">
               <img
                 class="aspect-square w-full object-cover mask-b-from-50% sm:mask-b-from-0% sm:mask-r-from-50% object-top rounded-tl-lg"
                 src="${e1}"
@@ -958,7 +935,7 @@ var kd=Object.defineProperty;var Pd=(s,e,t)=>e in s?kd(s,e,{enumerable:!0,config
           ${e}
         </ul>
       </div>
-    `}createRenderRoot(){return this}};Co([R({type:String})],is.prototype,"star",2);Co([R({type:String})],is.prototype,"items",2);Co([R({type:Boolean})],is.prototype,"reverse",2);is=Co([oe("marquee-element")],is);var d1=Object.defineProperty,f1=Object.getOwnPropertyDescriptor,So=(s,e,t,i)=>{for(var n=i>1?void 0:i?f1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&d1(e,t,n),n};let ns=class extends Q{constructor(){super(...arguments),this.classNames="",this.href="",this.label=""}firstUpdated(){const s=document.querySelectorAll(".menu-item");s.forEach(i=>{const n=i.firstElementChild;ne.set(n,{clipPath:"inset(0% 0% 100% 0%)"})});function e(){const i=this.firstElementChild;ne.to(i,{duration:.2,clipPath:"inset(0% 0% 0% 0%)"})}function t(){if(this.classList.contains("active"))return;const i=this.firstElementChild;i&&ne.to(i,{duration:.2,clipPath:"inset(100% 0 0 0)",onComplete:()=>{ne.set(i,{clipPath:"inset(0% 0% 100%)"})}})}s.forEach(i=>{i.addEventListener("mouseenter",e),i.addEventListener("mouseleave",t)})}render(){const s=ts("menu-item font-semibold relative tracking-[0.04em] flex justify-center h-8 px-4 text-zinc-400 text-[.75rem] uppercase items-center"),e=ts("absolute flex items-center justify-center inset-0 text-zinc-950");return U`<a
+    `}createRenderRoot(){return this}};Co([R({type:String})],is.prototype,"star",2);Co([R({type:String})],is.prototype,"items",2);Co([R({type:Boolean})],is.prototype,"reverse",2);is=Co([oe("marquee-element")],is);var d1=Object.defineProperty,f1=Object.getOwnPropertyDescriptor,So=(s,e,t,i)=>{for(var n=i>1?void 0:i?f1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&d1(e,t,n),n};let ns=class extends Q{constructor(){super(...arguments),this.classNames="",this.href="",this.label=""}firstUpdated(){const s=document.querySelectorAll(".menu-item");s.forEach(i=>{const n=i.firstElementChild;ne.set(n,{clipPath:"inset(0% 0% 100% 0%)"})});function e(){const i=this.firstElementChild;ne.to(i,{duration:.2,clipPath:"inset(0% 0% 0% 0%)"})}function t(){if(this.classList.contains("active"))return;const i=this.firstElementChild;i&&ne.to(i,{duration:.2,clipPath:"inset(100% 0 0 0)",onComplete:()=>{ne.set(i,{clipPath:"inset(0% 0% 100%)"})}})}s.forEach(i=>{i.addEventListener("mouseenter",e),i.addEventListener("mouseleave",t)})}render(){const s=ts("menu-item font-medium relative flex justify-center h-8 pt-[5px] pb-[7px] px-4 text-zinc-400 text-[.875rem] items-center"),e=ts("absolute flex items-center justify-center inset-0 text-zinc-950 pt-[5px] pb-[7px]");return U`<a
       class="${s} ${this.classNames}"
       href="${this.href}"
       data-label="${this.label}"
@@ -1030,20 +1007,20 @@ var kd=Object.defineProperty;var Pd=(s,e,t)=>e in s?kd(s,e,{enumerable:!0,config
             </span>
           </button>
           <nav>
-            <ul id="anchors" class="hidden lg:flex justify-end">
-              <li class="flex-1">
+            <ul id="anchors" class="hidden lg:flex justify-center">
+              <li>
                 <menu-item
                   href="#section-praxis"
                   label="${m.t("menu.praxis")}"
                 ></menu-item>
               </li>
-              <li class="flex-1">
+              <li>
                 <menu-item
                   href="#section-journey"
                   label="${m.t("menu.journey")}"
                 ></menu-item>
               </li>
-              <li class="flex-1">
+              <li>
                 <menu-item
                   href="#section-connect"
                   label="${m.t("menu.connect")}"
@@ -1052,7 +1029,7 @@ var kd=Object.defineProperty;var Pd=(s,e,t)=>e in s?kd(s,e,{enumerable:!0,config
             </ul>
           </nav>
           <div class="hidden lg:flex items-center justify-end gap-2">
-            <a class="cta-button py-1.5 px-4 uppercase font-semibold text-[.75rem] tracking-[0.05em]" href="${m.t("links.projects.url")}">
+            <a class="cta-button pt-[5px] pb-[7px] px-4 text-[.875rem]" href="${m.t("links.projects.url")}">
               ${m.t("featured.button")}
             </a>
             <div class="flex h-12 items-center justify-center lg:h-12">
@@ -1272,7 +1249,7 @@ var kd=Object.defineProperty;var Pd=(s,e,t)=>e in s?kd(s,e,{enumerable:!0,config
         <p class="text-default text-pretty">
           ${ci(m.t("twyne.about.p1"))}
         </p>
-        <ul class="hidden lg:block mt-auto text-[.75rem] leading-none *:py-4 lg:text-[1rem] *:border-b *:border-zinc-800">
+        <ul class="hidden lg:block mt-auto text-[.75rem] leading-none *:py-6 lg:text-[1rem] *:border-b *:border-zinc-800">
           <li class="flex justify-between align-baseline">
             <span> ${m.t("twyne.about.details.company")} </span>
             <span class="text-right text-zinc-50">
@@ -1549,7 +1526,7 @@ var kd=Object.defineProperty;var Pd=(s,e,t)=>e in s?kd(s,e,{enumerable:!0,config
             </ul>
           </nav>
           <div class="hidden lg:flex items-center justify-end gap-2">
-            <a class="cta-button py-1.5 px-4 uppercase font-semibold text-[.75rem] tracking-[0.05em]" href="${m.t("links.projects.url")}">
+            <a class="cta-button pt-[5px] pb-[7px] px-4 text-[.875rem]" href="${m.t("links.projects.url")}">
               ${m.t("featured.button")}
             </a>
             <div class="flex h-12 items-center justify-center lg:h-12">
@@ -1683,6 +1660,14 @@ var kd=Object.defineProperty;var Pd=(s,e,t)=>e in s?kd(s,e,{enumerable:!0,config
             class="w-[calc(560px*0.8)] xl:w-auto"
           />
         </div>
+        <img
+          src="${e_}"
+          height="448"
+          width="792"
+          loading="lazy"
+          alt="Component B4"
+          class="w-[calc(792px*0.8)] xl:w-auto"
+        />
         <div class="hidden lg:flex gap-4">
           <img
             src="${n_}"
@@ -1709,14 +1694,7 @@ var kd=Object.defineProperty;var Pd=(s,e,t)=>e in s?kd(s,e,{enumerable:!0,config
             class="w-[calc(240px*0.8)] xl:w-auto"
           />
         </div>
-        <img
-          src="${e_}"
-          height="448"
-          width="792"
-          loading="lazy"
-          alt="Component B4"
-          class="w-[calc(792px*0.8)] xl:w-auto"
-        />
+        
       </div>
     `}renderComponentColumn(){return U`
       <div class="grid gap-2 lg:gap-4">
