@@ -53,11 +53,7 @@ export class MenuItem extends LitElement {
 
   render() {
     const baseClasses = classNames(
-      `menu-item font-medium relative flex justify-center h-8 pt-[5px] pb-[7px] px-4 text-zinc-400 text-[.875rem] items-center`
-    )
-
-    const fxClasses = classNames(
-      'absolute flex items-center justify-center inset-0 text-zinc-950 pt-[5px] pb-[7px]'
+      `font-medium relative flex justify-center h-8 px-4 text-zinc-300 text-[.875rem] items-center rounded-full hover:text-zinc-50 hover:bg-zinc-50/10 transition-all duration-[200ms] active:scale-95 active:bg-zinc-50/20`
     )
 
     return html`<a
@@ -65,7 +61,6 @@ export class MenuItem extends LitElement {
       href="${this.href}"
       data-label="${this.label}"
     >
-      <div aria-hidden="true" class="${fxClasses}">${this.label}</div>
       ${this.label}
     </a>`
   }

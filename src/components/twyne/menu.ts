@@ -90,7 +90,7 @@ export class TwyneMenu extends ThemeMixin(LitElement) {
         toggleActions: 'play none none reverse',
         scrub: 2,
       },
-      outline: '1px solid hsla(0 0 100% / 0.05)',
+      outline: '1px solid hsla(0 0 100% / 0.075)',
       padding: '0 0 0 0',
     })
   }
@@ -154,12 +154,12 @@ export class TwyneMenu extends ThemeMixin(LitElement) {
           <div class="flex items-center">
           <button
               @click=${() => this.getPreviousPage()}
-              class="flex size-10 p-3 cursor-pointer transition-background duration-500 items-center justify-center opacity-50 hover:opacity-100 hover:bg-zinc-800 rounded-full"
+              class="flex size-10 p-3 cursor-pointer transition-all duration-[200ms] items-center justify-center opacity-50 hover:opacity-100 hover:bg-zinc-50/10 active:bg-zinc-50/20 rounded-full active:scale-95"
               title="Go back to homepage"
             >
               <img
                 src="${goBack}"
-                class="transition-opacity duration-500"
+                class="transition-all duration-[200ms]"
               />
             </button>
             <mail-button

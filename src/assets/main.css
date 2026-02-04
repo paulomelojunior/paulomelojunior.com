@@ -192,30 +192,26 @@
     background-image: linear-gradient(
       to bottom,
       var(--color-zinc-50) 25%,
-      var(--color-brand-400) 25%,
+      var(--color-brand-100) 25%,
       var(--color-brand-400) 50%,
       var(--color-brand-400) 50%,
-      var(--color-brand-400) 75%,
+      var(--color-zinc-700) 75%,
       var(--color-zinc-700) 75%
     );
     background-size: 100% 400%;
     background-position: 0% 100%;
     transition:
       background-position 0.4s cubic-bezier(0.75, 0, 0.5, 1),
-      color 0.2s cubic-bezier(0.75, 0, 0.5, 1),
-      outline 0.2s cubic-bezier(0.75, 0, 0.5, 1);
+      color 0.1s cubic-bezier(0.75, 0, 0.5, 1);
     color: var(--color-zinc-950);
-    transition-delay: 0s, 0.2s, 0.2s;
-    outline: 0px solid transparent;
-    @apply rounded-full py-3 px-4 text-[1rem] font-medium leading-[20px] text-zinc-100;
+    transition-delay: 0s, 0.1s;
+    @apply rounded-full py-3 px-4 text-[1rem] font-medium leading-[20px] text-zinc-50;
   }
 
   .cta-button:hover,
   .cta-button:focus,
   .cta-button:focus-within,
-  .cta-button.active {
-    outline-width: 2px;
-    outline-color: transparent;
+  .cta-button:active {
     color: var(--color-zinc-950);
     background-position: 0% 0%;
   }
@@ -228,9 +224,15 @@
   .cta-button--accent:hover,
   .cta-button--accent:focus,
   .cta-button--accent:focus-within,
-  .cta-button--accent.active {
+  .cta-button--accent:active {
     background-position: 0% 100%;
     color: var(--color-zinc-50);
+  }
+
+  .cta-button:active {
+    scale: 95%;
+    filter: brightness(1.1);
+    transition: all .2s ease-in-out;
   }
 
   /* Footer */
@@ -324,7 +326,7 @@
   }
 
   .menu-item:active > div {
-    filter: brightness(0.9);
+    filter: brightness(1.1);
   }
 
   .menu-toggle {

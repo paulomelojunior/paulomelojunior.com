@@ -52,6 +52,23 @@ export class FooterSection extends LitElement {
     }
   }
 
+  private currentYear() {
+    return new Date().getFullYear()
+  }
+
+  private getRandomQuote() {
+    const quotes = [
+      'Stay hungry, stay foolish.',
+      'Get off zero.',
+      'No great thing is created suddenly.',
+      'Where the mind goes the body will follow.',
+      'To define is to limit.',
+      'Publish to polish.'
+    ]
+    const randomIndex = Math.floor(Math.random() * quotes.length)
+    return quotes[randomIndex]
+  }
+
   protected firstUpdated() {
     const navList = this.querySelector('#menu')
 
@@ -141,12 +158,12 @@ export class FooterSection extends LitElement {
             </span>
           </div>
         </div>
-        <div class="absolute z-50 inset-x-0 bottom-0 h-12 w-full flex items-center gap-2 justify-center px-5 font-mono text-[.625rem] font-semibold uppercase bg-zinc-950 tracking-[0.1em]">
-            <span> [c] 2025 Paulo melo Jr. </span>
-            <span class="text-zinc-600"> / </span>
-            <span> Made by a human being </span>
-          </div>
-      </footer>
+        <div class="absolute z-50 inset-x-0 bottom-0 w-full flex gap-2 justify-center px-5 pt-[10px] pb-[14px] font-mono text-[.625rem] font-semibold uppercase bg-zinc-950 tracking-[0.1em]">
+            <span> [c] ${this.currentYear() || '2026'} Paulo Melo Jr. </span>
+            <span class="text-zinc-600 hidden md:inline"> / </span>
+            <span class="hidden md:inline"> ${this.getRandomQuote() || 'To define is to limit.'} </span>
+            </div>
+        </footer>
     `
   }
 

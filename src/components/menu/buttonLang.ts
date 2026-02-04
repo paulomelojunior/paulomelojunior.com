@@ -11,7 +11,7 @@ export class LangButton extends LitElement {
 
   render() {
     const baseClasses =
-      'relative text-[.75rem] tracking-[0.05em] flex transition-all ps-3 pe-1 xl:pe-1.5 gap-2 h-8 xl:h-6 hover:h-8 rounded-full leading-8.5 xl:items-center hover:bg-zinc-100 hover:text-zinc-950 text-zinc-300 font-semibold stroke-zinc-300 hover:stroke-zinc-950 hover:fill-zinc-100'
+      'relative text-[.75rem] tracking-[0.05em] flex transition-all ps-3 pe-1 xl:pe-1.5 gap-2 h-8 xl:h-6 hover:h-8 rounded-full leading-8.5 xl:items-center hover:bg-zinc-100 hover:text-zinc-950 text-zinc-300 font-medium stroke-zinc-300 hover:stroke-zinc-950 hover:fill-zinc-100 active:scale-95'
     const buttonClasses = classNames(baseClasses, this.classNames)
 
     return html`
