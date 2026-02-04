@@ -1,7 +1,6 @@
 import i18next from '../../../i18n'
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import './press'
 import social1 from './assets/social-1.webp'
 import social2 from './assets/social-2.webp'
 import social3 from './assets/social-3.webp'

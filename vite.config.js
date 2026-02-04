@@ -16,7 +16,6 @@ export default defineConfig({
     cssCodeSplit: false,
     reportCompressedSize: false,
     chunkSizeWarningLimit: 1000,
-    incremental: true,
     rollupOptions: {
       treeshake: 'recommended',
       input: {
