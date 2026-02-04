@@ -1,6 +1,5 @@
-
-import { customElement, property } from 'lit/decorators.js'
 import { gsap } from 'gsap'
+import { customElement, property } from 'lit/decorators.js'
 import { LitElement, html } from 'lit'
 import { ThemeMixin } from '../../store/theme'
 import i18next from '../../i18n'
@@ -29,8 +28,43 @@ export class HeroSection extends ThemeMixin(LitElement) {
       this.lang = i18next.language
     })
   }
-  
-  firstUpdated() {
+
+  private itemEntrance() {
+    gsap.from('.hero',
+      {
+        paddingTop: 64,
+      }
+    );
+    document
+      .querySelectorAll('[data-entrance]')
+      .forEach((triggerElement) => {
+        const items = [
+          { item: '4', opacity: '0', y: '0%', delay: .4, scale: 1.1, duration: 1 },
+          { item: '5', opacity: '0', y: '0%', delay: 0, scale: 1.1, duration: 1.2 },
+          { item: '3', opacity: '0', y: '0rem', delay: .2, duration: 1 },
+          { item: '2', opacity: '0', y: '0rem', delay: .2, duration: 1 },
+          { item: '1', opacity: '0', y: '0rem', delay: .2, duration: 1 },
+        ]
+        const tl = gsap.timeline()
+        items.forEach((itemObj, idx) => {
+          tl.from(
+            triggerElement.querySelectorAll(
+              `[data-entrance-item="${itemObj.item}"]`
+            ),
+            {
+              y: itemObj.y,
+              opacity: itemObj.opacity,
+              delay: itemObj.delay,
+              scale: itemObj.scale,
+              duration: itemObj.duration
+            },
+            idx === 0 ? undefined : '<'
+          )
+        })
+      })
+  }
+
+  private heroParallax() {
     document
       .querySelectorAll('[data-parallax-layers]')
       .forEach((triggerElement) => {
@@ -63,15 +97,19 @@ export class HeroSection extends ThemeMixin(LitElement) {
       })
   }
 
+  firstUpdated() {
+    this.heroParallax();
+    this.itemEntrance();
+  }
+
   render() {
     return html`
-      <section class="hero" data-parallax-layers>
+      <section class="hero before:animate-(--animate-fade-in)" data-parallax-layers data-entrance>
         <div
           class="container flex flex-col justify-between min-h-[calc(100svh-4rem)] pt-16"
         >
           <div class="flex flex-col items-center my-auto pt-12 pb-16 gap-10 md:gap-12" data-parallax-layer="1">
-
-            <div class="flex items-center gap-4 -mb-2 md:-mb-3">
+            <div data-entrance-item="3" class="flex items-center gap-4 -mb-2 md:-mb-3">
               <img
                 src="${p1x}"
                 srcset="${p1x} 64w, ${p2x} 96w, ${p3x} 128w"
@@ -102,8 +140,8 @@ export class HeroSection extends ThemeMixin(LitElement) {
               </div>
             </div>
             
-            <div class="flex flex-col gap-2 text-center">
-              <h1 class="text-pretty text-zinc-50 font-semibold text-[2rem] leading-none tracking-[-0.06em] xl:text-[2.75rem] 2xl:text-[4rem] uppercase">
+            <div data-entrance-item="2" class="flex flex-col gap-2 text-center">
+              <h1 data-split="heading" class="text-pretty text-zinc-50 font-semibold text-[2rem] leading-none tracking-[-0.06em] xl:text-[2.75rem] 2xl:text-[4rem] uppercase">
                 ${i18next.t('about.content.title')}
               </h1>
               <h2 class="text-balance leading-none text-[1rem] 2xl:text-[1.5rem] text-zinc-200 tracking-[-0.02em] xl:font-light">
@@ -111,7 +149,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
               </h2>
             </div>
 
-            <div class="flex relative gap-2">
+            <div data-entrance-item="1" class="flex relative gap-2">
               <a
                 href="${i18next.t('about.cta.url')}"
                 class="cta-button cta-button--accent flex items-center gap-3 self-center px-6 outline-8 outline-zinc-950"
@@ -129,28 +167,6 @@ export class HeroSection extends ThemeMixin(LitElement) {
                 />
               </a>
             </div>
-
-          </div>
-          <div
-            class="hidden px-5 xl:grid-cols-2 xl:gap-24 gap-6"
-            data-parallax-layer="1"
-          >
-            <div class="xl:py-24 2xl:py-32">
-              <p class="text-default">
-                <mark
-                  class="inline-block bg-transparent text-zinc-50"
-                  >${i18next.t('about.content.h1')}</mark
-                >${i18next.t('about.content.p1')}
-              </p>
-            </div>
-            <div class="xl:py-24 2xl:py-32">
-              <p class="text-default">
-                <mark
-                  class="inline-block bg-transparent text-zinc-50"
-                  >${i18next.t('about.content.h2')}</mark
-                >${i18next.t('about.content.p2')}
-              </p>
-            </div>
           </div>
           <div
             class="container grid grid-cols-12 items-end ps-5 sm:ps-0"
@@ -158,6 +174,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
           >
             <div class="block sm:hidden xl:block col-span-12 xl:col-span-3">
               <img
+                data-entrance-item="5"
                 class="aspect-square w-full object-cover mask-b-from-50% sm:mask-b-from-0% sm:mask-r-from-50% object-top rounded-tl-lg"
                 src="${s1}"
                 height="384"
@@ -166,6 +183,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
               </div>
             <div class="hidden sm:block col-span-8 xl:col-span-6">
               <img
+                data-entrance-item="4"
                 class="w-full max-h-[432px] object-cover object-top mask-b-from-75% rounded-t-lg"
                 src="${s2}"
                 height="432"
@@ -174,6 +192,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
             </div>
             <div class="hidden sm:block col-span-4 xl:col-span-3">
               <img
+                data-entrance-item="5"
                 class="aspect-square w-full object-cover mask-b-from-50% mask-l-from-0% object-top rounded-tr-lg"
                 src="${s3}"
                 height="384"

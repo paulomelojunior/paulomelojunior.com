@@ -1,15 +1,11 @@
 // GSAP
 import { gsap } from 'gsap'
-import { CustomEase } from 'gsap/CustomEase'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin'
-import { ScrambleTextPlugin } from 'gsap/ScrambleTextPlugin'
+import { ScrollTrigger, CustomEase, DrawSVGPlugin } from 'gsap/all'
 
 gsap.registerPlugin(
   CustomEase,
   DrawSVGPlugin,
-  ScrollTrigger,
-  ScrambleTextPlugin
+  ScrollTrigger
 )
 
 gsap.defaults({

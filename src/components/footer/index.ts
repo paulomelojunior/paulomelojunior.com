@@ -23,35 +23,6 @@ export class FooterSection extends LitElement {
     this.lang = i18next.language
   }
 
-  private initScrambleText() {
-    const copyrightElement = this.querySelector('#copyright')
-    const copyrightSpan = this.querySelector('.copyright span')
-
-    if (copyrightElement && copyrightSpan) {
-      copyrightElement.addEventListener('mouseenter', () => {
-        gsap.to(copyrightSpan, {
-          duration: 1,
-          scrambleText: {
-            text: 'Made by a human being',
-            chars: '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-            speed: 0.1,
-          },
-        })
-      })
-
-      copyrightElement.addEventListener('mouseleave', () => {
-        gsap.to(copyrightSpan, {
-          duration: 0.5,
-          scrambleText: {
-            text: 'Copyright',
-            chars: '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-            speed: 0.1,
-          },
-        })
-      })
-    }
-  }
-
   private currentYear() {
     return new Date().getFullYear()
   }
@@ -63,7 +34,7 @@ export class FooterSection extends LitElement {
       'No great thing is created suddenly.',
       'Where the mind goes the body will follow.',
       'To define is to limit.',
-      'Publish to polish.'
+      // 'Publish to polish.'
     ]
     const randomIndex = Math.floor(Math.random() * quotes.length)
     return quotes[randomIndex]
@@ -108,7 +79,6 @@ export class FooterSection extends LitElement {
       navList.insertAdjacentHTML('beforeend', navItem)
     })
 
-    this.initScrambleText()
     this.initMenuAnimation()
   }
 

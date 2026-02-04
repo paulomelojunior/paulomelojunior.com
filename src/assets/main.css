@@ -45,6 +45,17 @@
   --color-zinc-800: oklch(0.260 0.010 var(--hue));
   --color-zinc-900: oklch(0.180 0.007 var(--hue));
   --color-zinc-950: oklch(0.100 0.004 var(--hue));
+
+  --animate-fade-in: fade-in .2s ease-in;
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }
 
 @utility container {

@@ -107,7 +107,7 @@ export class PageLoading extends LitElement {
       <div
         class="container flex h-full items-center justify-center gap-4 flex-col"
       >
-        <div class="saturate-50">
+        <div class="">
           ${unsafeHTML(`${spin}`)}
         </div>
         <span
