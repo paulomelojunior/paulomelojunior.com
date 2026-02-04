@@ -190,7 +190,7 @@ export class MenuContainer extends ThemeMixin(LitElement) {
             </ul>
           </nav>
           <div class="hidden lg:flex items-center justify-end gap-2">
-            <a class="cta-button pt-[5px] pb-[7px] px-4 text-[.875rem]" href="${i18next.t('links.projects.url')}">
+            <a class="cta-button pt-[6px] pb-[6px] px-4 text-[.875rem]" href="${i18next.t('links.projects.url')}">
               ${i18next.t('featured.button')}
             </a>
             <div class="flex h-12 items-center justify-center lg:h-12">

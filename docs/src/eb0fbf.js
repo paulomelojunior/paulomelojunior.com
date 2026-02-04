@@ -295,7 +295,7 @@ var ph=Object.defineProperty;var gh=(s,e,t)=>e in s?ph(s,e,{enumerable:!0,config
           <div class="flex justify-end">
             <div class="flex items-center justify-center gap-2">
               <a
-                class="cta-button flex items-center gap-2 pt-[5px] pb-[7px] text-[.875rem]"
+                class="cta-button flex items-center gap-2 pt-[6px] pb-[6px] text-[.875rem]"
                 href="/Paulo Melo Jr. - Currículo.pdf"
                 target="_blank"
               >
@@ -887,7 +887,7 @@ var ph=Object.defineProperty;var gh=(s,e,t)=>e in s?ph(s,e,{enumerable:!0,config
             </ul>
           </nav>
           <div class="hidden lg:flex items-center justify-end gap-2">
-            <a class="cta-button pt-[5px] pb-[7px] px-4 text-[.875rem]" href="${m.t("links.projects.url")}">
+            <a class="cta-button pt-[6px] pb-[6px] px-4 text-[.875rem]" href="${m.t("links.projects.url")}">
               ${m.t("featured.button")}
             </a>
             <div class="flex h-12 items-center justify-center lg:h-12">
@@ -1384,7 +1384,7 @@ var ph=Object.defineProperty;var gh=(s,e,t)=>e in s?ph(s,e,{enumerable:!0,config
             </ul>
           </nav>
           <div class="hidden lg:flex items-center justify-end gap-2">
-            <a class="cta-button pt-[5px] pb-[7px] px-4 text-[.875rem]" href="${m.t("links.projects.url")}">
+            <a class="cta-button pt-[6px] pb-[6px] px-4 text-[.875rem]" href="${m.t("links.projects.url")}">
               ${m.t("featured.button")}
             </a>
             <div class="flex h-12 items-center justify-center lg:h-12">

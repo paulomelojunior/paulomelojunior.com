@@ -153,7 +153,7 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
           <div class="flex justify-end">
             <div class="flex items-center justify-center gap-2">
               <a
-                class="cta-button flex items-center gap-2 pt-[5px] pb-[7px] text-[.875rem]"
+                class="cta-button flex items-center gap-2 pt-[6px] pb-[6px] text-[.875rem]"
                 href="/Paulo Melo Jr. - Currículo.pdf"
                 target="_blank"
               >
