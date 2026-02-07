@@ -201,13 +201,13 @@
   /* CTA Button */
   .cta-button {
     background-image: linear-gradient(
-      to bottom,
-      var(--color-zinc-50) 25%,
+      var(--direction, to bottom),
+      var(--color-zinc-100) 0%,
       var(--color-brand-100) 25%,
       var(--color-brand-400) 50%,
       var(--color-brand-400) 50%,
-      var(--color-zinc-700) 75%,
-      var(--color-zinc-700) 75%
+      var(--color-zinc-800) 75%,
+      var(--color-zinc-900) 120%
     );
     background-size: 100% 400%;
     background-position: 0% 100%;
@@ -228,7 +228,7 @@
   }
   
   .cta-button--accent {
-    background-position: 0% 0%;
+    --direction: to top;
     color: var(--color-zinc-950);
   }
   
@@ -236,14 +236,13 @@
   .cta-button--accent:focus,
   .cta-button--accent:focus-within,
   .cta-button--accent:active {
-    background-position: 0% 100%;
     color: var(--color-zinc-50);
   }
 
   .cta-button:active {
     scale: 95%;
     filter: brightness(1.1);
-    transition: all .2s ease-in-out;
+    transition: all .2s cubic-bezier(0.75, 0, 0.5, 1);
   }
 
   /* Footer */
@@ -319,13 +318,20 @@
 
   /* Menu */
   .menu-item > div {
-    @apply bg-[linear-gradient(to_bottom,var(--color-zinc-100)_50%,var(--color-brand-400)_50%)];
-    background-size: 100% 200%;
+    background-image: linear-gradient(
+      to bottom,
+      var(--color-zinc-50) 25%,
+      var(--color-brand-100) 25%,
+      var(--color-brand-400) 50%,
+      var(--color-brand-400) 50%,
+      var(--color-zinc-700) 75%,
+      var(--color-zinc-700) 75%
+    );
+    background-size: 100% 400%;
     background-position: 0% 100%;
     transition:
-      background-position 0.2s cubic-bezier(0.75, 0, 0.5, 1),
-      filter 0.2s cubic-bezier(0.75, 0, 0.5, 1);
-    transition-delay: 0.2s, 0s;
+      background-position 0.4s cubic-bezier(0.75, 0, 0.5, 1);
+    transition-delay: 0s, 0.1s, 0.1s;
     border-radius: .125rem;
   }
 

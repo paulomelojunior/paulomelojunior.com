@@ -97,7 +97,7 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
       <header
         class="absolute inset-x-0 z-40 hidden w-full bg-linear-to-t from-zinc-950 backdrop-blur to-zinc-950/80 backdrop-saturate-200 lg:fixed lg:block py-2"
       >
-        <div class="container grid items-center lg:grid-cols-3">
+        <div class="lg:container grid items-center lg:grid-cols-3">
           <div class="flex items-center">
             <button
               @click=${() => this.getPreviousPage()}

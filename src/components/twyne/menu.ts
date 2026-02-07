@@ -104,7 +104,7 @@ export class TwyneMenu extends ThemeMixin(LitElement) {
       <header
         class="fixed inset-x-0 z-40 w-full bg-linear-to-t from-zinc-950 backdrop-blur to-zinc-950/80 backdrop-saturate-200 lg:fixed lg:block py-2"
       >
-        <div class="container lg:grid flex items-center lg:grid-cols-4">
+        <div class="lg:container lg:grid flex items-center lg:grid-cols-4">
           <nav class="lg:hidden">
             <ul id="anchors" class="flex bg-zinc-950 overflow-hidden fixed inset-0 flex-col justify-center w-dvw *:transition-all duration-500 ${this.more ? 'h-dvh' : 'h-0 *:opacity-0'}">
               <li>

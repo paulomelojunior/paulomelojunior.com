@@ -5,8 +5,6 @@ import { ThemeMixin } from '../../store/theme'
 import i18next from '../../i18n'
 import arrow from './imgs/arrow.svg'
 import p1x from './imgs/profile-1x.webp'
-import p2x from './imgs/profile-2x.webp'
-import p3x from './imgs/profile-3x.webp'
 import s1 from './imgs/d1.webp'
 import s2 from './imgs/d2.webp'
 import s3 from './imgs/d3.webp'
@@ -112,12 +110,10 @@ export class HeroSection extends ThemeMixin(LitElement) {
             <div data-entrance-item="3" class="flex items-center gap-4 -mb-2 md:-mb-3">
               <img
                 src="${p1x}"
-                srcset="${p1x} 64w, ${p2x} 96w, ${p3x} 128w"
                 sizes="64px"
                 height="64"
                 width="64"
                 fetchpriority="high"
-                decoding="async"
                 loading="eager"
                 alt="${i18next.t('about.picDescription')}"
                 class="rounded-full size-14 2xl:size-16 bg-zinc-900 outline-4 outline-zinc-950"
@@ -152,13 +148,13 @@ export class HeroSection extends ThemeMixin(LitElement) {
             <div data-entrance-item="1" class="flex relative gap-2">
               <a
                 href="${i18next.t('about.cta.url')}"
-                class="cta-button cta-button--accent flex items-center gap-3 self-center px-6 outline-8 outline-zinc-950"
+                class="cta-button cta-button--accent flex items-center gap-3 self-center px-6 outline-4 outline-zinc-950"
               >
                 ${i18next.t('about.cta.label')}
               </a>
               <a
                 href="#section-praxis"
-                class="hidden lg:flex rounded-full size-[44px] transition-color duration-200 bg-zinc-800 hover:bg-zinc-700 justify-center items-center outline-4 outline-zinc-950"
+                class="hidden lg:flex rounded-full size-[44px] transition-color duration-[200ms] bg-zinc-800 hover:bg-zinc-700 justify-center items-center outline-4 outline-zinc-950 active:scale-95"
                 title="Scroll page"
               >
                 <img
@@ -175,7 +171,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
             <div class="block sm:hidden xl:block col-span-12 xl:col-span-3">
               <img
                 data-entrance-item="5"
-                class="aspect-square w-full object-cover mask-b-from-50% sm:mask-b-from-0% sm:mask-r-from-50% object-top rounded-tl-lg"
+                class="aspect-square w-full object-cover mask-b-from-50% sm:mask-b-from-0% sm:mask-r-from-50% object-top rounded-tl-lg bg-zinc-900"
                 src="${s1}"
                 height="384"
                 width="384"
@@ -184,7 +180,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
             <div class="hidden sm:block col-span-8 xl:col-span-6">
               <img
                 data-entrance-item="4"
-                class="w-full max-h-[432px] object-cover object-top mask-b-from-75% rounded-t-lg"
+                class="w-full max-h-[432px] object-cover object-top mask-b-from-75% rounded-t-lg bg-zinc-900"
                 src="${s2}"
                 height="432"
                 width="768"
@@ -193,7 +189,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
             <div class="hidden sm:block col-span-4 xl:col-span-3">
               <img
                 data-entrance-item="5"
-                class="aspect-square w-full object-cover mask-b-from-50% mask-l-from-0% object-top rounded-tr-lg"
+                class="aspect-square w-full object-cover mask-b-from-50% mask-l-from-0% object-top rounded-tr-lg bg-zinc-900"
                 src="${s3}"
                 height="384"
                 width="384"

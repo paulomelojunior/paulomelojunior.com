@@ -66,7 +66,7 @@ export class FooterSection extends LitElement {
       const indexStr = (i + 1).toString().padStart(2, '0')
       const navItem = `
 				<div class="border-b border-zinc-800 lg:border-0">
-					<a target="_blank" class="menu-item h-20 lg:h-16 px-5 lg:pt-1 flex items-center text-zinc-100 relative" rel="noopener noreferrer" href="${e.url}">
+					<a target="_blank" class="menu-item h-20 lg:h-16 px-5 lg:pt-1 flex items-center text-zinc-50 relative" rel="noopener noreferrer" href="${e.url}">
 						${e.label}
 						<div class="absolute flex items-center px-5 pt-1 inset-0 lg:rounded-full text-zinc-950">
 							${e.label}

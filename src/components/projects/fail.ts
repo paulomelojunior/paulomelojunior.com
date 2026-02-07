@@ -23,13 +23,17 @@ export class ProjectsFail extends LitElement {
   render() {
     return html`
       <div
-        class="hero flex h-dvh flex-col items-center justify-center gap-16 p-8 text-center text-[1.5rem] text-zinc-100 lg:hidden"
+        class="hero flex h-dvh flex-col items-center justify-center gap-16 p-8 text-center text-[1.5rem] text-zinc-100 lg:hidden text-balance"
       >
-        Sorry, this page isn't available <br />
-        for small screens yet.
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="fill-red-400" viewBox="0 0 256 256">
+          <path d="M213.92,210.62l-160-176A8,8,0,1,0,42.08,45.38L56,60.69V216a24,24,0,0,0,24,24h96a24,24,0,0,0,23.82-21.11l2.26,2.49a8,8,0,1,0,11.84-10.76ZM184,216a8,8,0,0,1-8,8H80a8,8,0,0,1-8-8V78.29l112,123.2ZM68.7,24a8,8,0,0,1,8-8H176a24,24,0,0,1,24,24V150.83a8,8,0,1,1-16,0V40a8,8,0,0,0-8-8H76.7A8,8,0,0,1,68.7,24Z"></path>
+        </svg>
+        ${this.lang === 'pt'
+          ? html`Desculpe, esta página ainda não está disponível para telas pequenas.`
+          : html`Sorry, this page isn't available for small screens yet.`}
         <a
           href="/"
-          class=" flex items-center gap-4 rounded-full bg-zinc-100 py-3 pe-6 ps-4 text-[1rem] font-semibold uppercase leading-none text-zinc-950"
+          class="flex items-center gap-4 rounded-full bg-zinc-100 py-3 pe-6 ps-4 text-[1rem] font-medium leading-none text-zinc-950"
         >
           <svg
             width="14"
@@ -41,32 +45,11 @@ export class ProjectsFail extends LitElement {
             <path
               d="M8 13L2 6.99999M2 6.99999L8 1M2 6.99999L14 6.99999"
               stroke="black"
-              stroke-width="2"
+              stroke-width="1.75"
             />
           </svg>
           Go back
         </a>
-        <svg
-          class="absolute bottom-8 h-12 rotate-21 stroke-zinc-600"
-          width="44"
-          height="67"
-          viewBox="0 0 44 67"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M13.622 26.2432C21.3514 21.7806 26.8467 14.2637 26.8467 14.2637L24.3142 20.9771C22.2556 25.7528 20.6914 30.708 18.6864 35.4888C16.8732 39.8121 13.9681 45.3093 12.0938 48.2719C10.2195 51.2345 5.20238 56.9493 4.7375 53.4575C4.51176 51.7619 5.98672 46.8824 8.83354 42.6494C11.6804 38.4164 18.3776 29.4011 24.7806 25.0562C32.0957 20.0925 40.026 12.6061 40.6384 8.03106C42.2438 -3.96201 21.0414 0.396133 1.82617 23.5558"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M12.0068 65.5502C25.5655 61.1839 21.8028 42.839 27.25 23.3022C28.2281 19.7942 29.5032 16.2477 31.2288 12.7368C30.2319 15.3528 27.6369 24.4559 30.9257 27.8938C34.2144 31.3317 40.2681 27.7068 42.8838 25.4646"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
       </div>
     `
   }
