@@ -102,7 +102,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
               </svg>
               <div class="grid gap-2 xl:gap-0">
                 <h2
-                  class="flex items-center text-[1.5rem] leading-16 text-zinc-50 xl:text-[2rem] xl:leading-24 2xl:text-[2.5rem] 2xl:leading-24"
+                  class="flex items-center text-[1.5rem] leading-16 text-zinc-50 xl:text-[2rem] xl:leading-24 2xl:text-[2.5rem] 2xl:leading-24 tracking-[-2px]"
                 >
                   ${i18next.t('praxis.t1')}
                 </h2>
@@ -128,7 +128,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
               </svg>
               <div class="grid gap-2 xl:gap-0">
                 <h2
-                  class="flex items-center text-[1.5rem] leading-16 text-zinc-50 xl:text-[2rem] xl:leading-24 2xl:text-[2.5rem] 2xl:leading-24"
+                  class="flex items-center text-[1.5rem] leading-16 text-zinc-50 xl:text-[2rem] xl:leading-24 2xl:text-[2.5rem] 2xl:leading-24 tracking-[-2px]"
                 >
                   ${i18next.t('praxis.t2')}
                 </h2>

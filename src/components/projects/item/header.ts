@@ -30,7 +30,7 @@ export class ItemHeader extends LitElement {
           <span class="text-brand-400"> ${this.year} </span>
           ${headerTags}
         </div>
-        <h2 class="text-[2.5rem] leading-none text-zinc-50">${this.title}</h2>
+        <h2 class="text-[2.5rem] leading-none text-zinc-50 tracking-[-0.02em]">${this.title}</h2>
         ${this.contentHtml
           ? html`<div class="flex flex-col gap-4 text-balance leading-loose items-start">
               ${unsafeHTML(this.contentHtml)}

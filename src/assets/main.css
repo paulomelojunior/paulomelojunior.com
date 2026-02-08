@@ -463,7 +463,8 @@
       leading-none
       tracking-[0.02em]
       lg:text-[.875rem]
-      2xl:text-[1rem];
+      2xl:text-[1rem]
+      font-medium;
     min-width: 100%;
     gap: var(--gap);
     animation: marquee 56s linear infinite;
