@@ -36,7 +36,7 @@ export class MenuContainer extends ThemeMixin(LitElement) {
     this.lang = i18next.language
   }
 
-  changeLang() {
+  toggleLanguage() {
     const currentLang = i18next.language
     const newLang = currentLang === 'en' ? 'pt' : 'en'
 
@@ -142,13 +142,13 @@ export class MenuContainer extends ThemeMixin(LitElement) {
                 ></mobile-item>
               </li>
               <div class="absolute bottom-4 right-4">
-                <lang-button
-                  @click=${() => this.changeLang()}
+                <button-lang
+                  @click=${() => this.toggleLanguage()}
                   label=${this.lang === 'pt' ? `PT · BR` : `EN · US`}
                   title="${this.lang === 'en'
                     ? 'Mudar para português'
                     : 'Change to english'}"
-                ></lang-button>
+                ></button-lang>
               </div>
             </ul>
           </nav>
@@ -193,15 +193,7 @@ export class MenuContainer extends ThemeMixin(LitElement) {
             <a class="cta-button pt-[6px] pb-[6px] px-4 text-[.875rem]" href="${i18next.t('links.projects.url')}">
               ${i18next.t('featured.button')}
             </a>
-            <div class="flex h-12 items-center justify-center lg:h-12">
-              <lang-button
-                @click=${() => this.changeLang()}
-                label=${this.lang === 'pt' ? `PT · BR` : `EN · US`}
-                title="${this.lang === 'en'
-                  ? 'Mudar para português'
-                  : 'Change to english'}"
-              ></lang-button>
-            </div>
+            <languages-dropdown></languages-dropdown>
           </div>
         </div>
       </header>

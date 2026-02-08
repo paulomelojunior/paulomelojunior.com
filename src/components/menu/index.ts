@@ -1,8 +1,12 @@
 import './item'
 import './container'
+import './languagesButton'
+import './mailButton'
 import './buttonLang'
-import './buttonMail'
 import './mobileItem'
+import './languagesDropdown'
+
+export { LanguagesDropdown } from './languagesDropdown'
 export { MenuItem } from './item'
 export { MenuContainer } from './container'
 export { MobileItem } from './mobileItem'

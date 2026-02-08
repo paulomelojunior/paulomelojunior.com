@@ -137,7 +137,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
             </div>
             
             <div data-entrance-item="2" class="flex flex-col gap-2 text-center">
-              <h1 data-split="heading" class="text-pretty text-zinc-50 font-semibold text-[2rem] leading-none tracking-[-0.06em] xl:text-[2.75rem] 2xl:text-[4rem] uppercase">
+              <h1 data-split="heading" class="text-balance text-zinc-50 font-semibold text-[2rem] leading-none tracking-[-0.06em] xl:text-[2.75rem] 2xl:text-[4rem] uppercase">
                 ${i18next.t('about.content.title')}
               </h1>
               <h2 class="text-balance leading-none text-[1rem] 2xl:text-[1.5rem] text-zinc-200">

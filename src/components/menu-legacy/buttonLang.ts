@@ -2,7 +2,7 @@ import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import classNames from 'classnames'
 
-@customElement('lang-button')
+@customElement('languages-button')
 export class LangButton extends LitElement {
   @property({ type: String }) classNames = ''
   @property({ type: String }) icon = ''

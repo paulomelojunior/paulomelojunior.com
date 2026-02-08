@@ -33,7 +33,7 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
     this.lang = i18next.language
   }
 
-  changeLang() {
+  toggleLanguage() {
     const currentLang = i18next.language
     const newLang = currentLang === 'en' ? 'pt' : 'en'
 
@@ -159,15 +159,7 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
               >
                 ${this.lang === 'en' ? 'Download resume' : 'Baixar currículo'}
               </a>
-              <div class="flex h-12 items-center justify-center">
-                <lang-button
-                  @click=${() => this.changeLang()}
-                  label=${this.lang === 'pt' ? `PT · BR` : `EN · US`}
-                  title="${this.lang === 'en'
-                    ? 'Mudar para português'
-                    : 'Change to english'}"
-                ></lang-button>
-              </div>
+              <languages-dropdown></languages-dropdown>
             </div>
           </div>
         </div>

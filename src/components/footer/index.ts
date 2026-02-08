@@ -34,7 +34,7 @@ export class FooterSection extends LitElement {
       'No great thing is created suddenly.',
       'Where the mind goes the body will follow.',
       'To define is to limit.',
-      // 'Publish to polish.'
+      'Publish to polish.'
     ]
     const randomIndex = Math.floor(Math.random() * quotes.length)
     return quotes[randomIndex]
