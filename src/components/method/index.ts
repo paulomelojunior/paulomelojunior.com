@@ -32,7 +32,7 @@ export class MethodSection extends ThemeMixin(LitElement) {
     return html`
       <section class="">
         <div class="container">
-          <div class="*:contents grid grid-cols-2 md:grid-cols-4 rounded-4xl overflow-hidden gap-[2px]">
+          <div class="*:contents grid grid-cols-2 md:grid-cols-4 rounded-4xl overflow-hidden gap-[2px] px-0.5">
             <method-item
               index="001"
               t=${i18next.t('method.1')}

@@ -33,7 +33,7 @@ export class MethodItem extends ThemeMixin(LitElement) {
 
   render() {
     return html`
-			<div class="aspect-square xl:aspect-[2/1] p-6 xl:p-12 flex flex-col rounded-[.125rem] justify-between h-full ${this.open ? 'col-span-3 bg-zinc-800' : 'bg-zinc-900'}">
+			<div class="aspect-square xl:aspect-[2/1] p-6 xl:p-12 flex flex-col rounded-[.25rem] justify-between h-full ${this.open ? 'col-span-3 bg-zinc-800' : 'bg-zinc-900'}">
 				<span class="leading-none mb-2 text-zinc-600">
 					${this.index}
 				</span>

@@ -107,7 +107,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
           class="container flex flex-col justify-between min-h-[calc(100svh-4rem)] md:pt-18 pt-12"
         >
           <div class="flex flex-col items-center my-auto pt-12 pb-16" data-parallax-layer="1">
-            <div data-entrance-item="3" class="flex items-center gap-4 mb-8">
+            <div data-entrance-item="3" class="hidden items-center gap-4 mb-8">
               <img
                 src="${p1x}"
                 sizes="64px"
@@ -137,10 +137,10 @@ export class HeroSection extends ThemeMixin(LitElement) {
             </div>
             
             <div data-entrance-item="2" class="flex flex-col gap-4 text-center mb-11">
-              <h1 data-split="heading" class="text-balance text-zinc-50 font-semibold text-[3rem] leading-none tracking-tighter xl:text-[4rem] uppercase">
+              <h1 data-split="heading" class="text-balance text-zinc-50 font-medium text-[2.5rem] leading-none tracking-tight xl:text-[5rem]">
                 ${i18next.t('hero.title')}
               </h1>
-              <h2 class="text-balance leading-none text-[1.125rem] 2xl:text-[1.5rem] px-5">
+              <h2 class="text-balance text-[1.125rem] 2xl:text-[1.5rem] px-5">
                 ${i18next.t('hero.subtitle')}
               </h2>
             </div>
