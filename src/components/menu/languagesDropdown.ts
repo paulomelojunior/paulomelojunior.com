@@ -71,14 +71,14 @@ export class LanguagesDropdown extends LitElement {
         ></languages-button>
         <ul
           id="langMenuEl"
-          class="transition-all flex flex-col absolute font-medium gap-2 outline-2 outline-zinc-800 bg-zinc-900 right-0 top-full mt-1 p-2 rounded-[1.5rem]
+          class="transition-all flex flex-col absolute font-medium gap-2 outline-1 outline-zinc-800 bg-zinc-900 right-0 top-full mt-2.5 p-2 rounded-[1.5rem]
             ${this.langMenu ? 'scale-100 blur-none' : 'opacity-0 invisible -translate-y-4 blur-sm'}"
         >
           <li>
             <button
               @click=${() => this.selectLanguage('en')}
               class=${classNames(
-                "w-full pt-[6px] pb-[6px] px-4 leading-[20px] rounded-full text-[.875rem] transition-all active:scale-95 duration-[200ms]",
+                "w-full pt-2 pb-2.5 px-4 rounded-full text-[.875rem] leading-none transition-all active:scale-95 duration-[200ms]",
                 this.lang === 'en'
                   ? 'bg-zinc-100 text-zinc-950 hover:bg-white'
                   : 'hover:bg-zinc-50/10 hover:text-zinc-50'
@@ -91,7 +91,7 @@ export class LanguagesDropdown extends LitElement {
             <button
               @click=${() => this.selectLanguage('pt')}
               class=${classNames(
-                "w-full pt-[6px] pb-[6px] px-4 leading-[20px] rounded-full text-[.875rem] transition-all active:scale-95 duration-[200ms]",
+                "w-full pt-2 pb-2.5 px-4 rounded-full text-[.875rem] leading-none transition-all active:scale-95 duration-[200ms]",
                 this.lang === 'pt'
                   ? 'bg-zinc-100 text-zinc-950 hover:bg-white'
                   : 'hover:bg-zinc-50/10 hover:text-zinc-50'

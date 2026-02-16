@@ -2,7 +2,7 @@
   "menu": {
     "about": "Sobre",
     "journey": "Jornada",
-    "praxis": "Método",
+    "praxis": "Abordagem",
     "connect": "Contato",
     "languages": {
       "en": "EN",
@@ -10,16 +10,17 @@
     }
   },
   "about": {
+    "title": "Sobre mim",
+    "p1": "Entusiasta de tecnologias descentralizadas e outros assuntos geek, sou movido pelo equilíbrio entre as necessidades das pessoas e os objetivos de negócios. Também tenho profundo interesse em IA, como uma ferramenta para simplificar fluxos de trabalho, melhorar a tomada de decisões e explorar novas possibilidades criativas.",
+    "p2": "Comprometido com a qualidade, busco constantemente o aprendizado e o desenvolvimento profissional, mantendo-me atualizado sobre tendências emergentes de design, avanços tecnológicos e melhores práticas para oferecer soluções inovadoras.",
+    "education": "Educação",
+    "link": "Ver credencial"
+  },
+  "hero": {
     "status": "Disponível para contrato",
     "picDescription": "Uma foto de Paulo, um homem barbado com cabelos curtos e escuros. Ele está olhando para a direita com uma expressão pensativa. Ele usa uma camisa simples.",
-    "content": {
-      "title": "Designer de Produtos e Softwares",
-      "subtitle": "Criando experiências digitais prontas para o futuro.",
-      "h1": "Entusiasta de tecnologias descentralizadas",
-      "p1": " e valorizando soluções open-source. Recentemente atuei em uma empresa de marketing interativo especializada em geração de leads, com base em Denver, CO.",
-      "h2": "Comprometido com a qualidade",
-      "p2": " e o aprendizado contínuo, mantenho-me atualizado sobre tendências de design, avanços tecnológicos e as melhores práticas do setor para entregar soluções modernas e eficazes."
-    },
+    "title": "Software Designer",
+    "subtitle": "Criando experiências digitais prontas para o futuro.",
     "cta": {
       "label": "Showcase do último projeto",
       "url": "/last-project"
@@ -30,6 +31,12 @@
     "p1": "Do insight à interface, projeto com foco nas pessoas. Unindo estética, propósito e tecnologia de ponta por meio do Design Thinking e Human-Centered Design.",
     "t2": "Tecnologia para realizar",
     "p2": "Aprender com experts em tecnologia desde cedo tornou algoritmos parte do meu repertório, conecto design e engenharia para criar experiências refinadas."
+  },
+  "method": {
+    "1": "Strategy",
+    "2": "Create",
+    "3": "Deliver",
+    "4": "Repeat"
   },
   "journey": {
     "t0": "Jornada",
@@ -173,7 +180,7 @@
     "description2": "O objetivo do Damus é oferecer uma alternativa às redes sociais tradicionais, com foco na liberdade de expressão e privacidade."
   },
   "ifficient": {
-    "title": "Twyne",
+    "title": "Ifficient",
     "tags": "Product, UX, UI, Front-end",
     "description1": "Companhia de marketing interativo especializada em geração de leads, com base em Denver, CO.",
     "description2": "Nela liderei o design dos softwares Twyne e Path Evolution, assegurando escalabilidade e consistência na evolução dos produtos.",

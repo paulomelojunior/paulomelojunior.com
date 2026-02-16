@@ -46,6 +46,10 @@ export class FooterSection extends LitElement {
     if (!navList) return
 
     const navItems = {
+      instagram: {
+        label: i18next.t('links.instagram.label'),
+        url: i18next.t('links.instagram.url'),
+      },
       github: {
         label: i18next.t('links.github.label'),
         url: i18next.t('links.github.url'),
@@ -66,12 +70,12 @@ export class FooterSection extends LitElement {
       const indexStr = (i + 1).toString().padStart(2, '0')
       const navItem = `
 				<div class="border-b border-zinc-800 lg:border-0">
-					<a target="_blank" class="menu-item h-20 lg:h-16 px-5 lg:pt-1 flex items-center text-zinc-50 relative" rel="noopener noreferrer" href="${e.url}">
+					<a target="_blank" class="menu-item py-6 px-5 xl:py-3 flex text-zinc-50 relative" rel="noopener noreferrer" href="${e.url}">
 						${e.label}
-						<div class="absolute flex items-center px-5 pt-1 inset-0 lg:rounded-full text-zinc-950">
+						<div class="absolute flex inset-0 py-6 px-5 xl:py-3 text-zinc-950 lg:rounded-full">
 							${e.label}
 						</div>
-						<span class="lg:hidden absolute opacity-50 mix-blend-difference right-6 bottom-6 font-mono text-[.75rem] tracking-[0.05em]">
+						<span class="lg:hidden absolute opacity-50 mix-blend-difference right-6 bottom-6 font-mono text-[.75rem] tracking-wider">
 							${e.label === 'Email' ? 'hello@pmjr.cc' : indexStr}
 						</span>
 					</a>
@@ -106,7 +110,7 @@ export class FooterSection extends LitElement {
     return html`
       <footer
         id="section-connect"
-        class="footer relative z-10 h-lvh overflow-hidden rounded-t-4xl before:content-none lg:before:content-['']"
+        class="footer relative z-10 h-lvh overflow-hidden before:content-none lg:before:content-['']"
       >
         <div
           id="footerLinks"
@@ -114,7 +118,7 @@ export class FooterSection extends LitElement {
         >
           <div
             id="menu"
-            class="flex flex-1 flex-col flex-wrap gap-0 text-[2rem] tracking-[-0.04em] lg:flex-row lg:items-baseline lg:justify-center lg:gap-4 lg:text-[2.5rem]"
+            class="flex tracking-tight flex-1 flex-col flex-wrap gap-0 text-[2rem] lg:flex-row leading-none lg:items-baseline lg:justify-center lg:gap-8 lg:text-[2.5rem]"
           >
             <span
               class="flex h-20 items-center px-5 lg:p-0 text-zinc-600 me-5"
@@ -122,18 +126,18 @@ export class FooterSection extends LitElement {
               ${i18next.t('connect.title')}
             </span>
             <span
-              class="hidden lg:flex items-center self-center relative px-2 stroke-brand-400"
+              class="hidden lg:flex stroke-brand-400"
             >
               ${unsafeHTML(`${logo}`)}
             </span>
           </div>
         </div>
-        <div class="absolute z-50 inset-x-0 bottom-0 w-full flex gap-2 justify-center px-5 pt-[10px] pb-[14px] font-mono text-[.625rem] font-semibold uppercase bg-zinc-950 tracking-[0.1em]">
-            <span> [c] ${this.currentYear() || '2026'} Paulo Melo Jr. </span>
-            <span class="text-zinc-600 hidden md:inline"> / </span>
-            <span class="hidden md:inline"> ${this.getRandomQuote() || 'To define is to limit.'} </span>
-            </div>
-        </footer>
+        <div class="absolute z-50 inset-x-0 bottom-0 w-full flex gap-2 justify-center px-5 pt-[10px] pb-[14px] font-mono text-[.625rem] font-semibold uppercase bg-zinc-950 tracking-widest">
+          <span> [c] ${this.currentYear() || '2026'} Paulo Melo Jr. </span>
+          <span class="text-zinc-600 hidden md:inline"> / </span>
+          <span class="hidden md:inline"> ${this.getRandomQuote() || 'To define is to limit.'} </span>
+        </div>
+      </footer>
     `
   }
 

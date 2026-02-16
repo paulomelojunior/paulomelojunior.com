@@ -19,7 +19,7 @@
 @theme {
   --font-sans: 'Mona Sans', sans-serif;
   --font-mono: 'Geist Mono', monospace;
-  --font-sans--font-feature-settings: 'ss01';
+  --font-sans--font-feature-settings: 'ss05' on, 'ss06' on, 'ss10' on;
   
   --hue: 256;
   --brand: 256;
@@ -100,8 +100,7 @@
     @apply
       pt-[env(safe-area-inset-top)]
       bg-zinc-950
-      text-zinc-300
-      subpixel-antialiased;
+      text-zinc-300;
   }
 
   .text-default {
@@ -131,18 +130,17 @@
   
   .hero::before {
     position: absolute;
-    background: url('imgs/pattern.svg'), var(--color-brand-900);
+    background: url('imgs/pattern.svg');
     content: '';
     height: 100vh;
     top: -2px;
     inset-inline: 0;
     mask-image: radial-gradient(
       circle at top center,
-      var(--color-zinc-950),
+      black,
       transparent 50%
     );
     pointer-events: none;
-    z-index: -1;
     background-attachment: local;
   }
   
@@ -216,7 +214,7 @@
       color 0.1s cubic-bezier(0.75, 0, 0.5, 1);
     color: var(--color-zinc-950);
     transition-delay: 0s, 0.1s;
-    @apply rounded-full py-3 px-4 text-[1rem] font-medium leading-[20px] text-zinc-50;
+    @apply rounded-[.25rem] py-3 px-4 text-[1rem] font-medium leading-none text-zinc-50;
   }
 
   .cta-button:hover,
@@ -413,7 +411,7 @@
   .praxis path {
     stroke-width: 2;
     vector-effect: non-scaling-stroke;
-    @apply stroke-brand-400 fill-zinc-900 will-change-auto;
+    @apply stroke-brand-400 fill-zinc-950 will-change-auto;
   }
 
   /* Marquee */
@@ -461,7 +459,6 @@
       text-[.75rem]
       uppercase
       leading-none
-      tracking-[0.02em]
       lg:text-[.875rem]
       2xl:text-[1rem]
       font-medium;

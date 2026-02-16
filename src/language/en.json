@@ -1,25 +1,26 @@
 {
   "menu": {
     "about": "About",
-    "journey": "Journey",
-    "praxis": "Method",
     "connect": "Connect",
+    "journey": "Journey",
+    "praxis": "Approach",
     "languages": {
       "en": "EN",
       "pt": "PT"
     }
   },
   "about": {
+    "title": "About me",
+    "p1": "Enthusiast of decentralized technologies and other geeky stuff, I'm driven by the balance between people's needs and business goals. Also deeply interested in AI, as a tool to simplify workflows, improve decision-making, and explore new creative possibilities.",
+    "p2": "Devoted to quality, I commit to continuous learning and professional development, staying abreast of emerging design trends tech advancements and best practices to deliver cutting-edge solutions.",
+    "education": "Education",
+    "link": "See credential"
+  },
+  "hero": {
     "status": "Available for hiring",
     "picDescription": "An image of Paul M., a bearded man with short, dark hair. He is looking to the right with a thoughtful expression. He is wearing a plain t-shirt.",
-    "content": {
-      "title": "Software and Product Designer",
-      "subtitle": "Crafting future-ready digital interactions.",
-      "h1": "Enthusiast of decentralized technologies",
-      "p1": ", driven by the open-source movement and other geeky stuff. Previously part of an interactive marketing company focused on lead generation from Denver, CO.",
-      "h2": "Devoted to quality",
-      "p2": ", I commit to continuous learning and professional development, staying abreast of emerging design trends tech advancements and best practices to deliver cutting-edge solutions."
-    },
+    "title": "Software Designer",
+    "subtitle": "Crafting future-ready digital interactions.",
     "cta": {
       "label": "Last project showcase",
       "url": "/last-project"
@@ -30,6 +31,12 @@
     "p1": "From insight to interface, I design with people in mind. Merging aesthetics, purpose, and cutting-edge tech through Design Thinking and Human-Centered Design.",
     "t2": "Technology to deliver",
     "p2": "Learning from tech experts early on made algorithms a core part of my toolkit, bridging design and engineering to craft seamless, refined digital experiences."
+  },
+  "method": {
+    "1": "Strategy",
+    "2": "Create",
+    "3": "Deliver",
+    "4": "Repeat"
   },
   "journey": {
     "t0": "Journey",
@@ -160,7 +167,7 @@
     "description2": "The goal of Damus is to offer an alternative to traditional social networks, focusing on freedom of expression and privacy."
   },
   "ifficient": {
-    "title": "Twyne",
+    "title": "Ifficient",
     "tags": "Product, UX, UI, Front-end",
     "description1": "Interactive marketing company specialized in lead generation, based in Denver, CO.",
     "description2": "There I led the design of Twyne and Path Evolution software, ensuring scalability and consistency in product evolution.",
@@ -220,6 +227,10 @@
     "lastProject": {
       "label": "Last project",
       "url": "/last-project"
+    },
+    "instagram": {
+      "label": "Instagram",
+      "url": "https://instagram.com/paulomelojunior"
     },
     "github": {
       "label": "GitHub",

@@ -27,7 +27,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
     })
   }
 
-  private itemEntrance() {
+  itemEntrance() {
     gsap.from('.hero',
       {
         paddingTop: 64,
@@ -62,7 +62,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
       })
   }
 
-  private heroParallax() {
+  heroParallax() {
     document
       .querySelectorAll('[data-parallax-layers]')
       .forEach((triggerElement) => {
@@ -96,18 +96,18 @@ export class HeroSection extends ThemeMixin(LitElement) {
   }
 
   firstUpdated() {
-    this.heroParallax();
     this.itemEntrance();
+    this.heroParallax();
   }
 
   render() {
     return html`
       <section class="hero before:animate-(--animate-fade-in)" data-parallax-layers data-entrance>
         <div
-          class="container flex flex-col justify-between min-h-[calc(100svh-4rem)] pt-16"
+          class="container flex flex-col justify-between min-h-[calc(100svh-4rem)] md:pt-18 pt-12"
         >
-          <div class="flex flex-col items-center my-auto pt-12 pb-16 gap-10 md:gap-12" data-parallax-layer="1">
-            <div data-entrance-item="3" class="flex items-center gap-4 -mb-2 md:-mb-3">
+          <div class="flex flex-col items-center my-auto pt-12 pb-16" data-parallax-layer="1">
+            <div data-entrance-item="3" class="flex items-center gap-4 mb-8">
               <img
                 src="${p1x}"
                 sizes="64px"
@@ -115,8 +115,8 @@ export class HeroSection extends ThemeMixin(LitElement) {
                 width="64"
                 fetchpriority="high"
                 loading="eager"
-                alt="${i18next.t('about.picDescription')}"
-                class="rounded-full size-14 2xl:size-16 bg-zinc-900 outline-4 outline-zinc-950"
+                alt="${i18next.t('hero.picDescription')}"
+                class="rounded-full size-14 bg-zinc-900 outline-4 outline-zinc-950"
               />
               <div class="grid gap-2 leading-none">
                 <span class="2xl:text-[1.25rem] text-white">
@@ -131,30 +131,30 @@ export class HeroSection extends ThemeMixin(LitElement) {
                       class="relative m-0.5 inline-flex size-2 rounded-full bg-green-300"
                     ></span>
                   </span>
-                  ${i18next.t('about.status')}
+                  ${i18next.t('hero.status')}
                 </span>
               </div>
             </div>
             
-            <div data-entrance-item="2" class="flex flex-col gap-2 text-center">
-              <h1 data-split="heading" class="text-balance text-zinc-50 font-semibold text-[2rem] leading-none tracking-[-0.06em] xl:text-[2.75rem] 2xl:text-[4rem] uppercase">
-                ${i18next.t('about.content.title')}
+            <div data-entrance-item="2" class="flex flex-col gap-4 text-center mb-11">
+              <h1 data-split="heading" class="text-balance text-zinc-50 font-semibold text-[3rem] leading-none tracking-tighter xl:text-[4rem] uppercase">
+                ${i18next.t('hero.title')}
               </h1>
-              <h2 class="text-balance leading-none text-[1rem] 2xl:text-[1.5rem] text-zinc-200">
-                ${i18next.t('about.content.subtitle')}
+              <h2 class="text-balance leading-none text-[1.125rem] 2xl:text-[1.5rem] px-5">
+                ${i18next.t('hero.subtitle')}
               </h2>
             </div>
 
             <div data-entrance-item="1" class="flex relative gap-2">
               <a
-                href="${i18next.t('about.cta.url')}"
-                class="cta-button cta-button--accent flex items-center gap-3 self-center px-6 outline-4 outline-zinc-950"
+                href="${i18next.t('hero.cta.url')}"
+                class="cta-button cta-button--accent flex items-center gap-3 self-center"
               >
-                ${i18next.t('about.cta.label')}
+                ${i18next.t('hero.cta.label')}
               </a>
               <a
                 href="#section-praxis"
-                class="hidden lg:flex rounded-full size-[44px] transition-color duration-[200ms] bg-zinc-800 hover:bg-zinc-700 justify-center items-center outline-4 outline-zinc-950 active:scale-95"
+                class="hidden lg:flex rounded-full size-[42px] transition-color duration-[200ms] bg-zinc-900 hover:bg-zinc-800 justify-center items-center outline-4 outline-zinc-950 active:scale-95"
                 title="Scroll page"
               >
                 <img
@@ -165,7 +165,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
             </div>
           </div>
           <div
-            class="container grid grid-cols-12 items-end ps-5 sm:ps-0"
+            class="container col-span-12 grid grid-cols-12 items-end ps-5 sm:ps-0"
             data-parallax-layer="2"
           >
             <div class="block sm:hidden xl:block col-span-12 xl:col-span-3">

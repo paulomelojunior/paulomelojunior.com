@@ -90,10 +90,11 @@ export class MenuContainer extends ThemeMixin(LitElement) {
     // remove outline on top using gsap and scrollTrigge
     gsap.to('header', {
       scrollTrigger: {
-        trigger: 'header',
-        start: 'bottom top',
+        trigger: '.hero',
+        start: '60 60',
+        end: '60 0',
         toggleActions: 'play none none reverse',
-        scrub: 2,
+        scrub: 1,
       },
       outline: '1px solid hsla(0 0 100% / 0.075)',
       padding: '0 0 0 0',
@@ -103,7 +104,7 @@ export class MenuContainer extends ThemeMixin(LitElement) {
   render() {
     return html`
       <header
-        class="fixed inset-x-0 z-40 w-full bg-linear-to-t from-zinc-950 backdrop-blur to-zinc-950/80 lg:fixed py-2"
+        class="fixed inset-x-0 z-40 w-full bg-linear-to-t from-zinc-950 backdrop-blur to-zinc-950/80 lg:fixed md:py-3"
       >
         <div class="lg:container lg:grid flex items-center lg:grid-cols-3">
           <nav class="lg:hidden">
@@ -183,6 +184,12 @@ export class MenuContainer extends ThemeMixin(LitElement) {
               </li>
               <li>
                 <menu-item
+                  href="#section-about"
+                  label="${i18next.t('menu.about')}"
+                ></menu-item>
+              </li>
+              <li>
+                <menu-item
                   href="#section-connect"
                   label="${i18next.t('menu.connect')}"
                 ></menu-item>
@@ -190,7 +197,7 @@ export class MenuContainer extends ThemeMixin(LitElement) {
             </ul>
           </nav>
           <div class="hidden lg:flex items-center justify-end gap-2">
-            <a class="cta-button pt-[6px] pb-[6px] px-4 text-[.875rem]" href="${i18next.t('links.projects.url')}">
+            <a class="cta-button pt-2 pb-2.5 text-[.875rem]" href="${i18next.t('links.projects.url')}">
               ${i18next.t('featured.button')}
             </a>
             <languages-dropdown></languages-dropdown>

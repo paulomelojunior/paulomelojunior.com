@@ -25,7 +25,20 @@ export class PraxisSection extends ThemeMixin(LitElement) {
 
   firstUpdated() {
     const praxisPath = this.renderRoot.querySelectorAll('.praxis svg')
-    
+    const praxisBg = this.renderRoot.querySelector('section > .praxis-bg')
+
+    gsap.to(praxisBg, {
+      scrollTrigger: {
+        trigger: praxisBg,
+        start: '0 75%',
+        end: '0 50%',
+        toggleActions: 'play none none reverse',
+        scrub: 1,
+      },
+      opacity: 0,
+      ease: 'none'
+    })
+
     praxisPath.forEach((i) => {
       const p = i.querySelectorAll('path')
       gsap.from(p, {
@@ -60,10 +73,11 @@ export class PraxisSection extends ThemeMixin(LitElement) {
 
   render() {
     return html`
-      <section class="bg-zinc-900 relative">
+      <section class="bg-zinc-950 relative">
+        <div class="praxis-bg absolute inset-0 bg-zinc-900"></div>
         <div id="section-praxis" class="absolute w-full h-px -top-12"></div>
         <div
-          class="relative mx-5 h-px bg-linear-to-r from-zinc-900 via-zinc-700 to-zinc-900"
+          class="relative mx-5 h-px bg-linear-to-r from-transparent via-zinc-800 to-transparent"
         ></div>
         <div class="container">
           <marquee-element
@@ -71,7 +85,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
             items="Design Engineering, Product Design, UX & UI"
           ></marquee-element>
           <div
-            class="grid gap-16 overflow-x-hidden px-5 py-16 *:flex *:items-start *:justify-center *:gap-5 lg:grid-cols-2 xl:gap-24 xl:py-0 xl:*:flex-row *:xl:gap-12 *:xl:py-24 *:2xl:py-32"
+            class="grid gap-16 overflow-x-hidden mx-5 py-16 *:flex *:items-start *:justify-center *:gap-5 lg:grid-cols-2 xl:gap-24 xl:py-0 xl:*:flex-row *:xl:gap-12 *:xl:py-24 *:2xl:py-48"
           >
             <div class="praxis">
               <svg
@@ -143,9 +157,6 @@ export class PraxisSection extends ThemeMixin(LitElement) {
             star="fill-brand-400"
             items="Design Engineering, Product Design, UX & UI"
           ></marquee-element>
-          <div
-            class="relative mx-5 h-px bg-linear-to-r from-zinc-900 via-zinc-700 to-zinc-900"
-          ></div>
         </div>
       </section>
     `
