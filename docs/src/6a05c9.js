@@ -299,19 +299,16 @@ var Ch=Object.defineProperty;var Sh=(s,e,t)=>e in s?Ch(s,e,{enumerable:!0,config
       </div>
     `}createRenderRoot(){return this}};cs([L({type:String})],ir.prototype,"title",2);cs([L({type:String})],ir.prototype,"tags",2);cs([L({type:String})],ir.prototype,"year",2);cs([L({type:String})],ir.prototype,"contentHtml",2);ir=cs([ee("item-header")],ir);const r0="data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%2013L2%206.99999M2%206.99999L8%201M2%206.99999L14%206.99999'%20stroke='white'%20stroke-width='1.75'/%3e%3c/svg%3e";var s0=Object.defineProperty,a0=Object.getOwnPropertyDescriptor,Cl=(s,e,t,i)=>{for(var n=i>1?void 0:i?a0(e,t):e,r=s.length-1,a;r>=0;r--)(a=s[r])&&(n=(i?a(e,t,n):a(n))||n);return i&&n&&s0(e,t,n),n};let ua=class extends ui(Y){constructor(){super(),this.more=!1,this.lang=m.language,this.handleLanguageChange=()=>{this.lang=m.language};const s=localStorage.getItem("lang");s&&(this.lang=s,m.changeLanguage(s))}connectedCallback(){super.connectedCallback(),m.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),m.off("languageChanged",this.handleLanguageChange)}toggleLanguage(){const e=m.language==="en"?"pt":"en";m.changeLanguage(e),localStorage.setItem("lang",e),this.lang=e}changeTheme(){this.toggleTheme()}copyEmail(){navigator.clipboard.writeText("hello@pmjr.cc").then(()=>{this.updateText(this.lang==="en"?"Copied!":"Copiado!",0)}).catch(e=>{alert(`Failed to copy email: ${e}`)})}copyEmailReset(){this.updateText(this.lang==="en"?"Click to copy":"Copiar e-mail",300)}updateText(s,e){const t=document.querySelector("mail-button span");t&&setTimeout(()=>{t.textContent=s},e)}firstUpdated(){ae.to("header",{scrollTrigger:{trigger:"header",start:"bottom top",toggleActions:"play none none reverse",scrub:2},outline:"1px solid hsla(0 0 100% / 0.075)",padding:"0 0 0 0"})}getPreviousPage(){window.location.href="/"}render(){return D`
       <header
-        class="absolute inset-x-0 z-40 hidden w-full bg-linear-to-t from-zinc-950 backdrop-blur to-zinc-950/80 backdrop-saturate-200 lg:fixed lg:block py-2"
+        class="absolute inset-x-0 z-40 hidden w-full bg-linear-to-t from-zinc-950 to-zinc-950/80 py-2 backdrop-blur backdrop-saturate-200 lg:fixed lg:block"
       >
-        <div class="lg:container grid items-center lg:grid-cols-3">
+        <div class="grid items-center lg:container lg:grid-cols-3">
           <div class="flex items-center">
             <button
               @click=${()=>this.getPreviousPage()}
-              class="flex size-10 p-3 cursor-pointer transition-all duration-[200ms] items-center justify-center opacity-50 hover:opacity-100 hover:bg-zinc-50/10 active:bg-zinc-50/20 rounded-full active:scale-95"
+              class="flex size-10 cursor-pointer items-center justify-center rounded-full p-3 opacity-50 transition-all duration-[200ms] hover:bg-zinc-50/10 hover:opacity-100 active:scale-95 active:bg-zinc-50/20"
               title="Go back to homepage"
             >
-              <img
-                src="${r0}"
-                class="transition-all duration-[200ms]"
-              />
+              <img src="${r0}" class="transition-all duration-[200ms]" />
             </button>
             <mail-button
               @click=${()=>this.copyEmail()}
@@ -323,33 +320,21 @@ var Ch=Object.defineProperty;var Sh=(s,e,t)=>e in s?Ch(s,e,{enumerable:!0,config
           <nav>
             <ul id="anchors" class="flex justify-center">
               <li>
-                <menu-item
-                  href="#ifficient"
-                  label="Ifficient"
-                ></menu-item>
+                <menu-item href="#ifficient" label="Ifficient"></menu-item>
               </li>
               <li>
-                <menu-item
-                  href="#damus"
-                  label="Damus"
-                ></menu-item>
+                <menu-item href="#damus" label="Damus"></menu-item>
               </li>
               <li>
-                <menu-item
-                  href="#allugator"
-                  label="Allugator"
-                ></menu-item>
+                <menu-item href="#allugator" label="Allugator"></menu-item>
               </li>
               <li>
-                <menu-item
-                  href="#multiplayer"
-                  label="Multiplayer"
-                ></menu-item>
+                <menu-item href="#multiplayer" label="Multiplayer"></menu-item>
               </li>
             </ul>
             <div
               id="copy"
-              class="absolute flex h-12 w-full items-center justify-center px-5 font-mono text-[.625rem] font-semibold uppercase lg:hidden bg-zinc-900"
+              class="absolute flex h-12 w-full items-center justify-center bg-zinc-900 px-5 font-mono text-[.625rem] font-semibold uppercase lg:hidden"
             >
               <span> Copyright 2025 Paulo Melo Jr. </span>
             </div>
@@ -357,7 +342,7 @@ var Ch=Object.defineProperty;var Sh=(s,e,t)=>e in s?Ch(s,e,{enumerable:!0,config
           <div class="flex justify-end">
             <div class="flex items-center justify-center gap-2">
               <a
-                class="cta-button flex items-center gap-2 text-[.875rem]"
+                class="cta-button px-3 pt-2 pb-2.5 text-[.875rem]"
                 href="/Paulo Melo Jr. - Currículo.pdf"
                 target="_blank"
               >
@@ -817,13 +802,18 @@ var Ch=Object.defineProperty;var Sh=(s,e,t)=>e in s?Ch(s,e,{enumerable:!0,config
       ${this.label}
     </a>`}createRenderRoot(){return this}};Sa([L({type:String})],rs.prototype,"classNames",2);Sa([L({type:String})],rs.prototype,"href",2);Sa([L({type:String})],rs.prototype,"label",2);rs=Sa([ee("menu-item")],rs);var Z0=Object.defineProperty,J0=Object.getOwnPropertyDescriptor,$l=(s,e,t,i)=>{for(var n=i>1?void 0:i?J0(e,t):e,r=s.length-1,a;r>=0;r--)(a=s[r])&&(n=(i?a(e,t,n):a(n))||n);return i&&n&&Z0(e,t,n),n};let ha=class extends ui(Y){constructor(){super(),this.more=!1,this.lang=m.language,this.handleLanguageChange=()=>{this.lang=m.language};const s=localStorage.getItem("lang");s&&(this.lang=s,m.changeLanguage(s))}toggleMore(){this.more=!this.more}connectedCallback(){super.connectedCallback(),m.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),m.off("languageChanged",this.handleLanguageChange)}toggleLanguage(){const e=m.language==="en"?"pt":"en";m.changeLanguage(e),localStorage.setItem("lang",e),this.lang=e}copyEmail(){navigator.clipboard.writeText("hello@pmjr.cc").then(()=>{this.updateText(this.lang==="en"?"Email copied!":"Email copiado!",0)}).catch(e=>{alert(`Failed to copy email: ${e}`)})}copyEmailReset(){this.updateText(this.lang==="en"?"Click to copy":"Copiar e-mail",300)}updateText(s,e){const t=document.querySelector("mail-button span");t&&setTimeout(()=>{t.textContent=s},e)}firstUpdated(){ae.from("header > *",{y:-64}),window.addEventListener("scroll",()=>{this.more=!1}),ae.to("header",{scrollTrigger:{trigger:".hero",start:"60 60",end:"60 0",toggleActions:"play none none reverse",scrub:1},outline:"1px solid hsla(0 0 100% / 0.075)",padding:"0 0 0 0"})}render(){return D`
       <header
-        class="fixed inset-x-0 z-40 w-full bg-linear-to-t from-zinc-950 backdrop-blur to-zinc-950/80 lg:fixed md:py-3"
+        class="fixed inset-x-0 z-40 w-full bg-linear-to-t from-zinc-950 to-zinc-950/80 backdrop-blur md:py-3 lg:fixed"
       >
-        <div class="lg:container lg:grid flex items-center lg:grid-cols-3">
+        <div class="flex items-center lg:container lg:grid lg:grid-cols-3">
           <nav class="lg:hidden">
-            <ul id="anchors" class="flex bg-zinc-950 overflow-hidden fixed inset-0 flex-col justify-center w-dvw *:transition-all duration-500 ${this.more?"h-dvh":"h-0 *:opacity-0"}">
+            <ul
+              id="anchors"
+              class="${this.more?"h-dvh":"h-0 *:opacity-0"} fixed inset-0 flex w-dvw flex-col justify-center overflow-hidden bg-zinc-950 duration-500 *:transition-all"
+            >
               <li>
-                <span class="text-[2rem] tracking-[-0.04em] h-20 px-5 flex items-center text-zinc-500">
+                <span
+                  class="flex h-20 items-center px-5 text-[2rem] tracking-[-0.04em] text-zinc-500"
+                >
                   Menu
                 </span>
               </li>
@@ -850,12 +840,12 @@ var Ch=Object.defineProperty;var Sh=(s,e,t)=>e in s?Ch(s,e,{enumerable:!0,config
               </li>
               <li>
                 <mobile-item
-                href="${m.t("links.email.url")}"
-                label="${m.t("links.email.label")}"
-                index="hello@pmjr.cc"
+                  href="${m.t("links.email.url")}"
+                  label="${m.t("links.email.label")}"
+                  index="hello@pmjr.cc"
                 ></mobile-item>
               </li>
-              <div class="absolute bottom-4 right-4">
+              <div class="absolute right-4 bottom-4">
                 <button-lang
                   @click=${()=>this.toggleLanguage()}
                   label=${this.lang==="pt"?"PT · BR":"EN · US"}
@@ -872,15 +862,13 @@ var Ch=Object.defineProperty;var Sh=(s,e,t)=>e in s?Ch(s,e,{enumerable:!0,config
             hover="${this.lang==="en"?"Click to copy":"Copiar e-mail"}"
           ></mail-button>
           <button
-            class="menu-toggle lg:hidden ms-auto me-4 ${this.more?"menu-toggle--close":""}"
+            class="menu-toggle ${this.more?"menu-toggle--close":""} ms-auto me-4 lg:hidden"
             @click=${()=>this.toggleMore()}
           >
-            <span class="uppercase text-[.75rem] font-semibold">
-              Menu
-            </span>
+            <span class="text-[.75rem] font-semibold uppercase"> Menu </span>
           </button>
           <nav>
-            <ul id="anchors" class="hidden lg:flex justify-center">
+            <ul id="anchors" class="hidden justify-center lg:flex">
               <li>
                 <menu-item
                   href="#section-praxis"
@@ -907,8 +895,11 @@ var Ch=Object.defineProperty;var Sh=(s,e,t)=>e in s?Ch(s,e,{enumerable:!0,config
               </li>
             </ul>
           </nav>
-          <div class="hidden lg:flex items-center justify-end gap-2">
-            <a class="cta-button pt-2 pb-2.5 text-[.875rem]" href="${m.t("links.projects.url")}">
+          <div class="hidden items-center justify-end gap-2 lg:flex">
+            <a
+              class="cta-button px-3 pt-2 pb-2.5 text-[.875rem]"
+              href="${m.t("links.projects.url")}"
+            >
               ${m.t("featured.button")}
             </a>
             <languages-dropdown></languages-dropdown>
@@ -1467,7 +1458,7 @@ var Ch=Object.defineProperty;var Sh=(s,e,t)=>e in s?Ch(s,e,{enumerable:!0,config
             </ul>
           </nav>
           <div class="hidden lg:flex items-center justify-end gap-2">
-            <a class="cta-button pt-[6px] pb-[6px] px-4 text-[.875rem]" href="${m.t("links.projects.url")}">
+            <a class="cta-button pt-2 pb-2.5 text-[.875rem] px-3" href="${m.t("links.projects.url")}">
               ${m.t("featured.button")}
             </a>
             <languages-dropdown></languages-dropdown>
