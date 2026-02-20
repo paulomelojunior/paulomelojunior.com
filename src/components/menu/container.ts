@@ -104,13 +104,20 @@ export class MenuContainer extends ThemeMixin(LitElement) {
   render() {
     return html`
       <header
-        class="fixed inset-x-0 z-40 w-full bg-linear-to-t from-zinc-950 backdrop-blur to-zinc-950/80 lg:fixed md:py-3"
+        class="fixed inset-x-0 z-40 w-full bg-linear-to-t from-zinc-950 to-zinc-950/80 backdrop-blur md:py-3 lg:fixed"
       >
-        <div class="lg:container lg:grid flex items-center lg:grid-cols-3">
+        <div class="flex items-center lg:container lg:grid lg:grid-cols-3">
           <nav class="lg:hidden">
-            <ul id="anchors" class="flex bg-zinc-950 overflow-hidden fixed inset-0 flex-col justify-center w-dvw *:transition-all duration-500 ${this.more ? 'h-dvh' : 'h-0 *:opacity-0'}">
+            <ul
+              id="anchors"
+              class="${this.more
+                ? 'h-dvh'
+                : 'h-0 *:opacity-0'} fixed inset-0 flex w-dvw flex-col justify-center overflow-hidden bg-zinc-950 duration-500 *:transition-all"
+            >
               <li>
-                <span class="text-[2rem] tracking-[-0.04em] h-20 px-5 flex items-center text-zinc-500">
+                <span
+                  class="flex h-20 items-center px-5 text-[2rem] tracking-[-0.04em] text-zinc-500"
+                >
                   Menu
                 </span>
               </li>
@@ -137,12 +144,12 @@ export class MenuContainer extends ThemeMixin(LitElement) {
               </li>
               <li>
                 <mobile-item
-                href="${i18next.t('links.email.url')}"
-                label="${i18next.t('links.email.label')}"
-                index="hello@pmjr.cc"
+                  href="${i18next.t('links.email.url')}"
+                  label="${i18next.t('links.email.label')}"
+                  index="hello@pmjr.cc"
                 ></mobile-item>
               </li>
-              <div class="absolute bottom-4 right-4">
+              <div class="absolute right-4 bottom-4">
                 <button-lang
                   @click=${() => this.toggleLanguage()}
                   label=${this.lang === 'pt' ? `PT · BR` : `EN · US`}
@@ -161,15 +168,15 @@ export class MenuContainer extends ThemeMixin(LitElement) {
             hover="${this.lang === 'en' ? 'Click to copy' : 'Copiar e-mail'}"
           ></mail-button>
           <button
-            class="menu-toggle lg:hidden ms-auto me-4 ${this.more ? 'menu-toggle--close' : ''}"
+            class="menu-toggle ${this.more
+              ? 'menu-toggle--close'
+              : ''} ms-auto me-4 lg:hidden"
             @click=${() => this.toggleMore()}
           >
-            <span class="uppercase text-[.75rem] font-semibold">
-              Menu
-            </span>
+            <span class="text-[.75rem] font-semibold uppercase"> Menu </span>
           </button>
           <nav>
-            <ul id="anchors" class="hidden lg:flex justify-center">
+            <ul id="anchors" class="hidden justify-center lg:flex">
               <li>
                 <menu-item
                   href="#section-praxis"
@@ -196,8 +203,11 @@ export class MenuContainer extends ThemeMixin(LitElement) {
               </li>
             </ul>
           </nav>
-          <div class="hidden lg:flex items-center justify-end gap-2">
-            <a class="cta-button pt-2 pb-2.5 text-[.875rem]" href="${i18next.t('links.projects.url')}">
+          <div class="hidden items-center justify-end gap-2 lg:flex">
+            <a
+              class="cta-button px-3 pt-2 pb-2.5 text-[.875rem]"
+              href="${i18next.t('links.projects.url')}"
+            >
               ${i18next.t('featured.button')}
             </a>
             <languages-dropdown></languages-dropdown>

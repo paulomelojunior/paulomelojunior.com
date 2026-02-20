@@ -95,19 +95,16 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
 
     return html`
       <header
-        class="absolute inset-x-0 z-40 hidden w-full bg-linear-to-t from-zinc-950 backdrop-blur to-zinc-950/80 backdrop-saturate-200 lg:fixed lg:block py-2"
+        class="absolute inset-x-0 z-40 hidden w-full bg-linear-to-t from-zinc-950 to-zinc-950/80 py-2 backdrop-blur backdrop-saturate-200 lg:fixed lg:block"
       >
-        <div class="lg:container grid items-center lg:grid-cols-3">
+        <div class="grid items-center lg:container lg:grid-cols-3">
           <div class="flex items-center">
             <button
               @click=${() => this.getPreviousPage()}
-              class="flex size-10 p-3 cursor-pointer transition-all duration-[200ms] items-center justify-center opacity-50 hover:opacity-100 hover:bg-zinc-50/10 active:bg-zinc-50/20 rounded-full active:scale-95"
+              class="flex size-10 cursor-pointer items-center justify-center rounded-full p-3 opacity-50 transition-all duration-[200ms] hover:bg-zinc-50/10 hover:opacity-100 active:scale-95 active:bg-zinc-50/20"
               title="Go back to homepage"
             >
-              <img
-                src="${goBack}"
-                class="transition-all duration-[200ms]"
-              />
+              <img src="${goBack}" class="transition-all duration-[200ms]" />
             </button>
             <mail-button
               @click=${() => this.copyEmail()}
@@ -119,33 +116,21 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
           <nav>
             <ul id="anchors" class="flex justify-center">
               <li>
-                <menu-item
-                  href="#ifficient"
-                  label="Ifficient"
-                ></menu-item>
+                <menu-item href="#ifficient" label="Ifficient"></menu-item>
               </li>
               <li>
-                <menu-item
-                  href="#damus"
-                  label="Damus"
-                ></menu-item>
+                <menu-item href="#damus" label="Damus"></menu-item>
               </li>
               <li>
-                <menu-item
-                  href="#allugator"
-                  label="Allugator"
-                ></menu-item>
+                <menu-item href="#allugator" label="Allugator"></menu-item>
               </li>
               <li>
-                <menu-item
-                  href="#multiplayer"
-                  label="Multiplayer"
-                ></menu-item>
+                <menu-item href="#multiplayer" label="Multiplayer"></menu-item>
               </li>
             </ul>
             <div
               id="copy"
-              class="absolute flex h-12 w-full items-center justify-center px-5 font-mono text-[.625rem] font-semibold uppercase lg:hidden bg-zinc-900"
+              class="absolute flex h-12 w-full items-center justify-center bg-zinc-900 px-5 font-mono text-[.625rem] font-semibold uppercase lg:hidden"
             >
               <span> Copyright 2025 Paulo Melo Jr. </span>
             </div>
@@ -153,7 +138,7 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
           <div class="flex justify-end">
             <div class="flex items-center justify-center gap-2">
               <a
-                class="cta-button flex items-center gap-2 text-[.875rem]"
+                class="cta-button px-3 pt-2 pb-2.5 text-[.875rem]"
                 href="/Paulo Melo Jr. - Currículo.pdf"
                 target="_blank"
               >
