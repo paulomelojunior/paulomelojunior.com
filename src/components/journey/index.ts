@@ -95,11 +95,11 @@ export class JourneySection extends ThemeMixin(LitElement) {
     }
     return html`
       <div class="job relative flex-col gap-4 px-5 xl:px-20 2xl:px-32 flex">
-        <span class="font-mono text-[.75rem] leading-none font-medium tracking-[.05em] text-zinc-500 mb-2">
+        <span class="font-mono text-[.75rem] leading-none font-medium tracking-tight text-zinc-500 mb-2">
           ${item.start} &bull; 
           <span class=${item.custom ?? ''}>${item.end}</span>
         </span>
-        <h2 class="text-[1.5rem] 2xl:text-[2rem] xl:leading-none text-zinc-50 tracking-[-.04em]">
+        <h2 class="text-[1.5rem] 2xl:text-[2rem] xl:leading-none text-zinc-50 tracking-tight">
           ${unsafeHTML(item.title)}
         </h2>
         <p class="text-sm/loose lg:text-base/loose text-pretty">
