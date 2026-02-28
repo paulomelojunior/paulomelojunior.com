@@ -585,9 +585,9 @@ var Ch=Object.defineProperty;var Sh=(s,e,t)=>e in s?Ch(s,e,{enumerable:!0,config
           ></div>
         </div>
       </section>
-    `}createRenderRoot(){return this}};rh([L({type:String})],Mo.prototype,"lang",2);Mo=rh([ee("cases-section")],Mo);const L0=`<svg width="46" height="24" viewBox="0 0 46 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 23H34M12 23C5.92487 23 1 18.0751 1 12M12 23H23M1 12C1 5.92487 5.92487 1 12 1M1 12H12M45 12C45 18.0751 40.0751 23 34 23M45 12C45 5.92487 40.0751 1 34 1M45 12H34M34 23H23M34 1H12M34 1H23M12 1H23M23 23C16.9249 23 12 18.0751 12 12M23 23C29.0751 23 34 18.0751 34 12M23 23C23 21.5555 23.2845 20.1251 23.8373 18.7905C24.3901 17.4559 25.2004 16.2433 26.2218 15.2218C27.2433 14.2004 28.4559 13.3901 29.7905 12.8373C31.1251 12.2845 32.5555 12 34 12M23 23C23 21.5555 22.7155 20.1251 22.1627 18.7905C21.6099 17.4559 20.7996 16.2433 19.7782 15.2218C18.7567 14.2004 17.5441 13.3901 16.2095 12.8373C14.8749 12.2845 13.4445 12 12 12M12 12C12 5.92487 16.9249 1 23 1M12 12C14.9174 12 17.7153 10.8411 19.7782 8.77818C21.8411 6.71528 23 3.91738 23 1M34 12C34 5.92487 29.0751 1 23 1M34 12C32.5555 12 31.1251 11.7155 29.7905 11.1627C28.4559 10.6099 27.2433 9.79962 26.2218 8.77817C25.2004 7.75673 24.3901 6.5441 23.8373 5.20952C23.2845 3.87494 23 2.44454 23 1" stroke-width="2"/>
-</svg>
+    `}createRenderRoot(){return this}};rh([L({type:String})],Mo.prototype,"lang",2);Mo=rh([ee("cases-section")],Mo);const L0=`<svg width="46" height="24" viewBox="0 0 46 24" fill="none" xmlns="http://www.w3.org/2000/svg">\r
+<path d="M12 23H34M12 23C5.92487 23 1 18.0751 1 12M12 23H23M1 12C1 5.92487 5.92487 1 12 1M1 12H12M45 12C45 18.0751 40.0751 23 34 23M45 12C45 5.92487 40.0751 1 34 1M45 12H34M34 23H23M34 1H12M34 1H23M12 1H23M23 23C16.9249 23 12 18.0751 12 12M23 23C29.0751 23 34 18.0751 34 12M23 23C23 21.5555 23.2845 20.1251 23.8373 18.7905C24.3901 17.4559 25.2004 16.2433 26.2218 15.2218C27.2433 14.2004 28.4559 13.3901 29.7905 12.8373C31.1251 12.2845 32.5555 12 34 12M23 23C23 21.5555 22.7155 20.1251 22.1627 18.7905C21.6099 17.4559 20.7996 16.2433 19.7782 15.2218C18.7567 14.2004 17.5441 13.3901 16.2095 12.8373C14.8749 12.2845 13.4445 12 12 12M12 12C12 5.92487 16.9249 1 23 1M12 12C14.9174 12 17.7153 10.8411 19.7782 8.77818C21.8411 6.71528 23 3.91738 23 1M34 12C34 5.92487 29.0751 1 23 1M34 12C32.5555 12 31.1251 11.7155 29.7905 11.1627C28.4559 10.6099 27.2433 9.79962 26.2218 8.77817C25.2004 7.75673 24.3901 6.5441 23.8373 5.20952C23.2845 3.87494 23 2.44454 23 1" stroke-width="2"/>\r
+</svg>\r
 `;var M0=Object.defineProperty,z0=Object.getOwnPropertyDescriptor,sh=(s,e,t,i)=>{for(var n=i>1?void 0:i?z0(e,t):e,r=s.length-1,a;r>=0;r--)(a=s[r])&&(n=(i?a(e,t,n):a(n))||n);return i&&n&&M0(e,t,n),n};let zo=class extends Y{constructor(){super(...arguments),this.lang=m.language,this.handleLanguageChange=()=>{this.lang=m.language}}connectedCallback(){super.connectedCallback(),m.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),m.off("languageChanged",this.handleLanguageChange)}currentYear(){return new Date().getFullYear()}getRandomQuote(){const s=["Stay hungry, stay foolish.","Get off zero.","No great thing is created suddenly.","Where the mind goes the body will follow.","To define is to limit.","Publish to polish."],e=Math.floor(Math.random()*s.length);return s[e]}firstUpdated(){const s=this.querySelector("#menu");if(!s)return;const e={instagram:{label:m.t("links.instagram.label"),url:m.t("links.instagram.url")},github:{label:m.t("links.github.label"),url:m.t("links.github.url")},linkedin:{label:m.t("links.linkedin.label"),url:m.t("links.linkedin.url")},email:{label:m.t("links.email.label"),url:m.t("links.email.url")}};Object.values(e).forEach((i,n)=>{const r=(n+1).toString().padStart(2,"0"),a=`
 				<div class="border-b border-zinc-800 lg:border-0">
 					<a target="_blank" class="menu-item py-6 px-5 xl:py-3 flex text-zinc-50 relative" rel="noopener noreferrer" href="${i.url}">
@@ -1126,31 +1126,31 @@ var Ch=Object.defineProperty;var Sh=(s,e,t)=>e in s?Ch(s,e,{enumerable:!0,config
           ></marquee-element>
         </div>
       </section>
-    `}createRenderRoot(){return this}};ch([L({type:String})],Io.prototype,"lang",2);Io=ch([ee("praxis-section")],Io);const g1=`<style>
-    .spinning {
-        animation: spinning .75s infinite linear;
-        transform-origin: 50% 50%;
-        vector-effect: non-scaling-stroke;
-    }
-
-    @keyframes spinning {
-        0% {
-            transform: rotate(0deg);
-        }
-
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-</style>
-<svg class="spinning" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="path-1-inside-1_1307_1673" fill="white">
-<path d="M40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20Z"/>
-</mask>
-<g clip-path="url(#paint0_angular_1307_1673_clip_path)" data-figma-skip-parse="true" mask="url(#path-1-inside-1_1307_1673)"><g transform="matrix(0 -0.02 0.02 0 20 20)"><foreignObject x="-1200" y="-1200" width="2400" height="2400"><div xmlns="http://www.w3.org/1999/xhtml" style="background:conic-gradient(from 90deg,rgba(255, 255, 255, 0) 0deg,rgba(183, 210, 224, 0.75) 306.968deg,rgba(255, 255, 255, 1) 360deg);height:100%;width:100%;opacity:1"></div></foreignObject></g></g><path d="M40 20H36C36 28.8366 28.8366 36 20 36V40V44C33.2548 44 44 33.2548 44 20H40ZM20 40V36C11.1634 36 4 28.8366 4 20H0H-4C-4 33.2548 6.74517 44 20 44V40ZM0 20H4C4 11.1634 11.1634 4 20 4V0V-4C6.74517 -4 -4 6.74517 -4 20H0ZM20 0V4C28.8366 4 36 11.1634 36 20H40H44C44 6.74517 33.2548 -4 20 -4V0Z" data-figma-gradient-fill="{&#34;type&#34;:&#34;GRADIENT_ANGULAR&#34;,&#34;stops&#34;:[{&#34;color&#34;:{&#34;r&#34;:1.0,&#34;g&#34;:1.0,&#34;b&#34;:1.0,&#34;a&#34;:0.0},&#34;position&#34;:0.0},{&#34;color&#34;:{&#34;r&#34;:0.72000002861022949,&#34;g&#34;:0.82666671276092529,&#34;b&#34;:0.87999999523162842,&#34;a&#34;:0.750},&#34;position&#34;:0.85268861055374146},{&#34;color&#34;:{&#34;r&#34;:1.0,&#34;g&#34;:1.0,&#34;b&#34;:1.0,&#34;a&#34;:1.0},&#34;position&#34;:1.0}],&#34;stopsVar&#34;:[{&#34;color&#34;:{&#34;r&#34;:1.0,&#34;g&#34;:1.0,&#34;b&#34;:1.0,&#34;a&#34;:0.0},&#34;position&#34;:0.0},{&#34;color&#34;:{&#34;r&#34;:0.72000002861022949,&#34;g&#34;:0.82666671276092529,&#34;b&#34;:0.87999999523162842,&#34;a&#34;:0.750},&#34;position&#34;:0.85268861055374146},{&#34;color&#34;:{&#34;r&#34;:1.0,&#34;g&#34;:1.0,&#34;b&#34;:1.0,&#34;a&#34;:1.0},&#34;position&#34;:1.0}],&#34;transform&#34;:{&#34;m00&#34;:-7.3478812213901255e-15,&#34;m01&#34;:40.0,&#34;m02&#34;:-7.1054273576010019e-14,&#34;m10&#34;:-40.0,&#34;m11&#34;:-7.3478812213901255e-15,&#34;m12&#34;:40.0},&#34;opacity&#34;:1.0,&#34;blendMode&#34;:&#34;NORMAL&#34;,&#34;visible&#34;:true}" mask="url(#path-1-inside-1_1307_1673)"/>
-<path d="M20 1.50996e-07C20.2626 1.39515e-07 20.5227 0.0517317 20.7654 0.152241C21.008 0.25275 21.2285 0.400069 21.4142 0.585787C21.5999 0.771504 21.7472 0.991982 21.8478 1.23463C21.9483 1.47728 22 1.73736 22 2C22 2.26264 21.9483 2.52272 21.8478 2.76537C21.7472 3.00802 21.5999 3.2285 21.4142 3.41421C21.2285 3.59993 21.008 3.74725 20.7654 3.84776C20.5227 3.94827 20.2626 4 20 4L20 2L20 1.50996e-07Z" fill="white"/>
-<defs>
-<clipPath id="paint0_angular_1307_1673_clip_path"><path d="M40 20H36C36 28.8366 28.8366 36 20 36V40V44C33.2548 44 44 33.2548 44 20H40ZM20 40V36C11.1634 36 4 28.8366 4 20H0H-4C-4 33.2548 6.74517 44 20 44V40ZM0 20H4C4 11.1634 11.1634 4 20 4V0V-4C6.74517 -4 -4 6.74517 -4 20H0ZM20 0V4C28.8366 4 36 11.1634 36 20H40H44C44 6.74517 33.2548 -4 20 -4V0Z" mask="url(#path-1-inside-1_1307_1673)"/></clipPath></defs>
+    `}createRenderRoot(){return this}};ch([L({type:String})],Io.prototype,"lang",2);Io=ch([ee("praxis-section")],Io);const g1=`<style>\r
+    .spinning {\r
+        animation: spinning .75s infinite linear;\r
+        transform-origin: 50% 50%;\r
+        vector-effect: non-scaling-stroke;\r
+    }\r
+\r
+    @keyframes spinning {\r
+        0% {\r
+            transform: rotate(0deg);\r
+        }\r
+\r
+        100% {\r
+            transform: rotate(360deg);\r
+        }\r
+    }\r
+</style>\r
+<svg class="spinning" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">\r
+<mask id="path-1-inside-1_1307_1673" fill="white">\r
+<path d="M40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20Z"/>\r
+</mask>\r
+<g clip-path="url(#paint0_angular_1307_1673_clip_path)" data-figma-skip-parse="true" mask="url(#path-1-inside-1_1307_1673)"><g transform="matrix(0 -0.02 0.02 0 20 20)"><foreignObject x="-1200" y="-1200" width="2400" height="2400"><div xmlns="http://www.w3.org/1999/xhtml" style="background:conic-gradient(from 90deg,rgba(255, 255, 255, 0) 0deg,rgba(183, 210, 224, 0.75) 306.968deg,rgba(255, 255, 255, 1) 360deg);height:100%;width:100%;opacity:1"></div></foreignObject></g></g><path d="M40 20H36C36 28.8366 28.8366 36 20 36V40V44C33.2548 44 44 33.2548 44 20H40ZM20 40V36C11.1634 36 4 28.8366 4 20H0H-4C-4 33.2548 6.74517 44 20 44V40ZM0 20H4C4 11.1634 11.1634 4 20 4V0V-4C6.74517 -4 -4 6.74517 -4 20H0ZM20 0V4C28.8366 4 36 11.1634 36 20H40H44C44 6.74517 33.2548 -4 20 -4V0Z" data-figma-gradient-fill="{&#34;type&#34;:&#34;GRADIENT_ANGULAR&#34;,&#34;stops&#34;:[{&#34;color&#34;:{&#34;r&#34;:1.0,&#34;g&#34;:1.0,&#34;b&#34;:1.0,&#34;a&#34;:0.0},&#34;position&#34;:0.0},{&#34;color&#34;:{&#34;r&#34;:0.72000002861022949,&#34;g&#34;:0.82666671276092529,&#34;b&#34;:0.87999999523162842,&#34;a&#34;:0.750},&#34;position&#34;:0.85268861055374146},{&#34;color&#34;:{&#34;r&#34;:1.0,&#34;g&#34;:1.0,&#34;b&#34;:1.0,&#34;a&#34;:1.0},&#34;position&#34;:1.0}],&#34;stopsVar&#34;:[{&#34;color&#34;:{&#34;r&#34;:1.0,&#34;g&#34;:1.0,&#34;b&#34;:1.0,&#34;a&#34;:0.0},&#34;position&#34;:0.0},{&#34;color&#34;:{&#34;r&#34;:0.72000002861022949,&#34;g&#34;:0.82666671276092529,&#34;b&#34;:0.87999999523162842,&#34;a&#34;:0.750},&#34;position&#34;:0.85268861055374146},{&#34;color&#34;:{&#34;r&#34;:1.0,&#34;g&#34;:1.0,&#34;b&#34;:1.0,&#34;a&#34;:1.0},&#34;position&#34;:1.0}],&#34;transform&#34;:{&#34;m00&#34;:-7.3478812213901255e-15,&#34;m01&#34;:40.0,&#34;m02&#34;:-7.1054273576010019e-14,&#34;m10&#34;:-40.0,&#34;m11&#34;:-7.3478812213901255e-15,&#34;m12&#34;:40.0},&#34;opacity&#34;:1.0,&#34;blendMode&#34;:&#34;NORMAL&#34;,&#34;visible&#34;:true}" mask="url(#path-1-inside-1_1307_1673)"/>\r
+<path d="M20 1.50996e-07C20.2626 1.39515e-07 20.5227 0.0517317 20.7654 0.152241C21.008 0.25275 21.2285 0.400069 21.4142 0.585787C21.5999 0.771504 21.7472 0.991982 21.8478 1.23463C21.9483 1.47728 22 1.73736 22 2C22 2.26264 21.9483 2.52272 21.8478 2.76537C21.7472 3.00802 21.5999 3.2285 21.4142 3.41421C21.2285 3.59993 21.008 3.74725 20.7654 3.84776C20.5227 3.94827 20.2626 4 20 4L20 2L20 1.50996e-07Z" fill="white"/>\r
+<defs>\r
+<clipPath id="paint0_angular_1307_1673_clip_path"><path d="M40 20H36C36 28.8366 28.8366 36 20 36V40V44C33.2548 44 44 33.2548 44 20H40ZM20 40V36C11.1634 36 4 28.8366 4 20H0H-4C-4 33.2548 6.74517 44 20 44V40ZM0 20H4C4 11.1634 11.1634 4 20 4V0V-4C6.74517 -4 -4 6.74517 -4 20H0ZM20 0V4C28.8366 4 36 11.1634 36 20H40H44C44 6.74517 33.2548 -4 20 -4V0Z" mask="url(#path-1-inside-1_1307_1673)"/></clipPath></defs>\r
 </svg>`;var m1=Object.defineProperty,_1=Object.getOwnPropertyDescriptor,uh=(s,e,t,i)=>{for(var n=i>1?void 0:i?_1(e,t):e,r=s.length-1,a;r>=0;r--)(a=s[r])&&(n=(i?a(e,t,n):a(n))||n);return i&&n&&m1(e,t,n),n};let No=class extends Y{constructor(){super(...arguments),this.minMs=500,this.mountedAt=0,this.finishTimeoutId=null,this.fallbackTimeoutId=null,this.isExiting=!1,this.onDomContentLoaded=()=>this.finishAfterMinTime(),this.onWindowLoad=()=>this.finishAfterMinTime()}connectedCallback(){super.connectedCallback(),this.setAttribute("aria-busy","true"),this.setAttribute("aria-live","polite"),this.mountedAt=performance.now(),document.readyState==="complete"||document.readyState==="interactive"?this.finishAfterMinTime():(document.addEventListener("DOMContentLoaded",this.onDomContentLoaded,{once:!0}),window.addEventListener("load",this.onWindowLoad,{once:!0}),this.fallbackTimeoutId=window.setTimeout(()=>this.finishAfterMinTime(),8e3))}disconnectedCallback(){super.disconnectedCallback(),document.removeEventListener("DOMContentLoaded",this.onDomContentLoaded),window.removeEventListener("load",this.onWindowLoad),this.finishTimeoutId&&(clearTimeout(this.finishTimeoutId),this.finishTimeoutId=null),this.fallbackTimeoutId&&(clearTimeout(this.fallbackTimeoutId),this.fallbackTimeoutId=null)}finishAfterMinTime(){const s=performance.now()-this.mountedAt,e=Math.max(0,this.minMs-s);this.finishTimeoutId=window.setTimeout(()=>this.exit(),e)}exit(){if(this.isExiting)return;this.isExiting=!0,this.finishTimeoutId&&(clearTimeout(this.finishTimeoutId),this.finishTimeoutId=null),this.fallbackTimeoutId&&(clearTimeout(this.fallbackTimeoutId),this.fallbackTimeoutId=null);const s=this.querySelector("#loading")||this,e=document.querySelector("main");ae.set(e,{y:"5rem",opacity:0}),ae.to(s,{opacity:0,scale:2,filter:"blur(1rem)",duration:.4,force3D:!0,onComplete:()=>{this.dispatchEvent(new CustomEvent("mobile-loading:done",{bubbles:!0,composed:!0})),ae.to(e,{y:0,opacity:1,duration:1,onComplete:()=>{e.removeAttribute("style")}}),this.remove()}})}render(){return D` <div
       id="loading"
       class="fixed top-0 z-100 h-svh w-full bg-zinc-950"
@@ -1294,7 +1294,7 @@ var Ch=Object.defineProperty;var Sh=(s,e,t)=>e in s?Ch(s,e,{enumerable:!0,config
           </div>
         </div>
       </section>
-    `}createRenderRoot(){return this}};fh([L({type:String})],Uo.prototype,"lang",2);Uo=fh([ee("twyne-goal")],Uo);const P1="/src/588b59.svg";var k1=Object.defineProperty,T1=Object.getOwnPropertyDescriptor,ph=(s,e,t,i)=>{for(var n=i>1?void 0:i?T1(e,t):e,r=s.length-1,a;r>=0;r--)(a=s[r])&&(n=(i?a(e,t,n):a(n))||n);return i&&n&&k1(e,t,n),n};let Vo=class extends Y{constructor(){super(...arguments),this.lang=m.language,this.handleLanguageChange=()=>{this.lang=m.language}}connectedCallback(){super.connectedCallback(),m.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),m.off("languageChanged",this.handleLanguageChange)}render(){return D`
+    `}createRenderRoot(){return this}};fh([L({type:String})],Uo.prototype,"lang",2);Uo=fh([ee("twyne-goal")],Uo);const P1="/src/3d9806.svg";var k1=Object.defineProperty,T1=Object.getOwnPropertyDescriptor,ph=(s,e,t,i)=>{for(var n=i>1?void 0:i?T1(e,t):e,r=s.length-1,a;r>=0;r--)(a=s[r])&&(n=(i?a(e,t,n):a(n))||n);return i&&n&&k1(e,t,n),n};let Vo=class extends Y{constructor(){super(...arguments),this.lang=m.language,this.handleLanguageChange=()=>{this.lang=m.language}}connectedCallback(){super.connectedCallback(),m.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),m.off("languageChanged",this.handleLanguageChange)}render(){return D`
       <div class="flex flex-col items-start xl:gap-2 xl:px-14 px-5 py-16 pb-14 xl:pb-16">
         <div class="flex items-center gap-6">
           <img src="${P1}" class="h-14 border-r border-zinc-700 pr-6" />
