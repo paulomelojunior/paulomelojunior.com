@@ -70,15 +70,17 @@ export class CasesSection extends LitElement {
             class="hidden h-px w-full bg-linear-to-r from-transparent via-zinc-800 to-transparent xl:block"
           ></div>
           <div
-            class="cases-background relative bg-radial-[circle_at_bottom_center] from-zinc-900 flex rounded-4xl 2xl:h-[512px]"
+            class="cases-background relative flex rounded-4xl bg-radial-[circle_at_bottom_center] from-zinc-900 2xl:h-[512px]"
           >
             <div class="hidden w-2/3 justify-center xl:flex">
               <span
-                class="absolute bottom-0 left-0 flex gap-2 p-8 font-mono text-[.75rem] font-medium uppercase leading-none tracking-[.05em] text-zinc-600"
+                class="absolute bottom-0 left-0 flex gap-2 p-8 font-mono text-[.75rem] leading-none font-medium tracking-[.05em] text-zinc-600 uppercase"
               >
                 2025 ${i18next.t('cases.project')}
               </span>
-              <div class="absolute bottom-0 overflow-hidden pointer-events-none">
+              <div
+                class="pointer-events-none absolute bottom-0 overflow-hidden"
+              >
                 <img
                   class="cases absolute w-[calc(1264px*0.8)] max-w-none 2xl:w-auto"
                   src="${m1}"
@@ -104,13 +106,13 @@ export class CasesSection extends LitElement {
                 ${this.renderTitle(i18next.t('cases.title'))}
               </h2>
               <p
-                class="mb-auto mt-8 text-pretty text-sm/loose 2xl:text-base/loose"
+                class="mt-8 mb-auto text-sm/loose text-pretty 2xl:text-base/loose"
               >
                 ${i18next.t('cases.description')}
               </p>
               <a
                 href="${i18next.t('links.lastProject.url')}"
-                class="cta-button cta-button--accent flex items-center gap-3 self-center w-full justify-between"
+                class="cta-button cta-button--accent flex w-full items-center justify-between gap-3 self-center ps-6 py-4"
               >
                 ${i18next.t('cases.cta')}
                 <svg

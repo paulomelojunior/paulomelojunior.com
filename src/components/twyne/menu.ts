@@ -77,18 +77,23 @@ export class TwyneMenu extends ThemeMixin(LitElement) {
   }
 
   firstUpdated() {
+    gsap.from('header > *', {
+      y: -64,
+    })
+
     // close menu on scroll
     window.addEventListener('scroll', () => {
       this.more = false
     })
 
-    // remove outline on top using gsap and scrollTrigger
+    // remove outline on top using gsap and scrollTrigge
     gsap.to('header', {
       scrollTrigger: {
-        trigger: 'header',
-        start: 'bottom top',
+        trigger: '.hero',
+        start: '60 60',
+        end: '60 0',
         toggleActions: 'play none none reverse',
-        scrub: 2,
+        scrub: 1,
       },
       outline: '1px solid hsla(0 0 100% / 0.075)',
       padding: '0 0 0 0',
@@ -102,22 +107,25 @@ export class TwyneMenu extends ThemeMixin(LitElement) {
   render() {
     return html`
       <header
-        class="fixed inset-x-0 z-40 w-full bg-linear-to-t from-zinc-950 backdrop-blur to-zinc-950/80 backdrop-saturate-200 lg:fixed lg:block py-2"
+        class="fixed inset-x-0 z-40 w-full bg-linear-to-t from-zinc-950 to-zinc-950/80 py-2 backdrop-blur backdrop-saturate-200 lg:fixed lg:block"
       >
-        <div class="lg:container lg:grid flex items-center lg:grid-cols-4">
+        <div class="flex items-center lg:container lg:grid lg:grid-cols-4">
           <nav class="lg:hidden">
-            <ul id="anchors" class="flex bg-zinc-950 overflow-hidden fixed inset-0 flex-col justify-center w-dvw *:transition-all duration-500 ${this.more ? 'h-dvh' : 'h-0 *:opacity-0'}">
+            <ul
+              id="anchors"
+              class="${this.more
+                ? 'h-dvh'
+                : 'h-0 *:opacity-0'} fixed inset-0 flex w-dvw flex-col justify-center overflow-hidden bg-zinc-950 duration-500 *:transition-all"
+            >
               <li>
-                <span class="text-[2rem] tracking-[-0.04em] h-20 px-5 flex items-center text-zinc-500">
+                <span
+                  class="flex h-20 items-center px-5 text-[2rem] tracking-[-0.04em] text-zinc-500"
+                >
                   Menu
                 </span>
               </li>
               <li>
-                <mobile-item
-                  href="/"
-                  label="Home"
-                  index="01"
-                ></mobile-item>
+                <mobile-item href="/" label="Home" index="01"></mobile-item>
               </li>
               <li>
                 <mobile-item
@@ -140,7 +148,7 @@ export class TwyneMenu extends ThemeMixin(LitElement) {
                   index="hello@pmjr.cc"
                 ></mobile-item>
               </li>
-              <div class="absolute bottom-4 right-4">
+              <div class="absolute right-4 bottom-4">
                 <button-lang
                   @click=${() => this.changeLang()}
                   label=${this.lang === 'pt' ? `PT · BR` : `EN · US`}
@@ -152,15 +160,12 @@ export class TwyneMenu extends ThemeMixin(LitElement) {
             </ul>
           </nav>
           <div class="flex items-center">
-          <button
+            <button
               @click=${() => this.getPreviousPage()}
-              class="flex size-10 p-3 cursor-pointer transition-all duration-[200ms] items-center justify-center opacity-50 hover:opacity-100 hover:bg-zinc-50/10 active:bg-zinc-50/20 rounded-full active:scale-95"
+              class="flex size-10 cursor-pointer items-center justify-center rounded-full p-3 opacity-50 transition-all duration-[200ms] hover:bg-zinc-50/10 hover:opacity-100 active:scale-95 active:bg-zinc-50/20"
               title="Go back to homepage"
             >
-              <img
-                src="${goBack}"
-                class="transition-all duration-[200ms]"
-              />
+              <img src="${goBack}" class="transition-all duration-[200ms]" />
             </button>
             <mail-button
               @click=${() => this.copyEmail()}
@@ -170,15 +175,15 @@ export class TwyneMenu extends ThemeMixin(LitElement) {
             ></mail-button>
           </div>
           <button
-            class="menu-toggle lg:hidden ms-auto me-4 ${this.more ? 'menu-toggle--close' : ''}"
+            class="menu-toggle ${this.more
+              ? 'menu-toggle--close'
+              : ''} ms-auto me-4 lg:hidden"
             @click=${() => this.toggleMore()}
           >
-            <span class="uppercase text-[.75rem] font-semibold">
-              Menu
-            </span>
+            <span class="text-[.75rem] font-semibold uppercase"> Menu </span>
           </button>
           <nav class="col-span-2">
-            <ul id="anchors" class="hidden lg:flex justify-center px-0">
+            <ul id="anchors" class="hidden justify-center px-0 lg:flex">
               <li class="spy-link">
                 <menu-item
                   href="#goal"
@@ -211,8 +216,11 @@ export class TwyneMenu extends ThemeMixin(LitElement) {
               </li>
             </ul>
           </nav>
-          <div class="hidden lg:flex items-center justify-end gap-2">
-            <a class="cta-button pt-2 pb-2.5 text-[.875rem] px-3" href="${i18next.t('links.projects.url')}">
+          <div class="hidden items-center justify-end gap-2 lg:flex">
+            <a
+              class="cta-button px-3 pt-2 pb-2.5 text-[.875rem]"
+              href="${i18next.t('links.projects.url')}"
+            >
               ${i18next.t('featured.button')}
             </a>
             <languages-dropdown></languages-dropdown>

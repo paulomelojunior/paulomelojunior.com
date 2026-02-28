@@ -73,15 +73,17 @@ export class JourneySection extends ThemeMixin(LitElement) {
   private renderJourneyHeader() {
     return html`
       <h2
-        class="text-pretty text-[2.5rem] leading-none tracking-tight xl:text-[3rem] 2xl:text-[4rem] text-zinc-50 px-5 xl:px-20 2xl:px-32"
+        class="px-5 text-[2.5rem] leading-none tracking-tight text-pretty text-zinc-50 xl:px-20 xl:text-[3rem] 2xl:px-32 2xl:text-[4rem]"
       >
         ${i18next.t('journey.t0')}
       </h2>
-      <div class="flex items-center lg:justify-end order-1 lg:order-0 px-5 xl:px-20 2xl:px-32">
+      <div
+        class="order-1 flex items-center px-5 lg:order-0 lg:justify-end xl:px-20 2xl:px-32"
+      >
         <a
           href="/Paulo Melo Jr. - Currículo.pdf"
           target="_blank"
-          class="cta-button cta-button--accent flex items-center text-[1rem] leading-none"
+          class="cta-button cta-button--accent flex items-center px-6 py-4 text-[1rem] leading-none"
         >
           ${this.lang === 'en' ? 'Download my resume' : 'Baixar meu currículo'}
         </a>

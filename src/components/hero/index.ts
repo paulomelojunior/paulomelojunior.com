@@ -107,7 +107,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
           class="container flex flex-col justify-between min-h-[calc(100svh-4rem)] md:pt-18 pt-12"
         >
           <div class="flex flex-col items-center my-auto pt-12 pb-16 xl:pt-16 xl:pb-20" data-parallax-layer="1">
-            <div data-entrance-item="3" class="hidden items-center gap-4 mb-8">
+            <div data-entrance-item="3" class="flex items-center gap-4 mb-5">
               <img
                 src="${p1x}"
                 sizes="64px"
@@ -148,13 +148,13 @@ export class HeroSection extends ThemeMixin(LitElement) {
             <div data-entrance-item="1" class="flex relative gap-2">
               <a
                 href="${i18next.t('hero.cta.url')}"
-                class="cta-button cta-button--accent flex items-center gap-3 self-center"
+                class="cta-button cta-button--accent flex items-center gap-3 self-center py-4 px-6"
               >
                 ${i18next.t('hero.cta.label')}
               </a>
               <a
                 href="#section-praxis"
-                class="hidden lg:flex rounded-full size-[42px] transition-color duration-[200ms] bg-zinc-900 hover:bg-zinc-800 justify-center items-center outline-4 outline-zinc-950 active:scale-95"
+                class="hidden rounded-full size-[48px] transition-color duration-[200ms] bg-zinc-900 hover:bg-zinc-800 justify-center items-center outline-4 outline-zinc-950 active:scale-95"
                 title="Scroll page"
               >
                 <img

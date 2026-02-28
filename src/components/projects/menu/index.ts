@@ -72,15 +72,25 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
       }, delay)
     }
   }
-  
+
   firstUpdated() {
+    gsap.from('header > *', {
+      y: -64,
+    })
+
+    // close menu on scroll
+    window.addEventListener('scroll', () => {
+      this.more = false
+    })
+
     // remove outline on top using gsap and scrollTrigge
     gsap.to('header', {
       scrollTrigger: {
-        trigger: 'header',
-        start: 'bottom top',
+        trigger: '.hero',
+        start: '60 60',
+        end: '60 0',
         toggleActions: 'play none none reverse',
-        scrub: 2,
+        scrub: 1,
       },
       outline: '1px solid hsla(0 0 100% / 0.075)',
       padding: '0 0 0 0',
@@ -92,7 +102,6 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
   }
 
   render() {
-
     return html`
       <header
         class="absolute inset-x-0 z-40 hidden w-full bg-linear-to-t from-zinc-950 to-zinc-950/80 py-2 backdrop-blur backdrop-saturate-200 lg:fixed lg:block"
