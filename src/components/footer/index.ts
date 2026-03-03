@@ -1,9 +1,7 @@
 import { gsap } from 'gsap'
 import i18next from '../../i18n'
 import { LitElement, html } from 'lit'
-import { unsafeHTML } from 'lit/directives/unsafe-html.js'
 import { customElement, property } from 'lit/decorators.js'
-import logo from './logo.svg?raw'
 import './link'
 
 @customElement('footer-section')
