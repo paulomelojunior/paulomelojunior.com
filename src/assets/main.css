@@ -253,8 +253,11 @@
     inset: 0;
     background: url('imgs/pattern.svg');
     background-attachment: local;
-    mask-image: radial-gradient(circle at bottom, white, black 50%);
-    mask-mode: luminance;
+    mask-image: radial-gradient(
+      circle at bottom center,
+      black,
+      transparent 50%
+    );
     pointer-events: none;
     z-index: -1;
   }
