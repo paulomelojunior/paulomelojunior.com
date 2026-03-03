@@ -22,7 +22,7 @@
   --font-sans--font-feature-settings: 'ss05' on, 'ss06' on, 'ss10' on;
   
   --hue: 256;
-  --brand: 256;
+  --brand: 220;
   
   --color-brand-100: oklch(0.9 0.037 var(--brand));
   --color-brand-200: oklch(0.8 0.077 var(--brand));
@@ -251,7 +251,7 @@
   .footer::before {
     position: absolute;
     inset: 0;
-    background-image: url('imgs/pattern.svg');
+    background: url('imgs/pattern.svg');
     background-attachment: fixed;
     mask-image: radial-gradient(circle at bottom, white, black 50%);
     mask-mode: luminance;
