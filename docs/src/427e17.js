@@ -619,7 +619,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
     `}createRenderRoot(){return this}};or([A({type:String})],wn.prototype,"url",2);or([A({type:String})],wn.prototype,"label",2);or([A({type:String})],wn.prototype,"index",2);or([A({type:String})],wn.prototype,"target",2);or([A({type:String})],wn.prototype,"rel",2);wn=or([J("footer-link")],wn);var R0=Object.defineProperty,j0=Object.getOwnPropertyDescriptor,oh=(s,e,t,i)=>{for(var n=i>1?void 0:i?j0(e,t):e,r=s.length-1,a;r>=0;r--)(a=s[r])&&(n=(i?a(e,t,n):a(n))||n);return i&&n&&R0(e,t,n),n};let Ro=class extends q{constructor(){super(...arguments),this.lang=m.language,this.handleLanguageChange=()=>{this.lang=m.language}}connectedCallback(){super.connectedCallback(),m.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),m.off("languageChanged",this.handleLanguageChange)}currentYear(){return new Date().getFullYear()}getRandomQuote(){const s=["Stay hungry, stay foolish.","Get off zero.","No great thing is created suddenly.","Where the mind goes the body will follow.","To define is to limit.","Publish to polish."],e=Math.floor(Math.random()*s.length);return s[e]}initMenuAnimation(){const s=this.querySelector("footer"),e=this.querySelector("#menu"),t=this.querySelectorAll("#menu > *");s&&e&&t.length>0&&re.from(Array.from(t),{scrollTrigger:{trigger:s,start:"top 50%",end:"top 0%",toggleActions:"play none none reverse"},opacity:0,stagger:.1,y:"5rem"})}firstUpdated(){this.initMenuAnimation()}render(){return D`
       <footer
         id="section-connect"
-        class="footer relative z-10 h-lvh overflow-hidden before:content-[''] bg-linear-0 from-brand-800 from-[5rem] via-zinc-950"
+        class="footer relative z-10 h-lvh overflow-hidden lg:before:content-[''] md:bg-linear-0 md:from-brand-800 md:from-[5rem] md:via-zinc-950"
       >
         <div
           id="footerLinks"
@@ -654,7 +654,7 @@ var $h=Object.defineProperty;var Ph=(s,e,t)=>e in s?$h(s,e,{enumerable:!0,config
           </div>
         </div>
         <div
-          class="absolute inset-x-0 bottom-0 z-50 flex w-full justify-center gap-2 bg-brand-800 px-5 pt-[10px] pb-[14px] font-mono text-[.625rem] font-semibold tracking-widest uppercase"
+          class="absolute inset-x-0 bottom-0 z-50 flex w-full justify-center gap-2 lg:bg-brand-800 px-5 pt-[10px] pb-[14px] font-mono text-[.625rem] font-semibold tracking-widest uppercase"
         >
           <span> [c] ${this.currentYear()||"2026"} Paulo Melo Jr. </span>
           <span class="hidden text-zinc-600 md:inline"> / </span>

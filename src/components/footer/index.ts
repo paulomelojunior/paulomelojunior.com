@@ -67,7 +67,7 @@ export class FooterSection extends LitElement {
     return html`
       <footer
         id="section-connect"
-        class="footer relative z-10 h-lvh overflow-hidden before:content-[''] bg-linear-0 from-brand-800 from-[5rem] via-zinc-950"
+        class="footer relative z-10 h-lvh overflow-hidden lg:before:content-[''] md:bg-linear-0 md:from-brand-800 md:from-[5rem] md:via-zinc-950"
       >
         <div
           id="footerLinks"
@@ -102,7 +102,7 @@ export class FooterSection extends LitElement {
           </div>
         </div>
         <div
-          class="absolute inset-x-0 bottom-0 z-50 flex w-full justify-center gap-2 bg-brand-800 px-5 pt-[10px] pb-[14px] font-mono text-[.625rem] font-semibold tracking-widest uppercase"
+          class="absolute inset-x-0 bottom-0 z-50 flex w-full justify-center gap-2 lg:bg-brand-800 px-5 pt-[10px] pb-[14px] font-mono text-[.625rem] font-semibold tracking-widest uppercase"
         >
           <span> [c] ${this.currentYear() || '2026'} Paulo Melo Jr. </span>
           <span class="hidden text-zinc-600 md:inline"> / </span>
