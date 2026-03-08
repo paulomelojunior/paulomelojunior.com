@@ -105,13 +105,11 @@ export class PageLoading extends LitElement {
       class="fixed top-0 z-100 h-svh w-full bg-zinc-950"
     >
       <div
-        class="container flex h-full items-center justify-center gap-4 flex-col"
+        class="container flex h-full flex-col items-center justify-center gap-4"
       >
-        <div class="">
-          ${unsafeHTML(`${spin}`)}
-        </div>
+        <div class="">${unsafeHTML(`${spin}`)}</div>
         <span
-          class="hidden animate-pulse text-[.75rem] uppercase leading-10 tracking-[.05em] text-zinc-50"
+          class="hidden animate-pulse text-[.75rem] leading-10 tracking-[.05em] text-zinc-50 uppercase"
         >
           ${this.lang === 'pt' ? html`Carregando...` : html`Loading...`}
         </span>

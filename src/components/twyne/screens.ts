@@ -57,8 +57,7 @@ export class TwyneScreens extends LitElement {
     if (!this.screens?.length) return
 
     this.currentIndex =
-      (this.currentIndex - 1 + this.screens.length) %
-      this.screens.length
+      (this.currentIndex - 1 + this.screens.length) % this.screens.length
 
     this.updateScreens()
   }
@@ -66,9 +65,7 @@ export class TwyneScreens extends LitElement {
   private handleNext = () => {
     if (!this.screens?.length) return
 
-    this.currentIndex =
-      (this.currentIndex + 1) %
-      this.screens.length
+    this.currentIndex = (this.currentIndex + 1) % this.screens.length
 
     this.updateScreens()
   }
@@ -82,17 +79,12 @@ export class TwyneScreens extends LitElement {
     this.abortController.abort()
     this.abortController = new AbortController()
 
-    this.screens = this.querySelectorAll<HTMLImageElement>(
-      '.carrossel img'
-    )
+    this.screens = this.querySelectorAll<HTMLImageElement>('.carrossel img')
 
     if (!this.screens.length) return
 
     // Garante índice válido
-    this.currentIndex = Math.min(
-      this.currentIndex,
-      this.screens.length - 1
-    )
+    this.currentIndex = Math.min(this.currentIndex, this.screens.length - 1)
 
     this.updateScreens = () => {
       this.screens.forEach((img, idx) => {
@@ -116,12 +108,8 @@ export class TwyneScreens extends LitElement {
 
     this.updateScreens()
 
-    const prevBtn = this.querySelector<HTMLButtonElement>(
-      'button[data-prev]'
-    )
-    const nextBtn = this.querySelector<HTMLButtonElement>(
-      'button[data-next]'
-    )
+    const prevBtn = this.querySelector<HTMLButtonElement>('button[data-prev]')
+    const nextBtn = this.querySelector<HTMLButtonElement>('button[data-next]')
 
     const { signal } = this.abortController
 
@@ -150,13 +138,13 @@ export class TwyneScreens extends LitElement {
               src="${d2}"
               width="1728"
               height="976"
-              class="invisible absolute left-0 top-0 rounded-[.5rem]"
+              class="invisible absolute top-0 left-0 rounded-[.5rem]"
             />
             <img
               src="${d3}"
               width="1728"
               height="976"
-              class="invisible absolute left-0 top-0 rounded-[.5rem]"
+              class="invisible absolute top-0 left-0 rounded-[.5rem]"
             />
           </div>
 
@@ -169,20 +157,20 @@ export class TwyneScreens extends LitElement {
               <div class="relative z-20 flex gap-px pb-2">
                 <button
                   data-prev
-                  class="flex items-center gap-4 rounded-s-full bg-zinc-100/10 py-3 pe-4 ps-5 text-[.75rem] uppercase leading-none tracking-[.05em] text-zinc-50 transition-all hover:bg-zinc-100 hover:text-zinc-950"
+                  class="flex items-center gap-4 rounded-s-full bg-zinc-100/10 py-3 ps-5 pe-4 text-[.75rem] leading-none tracking-[.05em] text-zinc-50 uppercase transition-all hover:bg-zinc-100 hover:text-zinc-950"
                 >
                   Prev
                 </button>
 
                 <span
-                  class="flex items-center justify-center bg-zinc-50/5 px-4 font-mono text-[.75rem] font-medium uppercase leading-none tracking-[.05em]"
+                  class="flex items-center justify-center bg-zinc-50/5 px-4 font-mono text-[.75rem] leading-none font-medium tracking-[.05em] uppercase"
                 >
                   ${this.currentIndex + 1} / ${this.screens?.length ?? 3}
                 </span>
 
                 <button
                   data-next
-                  class="flex items-center gap-4 rounded-e-full bg-zinc-100/10 py-3 pe-5 ps-4 text-[.75rem] uppercase leading-none tracking-[.05em] text-zinc-50 transition-all hover:bg-zinc-100 hover:text-zinc-950"
+                  class="flex items-center gap-4 rounded-e-full bg-zinc-100/10 py-3 ps-4 pe-5 text-[.75rem] leading-none tracking-[.05em] text-zinc-50 uppercase transition-all hover:bg-zinc-100 hover:text-zinc-950"
                 >
                   Next
                 </button>

@@ -91,13 +91,13 @@ export class ProjectsScreens extends LitElement {
               src=""
               width="1728"
               height="976"
-              class="invisible absolute left-0 top-0 rounded-[.5rem]"
+              class="invisible absolute top-0 left-0 rounded-[.5rem]"
             />
             <img
               src=""
               width="1728"
               height="976"
-              class="invisible absolute left-0 top-0 rounded-[.5rem]"
+              class="invisible absolute top-0 left-0 rounded-[.5rem]"
             />
           </div>
           <div class="absolute inset-0">
@@ -107,18 +107,18 @@ export class ProjectsScreens extends LitElement {
               <progressive-blur></progressive-blur>
               <div class="relative z-20 flex gap-px pb-2">
                 <button
-                  class="flex items-center gap-4 rounded-s-full bg-zinc-100/10 py-3 pe-4 ps-5 text-[.75rem] uppercase leading-none tracking-[.05em] text-zinc-100 transition-all hover:bg-zinc-100 hover:text-zinc-950"
+                  class="flex items-center gap-4 rounded-s-full bg-zinc-100/10 py-3 ps-5 pe-4 text-[.75rem] leading-none tracking-[.05em] text-zinc-100 uppercase transition-all hover:bg-zinc-100 hover:text-zinc-950"
                 >
                   Prev
                 </button>
 
                 <span
-                  class="flex items-center justify-center bg-zinc-50/5 px-4 font-mono text-[.75rem] font-medium uppercase leading-none tracking-[.05em]"
+                  class="flex items-center justify-center bg-zinc-50/5 px-4 font-mono text-[.75rem] leading-none font-medium tracking-[.05em] uppercase"
                 >
                   ${this.currentIndex + 1} / ${this.screens.length}
                 </span>
                 <button
-                  class="flex items-center gap-4 rounded-e-full bg-zinc-100/10 py-3 pe-5 ps-4 text-[.75rem] uppercase leading-none tracking-[.05em] text-zinc-100 transition-all hover:bg-zinc-100 hover:text-zinc-950"
+                  class="flex items-center gap-4 rounded-e-full bg-zinc-100/10 py-3 ps-4 pe-5 text-[.75rem] leading-none tracking-[.05em] text-zinc-100 uppercase transition-all hover:bg-zinc-100 hover:text-zinc-950"
                 >
                   Next
                 </button>

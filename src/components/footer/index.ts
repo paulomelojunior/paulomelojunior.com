@@ -58,7 +58,7 @@ export class FooterSection extends LitElement {
       })
     }
   }
-  
+
   protected firstUpdated() {
     this.initMenuAnimation()
   }
@@ -67,7 +67,7 @@ export class FooterSection extends LitElement {
     return html`
       <footer
         id="section-connect"
-        class="footer relative z-10 h-lvh overflow-hidden lg:before:content-[''] md:bg-linear-0 md:from-brand-800 md:from-[5rem] md:via-zinc-950"
+        class="footer md:from-brand-800 relative z-10 h-lvh overflow-hidden md:bg-linear-0 md:from-[5rem] md:via-zinc-950 lg:before:content-['']"
       >
         <div
           id="footerLinks"
@@ -92,9 +92,9 @@ export class FooterSection extends LitElement {
               url=${i18next.t('links.linkedin.url')}
               label=${i18next.t('links.linkedin.label')}
               index="002"
-              ></footer-link>
-              
-              <footer-link
+            ></footer-link>
+
+            <footer-link
               url=${i18next.t('links.email.url')}
               label=${i18next.t('links.email.label')}
               index="hello@pmjr.cc"
@@ -102,7 +102,7 @@ export class FooterSection extends LitElement {
           </div>
         </div>
         <div
-          class="absolute inset-x-0 bottom-0 z-50 flex w-full justify-center gap-2 lg:bg-brand-800 px-5 pt-[10px] pb-[14px] font-mono text-[.625rem] font-semibold tracking-widest uppercase"
+          class="lg:bg-brand-800 absolute inset-x-0 bottom-0 z-50 flex w-full justify-center gap-2 px-5 pt-[10px] pb-[14px] font-mono text-[.625rem] font-semibold tracking-widest uppercase"
         >
           <span> [c] ${this.currentYear() || '2026'} Paulo Melo Jr. </span>
           <span class="hidden text-zinc-600 md:inline"> / </span>

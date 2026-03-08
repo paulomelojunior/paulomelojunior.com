@@ -52,20 +52,34 @@ export class ProjectsAllugator extends LitElement {
     `
 
     return html`
-      <div id="allugator" class="grid grid-cols-3 py-16">
+      <div id="allugator" class="py-8 lg:grid lg:grid-cols-3 lg:py-16">
         <item-header
           title="${i18next.t('allugator.title')}"
           tags="${i18next.t('allugator.tags')}"
           year="${i18next.t('allugator.year')}"
           .contentHtml=${contentHtml}
         ></item-header>
-        <div class="col-span-2 grid grid-cols-3 gap-4 *:rounded-[.5rem]">
-          <img class="mix-blend-screen border-2 border-zinc-800" src="${social4}" loading="lazy" />
+        <div
+          class="grid grid-cols-2 gap-2 *:rounded-[.5rem] lg:col-span-2 lg:grid-cols-3 lg:gap-4"
+        >
+          <img
+            class="border-2 border-zinc-800 mix-blend-screen"
+            src="${social4}"
+            loading="lazy"
+          />
           <img src="${social6}" loading="lazy" />
           <img src="${social1}" loading="lazy" />
-          <img class="col-span-2 row-span-2 mix-blend-screen" src="${social2}" loading="lazy" />
+          <img
+            class="col-span-2 mix-blend-screen lg:col-span-2 lg:row-span-2"
+            src="${social2}"
+            loading="lazy"
+          />
           <img src="${social5}" loading="lazy" />
-          <img class="border-2 border-zinc-800" src="${social3}" loading="lazy" />
+          <img
+            class="border-2 border-zinc-800"
+            src="${social3}"
+            loading="lazy"
+          />
         </div>
       </div>
     `

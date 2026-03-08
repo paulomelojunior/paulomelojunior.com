@@ -26,10 +26,10 @@ export class CasesSection extends LitElement {
   private initAnimation() {
     const casesElement = this.querySelector('#cases')
     const casesImages = this.querySelectorAll('#cases .cases')
-    
+
     if (casesElement && casesImages.length > 0) {
       const mm = gsap.matchMedia()
-      
+
       mm.add('(min-width: 1024px)', () => {
         gsap.from(Array.from(casesImages), {
           scrollTrigger: {
@@ -112,7 +112,7 @@ export class CasesSection extends LitElement {
               </p>
               <a
                 href="${i18next.t('links.lastProject.url')}"
-                class="cta-button cta-button--accent flex w-full items-center justify-between gap-3 self-center ps-6 py-4"
+                class="cta-button cta-button--accent flex w-full items-center justify-between gap-3 self-center py-4 ps-6"
               >
                 ${i18next.t('cases.cta')}
                 <svg

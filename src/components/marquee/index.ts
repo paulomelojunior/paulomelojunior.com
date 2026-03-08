@@ -2,7 +2,6 @@ import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import classNames from 'classnames'
 
-
 @customElement('marquee-element')
 export class MarqueeElement extends LitElement {
   @property({ type: String }) star: string = ''

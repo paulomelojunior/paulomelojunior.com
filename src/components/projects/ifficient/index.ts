@@ -60,21 +60,25 @@ export class ProjectsIfficient extends LitElement {
     `
 
     return html`
-      <div id="ifficient" class="lg:grid grid-cols-3 py-16">
-        <item-header title="${i18next.t('ifficient.title')}" tags="${i18next.t('ifficient.tags')}" .contentHtml=${contentHtml}></item-header>
-        <div class="col-span-2 grid gap-4 *:rounded-[.75rem]">
+      <div id="ifficient" class="py-8 lg:grid lg:grid-cols-3 lg:py-16">
+        <item-header
+          title="${i18next.t('ifficient.title')}"
+          tags="${i18next.t('ifficient.tags')}"
+          .contentHtml=${contentHtml}
+        ></item-header>
+        <div class="grid gap-4 *:rounded-[.75rem] lg:col-span-2">
           <div
-            class="relative group cursor-pointer aspect-video overflow-hidden border-2 border-zinc-800 before:hover:opacity-1 before:absolute before:inset-0 hover:before:bg-zinc-950/50 before:transition-colors before:duration-200"
+            class="group relative aspect-video cursor-pointer overflow-hidden border-2 border-zinc-800 before:absolute before:inset-0 before:transition-colors before:duration-200 hover:before:bg-zinc-950/50 before:hover:opacity-1"
             @click=${this.handleSeeFullPage}
           >
             <img id="ifficient-homepage" class="w-full" src="${p1}" />
             <div
-              class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 rounded-full py-3 px-5 text-[1rem] font-medium leading-[20px] text-zinc-50 opacity-0 group-hover:opacity-100 transition-all backdrop-blur duration-200 bg-zinc-100/15 hover:bg-zinc-100/30"
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-zinc-100/15 px-5 py-3 text-[1rem] leading-[20px] font-medium text-zinc-50 opacity-0 backdrop-blur transition-all duration-200 group-hover:opacity-100 hover:bg-zinc-100/30"
             >
               ${i18next.t('ifficient.fullView')}
             </div>
           </div>
-          <div class="grid grid-cols-3 gap-4 *:rounded-[.75rem]">
+          <div class="grid grid-cols-3 gap-2 *:rounded-[.75rem] lg:gap-4">
             <img src="${e2}" />
             <img src="${e1}" />
             <img src="${e3}" />

@@ -66,25 +66,31 @@ export class ProjectsMultiplayer extends LitElement {
     `
 
     return html`
-      <div id="multiplayer" class="grid grid-cols-3 py-16">
+      <div id="multiplayer" class="py-8 lg:grid lg:grid-cols-3 lg:py-16">
         <item-header
           title="${i18next.t('multiplayer.title')}"
           tags="${i18next.t('multiplayer.tags')}"
           year="${i18next.t('multiplayer.year')}"
           .contentHtml=${contentHtml}
         ></item-header>
-        <div class="col-span-2 grid grid-cols-2 gap-4 *:rounded-[.5rem]">
+        <div
+          class="grid grid-cols-2 gap-2 *:rounded-[.5rem] lg:col-span-2 lg:gap-4"
+        >
           <img src="${s0}" loading="lazy" />
           <img src="${s1}" loading="lazy" />
-          <img src="${s3}" loading="lazy"/>
-          <img src="${s4}" loading="lazy"/>
-          <img src="${s8}" loading="lazy"/>
-          <img src="${s2}" loading="lazy"/>
-          <img src="${s7}" loading="lazy"/>
-          <img src="${s9}" loading="lazy"/>
-          <img src="${s6}" loading="lazy"/>
-          <img src="${s5}" loading="lazy"/>
-          <img class="col-span-2 border-2 border-zinc-800" src="${p1}" loading="lazy" />
+          <img src="${s3}" loading="lazy" />
+          <img src="${s4}" loading="lazy" />
+          <img src="${s8}" loading="lazy" />
+          <img src="${s2}" loading="lazy" />
+          <img src="${s7}" loading="lazy" />
+          <img src="${s9}" loading="lazy" />
+          <img src="${s6}" loading="lazy" />
+          <img src="${s5}" loading="lazy" />
+          <img
+            class="col-span-2 border-2 border-zinc-800"
+            src="${p1}"
+            loading="lazy"
+          />
         </div>
       </div>
     `

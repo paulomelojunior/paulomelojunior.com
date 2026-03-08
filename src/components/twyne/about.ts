@@ -26,7 +26,7 @@ export class TwyneAbout extends LitElement {
   private handleCoverImage() {
     const coverImage = document.querySelector('#cover-image')
     if (!coverImage) return
-    
+
     gsap.matchMedia().add('(min-width: 1024px)', () => {
       gsap.to(coverImage, {
         scrollTrigger: {
@@ -48,19 +48,21 @@ export class TwyneAbout extends LitElement {
   render() {
     return html` <div
       id="about"
-      class="relative grid lg:grid-cols-2 overflow-hidden lg:rounded-4xl bg-linear-to-b from-zinc-900 to-zinc-950"
+      class="relative grid overflow-hidden bg-linear-to-b from-zinc-900 to-zinc-950 lg:grid-cols-2 lg:rounded-4xl"
     >
       <div
         class="absolute h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent lg:block"
       ></div>
-      <div class="flex flex-col lg:p-16 lg:pe-0 p-6">
+      <div class="flex flex-col p-6 lg:p-16 lg:pe-0">
         <p class="text-default mb-4 text-balance lg:-mt-2">
           ${unsafeHTML(i18next.t('twyne.about.p2'))}
         </p>
         <p class="text-default text-pretty">
           ${unsafeHTML(i18next.t('twyne.about.p1'))}
         </p>
-        <ul class="hidden lg:block mt-auto text-[.75rem] leading-none *:py-6 lg:text-[1rem] *:border-b *:border-zinc-800">
+        <ul
+          class="mt-auto hidden text-[.75rem] leading-none *:border-b *:border-zinc-800 *:py-6 lg:block lg:text-[1rem]"
+        >
           <li class="flex justify-between align-baseline">
             <span> ${i18next.t('twyne.about.details.company')} </span>
             <span class="text-right text-zinc-50">
@@ -80,30 +82,28 @@ export class TwyneAbout extends LitElement {
             </span>
           </li>
           <li class="flex justify-between align-baseline">
-            <span>
-              ${i18next.t('twyne.about.details.contributions')}
-            </span>
-            <span class="inline-flex align-baseline gap-2 text-right text-zinc-50">
-              <span>
-                ${i18next.t('twyne.about.details.contribution1')}
-              </span>
+            <span> ${i18next.t('twyne.about.details.contributions')} </span>
+            <span
+              class="inline-flex gap-2 text-right align-baseline text-zinc-50"
+            >
+              <span> ${i18next.t('twyne.about.details.contribution1')} </span>
               <span class="text-zinc-500">/</span>
               <span class="hidden xl:flex">
                 ${i18next.t('twyne.about.details.contribution2')}
               </span>
-              <span class="hidden xl:flex text-zinc-500">/</span>
-              <span>
-                ${i18next.t('twyne.about.details.contribution3')}
-              </span>
+              <span class="hidden text-zinc-500 xl:flex">/</span>
+              <span> ${i18next.t('twyne.about.details.contribution3')} </span>
             </span>
           </li>
         </ul>
       </div>
-      <div class="relative flex aspect-square lg:aspect-[3/4] xl:aspect-square overflow-hidden">
+      <div
+        class="relative flex aspect-square overflow-hidden lg:aspect-[3/4] xl:aspect-square"
+      >
         <img
           src="${d1}"
           id="cover-image"
-          class="absolute lg:left-16 lg:top-16 left-6 top-0 lg:max-w-none flex-none lg:rounded-ss-lg rounded-ss-md border-t border-zinc-800 shadow-[0px_24px_24px_0px_black]"
+          class="absolute top-0 left-6 flex-none rounded-ss-md border-t border-zinc-800 shadow-[0px_24px_24px_0px_black] lg:top-16 lg:left-16 lg:max-w-none lg:rounded-ss-lg"
         />
         <progressive-blur
           class="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-zinc-950 to-transparent"

@@ -40,11 +40,11 @@ export class TwyneMobile extends LitElement {
           },
         })
         const layers = [
-          { layer: '1', ys: '30%', ye: '0%', opacity: .5 },
-          { layer: '2', ys: '20%', ye: '5%', opacity: .75 },
+          { layer: '1', ys: '30%', ye: '0%', opacity: 0.5 },
+          { layer: '2', ys: '20%', ye: '5%', opacity: 0.75 },
           { layer: '3', ys: '10%', ye: '10%', opacity: 1 },
-          { layer: '4', ys: '20%', ye: '5%', opacity: .75 },
-          { layer: '5', ys: '30%', ye: '0%', opacity: .5 },
+          { layer: '4', ys: '20%', ye: '5%', opacity: 0.75 },
+          { layer: '5', ys: '30%', ye: '0%', opacity: 0.5 },
         ]
         layers.forEach((layerObj, idx) => {
           tl.fromTo(
@@ -58,7 +58,7 @@ export class TwyneMobile extends LitElement {
             {
               y: layerObj.ye,
               opacity: 1,
-              ease: 'none'
+              ease: 'none',
             },
             idx === 0 ? undefined : '<'
           )
@@ -69,11 +69,11 @@ export class TwyneMobile extends LitElement {
   protected firstUpdated(_changedProperties: PropertyValues): void {
     this.screensMotion()
   }
-  render() {    
+  render() {
     return html`
       <section id="mobile" class="mt-24 py-24 xl:mt-32 xl:py-32">
         <h2
-          class="mb-16 xl:mb-32 text-center text-[2.5rem] leading-normal tracking-[-.02em] 2xl:text-[3rem] text-zinc-50"
+          class="mb-16 text-center text-[2.5rem] leading-normal tracking-[-.02em] text-zinc-50 xl:mb-32 2xl:text-[3rem]"
         >
           ${unsafeHTML(i18next.t('twyne.mobile.t1'))}
         </h2>

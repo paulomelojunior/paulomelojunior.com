@@ -96,18 +96,26 @@ export class JourneySection extends ThemeMixin(LitElement) {
       return html`<div class="hidden xl:flex"></div>`
     }
     return html`
-      <div class="job relative flex-col gap-4 px-5 xl:px-20 2xl:px-32 flex">
-        <span class="font-mono text-[.75rem] leading-none font-medium tracking-tight text-zinc-500 mb-2">
-          ${item.start} &bull; 
+      <div class="job relative flex flex-col gap-4 px-5 xl:px-20 2xl:px-32">
+        <span
+          class="mb-2 font-mono text-[.75rem] leading-none font-medium tracking-tight text-zinc-500"
+        >
+          ${item.start} &bull;
           <span class=${item.custom ?? ''}>${item.end}</span>
         </span>
-        <h2 class="text-[1.5rem] 2xl:text-[2rem] xl:leading-none text-zinc-50 tracking-tight">
+        <h2
+          class="text-[1.5rem] tracking-tight text-zinc-50 xl:leading-none 2xl:text-[2rem]"
+        >
           ${unsafeHTML(item.title)}
         </h2>
-        <p class="text-sm/loose lg:text-base/loose text-pretty">
+        <p class="text-sm/loose text-pretty lg:text-base/loose">
           ${item.description}
         </p>
-        ${item.more ? html`<span class="text-default text-xs mt-1 hidden">${item.more}</span>` : nothing}
+        ${item.more
+          ? html`<span class="text-default mt-1 hidden text-xs"
+              >${item.more}</span
+            >`
+          : nothing}
       </div>
     `
   }
@@ -136,13 +144,13 @@ export class JourneySection extends ThemeMixin(LitElement) {
   render() {
     return html`
       <section id="section-journey">
-        <div class="lg:py-16 xl:py-24 2xl:py-48 2xl:my-16">
+        <div class="lg:py-16 xl:py-24 2xl:my-16 2xl:py-48">
           <div
             id="job"
-            class="container grid gap-y-16 overflow-hidden pt-14 lg:pt-0 lg:grid-cols-2 xl:gap-y-32"
+            class="container grid gap-y-16 overflow-hidden pt-14 lg:grid-cols-2 lg:pt-0 xl:gap-y-32"
           >
             ${this.renderJourneyHeader()}
-            ${this.journeyItems.map(item => this.renderJourneyItem(item))}
+            ${this.journeyItems.map((item) => this.renderJourneyItem(item))}
           </div>
         </div>
       </section>

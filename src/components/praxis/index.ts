@@ -36,7 +36,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
         scrub: 1,
       },
       opacity: 0,
-      ease: 'none'
+      ease: 'none',
     })
 
     praxisPath.forEach((i) => {
@@ -73,9 +73,9 @@ export class PraxisSection extends ThemeMixin(LitElement) {
 
   render() {
     return html`
-      <section class="bg-zinc-950 relative">
+      <section class="relative bg-zinc-950">
         <div class="praxis-bg absolute inset-0 bg-zinc-900"></div>
-        <div id="section-praxis" class="absolute w-full h-px -top-12"></div>
+        <div id="section-praxis" class="absolute -top-12 h-px w-full"></div>
         <div
           class="relative mx-5 h-px bg-linear-to-r from-transparent via-zinc-800 to-transparent"
         ></div>
@@ -85,7 +85,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
             items="Design Engineering, Product Design, UX & UI"
           ></marquee-element>
           <div
-            class="grid gap-16 overflow-x-hidden mx-5 py-16 *:flex *:items-start *:justify-center *:gap-5 lg:grid-cols-2 xl:gap-24 xl:py-0 xl:*:flex-row *:xl:gap-12 *:xl:py-24 *:2xl:py-48"
+            class="mx-5 grid gap-16 overflow-x-hidden py-16 *:flex *:items-start *:justify-center *:gap-5 lg:grid-cols-2 xl:gap-24 xl:py-0 xl:*:flex-row *:xl:gap-12 *:xl:py-24 *:2xl:py-48"
           >
             <div class="praxis">
               <svg
@@ -116,7 +116,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
               </svg>
               <div class="grid gap-2 xl:gap-0">
                 <h2
-                  class="flex items-center text-[1.5rem] leading-16 text-zinc-50 xl:text-[2rem] xl:leading-24 2xl:text-[2.5rem] 2xl:leading-24 tracking-tight"
+                  class="flex items-center text-[1.5rem] leading-16 tracking-tight text-zinc-50 xl:text-[2rem] xl:leading-24 2xl:text-[2.5rem] 2xl:leading-24"
                 >
                   ${i18next.t('praxis.t1')}
                 </h2>
@@ -142,7 +142,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
               </svg>
               <div class="grid gap-2 xl:gap-0">
                 <h2
-                  class="flex items-center text-[1.5rem] leading-16 text-zinc-50 xl:text-[2rem] xl:leading-24 2xl:text-[2.5rem] 2xl:leading-24 tracking-tight"
+                  class="flex items-center text-[1.5rem] leading-16 tracking-tight text-zinc-50 xl:text-[2rem] xl:leading-24 2xl:text-[2.5rem] 2xl:leading-24"
                 >
                   ${i18next.t('praxis.t2')}
                 </h2>

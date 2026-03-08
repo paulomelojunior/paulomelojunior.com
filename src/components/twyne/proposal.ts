@@ -81,12 +81,12 @@ export class TwyneProposal extends LitElement {
 
     return html`
       <ul
-        class="leading-loose 2xl:text-[1.25rem] text-zinc-50 flex flex-col gap-4 lg:gap-0"
+        class="flex flex-col gap-4 leading-loose text-zinc-50 lg:gap-0 2xl:text-[1.25rem]"
       >
         ${proposalList.map(
           (item) => html`
             <li
-              class="flex items-baseline gap-2 lg:gap-4 before:text-zinc-700 before:content-['✦'] text-balance"
+              class="flex items-baseline gap-2 text-balance before:text-zinc-700 before:content-['✦'] lg:gap-4"
             >
               ${item}
             </li>
@@ -98,9 +98,9 @@ export class TwyneProposal extends LitElement {
 
   private renderComponentGrid(): unknown {
     return html`
-      <div class="flex flex-col gap-2 lg:gap-4 items-center">
+      <div class="flex flex-col items-center gap-2 lg:gap-4">
         <div class="flex gap-4">
-          <div class="hidden lg:flex flex-col gap-4">
+          <div class="hidden flex-col gap-4 lg:flex">
             <img
               src="${b1}"
               height="425"
@@ -135,7 +135,7 @@ export class TwyneProposal extends LitElement {
           alt="Component B4"
           class="w-[calc(792px*0.8)] xl:w-auto"
         />
-        <div class="hidden lg:flex gap-4">
+        <div class="hidden gap-4 lg:flex">
           <img
             src="${b7}"
             height="218"
@@ -151,7 +151,7 @@ export class TwyneProposal extends LitElement {
             loading="lazy"
             alt="Component B5"
             class="w-[calc(240px*0.8)] xl:w-auto"
-            />
+          />
           <img
             src="${b6}"
             height="218"
@@ -161,7 +161,6 @@ export class TwyneProposal extends LitElement {
             class="w-[calc(240px*0.8)] xl:w-auto"
           />
         </div>
-        
       </div>
     `
   }
@@ -176,7 +175,7 @@ export class TwyneProposal extends LitElement {
           loading="lazy"
           alt="Component A1"
           class="w-[calc(480px*0.8)] xl:w-auto"
-          />
+        />
         <img
           src="${a2}"
           height="248"
@@ -209,7 +208,7 @@ export class TwyneProposal extends LitElement {
     return html`
       <div
         id="components"
-        class="relative px-2 lg:p-0 flex flex-col lg:flex-row lg:min-h-[1088px] xl:min-h-[1348px] items-center justify-center gap-2 lg:gap-4"
+        class="relative flex flex-col items-center justify-center gap-2 px-2 lg:min-h-[1088px] lg:flex-row lg:gap-4 lg:p-0 xl:min-h-[1348px]"
       >
         <style>
           #components img {
@@ -229,11 +228,11 @@ export class TwyneProposal extends LitElement {
         ></div>
         <div class="container rounded-t-4xl px-6 pb-24 lg:py-24 2xl:p-32">
           <h2
-            class="mb-10 text-[2rem] lg:text-[2.5rem] leading-none tracking-[-.02em] 2xl:text-[3rem] text-zinc-50"
+            class="mb-10 text-[2rem] leading-none tracking-[-.02em] text-zinc-50 lg:text-[2.5rem] 2xl:text-[3rem]"
           >
             ${i18next.t('twyne.proposal.t1')}
           </h2>
-          <div class="flex flex-col gap-8 lg:grid grid-cols-2">
+          <div class="flex grid-cols-2 flex-col gap-8 lg:grid">
             ${this.renderProposalList()}
             <p class="text-default text-pretty">
               ${i18next.t('twyne.proposal.p1')}

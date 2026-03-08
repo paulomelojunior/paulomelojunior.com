@@ -61,7 +61,7 @@ export class TwyneConclusion extends LitElement {
     return html`
       <svg
         id="sign"
-        class="rotate-21 stroke-zinc-600 mt-2"
+        class="mt-2 rotate-21 stroke-zinc-600"
         width="44"
         height="67"
         viewBox="0 0 44 67"
@@ -87,22 +87,28 @@ export class TwyneConclusion extends LitElement {
   private renderContent(): unknown {
     return html`
       <h2
-        class="mb-4 mt-16 font-semibold uppercase leading-none tracking-[0.05em] text-[0.75rem] text-zinc-500"
+        class="mt-16 mb-4 text-[0.75rem] leading-none font-semibold tracking-[0.05em] text-zinc-500 uppercase"
       >
         ${i18next.t('twyne.conclusion.t1')}
       </h2>
-      <p class="text-default text-zinc-50">${i18next.t('twyne.conclusion.p1')}</p>
-      <p class="text-default text-zinc-50">${i18next.t('twyne.conclusion.p2')}</p>
-      <p class="text-default text-zinc-50">${i18next.t('twyne.conclusion.p3')}</p>
+      <p class="text-default text-zinc-50">
+        ${i18next.t('twyne.conclusion.p1')}
+      </p>
+      <p class="text-default text-zinc-50">
+        ${i18next.t('twyne.conclusion.p2')}
+      </p>
+      <p class="text-default text-zinc-50">
+        ${i18next.t('twyne.conclusion.p3')}
+      </p>
     `
   }
 
   render() {
     return html`
       <section id="conclusion">
-        <div class="container lg:grid grid-cols-4 pt-24 lg:pt-32 px-6">
+        <div class="container grid-cols-4 px-6 pt-24 lg:grid lg:pt-32">
           <div
-            class="relative col-span-2 col-start-2 flex aspect-square flex-col items-center justify-center gap-8 text-balance text-center text-[1.25rem] leading-loose text-zinc-300 2xl:text-[1.5rem]"
+            class="relative col-span-2 col-start-2 flex aspect-square flex-col items-center justify-center gap-8 text-center text-[1.25rem] leading-loose text-balance text-zinc-300 2xl:text-[1.5rem]"
           >
             ${this.renderContent()} ${this.renderSignature()}
           </div>

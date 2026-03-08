@@ -24,15 +24,15 @@ export class MethodSection extends ThemeMixin(LitElement) {
     })
   }
 
-  firstUpdated() {
-
-  }
+  firstUpdated() {}
 
   render() {
     return html`
       <section class="">
         <div class="container">
-          <div class="*:contents grid grid-cols-2 md:grid-cols-4 rounded-4xl overflow-hidden gap-[2px] px-0.5">
+          <div
+            class="grid grid-cols-2 gap-[2px] overflow-hidden rounded-4xl px-0.5 *:contents md:grid-cols-4"
+          >
             <method-item
               index="001"
               t=${i18next.t('method.1')}
@@ -42,8 +42,8 @@ export class MethodSection extends ThemeMixin(LitElement) {
               index="002"
               t=${i18next.t('method.2')}
               content="We analyze your brand and strategize a custom roadmap."
-              ></method-item>
-              <method-item
+            ></method-item>
+            <method-item
               index="003"
               t=${i18next.t('method.3')}
               content="Time to design and ask for feedback. We lock in and work."
@@ -51,7 +51,8 @@ export class MethodSection extends ThemeMixin(LitElement) {
             <method-item
               index="004"
               t=${i18next.t('method.4')}
-              content="It's go-time! We launch your project, monitor its impact, and make adjustments to maximize performance."></method-item>
+              content="It's go-time! We launch your project, monitor its impact, and make adjustments to maximize performance."
+            ></method-item>
           </div>
         </div>
       </section>

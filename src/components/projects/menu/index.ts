@@ -33,6 +33,10 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
     this.lang = i18next.language
   }
 
+  toggleMore() {
+    this.more = !this.more
+  }
+
   toggleLanguage() {
     const currentLang = i18next.language
     const newLang = currentLang === 'en' ? 'pt' : 'en'
@@ -40,7 +44,6 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
     i18next.changeLanguage(newLang)
     localStorage.setItem('lang', newLang)
 
-    // Atualiza a propriedade lang
     this.lang = newLang
   }
 
@@ -78,12 +81,10 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
       y: -64,
     })
 
-    // close menu on scroll
     window.addEventListener('scroll', () => {
       this.more = false
     })
 
-    // remove outline on top using gsap and scrollTrigge
     gsap.to('header', {
       scrollTrigger: {
         trigger: '.hero',
@@ -104,9 +105,58 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
   render() {
     return html`
       <header
-        class="absolute inset-x-0 z-40 hidden w-full bg-linear-to-t from-zinc-950 to-zinc-950/80 py-2 backdrop-blur backdrop-saturate-200 lg:fixed lg:block"
+        class="fixed inset-x-0 z-40 w-full bg-linear-to-t from-zinc-950 to-zinc-950/80 py-2 backdrop-blur backdrop-saturate-200 lg:fixed lg:block"
       >
-        <div class="grid items-center lg:container lg:grid-cols-3">
+        <div class="flex items-center lg:container lg:grid lg:grid-cols-4">
+          <nav class="lg:hidden">
+            <ul
+              id="anchors"
+              class="${this.more
+                ? 'h-dvh'
+                : 'h-0 *:opacity-0'} fixed inset-0 flex w-dvw flex-col justify-center overflow-hidden bg-zinc-950 duration-500 *:transition-all"
+            >
+              <li>
+                <span
+                  class="flex h-20 items-center px-5 text-[2rem] tracking-[-0.04em] text-zinc-500"
+                >
+                  Menu
+                </span>
+              </li>
+              <li>
+                <mobile-item href="/" label="Home" index="01"></mobile-item>
+              </li>
+              <li>
+                <mobile-item
+                  href="${i18next.t('links.github.url')}"
+                  label="${i18next.t('links.github.label')}"
+                  index="02"
+                ></mobile-item>
+              </li>
+              <li>
+                <mobile-item
+                  href="${i18next.t('links.linkedin.url')}"
+                  label="${i18next.t('links.linkedin.label')}"
+                  index="03"
+                ></mobile-item>
+              </li>
+              <li>
+                <mobile-item
+                  href="${i18next.t('links.email.url')}"
+                  label="${i18next.t('links.email.label')}"
+                  index="hello@pmjr.cc"
+                ></mobile-item>
+              </li>
+              <div class="absolute right-4 bottom-4">
+                <button-lang
+                  @click=${() => this.toggleLanguage()}
+                  label=${this.lang === 'pt' ? `PT · BR` : `EN · US`}
+                  title="${this.lang === 'en'
+                    ? 'Mudar para português'
+                    : 'Change to english'}"
+                ></button-lang>
+              </div>
+            </ul>
+          </nav>
           <div class="flex items-center">
             <button
               @click=${() => this.getPreviousPage()}
@@ -122,8 +172,16 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
               hover="${this.lang === 'en' ? 'Click to copy' : 'Copiar e-mail'}"
             ></mail-button>
           </div>
-          <nav>
-            <ul id="anchors" class="flex justify-center">
+          <button
+            class="menu-toggle ${this.more
+              ? 'menu-toggle--close'
+              : ''} ms-auto me-4 lg:hidden"
+            @click=${() => this.toggleMore()}
+          >
+            <span class="text-[.75rem] font-semibold uppercase"> Menu </span>
+          </button>
+          <nav class="col-span-2">
+            <ul id="anchors" class="hidden justify-center px-0 lg:flex">
               <li>
                 <menu-item href="#ifficient" label="Ifficient"></menu-item>
               </li>
@@ -137,24 +195,16 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
                 <menu-item href="#multiplayer" label="Multiplayer"></menu-item>
               </li>
             </ul>
-            <div
-              id="copy"
-              class="absolute flex h-12 w-full items-center justify-center bg-zinc-900 px-5 font-mono text-[.625rem] font-semibold uppercase lg:hidden"
-            >
-              <span> Copyright 2025 Paulo Melo Jr. </span>
-            </div>
           </nav>
-          <div class="flex justify-end">
-            <div class="flex items-center justify-center gap-2">
-              <a
-                class="cta-button px-3 pt-2 pb-2.5 text-[.875rem]"
-                href="/Paulo Melo Jr. - Currículo.pdf"
-                target="_blank"
-              >
-                ${this.lang === 'en' ? 'Download resume' : 'Baixar currículo'}
-              </a>
-              <languages-dropdown></languages-dropdown>
-            </div>
+          <div class="hidden items-center justify-end gap-2 lg:flex">
+            <a
+              class="cta-button px-3 pt-2 pb-2.5 text-[.875rem]"
+              href="/Paulo Melo Jr. - Currículo.pdf"
+              target="_blank"
+            >
+              ${this.lang === 'en' ? 'Download resume' : 'Baixar currículo'}
+            </a>
+            <languages-dropdown></languages-dropdown>
           </div>
         </div>
       </header>

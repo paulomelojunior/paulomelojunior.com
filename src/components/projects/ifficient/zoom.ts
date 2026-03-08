@@ -90,17 +90,72 @@ export class ImgZoom extends LitElement {
       <div
         class="zoom-overlay fixed inset-0 z-50 overflow-auto overscroll-contain bg-zinc-50/20 backdrop-blur backdrop-brightness-50"
       >
-        <div class="zoom-content container max-w-[1280px] my-24">
+        <div class="zoom-content container my-24 max-w-[1280px]">
           <picture>
-            <img src="${p0}" width="1920" height="1136" type="image/webp" class="rounded-t-[.5rem]" />
-            <img src="${p1}" width="1920" height="800" loading="lazy" type="image/webp" />
-            <img src="${p2}" width="1920" height="800" loading="lazy" type="image/webp" />
-            <img src="${p3}" width="1920" height="800" loading="lazy" type="image/webp" />
-            <img src="${p4}" width="1920" height="800" loading="lazy" type="image/webp" />
-            <img src="${p5}" width="1920" height="800" loading="lazy" type="image/webp" />
-            <img src="${p6}" width="1920" height="800" loading="lazy" type="image/webp" />
-            <img src="${p7}" width="1920" height="800" loading="lazy" type="image/webp" />
-            <img src="${p8}" width="1920" height="236" loading="lazy" type="image/webp" class="rounded-b-[.5rem]" />
+            <img
+              src="${p0}"
+              width="1920"
+              height="1136"
+              type="image/webp"
+              class="rounded-t-[.5rem]"
+            />
+            <img
+              src="${p1}"
+              width="1920"
+              height="800"
+              loading="lazy"
+              type="image/webp"
+            />
+            <img
+              src="${p2}"
+              width="1920"
+              height="800"
+              loading="lazy"
+              type="image/webp"
+            />
+            <img
+              src="${p3}"
+              width="1920"
+              height="800"
+              loading="lazy"
+              type="image/webp"
+            />
+            <img
+              src="${p4}"
+              width="1920"
+              height="800"
+              loading="lazy"
+              type="image/webp"
+            />
+            <img
+              src="${p5}"
+              width="1920"
+              height="800"
+              loading="lazy"
+              type="image/webp"
+            />
+            <img
+              src="${p6}"
+              width="1920"
+              height="800"
+              loading="lazy"
+              type="image/webp"
+            />
+            <img
+              src="${p7}"
+              width="1920"
+              height="800"
+              loading="lazy"
+              type="image/webp"
+            />
+            <img
+              src="${p8}"
+              width="1920"
+              height="236"
+              loading="lazy"
+              type="image/webp"
+              class="rounded-b-[.5rem]"
+            />
           </picture>
         </div>
       </div>

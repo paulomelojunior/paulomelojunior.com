@@ -8,9 +8,16 @@ export class MobileItem extends LitElement {
 
   render() {
     return html`<div class="border-b border-zinc-900 xl:border-0">
-      <a target="_blank" class="menu-item h-20 xl:h-16 px-5 pt-1 flex items-center text-brand-900 text-zinc-100 relative" rel="noopener noreferrer" href="${this.href}">
+      <a
+        target="_blank"
+        class="menu-item text-brand-900 relative flex h-20 items-center px-5 pt-1 text-zinc-100 xl:h-16"
+        rel="noopener noreferrer"
+        href="${this.href}"
+      >
         ${this.label}
-        <div class="absolute flex items-center px-5 pt-1 inset-0 xl:rounded-full text-zinc-950">
+        <div
+          class="absolute inset-0 flex items-center px-5 pt-1 text-zinc-950 xl:rounded-full"
+        >
           ${this.label}
         </div>
       </a>

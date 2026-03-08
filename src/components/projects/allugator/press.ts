@@ -103,90 +103,90 @@ export class AlluPress extends LitElement {
               src="${press2}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-2xl"
+              class="invisible absolute top-0 left-0 rounded-2xl"
               loading="lazy"
             />
             <img
               src="${press4}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-2xl"
+              class="invisible absolute top-0 left-0 rounded-2xl"
               loading="lazy"
             />
             <img
               src="${press5}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-2xl"
+              class="invisible absolute top-0 left-0 rounded-2xl"
               loading="lazy"
             />
             <img
               src="${press6}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-2xl"
+              class="invisible absolute top-0 left-0 rounded-2xl"
               loading="lazy"
             />
             <img
               src="${press7}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-2xl"
+              class="invisible absolute top-0 left-0 rounded-2xl"
               loading="lazy"
             />
             <img
               src="${press8}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-2xl"
+              class="invisible absolute top-0 left-0 rounded-2xl"
             />
             <img
               src="${press9}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-2xl"
+              class="invisible absolute top-0 left-0 rounded-2xl"
               loading="lazy"
             />
             <img
               src="${press10}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-2xl"
+              class="invisible absolute top-0 left-0 rounded-2xl"
               loading="lazy"
             />
             <img
               src="${press11}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-2xl"
+              class="invisible absolute top-0 left-0 rounded-2xl"
               loading="lazy"
             />
             <img
               src="${press12}"
               width="1920"
               height="1080"
-              class="invisible absolute left-0 top-0 rounded-2xl"
+              class="invisible absolute top-0 left-0 rounded-2xl"
               loading="lazy"
             />
           </div>
           <div class="absolute inset-0">
             <div
-              class="sticky top-[calc(100dvh-4rem)] translate-y-full isolate flex h-16 items-center justify-center after:absolute after:-inset-px after:z-10 after:rounded-b-2xl after:bg-zinc-950/50 after:backdrop-blur-md after:content-['']"
+              class="sticky top-[calc(100dvh-4rem)] isolate flex h-16 translate-y-full items-center justify-center after:absolute after:-inset-px after:z-10 after:rounded-b-2xl after:bg-zinc-950/50 after:backdrop-blur-md after:content-['']"
             >
               <div class="relative z-20 flex gap-px">
                 <button
-                  class="flex items-center gap-4 rounded-s-full bg-zinc-50/10 py-3 pe-4 ps-5 text-[.75rem] uppercase leading-none tracking-[.05em] text-zinc-100 transition-all hover:bg-zinc-100 hover:text-zinc-950"
+                  class="flex items-center gap-4 rounded-s-full bg-zinc-50/10 py-3 ps-5 pe-4 text-[.75rem] leading-none tracking-[.05em] text-zinc-100 uppercase transition-all hover:bg-zinc-100 hover:text-zinc-950"
                 >
                   Prev
                 </button>
 
                 <span
-                  class="flex items-center justify-center bg-zinc-50/5 px-4 font-mono text-[.75rem] font-medium uppercase leading-none tracking-[.05em] text-zinc-50/50"
+                  class="flex items-center justify-center bg-zinc-50/5 px-4 font-mono text-[.75rem] leading-none font-medium tracking-[.05em] text-zinc-50/50 uppercase"
                 >
                   ${this.currentIndex + 1} / ${this.screens.length}
                 </span>
                 <button
-                  class="flex items-center gap-4 rounded-e-full bg-zinc-50/10 py-3 pe-5 ps-4 text-[.75rem] uppercase leading-none tracking-[.05em] text-zinc-100 transition-all hover:bg-zinc-100 hover:text-zinc-950"
+                  class="flex items-center gap-4 rounded-e-full bg-zinc-50/10 py-3 ps-4 pe-5 text-[.75rem] leading-none tracking-[.05em] text-zinc-100 uppercase transition-all hover:bg-zinc-100 hover:text-zinc-950"
                 >
                   Next
                 </button>

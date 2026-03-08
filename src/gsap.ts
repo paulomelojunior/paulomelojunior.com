@@ -2,11 +2,7 @@
 import { gsap } from 'gsap'
 import { ScrollTrigger, CustomEase, DrawSVGPlugin } from 'gsap/all'
 
-gsap.registerPlugin(
-  CustomEase,
-  DrawSVGPlugin,
-  ScrollTrigger
-)
+gsap.registerPlugin(CustomEase, DrawSVGPlugin, ScrollTrigger)
 
 gsap.defaults({
   duration: 1,

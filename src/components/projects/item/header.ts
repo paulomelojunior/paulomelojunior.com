@@ -17,22 +17,31 @@ export class ItemHeader extends LitElement {
     super.disconnectedCallback()
   }
 
-
   render() {
     const headerList = this.tags.split(',').map((item) => item.trim())
     const headerTags = headerList.map(
-      (item) => html`<span class="text-[.875rem] text-zinc-600">/</span><span class="text-zinc-50">${item}</span>`
+      (item) =>
+        html`<span class="text-[.875rem] text-zinc-600">/</span
+          ><span class="text-zinc-50">${item}</span>`
     )
 
     return html`
-      <div class="sticky top-20 grid items-end gap-8">
-        <div class="mb-2 flex flex-wrap gap-2 leading-none text-[.875rem]">
+      <div
+        class="mb-8 lg:sticky lg:top-20 lg:mb-0 lg:grid lg:items-end lg:gap-8"
+      >
+        <div class="mb-2 flex flex-wrap gap-2 text-[.875rem] leading-none">
           <span class="text-brand-400"> ${this.year} </span>
           ${headerTags}
         </div>
-        <h2 class="text-[2.5rem] leading-none text-zinc-50 tracking-[-0.02em]">${this.title}</h2>
+        <h2
+          class="text-[2rem] leading-none tracking-[-0.02em] text-zinc-50 lg:text-[2.5rem]"
+        >
+          ${this.title}
+        </h2>
         ${this.contentHtml
-          ? html`<div class="flex flex-col gap-4 text-balance leading-loose items-start">
+          ? html`<div
+              class="mt-4 flex flex-col items-start gap-4 leading-loose text-balance lg:mt-0"
+            >
               ${unsafeHTML(this.contentHtml)}
             </div>`
           : null}

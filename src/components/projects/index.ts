@@ -14,23 +14,23 @@ import { ThemeMixin } from '../../store/theme'
 export class ProjectsIndex extends ThemeMixin(LitElement) {
   render() {
     return html`
-      <section class="container pt-12">
+      <section class="container px-4 pt-20 lg:pt-12">
         <projects-header></projects-header>
         <projects-ifficient></projects-ifficient>
         <div
-          class="xl:my-16 h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent xl:block"
+          class="my-8 h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent lg:my-16"
         ></div>
         <projects-damus></projects-damus>
         <div
-          class="xl:my-16 h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent xl:block"
+          class="my-8 h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent lg:my-16"
         ></div>
         <projects-allugator></projects-allugator>
         <div
-          class="xl:my-16 h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent xl:block"
+          class="my-8 h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent lg:my-16"
         ></div>
         <projects-multiplayer></projects-multiplayer>
         <div
-          class="mt-16 mb-32 h-px w-full bg-linear-to-r bg-transparent"
+          class="mt-8 mb-16 h-px w-full bg-transparent bg-linear-to-r lg:mt-16 lg:mb-32"
         ></div>
         <cases-section></cases-section>
       </section>

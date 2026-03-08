@@ -23,17 +23,27 @@ export class ProjectsFail extends LitElement {
   render() {
     return html`
       <div
-        class="hero flex h-dvh flex-col items-center justify-center gap-16 p-8 text-center text-[1.5rem] text-zinc-100 lg:hidden text-balance"
+        class="hero flex h-dvh flex-col items-center justify-center gap-16 p-8 text-center text-[1.5rem] text-balance text-zinc-100 lg:hidden"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="fill-red-400" viewBox="0 0 256 256">
-          <path d="M213.92,210.62l-160-176A8,8,0,1,0,42.08,45.38L56,60.69V216a24,24,0,0,0,24,24h96a24,24,0,0,0,23.82-21.11l2.26,2.49a8,8,0,1,0,11.84-10.76ZM184,216a8,8,0,0,1-8,8H80a8,8,0,0,1-8-8V78.29l112,123.2ZM68.7,24a8,8,0,0,1,8-8H176a24,24,0,0,1,24,24V150.83a8,8,0,1,1-16,0V40a8,8,0,0,0-8-8H76.7A8,8,0,0,1,68.7,24Z"></path>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="#fff"
+          class="fill-red-400"
+          viewBox="0 0 256 256"
+        >
+          <path
+            d="M213.92,210.62l-160-176A8,8,0,1,0,42.08,45.38L56,60.69V216a24,24,0,0,0,24,24h96a24,24,0,0,0,23.82-21.11l2.26,2.49a8,8,0,1,0,11.84-10.76ZM184,216a8,8,0,0,1-8,8H80a8,8,0,0,1-8-8V78.29l112,123.2ZM68.7,24a8,8,0,0,1,8-8H176a24,24,0,0,1,24,24V150.83a8,8,0,1,1-16,0V40a8,8,0,0,0-8-8H76.7A8,8,0,0,1,68.7,24Z"
+          ></path>
         </svg>
         ${this.lang === 'pt'
-          ? html`Desculpe, esta página ainda não está disponível para telas pequenas.`
+          ? html`Desculpe, esta página ainda não está disponível para telas
+            pequenas.`
           : html`Sorry, this page isn't available for small screens yet.`}
         <a
           href="/"
-          class="flex items-center gap-4 rounded-full bg-zinc-100 py-3 pe-6 ps-4 text-[1rem] font-medium leading-none text-zinc-950"
+          class="flex items-center gap-4 rounded-full bg-zinc-100 py-3 ps-4 pe-6 text-[1rem] leading-none font-medium text-zinc-950"
         >
           <svg
             width="14"

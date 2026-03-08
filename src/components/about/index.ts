@@ -22,61 +22,78 @@ export class AboutSection extends ThemeMixin(LitElement) {
     this.requestUpdate()
   }
 
-  protected firstUpdated(_changedProperties: PropertyValues): void {
-  }
+  protected firstUpdated(_changedProperties: PropertyValues): void {}
 
   render() {
     return html`
       <section id="section-about">
         <div class="container">
-          <div class="grid xl:grid-cols-3 px-5 xl:px-20 2xl:px-32 pt-16 xl:pt-24 2xl:pt-64 gap-y-8 items-baseline">
+          <div
+            class="grid items-baseline gap-y-8 px-5 pt-16 xl:grid-cols-3 xl:px-20 xl:pt-24 2xl:px-32 2xl:pt-64"
+          >
             <h2
-              class="text-pretty text-[2.5rem] leading-none tracking-tight xl:text-[3rem] 2xl:text-[4rem] text-zinc-50"
+              class="text-[2.5rem] leading-none tracking-tight text-pretty text-zinc-50 xl:text-[3rem] 2xl:text-[4rem]"
             >
               ${i18next.t('about.title')}
             </h2>
-            <div class="col-span-2 flex flex-col gap-8 leading-loose xl:text-[1.125rem]">
+            <div
+              class="col-span-2 flex flex-col gap-8 leading-loose xl:text-[1.125rem]"
+            >
               <div>
-                <h3 class="hidden font-mono text-brand-400 text-[.625rem] font-semibold uppercase tracking-widest mb-1">
+                <h3
+                  class="text-brand-400 mb-1 hidden font-mono text-[.625rem] font-semibold tracking-widest uppercase"
+                >
                   Who I Am
                 </h3>
-                <p class="text-sm/loose lg:text-base/loose text-pretty mb-8">
+                <p class="mb-8 text-sm/loose text-pretty lg:text-base/loose">
                   ${i18next.t('about.p1')}
                 </p>
-                <p class="text-sm/loose lg:text-base/loose text-pretty">
+                <p class="text-sm/loose text-pretty lg:text-base/loose">
                   ${i18next.t('about.p2')}
                 </p>
               </div>
               <div class="pt-2">
-                <h3 class="font-mono text-brand-400 text-[.625rem] font-semibold uppercase tracking-widest">
+                <h3
+                  class="text-brand-400 font-mono text-[.625rem] font-semibold tracking-widest uppercase"
+                >
                   ${i18next.t('about.education')}
                 </h3>
-                <ul class="grid xl:grid-cols-3 gap-y-4">
+                <ul class="grid gap-y-4 xl:grid-cols-3">
                   <li class="mt-3 grid gap-2">
                     <h4 class="text-[1.25rem] leading-none text-zinc-50">
                       Industrial Design
                     </h4>
-                    <p class="text-[.625rem] font-semibold uppercase tracking-widest font-mono leading-none">
-                      2012 <span class="text-zinc-500">&bull;</span> Escola de Design, UEMG
+                    <p
+                      class="font-mono text-[.625rem] leading-none font-semibold tracking-widest uppercase"
+                    >
+                      2012 <span class="text-zinc-500">&bull;</span> Escola de
+                      Design, UEMG
                     </p>
                   </li>
                   <li class="mt-3 grid gap-2">
                     <h4 class="text-[1.25rem] leading-none text-zinc-50">
                       Software Development
                     </h4>
-                    <p class="text-[.625rem] font-semibold uppercase tracking-widest font-mono leading-none">
-                      2026 <span class="text-zinc-500">&bull;</span> Univ. Católica de Brasília
+                    <p
+                      class="font-mono text-[.625rem] leading-none font-semibold tracking-widest uppercase"
+                    >
+                      2026 <span class="text-zinc-500">&bull;</span> Univ.
+                      Católica de Brasília
                     </p>
                   </li>
                   <li class="mt-3 grid gap-2">
                     <h4 class="text-[1.25rem] leading-none text-zinc-50">
                       Digital Product Design
                     </h4>
-                    <p class="text-[.625rem] font-semibold uppercase tracking-widest font-mono leading-none">
-                      2025 <span class="text-zinc-500">&bull;</span> Tera <span class="text-zinc-500">&bull;</span>
+                    <p
+                      class="font-mono text-[.625rem] leading-none font-semibold tracking-widest uppercase"
+                    >
+                      2025 <span class="text-zinc-500">&bull;</span> Tera
+                      <span class="text-zinc-500">&bull;</span>
                       <a
-                        class="inline-flex hover:text-brand-400 transition-colors underline underline-offset-4 decoration-zinc-600"
-                        href="https://credentials.somostera.com/3efd7eaa4fbb5ef1277b1236b0d9f43d">
+                        class="hover:text-brand-400 inline-flex underline decoration-zinc-600 underline-offset-4 transition-colors"
+                        href="https://credentials.somostera.com/3efd7eaa4fbb5ef1277b1236b0d9f43d"
+                      >
                         ${i18next.t('about.link')}
                       </a>
                     </p>
@@ -84,7 +101,6 @@ export class AboutSection extends ThemeMixin(LitElement) {
                 </ul>
               </div>
             </div>
-
           </div>
         </div>
       </section>

@@ -27,20 +27,22 @@ export class MethodItem extends ThemeMixin(LitElement) {
     })
   }
 
-  firstUpdated() {
-
-  }
+  firstUpdated() {}
 
   render() {
     return html`
-			<div class="aspect-square xl:aspect-[2/1] p-6 xl:p-12 flex flex-col rounded-[.25rem] justify-between h-full ${this.open ? 'col-span-3 bg-zinc-800' : 'bg-zinc-900'}">
-				<span class="leading-none mb-2 text-zinc-600">
-					${this.index}
-				</span>
-				<h2 class="text-[1.5rem] xl:text-[2rem] leading-none text-zinc-50 tracking-[-0.02rem]">
-					${this.t}
-				</h2>
-			</div>
+      <div
+        class="${this.open
+          ? 'col-span-3 bg-zinc-800'
+          : 'bg-zinc-900'} flex aspect-square h-full flex-col justify-between rounded-[.25rem] p-6 xl:aspect-[2/1] xl:p-12"
+      >
+        <span class="mb-2 leading-none text-zinc-600"> ${this.index} </span>
+        <h2
+          class="text-[1.5rem] leading-none tracking-[-0.02rem] text-zinc-50 xl:text-[2rem]"
+        >
+          ${this.t}
+        </h2>
+      </div>
     `
   }
 

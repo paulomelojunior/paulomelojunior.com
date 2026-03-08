@@ -76,12 +76,10 @@ export class MenuContainer extends ThemeMixin(LitElement) {
   }
 
   firstUpdated() {
-    gsap.from('header > *',
-      {
-        y: -64,
-      }
-    );
-    
+    gsap.from('header > *', {
+      y: -64,
+    })
+
     // close menu on scroll
     window.addEventListener('scroll', () => {
       this.more = false

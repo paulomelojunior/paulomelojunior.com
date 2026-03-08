@@ -16,7 +16,7 @@ export class ThemeButton extends LitElement {
       <button class="${buttonClasses}">
         <i
           class="ph-fill ph-${this
-            .icon} rounded-full text-[1.25rem] bg-zinc-950"
+            .icon} rounded-full bg-zinc-950 text-[1.25rem]"
         ></i>
       </button>
     `

@@ -61,8 +61,7 @@ export class MobileScreens extends LitElement {
     if (!this.screens?.length) return
 
     this.currentIndex =
-      (this.currentIndex - 1 + this.screens.length) %
-      this.screens.length
+      (this.currentIndex - 1 + this.screens.length) % this.screens.length
 
     this.updateMobScreens()
   }
@@ -70,9 +69,7 @@ export class MobileScreens extends LitElement {
   private handleNext = () => {
     if (!this.screens?.length) return
 
-    this.currentIndex =
-      (this.currentIndex + 1) %
-      this.screens.length
+    this.currentIndex = (this.currentIndex + 1) % this.screens.length
 
     this.updateMobScreens()
   }
@@ -86,17 +83,12 @@ export class MobileScreens extends LitElement {
     this.abortController.abort()
     this.abortController = new AbortController()
 
-    this.screens = this.querySelectorAll<HTMLImageElement>(
-      '.mob-carrossel img'
-    )
+    this.screens = this.querySelectorAll<HTMLImageElement>('.mob-carrossel img')
 
     if (!this.screens.length) return
 
     // Garante índice válido
-    this.currentIndex = Math.min(
-      this.currentIndex,
-      this.screens.length - 1
-    )
+    this.currentIndex = Math.min(this.currentIndex, this.screens.length - 1)
 
     this.updateMobScreens = () => {
       this.screens.forEach((img, idx) => {
@@ -120,12 +112,8 @@ export class MobileScreens extends LitElement {
 
     this.updateMobScreens()
 
-    const prevBtn = this.querySelector<HTMLButtonElement>(
-      'button[data-prev]'
-    )
-    const nextBtn = this.querySelector<HTMLButtonElement>(
-      'button[data-next]'
-    )
+    const prevBtn = this.querySelector<HTMLButtonElement>('button[data-prev]')
+    const nextBtn = this.querySelector<HTMLButtonElement>('button[data-next]')
 
     const { signal } = this.abortController
 
@@ -141,31 +129,31 @@ export class MobileScreens extends LitElement {
 
   render() {
     return html`
-      <section class="relative px-2 mt-24 xl:mt-32">
+      <section class="relative mt-24 px-2 xl:mt-32">
         <div class="container">
           <h2
-            class="mb-10 text-[2rem] text-center xl:text-[2.5rem] leading-normal tracking-[-.02em] 2xl:text-[3rem] text-zinc-50"
+            class="mb-10 text-center text-[2rem] leading-normal tracking-[-.02em] text-zinc-50 xl:text-[2.5rem] 2xl:text-[3rem]"
           >
             ${unsafeHTML(i18next.t('twyne.mobile.t1'))}
           </h2>
 
           <div class="mob-carrossel relative overflow-hidden">
-            <img src="${e1}" class="relative mobile-screen" />
+            <img src="${e1}" class="mobile-screen relative" />
             <img
               src="${e2}"
-              class="invisible absolute left-0 top-0 mobile-screen"
+              class="mobile-screen invisible absolute top-0 left-0"
             />
             <img
               src="${e3}"
-              class="invisible absolute left-0 top-0 mobile-screen"
+              class="mobile-screen invisible absolute top-0 left-0"
             />
             <img
               src="${e4}"
-              class="invisible absolute left-0 top-0 mobile-screen"
+              class="mobile-screen invisible absolute top-0 left-0"
             />
             <img
               src="${e5}"
-              class="invisible absolute left-0 top-0 mobile-screen"
+              class="mobile-screen invisible absolute top-0 left-0"
             />
           </div>
 
@@ -178,20 +166,20 @@ export class MobileScreens extends LitElement {
               <div class="relative z-20 flex gap-px pb-2">
                 <button
                   data-prev
-                  class="flex items-center gap-4 rounded-s-full bg-zinc-100/10 py-3 pe-4 ps-5 text-[.75rem] uppercase leading-none tracking-[.05em] text-zinc-50 transition-all hover:bg-zinc-100 hover:text-zinc-950"
+                  class="flex items-center gap-4 rounded-s-full bg-zinc-100/10 py-3 ps-5 pe-4 text-[.75rem] leading-none tracking-[.05em] text-zinc-50 uppercase transition-all hover:bg-zinc-100 hover:text-zinc-950"
                 >
                   Prev
                 </button>
 
                 <span
-                  class="flex items-center justify-center bg-zinc-50/5 px-4 font-mono text-[.75rem] font-medium uppercase leading-none tracking-[.05em]"
+                  class="flex items-center justify-center bg-zinc-50/5 px-4 font-mono text-[.75rem] leading-none font-medium tracking-[.05em] uppercase"
                 >
                   ${this.currentIndex + 1} / ${this.screens?.length ?? 5}
                 </span>
 
                 <button
                   data-next
-                  class="flex items-center gap-4 rounded-e-full bg-zinc-100/10 py-3 pe-5 ps-4 text-[.75rem] uppercase leading-none tracking-[.05em] text-zinc-50 transition-all hover:bg-zinc-100 hover:text-zinc-950"
+                  class="flex items-center gap-4 rounded-e-full bg-zinc-100/10 py-3 ps-4 pe-5 text-[.75rem] leading-none tracking-[.05em] text-zinc-50 uppercase transition-all hover:bg-zinc-100 hover:text-zinc-950"
                 >
                   Next
                 </button>

@@ -40,19 +40,25 @@ export class ProjectsDamus extends LitElement {
     `
 
     return html`
-      <div id="damus" class="grid grid-cols-3 py-16">
+      <div id="damus" class="py-8 lg:grid lg:grid-cols-3 lg:py-16">
         <item-header
           title="${i18next.t('damus.title')}"
           tags="${i18next.t('damus.tags')}"
           year="${i18next.t('damus.year')}"
           .contentHtml=${contentHtml}
         ></item-header>
-        <div class="col-span-2 grid grid-cols-2 gap-4 *:rounded-[.5rem]">
+        <div
+          class="grid grid-cols-2 gap-2 *:rounded-[.5rem] lg:col-span-2 lg:gap-4"
+        >
           <img src="${pic1}" loading="lazy" class="border-2 border-zinc-800" />
           <img src="${pic2}" loading="lazy" />
-          <img src="${pic3}" loading="lazy"/>
-          <img src="${pic5}" loading="lazy"/>
-          <img class="col-span-2 border-2 border-zinc-800" src="${pic4}" loading="lazy"/>
+          <img src="${pic3}" loading="lazy" />
+          <img src="${pic5}" loading="lazy" />
+          <img
+            class="col-span-2 border-2 border-zinc-800"
+            src="${pic4}"
+            loading="lazy"
+          />
         </div>
       </div>
     `

@@ -28,38 +28,48 @@ export class HeroSection extends ThemeMixin(LitElement) {
   }
 
   itemEntrance() {
-    gsap.from('.hero',
-      {
-        paddingTop: 64,
-      }
-    );
-    document
-      .querySelectorAll('[data-entrance]')
-      .forEach((triggerElement) => {
-        const items = [
-          { item: '4', opacity: '0', y: '0%', delay: .4, scale: 1.1, duration: 1 },
-          { item: '5', opacity: '0', y: '0%', delay: 0, scale: 1.1, duration: 1.2 },
-          { item: '3', opacity: '0', y: '0rem', delay: .2, duration: 1 },
-          { item: '2', opacity: '0', y: '0rem', delay: .2, duration: 1 },
-          { item: '1', opacity: '0', y: '0rem', delay: .2, duration: 1 },
-        ]
-        const tl = gsap.timeline()
-        items.forEach((itemObj, idx) => {
-          tl.from(
-            triggerElement.querySelectorAll(
-              `[data-entrance-item="${itemObj.item}"]`
-            ),
-            {
-              y: itemObj.y,
-              opacity: itemObj.opacity,
-              delay: itemObj.delay,
-              scale: itemObj.scale,
-              duration: itemObj.duration
-            },
-            idx === 0 ? undefined : '<'
-          )
-        })
+    gsap.from('.hero', {
+      paddingTop: 64,
+    })
+    document.querySelectorAll('[data-entrance]').forEach((triggerElement) => {
+      const items = [
+        {
+          item: '4',
+          opacity: '0',
+          y: '0%',
+          delay: 0.4,
+          scale: 1.1,
+          duration: 1,
+        },
+        {
+          item: '5',
+          opacity: '0',
+          y: '0%',
+          delay: 0,
+          scale: 1.1,
+          duration: 1.2,
+        },
+        { item: '3', opacity: '0', y: '0rem', delay: 0.2, duration: 1 },
+        { item: '2', opacity: '0', y: '0rem', delay: 0.2, duration: 1 },
+        { item: '1', opacity: '0', y: '0rem', delay: 0.2, duration: 1 },
+      ]
+      const tl = gsap.timeline()
+      items.forEach((itemObj, idx) => {
+        tl.from(
+          triggerElement.querySelectorAll(
+            `[data-entrance-item="${itemObj.item}"]`
+          ),
+          {
+            y: itemObj.y,
+            opacity: itemObj.opacity,
+            delay: itemObj.delay,
+            scale: itemObj.scale,
+            duration: itemObj.duration,
+          },
+          idx === 0 ? undefined : '<'
+        )
       })
+    })
   }
 
   heroParallax() {
@@ -76,7 +86,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
         })
         const layers = [
           { layer: '1', y: '5rem' },
-          { layer: '2', y: '10rem', opacity: 0, filter: 'blur(1rem)' }
+          { layer: '2', y: '10rem', opacity: 0, filter: 'blur(1rem)' },
         ]
         layers.forEach((layerObj, idx) => {
           tl.to(
@@ -87,7 +97,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
               y: layerObj.y,
               ease: 'none',
               opacity: layerObj.opacity,
-              filter: layerObj.filter
+              filter: layerObj.filter,
             },
             idx === 0 ? undefined : '<'
           )
@@ -96,18 +106,25 @@ export class HeroSection extends ThemeMixin(LitElement) {
   }
 
   firstUpdated() {
-    this.itemEntrance();
-    this.heroParallax();
+    this.itemEntrance()
+    this.heroParallax()
   }
 
   render() {
     return html`
-      <section class="hero before:animate-(--animate-fade-in)" data-parallax-layers data-entrance>
+      <section
+        class="hero before:animate-(--animate-fade-in)"
+        data-parallax-layers
+        data-entrance
+      >
         <div
-          class="container flex flex-col justify-between min-h-[calc(100svh-4rem)] md:pt-18 pt-12"
+          class="container flex min-h-[calc(100svh-4rem)] flex-col justify-between pt-12 md:pt-18"
         >
-          <div class="flex flex-col items-center my-auto pt-12 pb-16 xl:pt-16 xl:pb-20" data-parallax-layer="1">
-            <div data-entrance-item="3" class="flex items-center gap-4 mb-5">
+          <div
+            class="my-auto flex flex-col items-center pt-12 pb-16 xl:pt-16 xl:pb-20"
+            data-parallax-layer="1"
+          >
+            <div data-entrance-item="3" class="mb-5 flex items-center gap-4">
               <img
                 src="${p1x}"
                 sizes="64px"
@@ -116,13 +133,15 @@ export class HeroSection extends ThemeMixin(LitElement) {
                 fetchpriority="high"
                 loading="eager"
                 alt="${i18next.t('hero.picDescription')}"
-                class="rounded-full size-14 bg-zinc-900 outline-4 outline-zinc-950"
+                class="size-14 rounded-full bg-zinc-900 outline-4 outline-zinc-950"
               />
               <div class="grid gap-2 leading-none">
-                <span class="2xl:text-[1.25rem] text-white">
+                <span class="text-white 2xl:text-[1.25rem]">
                   Paulo Melo Jr.
                 </span>
-                <span class="flex items-center gap-2 font-medium text-[.875rem] 2xl:text-[1rem]">
+                <span
+                  class="flex items-center gap-2 text-[.875rem] font-medium 2xl:text-[1rem]"
+                >
                   <span class="relative flex size-3">
                     <span
                       class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400"
@@ -135,61 +154,67 @@ export class HeroSection extends ThemeMixin(LitElement) {
                 </span>
               </div>
             </div>
-            
-            <div data-entrance-item="2" class="flex flex-col gap-4 text-center mb-11">
-              <h1 data-split="heading" class="text-balance text-zinc-50 font-medium text-[2.5rem] leading-none tracking-tight xl:text-[3rem] 2xl:text-[5rem]">
+
+            <div
+              data-entrance-item="2"
+              class="mb-11 flex flex-col gap-4 text-center"
+            >
+              <h1
+                data-split="heading"
+                class="text-[2.5rem] leading-none font-medium tracking-tight text-balance text-zinc-50 xl:text-[3rem] 2xl:text-[5rem]"
+              >
                 ${i18next.t('hero.title')}
               </h1>
-              <h2 class="text-balance text-[1.125rem] 2xl:text-[1.5rem] px-5">
+              <h2 class="px-5 text-[1.125rem] text-balance 2xl:text-[1.5rem]">
                 ${i18next.t('hero.subtitle')}
               </h2>
             </div>
 
-            <div data-entrance-item="1" class="flex relative gap-2">
+            <div data-entrance-item="1" class="relative flex gap-2">
               <a
                 href="${i18next.t('hero.cta.url')}"
-                class="cta-button cta-button--accent flex items-center gap-3 self-center py-4 px-6"
+                class="cta-button cta-button--accent flex items-center gap-3 self-center px-6 py-4"
               >
                 ${i18next.t('hero.cta.label')}
               </a>
               <a
                 href="#section-praxis"
-                class="hidden rounded-full size-[48px] transition-color duration-[200ms] bg-zinc-900 hover:bg-zinc-800 justify-center items-center outline-4 outline-zinc-950 active:scale-95"
+                class="transition-color hidden size-[48px] items-center justify-center rounded-full bg-zinc-900 outline-4 outline-zinc-950 duration-[200ms] hover:bg-zinc-800 active:scale-95"
                 title="Scroll page"
               >
                 <img
                   src="${arrow}"
-                  class="transition-opacity duration-500 -rotate-90"
+                  class="-rotate-90 transition-opacity duration-500"
                 />
               </a>
             </div>
           </div>
           <div
-            class="container col-span-12 grid grid-cols-12 items-end ps-5 sm:ps-0"
+            class="col-span-12 container grid grid-cols-12 items-end ps-5 sm:ps-0"
             data-parallax-layer="2"
           >
-            <div class="block sm:hidden xl:block col-span-12 xl:col-span-3">
+            <div class="col-span-12 block sm:hidden xl:col-span-3 xl:block">
               <img
                 data-entrance-item="5"
-                class="aspect-square w-full object-cover mask-b-from-50% sm:mask-b-from-0% sm:mask-r-from-50% object-top rounded-tl-lg bg-zinc-900"
+                class="aspect-square w-full rounded-tl-lg bg-zinc-900 mask-b-from-50% object-cover object-top sm:mask-r-from-50% sm:mask-b-from-0%"
                 src="${s1}"
                 height="384"
                 width="384"
               />
-              </div>
-            <div class="hidden sm:block col-span-8 xl:col-span-6">
+            </div>
+            <div class="col-span-8 hidden sm:block xl:col-span-6">
               <img
                 data-entrance-item="4"
-                class="w-full max-h-[432px] object-cover object-top mask-b-from-75% rounded-t-lg bg-zinc-900"
+                class="max-h-[432px] w-full rounded-t-lg bg-zinc-900 mask-b-from-75% object-cover object-top"
                 src="${s2}"
                 height="432"
                 width="768"
               />
             </div>
-            <div class="hidden sm:block col-span-4 xl:col-span-3">
+            <div class="col-span-4 hidden sm:block xl:col-span-3">
               <img
                 data-entrance-item="5"
-                class="aspect-square w-full object-cover mask-b-from-50% mask-l-from-0% object-top rounded-tr-lg bg-zinc-900"
+                class="aspect-square w-full rounded-tr-lg bg-zinc-900 mask-b-from-50% mask-l-from-0% object-cover object-top"
                 src="${s3}"
                 height="384"
                 width="384"
