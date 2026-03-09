@@ -53,14 +53,14 @@ export class ProjectsIfficient extends LitElement {
       </p>
       <a
         href="${i18next.t('links.lastProject.url')}"
-        class="cta-button cta-button--accent inline-flex items-center gap-4 mt-6 px-6"
+        class="cta-button cta-button--accent inline-flex items-center gap-4 mt-3 lg:mt-7 px-6"
       >
         ${i18next.t('ifficient.cta')}
       </a>
     `
 
     return html`
-      <div id="ifficient" class="py-8 lg:grid lg:grid-cols-3 lg:py-16">
+      <div id="ifficient" class="py-8 lg:grid lg:grid-cols-3 lg:py-16 mx-5">
         <item-header
           title="${i18next.t('ifficient.title')}"
           tags="${i18next.t('ifficient.tags')}"

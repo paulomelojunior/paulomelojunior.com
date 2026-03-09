@@ -2,7 +2,7 @@ import i18next from '../../../i18n'
 import { html, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { ThemeMixin } from '../../../store/theme'
-import goBack from './go-back.svg'
+import arrow from './arrow.svg'
 import gsap from 'gsap'
 
 @customElement('projects-menu')
@@ -81,10 +81,12 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
       y: -64,
     })
 
+    // close menu on scroll
     window.addEventListener('scroll', () => {
       this.more = false
     })
 
+    // remove outline on top using gsap and scrollTrigge
     gsap.to('header', {
       scrollTrigger: {
         trigger: '.hero',
@@ -105,7 +107,7 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
   render() {
     return html`
       <header
-        class="fixed inset-x-0 z-40 w-full bg-linear-to-t from-zinc-950 to-zinc-950/80 py-2 backdrop-blur backdrop-saturate-200 lg:fixed lg:block"
+        class="fixed inset-x-0 z-40 w-full bg-linear-to-t from-zinc-950 to-zinc-950/80 backdrop-blur md:py-3 lg:fixed"
       >
         <div class="flex items-center lg:container lg:grid lg:grid-cols-4">
           <nav class="lg:hidden">
@@ -160,10 +162,10 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
           <div class="flex items-center">
             <button
               @click=${() => this.getPreviousPage()}
-              class="flex size-10 cursor-pointer items-center justify-center rounded-full p-3 opacity-50 transition-all duration-[200ms] hover:bg-zinc-50/10 hover:opacity-100 active:scale-95 active:bg-zinc-50/20"
+              class="flex size-8 ms-2 cursor-pointer items-center justify-center rounded-full opacity-50 transition-all duration-[200ms] hover:bg-zinc-50/10 hover:opacity-100 active:scale-95 active:bg-zinc-50/20"
               title="Go back to homepage"
             >
-              <img src="${goBack}" class="transition-all duration-[200ms]" />
+              <img src="${arrow}" class="transition-all duration-[200ms]" />
             </button>
             <mail-button
               @click=${() => this.copyEmail()}
@@ -196,9 +198,9 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
               </li>
             </ul>
           </nav>
-          <div class="hidden items-center justify-end gap-2 lg:flex">
+          <div class="hidden items-center justify-end gap-1 lg:flex">
             <a
-              class="cta-button px-3 pt-2 pb-2.5 text-[.875rem]"
+              class="cta-button px-3.5 pt-2 pb-2.5 text-[.875rem]"
               href="/Paulo Melo Jr. - Currículo.pdf"
               target="_blank"
             >

@@ -12,7 +12,7 @@ export class LanguagesButton extends LitElement {
 
   render() {
     const baseClasses =
-      'relative font-medium text-[.75rem] tracking-[0.04em] flex transition-all duration-[200ms] px-1 xl:px-1.5 gap-2 h-8 rounded-full leading-8.5 xl:items-center  hover:text-zinc-50 text-zinc-300  active:scale-95'
+      'relative font-medium text-[.75rem] tracking-[0.04em] flex transition-all duration-[200ms] px-1 xl:px-1.5 gap-2 h-8 rounded-full leading-8.5 xl:items-center  hover:text-zinc-50 text-zinc-300  active:scale-95 me-2'
     const buttonClasses = classNames(baseClasses, this.customClasses)
 
     return html`

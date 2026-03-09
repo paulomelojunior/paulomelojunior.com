@@ -121,7 +121,7 @@
     height: 100vh;
     top: -2px;
     inset-inline: 0;
-    mask-image: radial-gradient(circle at top center, black, transparent 50%);
+    mask-image: radial-gradient(circle at top center, black, transparent 50dvw);
     pointer-events: none;
     background-attachment: local;
   }
@@ -178,12 +178,12 @@
   .cta-button {
     background-image: linear-gradient(
       var(--direction, to bottom),
-      var(--color-zinc-100) 0%,
+      var(--color-white) 0%,
       var(--color-brand-100) 25%,
       var(--color-brand-400) 50%,
       var(--color-brand-400) 50%,
-      var(--color-zinc-800) 75%,
-      var(--color-zinc-900) 120%
+      var(--color-zinc-700) 75%,
+      var(--color-zinc-800) 100%
     );
     background-size: 100% 400%;
     background-position: 0% 100%;

@@ -27,9 +27,9 @@ export class ItemHeader extends LitElement {
 
     return html`
       <div
-        class="mb-8 lg:sticky lg:top-20 lg:mb-0 lg:grid lg:items-end lg:gap-8"
+        class="mb-8 lg:sticky lg:top-24 lg:mb-0 lg:grid lg:items-end lg:gap-8"
       >
-        <div class="mb-2 flex flex-wrap gap-2 text-[.875rem] leading-none">
+        <div class="mb-6 lg:mb-1 flex flex-wrap gap-2 text-[.875rem] leading-none">
           <span class="text-brand-400"> ${this.year} </span>
           ${headerTags}
         </div>
@@ -40,7 +40,7 @@ export class ItemHeader extends LitElement {
         </h2>
         ${this.contentHtml
           ? html`<div
-              class="mt-4 flex flex-col items-start gap-4 leading-loose text-balance lg:mt-0"
+              class="mt-4 flex flex-col items-start gap-3 leading-loose text-balance lg:mt-0"
             >
               ${unsafeHTML(this.contentHtml)}
             </div>`

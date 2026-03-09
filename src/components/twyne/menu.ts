@@ -107,7 +107,7 @@ export class TwyneMenu extends ThemeMixin(LitElement) {
   render() {
     return html`
       <header
-        class="fixed inset-x-0 z-40 w-full bg-linear-to-t from-zinc-950 to-zinc-950/80 py-2 backdrop-blur backdrop-saturate-200 lg:fixed lg:block"
+        class="fixed inset-x-0 z-40 w-full bg-linear-to-t from-zinc-950 to-zinc-950/80 backdrop-blur md:py-3 lg:fixed"
       >
         <div class="flex items-center lg:container lg:grid lg:grid-cols-4">
           <nav class="lg:hidden">
@@ -162,7 +162,7 @@ export class TwyneMenu extends ThemeMixin(LitElement) {
           <div class="flex items-center">
             <button
               @click=${() => this.getPreviousPage()}
-              class="flex size-10 cursor-pointer items-center justify-center rounded-full p-3 opacity-50 transition-all duration-[200ms] hover:bg-zinc-50/10 hover:opacity-100 active:scale-95 active:bg-zinc-50/20"
+              class="ms-2 flex size-8 cursor-pointer items-center justify-center rounded-full opacity-50 transition-all duration-[200ms] hover:bg-zinc-50/10 hover:opacity-100 active:scale-95 active:bg-zinc-50/20"
               title="Go back to homepage"
             >
               <img src="${goBack}" class="transition-all duration-[200ms]" />
@@ -216,9 +216,9 @@ export class TwyneMenu extends ThemeMixin(LitElement) {
               </li>
             </ul>
           </nav>
-          <div class="hidden items-center justify-end gap-2 lg:flex">
+          <div class="hidden items-center justify-end gap-1 lg:flex">
             <a
-              class="cta-button px-3 pt-2 pb-2.5 text-[.875rem]"
+              class="cta-button px-3.5 pt-2 pb-2.5 text-[.875rem]"
               href="${i18next.t('links.projects.url')}"
             >
               ${i18next.t('featured.button')}
