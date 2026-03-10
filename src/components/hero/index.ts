@@ -8,7 +8,7 @@ import p1x from './imgs/profile-1x.webp'
 import s1 from './imgs/d1.webp'
 import s2 from './imgs/d2.webp'
 import s3 from './imgs/d3.webp'
-import m1 from './imgs/m1.png'
+import m1 from './imgs/m1.webp'
 
 @customElement('hero-section')
 export class HeroSection extends ThemeMixin(LitElement) {
