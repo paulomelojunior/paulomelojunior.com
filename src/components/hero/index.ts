@@ -86,8 +86,8 @@ export class HeroSection extends ThemeMixin(LitElement) {
           },
         })
         const layers = [
-          { layer: '1', y: '5rem' },
-          { layer: '2', y: '10rem', opacity: 0, filter: 'blur(1rem)' },
+          { layer: '1', y: '2.5rem', opacity: 0 },
+          { layer: '2', y: '5rem', opacity: 0, filter: 'blur(1rem)' },
         ]
         layers.forEach((layerObj, idx) => {
           tl.to(
@@ -114,15 +114,15 @@ export class HeroSection extends ThemeMixin(LitElement) {
   render() {
     return html`
       <section
-        class="hero before:animate-(--animate-fade-in)"
+        class="hero before:content-none md:before:content-['']"
         data-parallax-layers
         data-entrance
       >
         <div
-          class="container flex min-h-[calc(100svh-4rem)] flex-col-reverse justify-between pt-12 sm:flex-col md:pt-18"
+          class="container flex min-h-[calc(100svh-4rem)] flex-col-reverse md:justify-between pt-12 sm:flex-col md:pt-18"
         >
           <div
-            class="my-auto flex flex-col items-center pb-16 xl:pt-16 xl:pb-20"
+            class="relative z-10 mb-auto md:my-auto flex flex-col items-center xl:pt-16 xl:pb-20"
             data-parallax-layer="1"
           >
             <div data-entrance-item="3" class="mb-5 flex items-center gap-4">
@@ -158,11 +158,11 @@ export class HeroSection extends ThemeMixin(LitElement) {
 
             <div
               data-entrance-item="2"
-              class="mb-9 flex flex-col gap-2 text-center xl:gap-4"
+              class="mb-9 flex flex-col gap-2 text-center"
             >
               <h1
                 data-split="heading"
-                class="tracking-tightest text-[3rem] leading-none font-medium text-balance text-zinc-50 xl:tracking-tighter 2xl:text-[5rem]"
+                class="tracking-tightest text-[2.75rem] leading-none font-medium text-balance text-zinc-50 2xl:text-[5rem]"
               >
                 ${i18next.t('hero.title')}
               </h1>
@@ -194,16 +194,14 @@ export class HeroSection extends ThemeMixin(LitElement) {
             class="col-span-12 container grid grid-cols-12 items-end"
             data-parallax-layer="2"
           >
-            <div class="bg-zinc-950 col-span-12 block sm:hidden">
+            <div class="col-span-12 block bg-zinc-950 sm:hidden">
               <img
                 data-entrance-item="5"
-                class="aspect-[4/3] w-full rounded-tl-lg mask-b-from-50% object-cover object-center"
+                class="aspect-[3/2] w-full rounded-t-4xl mask-b-from-50% object-cover object-center"
                 src="${m1}"
-                height="384"
-                width="384"
               />
             </div>
-            <div class="bg-zinc-950 hidden xl:col-span-3 xl:block">
+            <div class="hidden bg-zinc-950 xl:col-span-3 xl:block">
               <img
                 data-entrance-item="5"
                 class="aspect-square w-full rounded-tl-lg mask-b-from-50% object-cover object-top sm:mask-r-from-50% sm:mask-b-from-0%"
@@ -212,7 +210,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
                 width="384"
               />
             </div>
-            <div class="bg-zinc-950 col-span-8 hidden sm:block xl:col-span-6">
+            <div class="col-span-8 hidden bg-zinc-950 sm:block xl:col-span-6">
               <img
                 data-entrance-item="4"
                 class="max-h-[432px] w-full rounded-t-lg mask-b-from-75% object-cover object-top"
@@ -221,7 +219,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
                 width="768"
               />
             </div>
-            <div class="bg-zinc-950 col-span-4 hidden sm:block xl:col-span-3">
+            <div class="col-span-4 hidden bg-zinc-950 sm:block xl:col-span-3">
               <img
                 data-entrance-item="5"
                 class="aspect-square w-full rounded-tr-lg mask-b-from-50% mask-l-from-0% object-cover object-top"

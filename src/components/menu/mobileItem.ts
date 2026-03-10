@@ -8,7 +8,7 @@ export class MobileItem extends LitElement {
   @property({ type: String }) index: string = ''
 
   render() {
-    return html`<div class="border-b border-zinc-800 xl:border-0">
+    return html`<div class="border-b border-zinc-900 xl:border-0">
       <a
         class="menu-item relative flex h-20 items-center px-5 text-[2rem] tracking-tighter text-zinc-100 xl:h-16"
         rel="noopener noreferrer"

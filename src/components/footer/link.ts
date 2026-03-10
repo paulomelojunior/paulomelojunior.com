@@ -15,7 +15,7 @@ export class FooterLink extends LitElement {
         href="${this.url}"
         target="${this.target}"
         rel="${this.rel}"
-        class="group relative flex h-20 items-center border-b border-zinc-800 bg-black px-5 text-zinc-50 transition-colors duration-400 group-hover/item:text-zinc-700 hover:text-white lg:h-auto lg:border-0 lg:bg-transparent"
+        class="group relative flex h-20 items-center border-b border-zinc-900 px-5 text-zinc-50 transition-colors duration-400 group-hover/item:text-zinc-700 hover:text-white lg:h-auto lg:border-0 lg:bg-transparent"
       >
         ${this.label}
         <div
