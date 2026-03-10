@@ -122,7 +122,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
           class="container flex min-h-[calc(100svh-4rem)] flex-col-reverse md:justify-between pt-12 sm:flex-col md:pt-18"
         >
           <div
-            class="relative z-10 mb-auto md:my-auto flex flex-col items-center xl:pt-16 xl:pb-20"
+            class="relative z-10 mb-auto md:my-auto flex flex-col mx-5 md:items-center xl:pt-16 xl:pb-20"
             data-parallax-layer="1"
           >
             <div data-entrance-item="3" class="mb-5 flex items-center gap-4">
@@ -138,7 +138,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
               />
               <div class="grid gap-2 leading-none">
                 <span class="text-white 2xl:text-[1.25rem]">
-                  Paulo Melo Jr.
+                  ${i18next.t('hero.name')}
                 </span>
                 <span
                   class="flex items-center gap-2 text-[.875rem] font-medium 2xl:text-[1rem]"
@@ -158,7 +158,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
 
             <div
               data-entrance-item="2"
-              class="mb-9 flex flex-col gap-2 text-center"
+              class="mb-9 flex flex-col gap-2 md:text-center"
             >
               <h1
                 data-split="heading"
@@ -166,7 +166,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
               >
                 ${i18next.t('hero.title')}
               </h1>
-              <h2 class="px-5 text-[1.125rem] text-balance 2xl:text-[1.5rem]">
+              <h2 class="text-[1.125rem] text-balance 2xl:text-[1.5rem]">
                 ${i18next.t('hero.subtitle')}
               </h2>
             </div>
@@ -196,7 +196,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
           >
             <div class="col-span-12 block bg-zinc-950 sm:hidden">
               <img
-                data-entrance-item="5"
+                data-entrance-item="1"
                 class="aspect-[3/2] w-full rounded-t-4xl mask-b-from-50% object-cover object-center"
                 src="${m1}"
               />

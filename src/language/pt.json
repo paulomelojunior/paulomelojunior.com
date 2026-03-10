@@ -19,10 +19,11 @@
     "link": "Ver credencial"
   },
   "hero": {
+    "name": "Paulo Melo Júnior",
     "status": "Disponível para contrato",
     "picDescription": "Uma foto de Paulo, um homem barbado com cabelos curtos e escuros. Ele está olhando para a direita com uma expressão pensativa. Ele usa uma camisa simples.",
     "title": "Software designer",
-    "subtitle": "Criando experiências digitais prontas para o futuro.",
+    "subtitle": "Criando experiências digitais prontas para o futuro",
     "cta": {
       "label": "Ver trabalho mais recente",
       "url": "/last-project"

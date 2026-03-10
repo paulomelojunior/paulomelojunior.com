@@ -19,10 +19,11 @@
     "link": "See credential"
   },
   "hero": {
+    "name": "Paulo Melo Jr.",
     "status": "Available for hiring",
     "picDescription": "An image of Paul M., a bearded man with short, dark hair. He is looking to the right with a thoughtful expression. He is wearing a plain t-shirt.",
     "title": "Software designer",
-    "subtitle": "Crafting future-ready digital interactions.",
+    "subtitle": "Crafting future-ready digital interactions",
     "cta": {
       "label": "Check out my latest work",
       "label_alt1": "See last project",
