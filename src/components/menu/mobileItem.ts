@@ -10,7 +10,7 @@ export class MobileItem extends LitElement {
   render() {
     return html`<div class="border-b border-zinc-800 xl:border-0">
       <a
-        class="menu-item relative flex h-20 items-center px-5 text-[2rem] tracking-[-0.04em] text-zinc-100 xl:h-16"
+        class="menu-item relative flex h-20 items-center px-5 text-[2rem] tracking-tighter text-zinc-100 xl:h-16"
         rel="noopener noreferrer"
         href="${this.href}"
       >

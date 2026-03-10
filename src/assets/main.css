@@ -1,12 +1,4 @@
 @font-face {
-  font-family: 'Mona Sans';
-  font-weight: 200 900;
-  font-display: swap;
-  font-style: normal;
-  src: url('fonts/mona.woff2') format('woff2');
-}
-
-@font-face {
   font-family: 'Geist Mono';
   font-weight: 100 900;
   font-display: swap;
@@ -17,9 +9,9 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-sans: 'Mona Sans', sans-serif;
+  --font-sans: 'Inter', sans-serif;
   --font-mono: 'Geist Mono', monospace;
-  --font-sans--font-feature-settings: 'ss05' on, 'ss06' on, 'ss10' on;
+  --font-sans--font-feature-settings: 'cv10' on, 'cv06' on, 'cv12' on;
 
   --hue: 256;
   --brand: 220;
@@ -45,6 +37,8 @@
   --color-zinc-800: oklch(0.26 0.01 var(--hue));
   --color-zinc-900: oklch(0.18 0.007 var(--hue));
   --color-zinc-950: oklch(0.1 0.004 var(--hue));
+
+  --tracking-tightest: -0.075em;
 
   --animate-fade-in: fade-in 0.2s ease-in;
 
@@ -121,7 +115,7 @@
     height: 100vh;
     top: -2px;
     inset-inline: 0;
-    mask-image: radial-gradient(circle at top center, black, transparent 50dvw);
+    mask-image: radial-gradient(circle at top center, black, transparent clamp(0%, 50svw, 50%));
     pointer-events: none;
     background-attachment: local;
   }
@@ -179,7 +173,7 @@
     background-image: linear-gradient(
       var(--direction, to bottom),
       var(--color-white) 0%,
-      var(--color-brand-100) 25%,
+      var(--color-zinc-200) 25%,
       var(--color-brand-400) 50%,
       var(--color-brand-400) 50%,
       var(--color-zinc-700) 75%,

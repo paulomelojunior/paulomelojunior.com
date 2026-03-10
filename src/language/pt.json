@@ -14,6 +14,8 @@
     "p1": "Entusiasta de tecnologias descentralizadas e outros assuntos geek, sou movido pelo equilíbrio entre as necessidades das pessoas e os objetivos de negócios. Também tenho profundo interesse em IA, como uma ferramenta para simplificar fluxos de trabalho, melhorar a tomada de decisões e explorar novas possibilidades criativas.",
     "p2": "Comprometido com a qualidade, busco constantemente o aprendizado e o desenvolvimento profissional, mantendo-me atualizado sobre tendências emergentes de design, avanços tecnológicos e melhores práticas para oferecer soluções inovadoras.",
     "education": "Educação",
+    "courses": "Cursos",
+    "iaBusiness": "IA em Negócios Digitais",
     "link": "Ver credencial"
   },
   "hero": {
@@ -22,7 +24,7 @@
     "title": "Software designer",
     "subtitle": "Criando experiências digitais prontas para o futuro.",
     "cta": {
-      "label": "Showcase do último projeto",
+      "label": "Ver trabalho mais recente",
       "url": "/last-project"
     }
   },
@@ -72,9 +74,9 @@
   "twyne": {
     "menu": {
       "about": "Sobre",
-      "goal": "Objetivo",
+      "goal": "Desafio",
       "proposal": "Proposta",
-      "impact": "Impacto",
+      "impact": "Resultados",
       "mobile": "Mobile",
       "final": "Final"
     },
@@ -110,7 +112,7 @@
       "contribution3": "UI Engineering"
     },
     "goal": {
-      "t1": "Objetivo",
+      "t1": "Desafio",
       "p1": "Resolver um dos grandes desafios do design digital: criar uma <span class='text-zinc-100'>interface modular</span>, <span class='text-zinc-100'>escalável</span> e <span class='text-zinc-100'>adaptável</span> para um software de alta complexidade técnica, com crescimento constante de features e demandas.",
       "p2": "A proposta visual precisava equilibrar performance, legibilidade e evolução contínua, sem exigir recomeços a cada nova funcionalidade. Oferecendo clareza e controle mesmo em fluxos densos."
     },
@@ -124,7 +126,7 @@
       "p1": "Cada componente carrega decisões orientadas por performance, legibilidade e clareza funcional, com atenção especial à jornada dos usuários corporativos."
     },
     "impact": {
-      "t1": "Impactos",
+      "t1": "Resultados",
       "l1": [
         "Redução de retrabalho no time de engenharia.",
         "Aumento na velocidade de onboarding de novos usuários.",

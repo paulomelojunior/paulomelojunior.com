@@ -8,6 +8,7 @@ import p1x from './imgs/profile-1x.webp'
 import s1 from './imgs/d1.webp'
 import s2 from './imgs/d2.webp'
 import s3 from './imgs/d3.webp'
+import m1 from './imgs/m1.png'
 
 @customElement('hero-section')
 export class HeroSection extends ThemeMixin(LitElement) {
@@ -36,7 +37,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
         {
           item: '4',
           opacity: '0',
-          y: '0%',
+          y: '20%',
           delay: 0.4,
           scale: 1.1,
           duration: 1,
@@ -44,7 +45,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
         {
           item: '5',
           opacity: '0',
-          y: '0%',
+          y: '20%',
           delay: 0,
           scale: 1.1,
           duration: 1.2,
@@ -118,10 +119,10 @@ export class HeroSection extends ThemeMixin(LitElement) {
         data-entrance
       >
         <div
-          class="container flex min-h-[calc(100svh-4rem)] flex-col justify-between pt-12 md:pt-18"
+          class="container flex min-h-[calc(100svh-4rem)] flex-col-reverse justify-between pt-12 sm:flex-col md:pt-18"
         >
           <div
-            class="my-auto flex flex-col items-center pt-12 pb-16 xl:pt-16 xl:pb-20"
+            class="my-auto flex flex-col items-center pb-16 xl:pt-16 xl:pb-20"
             data-parallax-layer="1"
           >
             <div data-entrance-item="3" class="mb-5 flex items-center gap-4">
@@ -157,11 +158,11 @@ export class HeroSection extends ThemeMixin(LitElement) {
 
             <div
               data-entrance-item="2"
-              class="mb-11 flex flex-col gap-4 text-center"
+              class="mb-9 flex flex-col gap-2 text-center xl:gap-4"
             >
               <h1
                 data-split="heading"
-                class="text-[2.5rem] leading-none font-medium tracking-tight text-balance text-zinc-50 xl:text-[3rem] 2xl:text-[5rem]"
+                class="tracking-tightest text-[3rem] leading-none font-medium text-balance text-zinc-50 xl:tracking-tighter 2xl:text-[5rem]"
               >
                 ${i18next.t('hero.title')}
               </h1>
@@ -190,31 +191,40 @@ export class HeroSection extends ThemeMixin(LitElement) {
             </div>
           </div>
           <div
-            class="col-span-12 container grid grid-cols-12 items-end ps-5 sm:ps-0"
+            class="col-span-12 container grid grid-cols-12 items-end"
             data-parallax-layer="2"
           >
-            <div class="col-span-12 block sm:hidden xl:col-span-3 xl:block">
+            <div class="bg-zinc-950 col-span-12 block sm:hidden">
               <img
                 data-entrance-item="5"
-                class="aspect-square w-full rounded-tl-lg bg-zinc-900 mask-b-from-50% object-cover object-top sm:mask-r-from-50% sm:mask-b-from-0%"
+                class="aspect-[4/3] w-full rounded-tl-lg mask-b-from-50% object-cover object-center"
+                src="${m1}"
+                height="384"
+                width="384"
+              />
+            </div>
+            <div class="bg-zinc-950 hidden xl:col-span-3 xl:block">
+              <img
+                data-entrance-item="5"
+                class="aspect-square w-full rounded-tl-lg mask-b-from-50% object-cover object-top sm:mask-r-from-50% sm:mask-b-from-0%"
                 src="${s1}"
                 height="384"
                 width="384"
               />
             </div>
-            <div class="col-span-8 hidden sm:block xl:col-span-6">
+            <div class="bg-zinc-950 col-span-8 hidden sm:block xl:col-span-6">
               <img
                 data-entrance-item="4"
-                class="max-h-[432px] w-full rounded-t-lg bg-zinc-900 mask-b-from-75% object-cover object-top"
+                class="max-h-[432px] w-full rounded-t-lg mask-b-from-75% object-cover object-top"
                 src="${s2}"
                 height="432"
                 width="768"
               />
             </div>
-            <div class="col-span-4 hidden sm:block xl:col-span-3">
+            <div class="bg-zinc-950 col-span-4 hidden sm:block xl:col-span-3">
               <img
                 data-entrance-item="5"
-                class="aspect-square w-full rounded-tr-lg bg-zinc-900 mask-b-from-50% mask-l-from-0% object-cover object-top"
+                class="aspect-square w-full rounded-tr-lg mask-b-from-50% mask-l-from-0% object-cover object-top"
                 src="${s3}"
                 height="384"
                 width="384"

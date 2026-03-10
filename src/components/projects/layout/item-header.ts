@@ -34,7 +34,7 @@ export class ItemHeader extends LitElement {
           ${headerTags}
         </div>
         <h2
-          class="text-[2rem] leading-none tracking-[-0.02em] text-zinc-50 lg:text-[2.5rem]"
+          class="text-[2rem] leading-none tracking-tighter text-zinc-50 lg:text-[2.5rem]"
         >
           ${this.title}
         </h2>

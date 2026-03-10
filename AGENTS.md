@@ -164,6 +164,7 @@ i18next.t('links.github.url')
 - Use Tailwind v4 with `@tailwindcss/vite` plugin
 - Use arbitrary values for dynamic styles (e.g., `h-[calc(100vh-64px)]`)
 - Use CSS variables from the design system for colors, spacing
+- **Font configuration**: Always define `--font-sans` in `@theme` block when changing fonts (required for Tailwind's `font-sans` utility to work). Font is loaded via CDN in HTML files.
 
 ### Event Handling
 

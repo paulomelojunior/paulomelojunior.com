@@ -228,7 +228,7 @@ export class TwyneProposal extends LitElement {
         ></div>
         <div class="container rounded-t-4xl px-6 pb-24 lg:py-24 2xl:p-32">
           <h2
-            class="mb-10 text-[2rem] leading-none tracking-[-.02em] text-zinc-50 lg:text-[2.5rem] 2xl:text-[3rem]"
+            class="mb-10 text-[2rem] leading-none tracking-tighter text-zinc-50 lg:text-[2.5rem] 2xl:text-[3rem]"
           >
             ${i18next.t('twyne.proposal.t1')}
           </h2>

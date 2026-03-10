@@ -38,7 +38,7 @@ export class MethodItem extends ThemeMixin(LitElement) {
       >
         <span class="mb-2 leading-none text-zinc-600"> ${this.index} </span>
         <h2
-          class="text-[1.5rem] leading-none tracking-[-0.02rem] text-zinc-50 xl:text-[2rem]"
+          class="text-[1.5rem] leading-none tracking-tighter text-zinc-50 xl:text-[2rem]"
         >
           ${this.t}
         </h2>

@@ -82,7 +82,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
         <div class="container">
           <marquee-element
             star="fill-brand-400"
-            items="Design Engineering, Product Design, UX & UI"
+            items="Design Engineering, Product Design, User Experience"
           ></marquee-element>
           <div
             class="mx-5 grid gap-16 overflow-x-hidden py-16 *:flex *:items-start *:justify-center *:gap-5 lg:grid-cols-2 xl:gap-24 xl:py-0 xl:*:flex-row *:xl:gap-12 *:xl:py-24 *:2xl:py-48"
@@ -116,7 +116,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
               </svg>
               <div class="grid gap-2 xl:gap-0">
                 <h2
-                  class="flex items-center text-[1.5rem] leading-16 tracking-tight text-zinc-50 xl:text-[2rem] xl:leading-24 2xl:text-[2.5rem] 2xl:leading-24"
+                  class="flex items-center text-[1.5rem] leading-16 tracking-tighter text-zinc-50 xl:text-[2rem] xl:leading-24 2xl:text-[2.5rem] 2xl:leading-24"
                 >
                   ${i18next.t('praxis.t1')}
                 </h2>
@@ -142,7 +142,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
               </svg>
               <div class="grid gap-2 xl:gap-0">
                 <h2
-                  class="flex items-center text-[1.5rem] leading-16 tracking-tight text-zinc-50 xl:text-[2rem] xl:leading-24 2xl:text-[2.5rem] 2xl:leading-24"
+                  class="flex items-center text-[1.5rem] leading-16 tracking-tighter text-zinc-50 xl:text-[2rem] xl:leading-24 2xl:text-[2.5rem] 2xl:leading-24"
                 >
                   ${i18next.t('praxis.t2')}
                 </h2>
@@ -155,7 +155,7 @@ export class PraxisSection extends ThemeMixin(LitElement) {
           <marquee-element
             reverse
             star="fill-brand-400"
-            items="Design Engineering, Product Design, UX & UI"
+            items="Design Engineering, Product Design, User Experience"
           ></marquee-element>
         </div>
       </section>

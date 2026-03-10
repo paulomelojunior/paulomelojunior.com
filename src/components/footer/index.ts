@@ -75,7 +75,7 @@ export class FooterSection extends LitElement {
         >
           <div
             id="menu"
-            class="group/item container flex flex-1 flex-col flex-wrap text-[2rem] leading-none tracking-tight lg:max-w-full lg:flex-row lg:items-baseline lg:justify-center lg:text-[2.5rem]"
+            class="group/item container flex flex-1 flex-col flex-wrap text-[2rem] leading-none tracking-tighter lg:max-w-full lg:flex-row lg:items-baseline lg:justify-center lg:text-[2.5rem]"
           >
             <span
               class="mx-5 flex h-20 items-center text-zinc-600 transition-colors duration-400 group-hover/item:text-zinc-400 lg:p-0"

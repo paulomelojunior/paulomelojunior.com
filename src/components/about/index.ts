@@ -32,7 +32,7 @@ export class AboutSection extends ThemeMixin(LitElement) {
             class="grid items-baseline gap-y-8 px-5 pt-16 xl:grid-cols-3 xl:px-20 xl:pt-24 2xl:px-32 2xl:pt-64"
           >
             <h2
-              class="text-[2.5rem] leading-none tracking-tight text-pretty text-zinc-50 xl:text-[3rem] 2xl:text-[4rem]"
+              class="text-[2.5rem] leading-none tracking-tighter text-pretty text-zinc-50 xl:text-[3rem] 2xl:text-[4rem]"
             >
               ${i18next.t('about.title')}
             </h2>
@@ -52,7 +52,7 @@ export class AboutSection extends ThemeMixin(LitElement) {
                   ${i18next.t('about.p2')}
                 </p>
               </div>
-              <div class="pt-2">
+              <div>
                 <h3
                   class="text-brand-400 font-mono text-[.625rem] font-semibold tracking-widest uppercase"
                 >
@@ -81,6 +81,15 @@ export class AboutSection extends ThemeMixin(LitElement) {
                       Católica de Brasília
                     </p>
                   </li>
+                </ul>
+              </div>
+              <div class="pt-2">
+                <h3
+                  class="text-brand-400 font-mono text-[.625rem] font-semibold tracking-widest uppercase"
+                >
+                  ${i18next.t('about.courses')}
+                </h3>
+                <ul class="grid gap-y-4 xl:grid-cols-3">
                   <li class="mt-3 grid gap-2">
                     <h4 class="text-[1.25rem] leading-none text-zinc-50">
                       Digital Product Design
@@ -93,6 +102,23 @@ export class AboutSection extends ThemeMixin(LitElement) {
                       <a
                         class="hover:text-brand-400 inline-flex underline decoration-zinc-600 underline-offset-4 transition-colors"
                         href="https://credentials.somostera.com/3efd7eaa4fbb5ef1277b1236b0d9f43d"
+                      >
+                        ${i18next.t('about.link')}
+                      </a>
+                    </p>
+                  </li>
+                  <li class="mt-3 grid gap-2">
+                    <h4 class="text-[1.25rem] leading-none text-zinc-50">
+                      ${i18next.t('about.iaBusiness')}
+                    </h4>
+                    <p
+                      class="font-mono text-[.625rem] leading-none font-semibold tracking-widest uppercase"
+                    >
+                      2025 <span class="text-zinc-500">&bull;</span> Tera
+                      <span class="text-zinc-500">&bull;</span>
+                      <a
+                        class="hover:text-brand-400 inline-flex underline decoration-zinc-600 underline-offset-4 transition-colors"
+                        href="https://credentials.somostera.com/d938e0586c96cd80ff9daef38415fab1"
                       >
                         ${i18next.t('about.link')}
                       </a>

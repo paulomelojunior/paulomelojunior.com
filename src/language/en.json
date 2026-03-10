@@ -14,6 +14,8 @@
     "p1": "Enthusiast of decentralized technologies and other geeky stuff, I'm driven by the balance between people's needs and business goals. Also deeply interested in AI, as a tool to simplify workflows, improve decision-making, and explore new creative possibilities.",
     "p2": "Devoted to quality, I commit to continuous learning and professional development, staying abreast of emerging design trends tech advancements and best practices to deliver cutting-edge solutions.",
     "education": "Education",
+    "courses": "Courses",
+    "iaBusiness": "AI in Digital Business",
     "link": "See credential"
   },
   "hero": {
@@ -22,7 +24,12 @@
     "title": "Software designer",
     "subtitle": "Crafting future-ready digital interactions.",
     "cta": {
-      "label": "Last project showcase",
+      "label": "Check out my latest work",
+      "label_alt1": "See last project",
+      "label_alt2": "Explore the last project",
+      "label_alt3": "Discover recent project",
+      "label_alt4": "View last case study",
+      "label_alt5": "See recent project",
       "url": "/last-project"
     }
   },
@@ -71,9 +78,9 @@
   "twyne": {
     "menu": {
       "about": "About",
-      "goal": "Goal",
-      "proposal": "Proposal",
-      "impact": "Impact",
+      "goal": "Challenge",
+      "proposal": "Proposition",
+      "impact": "Outcomes",
       "mobile": "Mobile",
       "final": "Final"
     },
@@ -97,12 +104,12 @@
       }
     },
     "goal": {
-      "t1": "Goal",
+      "t1": "Challenge",
       "p1": "Tackling one of the biggest challenges in digital design: creating a <span class='text-zinc-50'>modular</span>, <span class='text-zinc-50'>scalable</span>, and <span class='text-zinc-50'>adaptable</span> interface for highly complex software, with constant growth in features and requirements.",
       "p2": "The visual approach needed to balance performance, readability, and continuous evolution, without requiring a restart for every new feature. Delivering clarity and control even in dense flows."
     },
     "proposal": {
-      "t1": "Proposal",
+      "t1": "Proposition",
       "l1": [
         "A robust, strategic, and flexible UI kit.",
         "Simplified UI that puts information up front.",
@@ -111,7 +118,7 @@
       "p1": "Each component carries decisions guided by performance, readability, and functional clarity, with special attention to business logic and the journey of corporate users."
     },
     "impact": {
-      "t1": "Impact",
+      "t1": "Outcomes",
       "l1": [
         "Reduced rework for the engineering team.",
         "Faster onboarding for new users.",

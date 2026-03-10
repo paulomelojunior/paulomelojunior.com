@@ -25,7 +25,7 @@ export class ProjectsHeader extends LitElement {
     return html`
       <div class="mx-5 pt-22 pb-5 lg:pt-32 lg:pb-2">
         <h1
-          class="text-[3rem] leading-none tracking-tight text-zinc-50 2xl:text-[4rem]"
+          class="text-[3rem] leading-none tracking-tighter text-zinc-50 2xl:text-[4rem]"
         >
           ${unsafeHTML(i18next.t('featured.title'))}
         </h1>
