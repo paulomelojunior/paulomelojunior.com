@@ -90,7 +90,7 @@
 
   /* Body */
   body {
-    @apply bg-zinc-950 pt-[env(safe-area-inset-top)] text-zinc-300 tracking-tight;
+    @apply bg-zinc-950 pt-[env(safe-area-inset-top)] tracking-tight text-zinc-300;
   }
 
   .text-default {
@@ -115,7 +115,11 @@
     height: 100vh;
     top: -2px;
     inset-inline: 0;
-    mask-image: radial-gradient(circle at top center, black, transparent clamp(0%, 50svw, 50%));
+    mask-image: radial-gradient(
+      circle at top center,
+      black,
+      transparent clamp(0%, 50svw, 50%)
+    );
     pointer-events: none;
     background-attachment: local;
   }

@@ -61,7 +61,7 @@ export class TwyneConclusion extends LitElement {
     return html`
       <svg
         id="sign"
-        class="mt-2 rotate-21 stroke-brand-400"
+        class="stroke-brand-400 mt-2 rotate-21"
         width="44"
         height="67"
         viewBox="0 0 44 67"
@@ -87,7 +87,7 @@ export class TwyneConclusion extends LitElement {
   private renderContent(): unknown {
     return html`
       <h2
-        class="font-mono mt-16 mb-4 text-[0.75rem] leading-none font-semibold tracking-[0.05em] text-zinc-500 uppercase"
+        class="mt-16 mb-4 font-mono text-[0.75rem] leading-none font-semibold tracking-[0.05em] text-zinc-500 uppercase"
       >
         ${i18next.t('twyne.conclusion.t1')}
       </h2>

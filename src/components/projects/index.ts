@@ -29,7 +29,7 @@ export class ProjectsIndex extends ThemeMixin(LitElement) {
         ></div>
         <projects-multiplayer></projects-multiplayer>
         <div
-          class="hidden lg:block my-8 h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent lg:my-16 lg:mb-32"
+          class="my-8 hidden h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent lg:my-16 lg:mb-32 lg:block"
         ></div>
         <cases-section></cases-section>
       </section>

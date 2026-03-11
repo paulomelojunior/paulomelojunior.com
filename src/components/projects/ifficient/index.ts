@@ -60,7 +60,7 @@ export class ProjectsIfficient extends LitElement {
     `
 
     return html`
-      <div id="ifficient" class="py-8 lg:grid lg:grid-cols-3 lg:py-16 mx-5">
+      <div id="ifficient" class="mx-5 py-8 lg:grid lg:grid-cols-3 lg:py-16">
         <item-header
           title="${i18next.t('ifficient.title')}"
           tags="${i18next.t('ifficient.tags')}"

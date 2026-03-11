@@ -52,7 +52,7 @@ export class ProjectsAllugator extends LitElement {
     `
 
     return html`
-      <div id="allugator" class="py-8 lg:grid lg:grid-cols-3 lg:py-16 mx-5">
+      <div id="allugator" class="mx-5 py-8 lg:grid lg:grid-cols-3 lg:py-16">
         <item-header
           title="${i18next.t('allugator.title')}"
           tags="${i18next.t('allugator.tags')}"

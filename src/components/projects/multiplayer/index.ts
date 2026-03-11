@@ -66,7 +66,7 @@ export class ProjectsMultiplayer extends LitElement {
     `
 
     return html`
-      <div id="multiplayer" class="py-8 lg:grid lg:grid-cols-3 lg:py-16 mx-5">
+      <div id="multiplayer" class="mx-5 py-8 lg:grid lg:grid-cols-3 lg:py-16">
         <item-header
           title="${i18next.t('multiplayer.title')}"
           tags="${i18next.t('multiplayer.tags')}"
