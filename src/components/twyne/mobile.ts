@@ -82,11 +82,41 @@ export class TwyneMobile extends LitElement {
           class="mx-auto grid max-w-[1920px] grid-cols-5 items-center justify-center gap-4 px-4"
           data-parallax-layers
         >
-          <img src="${e2}" data-parallax-layer="1" class="mobile-screen" />
-          <img src="${e1}" data-parallax-layer="2" class="mobile-screen" />
-          <img src="${e3}" data-parallax-layer="3" class="mobile-screen" />
-          <img src="${e4}" data-parallax-layer="4" class="mobile-screen" />
-          <img src="${e5}" data-parallax-layer="5" class="mobile-screen" />
+          <img
+            src="${e2}"
+            data-parallax-layer="1"
+            class="mobile-screen"
+            loading="lazy"
+            alt="Mobile screen 1"
+          />
+          <img
+            src="${e1}"
+            data-parallax-layer="2"
+            class="mobile-screen"
+            loading="lazy"
+            alt="Mobile screen 2"
+          />
+          <img
+            src="${e3}"
+            data-parallax-layer="3"
+            class="mobile-screen"
+            loading="lazy"
+            alt="Mobile screen 3"
+          />
+          <img
+            src="${e4}"
+            data-parallax-layer="4"
+            class="mobile-screen"
+            loading="lazy"
+            alt="Mobile screen 4"
+          />
+          <img
+            src="${e5}"
+            data-parallax-layer="5"
+            class="mobile-screen"
+            loading="lazy"
+            alt="Mobile screen 5"
+          />
         </div>
       </section>
     `

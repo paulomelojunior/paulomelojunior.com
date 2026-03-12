@@ -139,6 +139,7 @@ export class AlluPress extends LitElement {
               width="1920"
               height="1080"
               class="invisible absolute top-0 left-0 rounded-2xl"
+              loading="lazy"
             />
             <img
               src="${press9}"

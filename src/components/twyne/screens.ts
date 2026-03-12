@@ -132,19 +132,25 @@ export class TwyneScreens extends LitElement {
               src="${d0}"
               width="1728"
               height="976"
+              loading="lazy"
               class="relative rounded-[.5rem]"
+              alt="Twyne screen 1"
             />
             <img
               src="${d2}"
               width="1728"
               height="976"
+              loading="lazy"
               class="invisible absolute top-0 left-0 rounded-[.5rem]"
+              alt="Twyne screen 2"
             />
             <img
               src="${d3}"
               width="1728"
               height="976"
+              loading="lazy"
               class="invisible absolute top-0 left-0 rounded-[.5rem]"
+              alt="Twyne screen 3"
             />
           </div>
 

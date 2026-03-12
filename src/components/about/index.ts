@@ -45,14 +45,10 @@ export class AboutSection extends ThemeMixin(LitElement) {
                 >
                   Who I Am
                 </h3>
-                <p
-                  class="mb-8 text-sm/loose text-pretty lg:text-xl/loose"
-                >
+                <p class="mb-8 text-sm/loose text-pretty lg:text-xl/loose">
                   ${i18next.t('about.p1')}
                 </p>
-                <p
-                  class="mb-2 text-sm/loose text-pretty lg:text-xl/loose"
-                >
+                <p class="mb-2 text-sm/loose text-pretty lg:text-xl/loose">
                   ${i18next.t('about.p2')}
                 </p>
               </div>

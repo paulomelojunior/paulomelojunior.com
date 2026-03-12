@@ -71,7 +71,12 @@ export class ProjectsIfficient extends LitElement {
             class="group relative aspect-video cursor-pointer overflow-hidden border-2 border-zinc-800 before:absolute before:inset-0 before:transition-colors before:duration-200 hover:before:bg-zinc-950/50 before:hover:opacity-1"
             @click=${this.handleSeeFullPage}
           >
-            <img id="ifficient-homepage" class="w-full" src="${p1}" />
+            <img
+              id="ifficient-homepage"
+              class="w-full"
+              src="${p1}"
+              alt="Ifficient homepage"
+            />
             <div
               class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-zinc-100/15 px-5 py-3 text-[1rem] leading-[20px] font-medium text-zinc-50 opacity-0 backdrop-blur transition-all duration-200 group-hover:opacity-100 hover:bg-zinc-100/30"
             >
@@ -79,9 +84,24 @@ export class ProjectsIfficient extends LitElement {
             </div>
           </div>
           <div class="grid grid-cols-3 gap-2 *:rounded-[.75rem] lg:gap-4">
-            <img src="${e2}" />
-            <img src="${e1}" />
-            <img src="${e3}" />
+            <img
+              src="${e2}"
+              loading="lazy"
+              decoding="async"
+              alt="Ifficient screenshot 1"
+            />
+            <img
+              src="${e1}"
+              loading="lazy"
+              decoding="async"
+              alt="Ifficient screenshot 2"
+            />
+            <img
+              src="${e3}"
+              loading="lazy"
+              decoding="async"
+              alt="Ifficient screenshot 3"
+            />
           </div>
         </div>
       </div>

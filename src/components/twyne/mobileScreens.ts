@@ -138,22 +138,35 @@ export class MobileScreens extends LitElement {
           </h2>
 
           <div class="mob-carrossel relative overflow-hidden">
-            <img src="${e1}" class="mobile-screen relative" />
+            <img
+              src="${e1}"
+              class="mobile-screen relative"
+              loading="lazy"
+              alt="Mobile screen"
+            />
             <img
               src="${e2}"
               class="mobile-screen invisible absolute top-0 left-0"
+              loading="lazy"
+              alt="Mobile screen"
             />
             <img
               src="${e3}"
               class="mobile-screen invisible absolute top-0 left-0"
+              loading="lazy"
+              alt="Mobile screen"
             />
             <img
               src="${e4}"
               class="mobile-screen invisible absolute top-0 left-0"
+              loading="lazy"
+              alt="Mobile screen"
             />
             <img
               src="${e5}"
               class="mobile-screen invisible absolute top-0 left-0"
+              loading="lazy"
+              alt="Mobile screen"
             />
           </div>
 

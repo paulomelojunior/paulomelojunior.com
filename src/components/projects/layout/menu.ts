@@ -165,7 +165,11 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
               class="ms-2 flex size-8 cursor-pointer items-center justify-center rounded-full opacity-50 transition-all duration-[200ms] hover:bg-zinc-50/10 hover:opacity-100 active:scale-95 active:bg-zinc-50/20"
               title="Go back to homepage"
             >
-              <img src="${arrow}" class="transition-all duration-[200ms]" />
+              <img
+                src="${arrow}"
+                class="transition-all duration-[200ms]"
+                alt="Go back"
+              />
             </button>
             <mail-button
               @click=${() => this.copyEmail()}

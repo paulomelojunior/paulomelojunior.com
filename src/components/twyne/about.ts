@@ -103,6 +103,9 @@ export class TwyneAbout extends LitElement {
         <img
           src="${d1}"
           id="cover-image"
+          loading="lazy"
+          decoding="async"
+          alt="Twyne about cover"
           class="absolute top-0 left-6 flex-none rounded-ss-md border-t border-zinc-800 shadow-[0px_24px_24px_0px_black] lg:top-16 lg:left-16 lg:max-w-none lg:rounded-ss-lg"
         />
         <progressive-blur

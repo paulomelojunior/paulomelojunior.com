@@ -85,19 +85,25 @@ export class ProjectsScreens extends LitElement {
               src=""
               width="1728"
               height="976"
+              loading="lazy"
               class="relative rounded-[.5rem]"
+              alt="Project screen 1"
             />
             <img
               src=""
               width="1728"
               height="976"
+              loading="lazy"
               class="invisible absolute top-0 left-0 rounded-[.5rem]"
+              alt="Project screen 2"
             />
             <img
               src=""
               width="1728"
               height="976"
+              loading="lazy"
               class="invisible absolute top-0 left-0 rounded-[.5rem]"
+              alt="Project screen 3"
             />
           </div>
           <div class="absolute inset-0">
