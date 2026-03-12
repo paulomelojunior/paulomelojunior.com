@@ -36,7 +36,3 @@ npm run preview
 - Smooth scroll animations
 - SEO optimized
 - PWA ready
-
-## License
-
-MIT
