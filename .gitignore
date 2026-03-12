@@ -1,5 +1,5 @@
 # Vault
-.vault/
+*vault*
 
 # Logs
 logs
@@ -25,9 +25,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-# Agentic coding
-.agents
-.AGENTS.md
-SKILL.md
-skills-lock.json
