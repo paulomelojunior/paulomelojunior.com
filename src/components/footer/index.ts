@@ -78,7 +78,7 @@ export class FooterSection extends LitElement {
             class="group/item container flex flex-1 flex-col flex-wrap text-[2rem] leading-none tracking-tighter lg:max-w-full lg:flex-row lg:items-baseline lg:justify-center lg:text-[2.5rem]"
           >
             <span
-              class="mx-5 flex h-20 items-center text-zinc-600 transition-colors duration-400 group-hover/item:text-zinc-400 lg:p-0"
+              class="mx-5 flex h-20 items-center text-zinc-400 transition-colors duration-400 group-hover/item:text-zinc-400 lg:p-0"
             >
               ${i18next.t('connect.title')}
             </span>
@@ -105,7 +105,7 @@ export class FooterSection extends LitElement {
           class="lg:bg-brand-800 absolute inset-x-0 bottom-0 z-50 flex w-full justify-center gap-2 px-5 pt-[10px] pb-[14px] font-mono text-[.625rem] font-semibold tracking-widest uppercase"
         >
           <span> [c] ${this.currentYear() || '2026'} Paulo Melo Jr. </span>
-          <span class="hidden text-zinc-600 md:inline"> / </span>
+          <span class="hidden text-zinc-400 md:inline"> / </span>
           <span class="hidden md:inline">
             ${this.getRandomQuote() || 'To define is to limit.'}
           </span>

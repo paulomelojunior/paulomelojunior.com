@@ -36,7 +36,7 @@ export class MethodItem extends ThemeMixin(LitElement) {
           ? 'col-span-3 bg-zinc-800'
           : 'bg-zinc-900'} flex aspect-square h-full flex-col justify-between rounded-[.25rem] p-6 xl:aspect-[2/1] xl:p-12"
       >
-        <span class="mb-2 leading-none text-zinc-600"> ${this.index} </span>
+        <span class="mb-2 leading-none text-zinc-400"> ${this.index} </span>
         <h2
           class="text-[1.5rem] leading-none tracking-tighter text-zinc-50 xl:text-[2rem]"
         >

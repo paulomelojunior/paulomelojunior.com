@@ -74,7 +74,7 @@ export class CasesSection extends LitElement {
           >
             <div class="hidden w-2/3 justify-center xl:flex">
               <span
-                class="absolute bottom-0 left-0 flex gap-2 p-8 font-mono text-[.75rem] leading-none font-medium tracking-[.05em] text-zinc-600 uppercase"
+                class="absolute bottom-0 left-0 flex gap-2 p-8 font-mono text-[.75rem] leading-none font-medium tracking-[.05em] text-zinc-400 uppercase"
               >
                 2025 ${i18next.t('cases.project')}
               </span>

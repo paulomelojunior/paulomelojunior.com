@@ -1,19 +1,8 @@
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
-import compression from 'vite-plugin-compression'
 
 export default defineConfig({
-  plugins: [
-    tailwindcss(),
-    compression({
-      algorithm: 'gzip',
-      ext: '.gz',
-    }),
-    compression({
-      algorithm: 'brotliCompress',
-      ext: '.br',
-    }),
-  ],
+  plugins: [tailwindcss()],
   esbuild: {
     loader: 'ts',
     include: /\.ts$/,

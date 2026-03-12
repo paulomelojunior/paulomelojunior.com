@@ -87,11 +87,11 @@ export class TwyneAbout extends LitElement {
               class="inline-flex gap-2 text-right align-baseline text-zinc-50"
             >
               <span> ${i18next.t('twyne.about.details.contribution1')} </span>
-              <span class="text-zinc-500">/</span>
+              <span class="text-zinc-400">/</span>
               <span class="hidden xl:flex">
                 ${i18next.t('twyne.about.details.contribution2')}
               </span>
-              <span class="hidden text-zinc-500 xl:flex">/</span>
+              <span class="hidden text-zinc-400 xl:flex">/</span>
               <span> ${i18next.t('twyne.about.details.contribution3')} </span>
             </span>
           </li>

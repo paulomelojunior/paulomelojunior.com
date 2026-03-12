@@ -98,7 +98,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
     return html`
       <div class="job relative flex flex-col gap-4 px-5 xl:px-20 2xl:px-32">
         <span
-          class="mb-2 font-mono text-[.75rem] leading-none font-medium tracking-tighter text-zinc-500"
+          class="mb-2 font-mono text-[.75rem] leading-none font-medium tracking-tighter text-zinc-400"
         >
           ${item.start} &bull;
           <span class=${item.custom ?? ''}>${item.end}</span>

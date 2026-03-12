@@ -178,7 +178,7 @@ export class MenuContainer extends ThemeMixin(LitElement) {
             class="grid-span-2 absolute flex h-12 w-full translate-y-full items-center justify-center gap-2 bg-zinc-950 px-5 font-mono text-[.625rem] font-semibold uppercase xl:hidden"
           >
             <span> [c] 2025 pmjr.cc </span>
-            <span class="text-zinc-600"> / </span>
+            <span class="text-zinc-400"> / </span>
             <span> Made by a human being </span>
           </div>
           <div class="hidden items-center justify-end gap-2 xl:flex">

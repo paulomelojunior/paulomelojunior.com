@@ -119,7 +119,7 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
             >
               <li>
                 <span
-                  class="flex h-20 items-center px-5 text-[2rem] tracking-tighter text-zinc-500"
+                  class="flex h-20 items-center px-5 text-[2rem] tracking-tighter text-zinc-400"
                 >
                   Menu
                 </span>

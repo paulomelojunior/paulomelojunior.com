@@ -66,7 +66,7 @@ export class AboutSection extends ThemeMixin(LitElement) {
                     <p
                       class="font-mono text-[.625rem] leading-none font-semibold tracking-widest uppercase"
                     >
-                      2012 <span class="text-zinc-500">&bull;</span> Escola de
+                      2012 <span class="text-zinc-400">&bull;</span> Escola de
                       Design, UEMG
                     </p>
                   </li>
@@ -77,7 +77,7 @@ export class AboutSection extends ThemeMixin(LitElement) {
                     <p
                       class="font-mono text-[.625rem] leading-none font-semibold tracking-widest uppercase"
                     >
-                      2026 <span class="text-zinc-500">&bull;</span> Univ.
+                      2026 <span class="text-zinc-400">&bull;</span> Univ.
                       Católica de Brasília
                     </p>
                   </li>
@@ -97,8 +97,8 @@ export class AboutSection extends ThemeMixin(LitElement) {
                     <p
                       class="font-mono text-[.625rem] leading-none font-semibold tracking-widest uppercase"
                     >
-                      2025 <span class="text-zinc-500">&bull;</span> Tera
-                      <span class="text-zinc-500">&bull;</span>
+                      2025 <span class="text-zinc-400">&bull;</span> Tera
+                      <span class="text-zinc-400">&bull;</span>
                       <a
                         class="hover:text-brand-400 inline-flex underline decoration-zinc-600 underline-offset-4 transition-colors"
                         href="https://credentials.somostera.com/3efd7eaa4fbb5ef1277b1236b0d9f43d"
@@ -114,8 +114,8 @@ export class AboutSection extends ThemeMixin(LitElement) {
                     <p
                       class="font-mono text-[.625rem] leading-none font-semibold tracking-widest uppercase"
                     >
-                      2025 <span class="text-zinc-500">&bull;</span> Tera
-                      <span class="text-zinc-500">&bull;</span>
+                      2025 <span class="text-zinc-400">&bull;</span> Tera
+                      <span class="text-zinc-400">&bull;</span>
                       <a
                         class="hover:text-brand-400 inline-flex underline decoration-zinc-600 underline-offset-4 transition-colors"
                         href="https://credentials.somostera.com/d938e0586c96cd80ff9daef38415fab1"
