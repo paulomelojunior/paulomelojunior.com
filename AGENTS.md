@@ -10,9 +10,9 @@ Static portfolio website with TypeScript, Lit web components, Vite, Tailwind CSS
 
 ```bash
 # Development
-pnpm dev              # Start Vite dev server on port 2121
-pnpm build            # Run TypeScript check + Vite build
-pnpm preview          # Preview production build locally
+yarn dev              # Start Vite dev server on port 2121
+yarn build            # Run TypeScript check + Vite build
+yarn preview          # Preview production build locally
 
 # Type checking (included in build)
 npx tsc --noEmit      # TypeScript strict type checking

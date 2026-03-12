@@ -27,17 +27,11 @@ export default defineConfig({
         assetFileNames: 'src/[hash:6].[ext]',
         chunkFileNames: 'src/[hash:6].js',
         entryFileNames: 'src/[hash:6].js',
-        manualChunks: {
-          gsap: ['gsap'],
-          lenis: ['lenis'],
-          i18n: ['i18next'],
-        },
       },
     },
   },
   server: {
     port: 2121,
-    open: true,
-    host: true,
+    open: true
   },
 })

@@ -5,9 +5,11 @@ declare module '*.scss' {
   export default content
 }
 
+import Lenis from 'lenis'
+
 declare global {
   interface Window {
-    lenis: import('lenis').default
+    lenis: Lenis
   }
 }
 

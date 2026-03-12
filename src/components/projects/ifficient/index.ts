@@ -1,11 +1,32 @@
 import i18next from '../../../i18n'
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import p1 from './assets/homepage-preview.webp'
+import home from './assets/homepage-preview.webp'
 import e1 from './assets/e1.webp'
 import e2 from './assets/e2.webp'
 import e3 from './assets/e3.webp'
+import p0 from './assets/homepage-0.webp'
+import p1 from './assets/homepage-1.webp'
+import p2 from './assets/homepage-2.webp'
+import p3 from './assets/homepage-3.webp'
+import p4 from './assets/homepage-4.webp'
+import p5 from './assets/homepage-5.webp'
+import p6 from './assets/homepage-6.webp'
+import p7 from './assets/homepage-7.webp'
+import p8 from './assets/homepage-8.webp'
 import './zoom'
+
+const homepageImages = [
+  { src: p0, width: 1920, height: 1136, class: 'rounded-t-[.5rem]' },
+  { src: p1, width: 1920, height: 800 },
+  { src: p2, width: 1920, height: 800 },
+  { src: p3, width: 1920, height: 800 },
+  { src: p4, width: 1920, height: 800 },
+  { src: p5, width: 1920, height: 800 },
+  { src: p6, width: 1920, height: 800 },
+  { src: p7, width: 1920, height: 800 },
+  { src: p8, width: 1920, height: 236, class: 'rounded-b-[.5rem]' },
+]
 
 @customElement('projects-ifficient')
 export class ProjectsIfficient extends LitElement {
@@ -25,22 +46,12 @@ export class ProjectsIfficient extends LitElement {
     this.lang = i18next.language
   }
 
-  private createZoomBox = (target: HTMLImageElement) => {
-    const el = document.createElement('img-zoom')
-    el.setAttribute('src', target.src)
-    return el
-  }
-
-  // removidos: init/close do zoom (agora em <img-zoom>)
-
-  private handleSeeFullPage = () => {
-    const homepage = document.querySelector<HTMLImageElement>(
-      '#ifficient-homepage'
-    )
-    if (homepage) {
-      const box = this.createZoomBox(homepage)
-      document.body.appendChild(box)
+  private openZoom = () => {
+    const el = document.createElement('img-zoom') as HTMLElement & {
+      images: typeof homepageImages
     }
+    el.images = homepageImages
+    document.body.appendChild(el)
   }
 
   render() {
@@ -69,12 +80,12 @@ export class ProjectsIfficient extends LitElement {
         <div class="grid gap-4 *:rounded-[.75rem] lg:col-span-2">
           <div
             class="group relative aspect-video cursor-pointer overflow-hidden border-2 border-zinc-800 before:absolute before:inset-0 before:transition-colors before:duration-200 hover:before:bg-zinc-950/50 before:hover:opacity-1"
-            @click=${this.handleSeeFullPage}
+            @click=${this.openZoom}
           >
             <img
               id="ifficient-homepage"
               class="w-full"
-              src="${p1}"
+              src="${home}"
               alt="Ifficient homepage"
             />
             <div
