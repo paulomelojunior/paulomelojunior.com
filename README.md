@@ -16,16 +16,23 @@ Personal portfolio website built with modern web technologies. A showcase of my 
 
 ```bash
 # Install dependencies
-npm install
+pnpm install
 
 # Start development server
-npm run dev
+pnpm dev
 
 # Build for production
-npm run build
+pnpm build
 
 # Preview production build
-npm run preview
+pnpm preview
+
+# Type checking
+npx tsc --noEmit
+
+# Formatting
+npx prettier --write .
+npx prettier --check .
 ```
 
 ## Features
@@ -36,3 +43,23 @@ npm run preview
 - Smooth scroll animations
 - SEO optimized
 - PWA ready
+
+## Project Structure
+
+```
+src/
+├── components/          # Lit web components
+├── language/            # i18n translations (en.json, pt.json)
+├── store/               # Global state (theme)
+├── main.ts              # Entry point
+├── i18n.ts              # i18next config
+└── seo.ts               # SEO utilities
+```
+
+## Deployment
+
+Build output goes to `docs/` directory (configured for GitHub Pages).
+
+## AGENTS.md
+
+For AI agents working on this project, see [AGENTS.md](./AGENTS.md) for code style and technical guidelines.
