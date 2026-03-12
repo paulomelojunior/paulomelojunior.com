@@ -114,15 +114,15 @@ export class HeroSection extends ThemeMixin(LitElement) {
   render() {
     return html`
       <section
-        class="hero before:content-none md:before:content-['']"
+        class="hero before:content-none sm:before:content-['']"
         data-parallax-layers
         data-entrance
       >
         <div
-          class="container flex min-h-[calc(100svh-4rem)] flex-col-reverse pt-12 sm:flex-col md:justify-between md:pt-18"
+          class="container flex min-h-[calc(100svh-4rem)] flex-col-reverse pt-12 sm:flex-col sm:justify-between sm:pt-18"
         >
           <div
-            class="relative z-10 mx-5 mb-auto flex flex-col md:my-auto md:items-center xl:pt-16 xl:pb-20"
+            class="relative z-10 mx-5 mb-auto flex flex-col sm:my-auto sm:items-center sm:pt-16 sm:pb-20"
             data-parallax-layer="1"
           >
             <div data-entrance-item="3" class="mb-5 flex items-center gap-4">

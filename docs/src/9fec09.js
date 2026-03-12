@@ -93,10 +93,14 @@ var xh=Object.defineProperty;var wh=(s,e,t)=>e in s?xh(s,e,{enumerable:!0,config
                 >
                   Who I Am
                 </h3>
-                <p class="mb-8 text-sm/loose text-pretty lg:text-base/loose">
+                <p
+                  class="mb-8 text-sm/loose text-pretty lg:text-xl/loose"
+                >
                   ${m.t("about.p1")}
                 </p>
-                <p class="text-sm/loose text-pretty lg:text-base/loose">
+                <p
+                  class="mb-2 text-sm/loose text-pretty lg:text-xl/loose"
+                >
                   ${m.t("about.p2")}
                 </p>
               </div>
@@ -106,7 +110,7 @@ var xh=Object.defineProperty;var wh=(s,e,t)=>e in s?xh(s,e,{enumerable:!0,config
                 >
                   ${m.t("about.education")}
                 </h3>
-                <ul class="grid gap-y-4 xl:grid-cols-3">
+                <ul class="grid gap-y-4 md:grid-cols-3">
                   <li class="mt-3 grid gap-2">
                     <h4 class="text-[1.25rem] leading-none text-zinc-50">
                       Industrial Design
@@ -131,13 +135,13 @@ var xh=Object.defineProperty;var wh=(s,e,t)=>e in s?xh(s,e,{enumerable:!0,config
                   </li>
                 </ul>
               </div>
-              <div class="pt-2">
+              <div class="pt-3">
                 <h3
                   class="text-brand-400 font-mono text-[.625rem] font-semibold tracking-widest uppercase"
                 >
                   ${m.t("about.courses")}
                 </h3>
-                <ul class="grid gap-y-4 xl:grid-cols-3">
+                <ul class="grid gap-y-4 md:grid-cols-3">
                   <li class="mt-3 grid gap-2">
                     <h4 class="text-[1.25rem] leading-none text-zinc-50">
                       Digital Product Design
@@ -199,7 +203,9 @@ var xh=Object.defineProperty;var wh=(s,e,t)=>e in s?xh(s,e,{enumerable:!0,config
       <div
         class="mb-8 lg:sticky lg:top-24 lg:mb-0 lg:grid lg:items-end lg:gap-8"
       >
-        <div class="mb-6 lg:mb-1 flex flex-wrap gap-2 text-[.875rem] leading-none">
+        <div
+          class="mb-6 flex flex-wrap gap-2 text-[.875rem] leading-none lg:mb-1"
+        >
           <span class="text-brand-400"> ${this.year} </span>
           ${e}
         </div>
@@ -267,7 +273,7 @@ var xh=Object.defineProperty;var wh=(s,e,t)=>e in s?xh(s,e,{enumerable:!0,config
           <div class="flex items-center">
             <button
               @click=${()=>this.getPreviousPage()}
-              class="flex size-8 ms-2 cursor-pointer items-center justify-center rounded-full opacity-50 transition-all duration-[200ms] hover:bg-zinc-50/10 hover:opacity-100 active:scale-95 active:bg-zinc-50/20"
+              class="ms-2 flex size-8 cursor-pointer items-center justify-center rounded-full opacity-50 transition-all duration-[200ms] hover:bg-zinc-50/10 hover:opacity-100 active:scale-95 active:bg-zinc-50/20"
               title="Go back to homepage"
             >
               <img src="${Sm}" class="transition-all duration-[200ms]" />
@@ -336,7 +342,7 @@ var xh=Object.defineProperty;var wh=(s,e,t)=>e in s?xh(s,e,{enumerable:!0,config
         <p class="text-[.875rem] leading-none">${m.t("allugator.metrics.daily.subtitle")}</p>
       </div>
     `;return R`
-      <div id="allugator" class="py-8 lg:grid lg:grid-cols-3 lg:py-16 mx-5">
+      <div id="allugator" class="mx-5 py-8 lg:grid lg:grid-cols-3 lg:py-16">
         <item-header
           title="${m.t("allugator.title")}"
           tags="${m.t("allugator.tags")}"
@@ -374,7 +380,7 @@ var xh=Object.defineProperty;var wh=(s,e,t)=>e in s?xh(s,e,{enumerable:!0,config
         ${m.t("damus.description2")}
       </p>
     `;return R`
-      <div id="damus" class="py-8 lg:grid lg:grid-cols-3 lg:py-16 mx-5">
+      <div id="damus" class="mx-5 py-8 lg:grid lg:grid-cols-3 lg:py-16">
         <item-header
           title="${m.t("damus.title")}"
           tags="${m.t("damus.tags")}"
@@ -500,7 +506,7 @@ var xh=Object.defineProperty;var wh=(s,e,t)=>e in s?xh(s,e,{enumerable:!0,config
         ${m.t("ifficient.cta")}
       </a>
     `;return R`
-      <div id="ifficient" class="py-8 lg:grid lg:grid-cols-3 lg:py-16 mx-5">
+      <div id="ifficient" class="mx-5 py-8 lg:grid lg:grid-cols-3 lg:py-16">
         <item-header
           title="${m.t("ifficient.title")}"
           tags="${m.t("ifficient.tags")}"
@@ -557,7 +563,7 @@ var xh=Object.defineProperty;var wh=(s,e,t)=>e in s?xh(s,e,{enumerable:!0,config
         </p>
       </div>
     `;return R`
-      <div id="multiplayer" class="py-8 lg:grid lg:grid-cols-3 lg:py-16 mx-5">
+      <div id="multiplayer" class="mx-5 py-8 lg:grid lg:grid-cols-3 lg:py-16">
         <item-header
           title="${m.t("multiplayer.title")}"
           tags="${m.t("multiplayer.tags")}"
@@ -601,7 +607,7 @@ var xh=Object.defineProperty;var wh=(s,e,t)=>e in s?xh(s,e,{enumerable:!0,config
         ></div>
         <projects-multiplayer></projects-multiplayer>
         <div
-          class="hidden lg:block my-8 h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent lg:my-16 lg:mb-32"
+          class="my-8 hidden h-px w-full bg-linear-to-r from-transparent via-zinc-700 to-transparent lg:my-16 lg:mb-32 lg:block"
         ></div>
         <cases-section></cases-section>
       </section>
@@ -767,15 +773,15 @@ var xh=Object.defineProperty;var wh=(s,e,t)=>e in s?xh(s,e,{enumerable:!0,config
       </footer>
     `}createRenderRoot(){return this}};nh([L({type:String})],Ma.prototype,"lang",2);Ma=nh([ie("footer-section")],Ma);const E0="data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%2013L2%206.99999M2%206.99999L8%201M2%206.99999L14%206.99999'%20stroke='white'%20stroke-width='1.5'/%3e%3c/svg%3e",A0="/src/c2501f.webp",L0="/src/c03c5c.webp",M0="/src/37694a.webp",z0="/src/2e45e1.webp",D0="/src/5963f7.webp";var R0=Object.defineProperty,j0=Object.getOwnPropertyDescriptor,rh=(s,e,t,i)=>{for(var n=i>1?void 0:i?j0(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&R0(e,t,n),n};let za=class extends ui(G){constructor(){super(...arguments),this.lang=m.language}connectedCallback(){super.connectedCallback(),m.on("languageChanged",()=>{this.lang=m.language})}disconnectedCallback(){super.disconnectedCallback(),m.off("languageChanged",()=>{this.lang=m.language})}itemEntrance(){oe.from(".hero",{paddingTop:64}),document.querySelectorAll("[data-entrance]").forEach(s=>{const e=[{item:"4",opacity:"0",y:"20%",delay:.4,scale:1.1,duration:1},{item:"5",opacity:"0",y:"20%",delay:0,scale:1.1,duration:1.2},{item:"3",opacity:"0",y:"0rem",delay:.2,duration:1},{item:"2",opacity:"0",y:"0rem",delay:.2,duration:1},{item:"1",opacity:"0",y:"0rem",delay:.2,duration:1}],t=oe.timeline();e.forEach((i,n)=>{t.from(s.querySelectorAll(`[data-entrance-item="${i.item}"]`),{y:i.y,opacity:i.opacity,delay:i.delay,scale:i.scale,duration:i.duration},n===0?void 0:"<")})})}heroParallax(){document.querySelectorAll("[data-parallax-layers]").forEach(s=>{let e=oe.timeline({scrollTrigger:{trigger:s,start:"0% 0%",end:"100% 0%",scrub:0}});[{layer:"1",y:"2.5rem",opacity:0},{layer:"2",y:"5rem",opacity:0,filter:"blur(1rem)"}].forEach((i,n)=>{e.to(s.querySelectorAll(`[data-parallax-layer="${i.layer}"]`),{y:i.y,ease:"none",opacity:i.opacity,filter:i.filter},n===0?void 0:"<")})})}firstUpdated(){this.itemEntrance(),this.heroParallax()}render(){return R`
       <section
-        class="hero before:content-none md:before:content-['']"
+        class="hero before:content-none sm:before:content-['']"
         data-parallax-layers
         data-entrance
       >
         <div
-          class="container flex min-h-[calc(100svh-4rem)] flex-col-reverse md:justify-between pt-12 sm:flex-col md:pt-18"
+          class="container flex min-h-[calc(100svh-4rem)] flex-col-reverse pt-12 sm:flex-col sm:justify-between sm:pt-18"
         >
           <div
-            class="relative z-10 mb-auto md:my-auto flex flex-col mx-5 md:items-center xl:pt-16 xl:pb-20"
+            class="relative z-10 mx-5 mb-auto flex flex-col sm:my-auto sm:items-center sm:pt-16 sm:pb-20"
             data-parallax-layer="1"
           >
             <div data-entrance-item="3" class="mb-5 flex items-center gap-4">
@@ -1418,7 +1424,7 @@ var xh=Object.defineProperty;var wh=(s,e,t)=>e in s?xh(s,e,{enumerable:!0,config
     </div>`}createRenderRoot(){return this}};ch([L({type:String})],Na.prototype,"lang",2);Na=ch([ie("twyne-about")],Na);var v1=Object.defineProperty,b1=Object.getOwnPropertyDescriptor,uh=(s,e,t,i)=>{for(var n=i>1?void 0:i?b1(e,t):e,r=s.length-1,o;r>=0;r--)(o=s[r])&&(n=(i?o(e,t,n):o(n))||n);return i&&n&&v1(e,t,n),n};oe.registerPlugin(Q);let Fa=class extends G{constructor(){super(...arguments),this.lang=m.language,this.handleLanguageChange=()=>{this.lang=m.language}}connectedCallback(){super.connectedCallback(),m.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),m.off("languageChanged",this.handleLanguageChange),this.cleanupAnimation()}setupSignatureAnimation(){if(!this.signElement)return;const s=this.signElement.querySelectorAll("path");this.animation=oe.from(s,{scrollTrigger:{trigger:this.signElement,start:"100% 100%",toggleActions:"play none none reverse"},duration:.75,stagger:.75,drawSVG:!1})}cleanupAnimation(){this.animation&&(this.animation.kill(),this.animation=void 0)}firstUpdated(s){this.signElement=this.querySelector("#sign"),this.setupSignatureAnimation()}renderSignature(){return R`
       <svg
         id="sign"
-        class="mt-2 rotate-21 stroke-brand-400"
+        class="stroke-brand-400 mt-2 rotate-21"
         width="44"
         height="67"
         viewBox="0 0 44 67"
@@ -1440,7 +1446,7 @@ var xh=Object.defineProperty;var wh=(s,e,t)=>e in s?xh(s,e,{enumerable:!0,config
       </svg>
     `}renderContent(){return R`
       <h2
-        class="font-mono mt-16 mb-4 text-[0.75rem] leading-none font-semibold tracking-[0.05em] text-zinc-500 uppercase"
+        class="mt-16 mb-4 font-mono text-[0.75rem] leading-none font-semibold tracking-[0.05em] text-zinc-500 uppercase"
       >
         ${m.t("twyne.conclusion.t1")}
       </h2>

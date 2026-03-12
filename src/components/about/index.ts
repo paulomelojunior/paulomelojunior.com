@@ -45,10 +45,14 @@ export class AboutSection extends ThemeMixin(LitElement) {
                 >
                   Who I Am
                 </h3>
-                <p class="mb-8 text-sm/loose text-pretty lg:text-base/loose">
+                <p
+                  class="mb-8 text-sm/loose text-pretty lg:text-xl/loose"
+                >
                   ${i18next.t('about.p1')}
                 </p>
-                <p class="text-sm/loose text-pretty lg:text-base/loose">
+                <p
+                  class="mb-2 text-sm/loose text-pretty lg:text-xl/loose"
+                >
                   ${i18next.t('about.p2')}
                 </p>
               </div>
@@ -58,7 +62,7 @@ export class AboutSection extends ThemeMixin(LitElement) {
                 >
                   ${i18next.t('about.education')}
                 </h3>
-                <ul class="grid gap-y-4 xl:grid-cols-3">
+                <ul class="grid gap-y-4 md:grid-cols-3">
                   <li class="mt-3 grid gap-2">
                     <h4 class="text-[1.25rem] leading-none text-zinc-50">
                       Industrial Design
@@ -83,13 +87,13 @@ export class AboutSection extends ThemeMixin(LitElement) {
                   </li>
                 </ul>
               </div>
-              <div class="pt-2">
+              <div class="pt-3">
                 <h3
                   class="text-brand-400 font-mono text-[.625rem] font-semibold tracking-widest uppercase"
                 >
                   ${i18next.t('about.courses')}
                 </h3>
-                <ul class="grid gap-y-4 xl:grid-cols-3">
+                <ul class="grid gap-y-4 md:grid-cols-3">
                   <li class="mt-3 grid gap-2">
                     <h4 class="text-[1.25rem] leading-none text-zinc-50">
                       Digital Product Design
