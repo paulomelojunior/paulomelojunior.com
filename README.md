@@ -16,16 +16,16 @@ Personal portfolio website built with modern web technologies. A showcase of my 
 
 ```bash
 # Install dependencies
-pnpm install
+yarn install
 
 # Start development server
-pnpm dev
+yarn dev
 
 # Build for production
-pnpm build
+yarn build
 
 # Preview production build
-pnpm preview
+yarn preview
 
 # Type checking
 npx tsc --noEmit
