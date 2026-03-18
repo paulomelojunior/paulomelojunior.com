@@ -156,7 +156,7 @@ export class TwyneScreens extends LitElement {
 
           <div class="absolute inset-0">
             <div
-              class="sticky -inset-x-4 top-[calc(100dvh-15rem)] isolate flex h-60 items-end justify-center after:absolute after:inset-0 after:z-10 after:bg-linear-to-t after:from-zinc-950 after:content-['']"
+              class="sticky -inset-x-4 top-[calc(100dvh-15rem)] isolate flex h-60 items-end justify-center after:absolute after:inset-0 after:z-10 after:bg-linear-to-t after:from-red-950 after:content-['']"
             >
               <progressive-blur></progressive-blur>
 

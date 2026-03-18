@@ -9,6 +9,7 @@
     "preview": "vite preview --open"
   },
   "devDependencies": {
+    "postcss-easing-gradients": "^3.0.1",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.6.14",
     "typescript": "^5.8.2",

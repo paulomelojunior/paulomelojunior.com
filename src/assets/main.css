@@ -56,6 +56,10 @@
   margin-inline: auto;
 }
 
+@utility bg-linear-easing {
+  background: linear-gradient(to bottom, black, ease, transparent);
+}
+
 @layer base {
   ::selection {
     @apply bg-brand-400 text-zinc-950;
