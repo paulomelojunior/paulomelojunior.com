@@ -1,8 +1,14 @@
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
+import postcssEasingGradients from 'postcss-easing-gradients'
 
 export default defineConfig({
   plugins: [tailwindcss()],
+  css: {
+    postcss: {
+      plugins: [postcssEasingGradients],
+    },
+  },
   esbuild: {
     loader: 'ts',
     include: /\.ts$/,
