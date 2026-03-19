@@ -72,7 +72,7 @@ export class PageLoading extends LitElement {
     }
     const overlay = (this.querySelector('#loading') as HTMLElement) || this
     const mainContent = document.querySelector('main') as HTMLElement
-    gsap.set(mainContent, { y: '5rem', opacity: 0 })
+    gsap.set(mainContent, { y: '1rem', opacity: 0 })
     gsap.to(overlay, {
       opacity: 0,
       scale: 2,

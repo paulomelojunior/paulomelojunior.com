@@ -1,3 +1,4 @@
+import './components/loading'
 import './i18n'
 import './lenis'
 import './gsap'
@@ -12,7 +13,6 @@ import './components/marquee'
 import './components/menu'
 import './components/method'
 import './components/praxis'
-import './components/loading'
 import './seo'
 
 // Twyne

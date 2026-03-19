@@ -106,7 +106,7 @@ export class TwyneAbout extends LitElement {
           loading="lazy"
           decoding="async"
           alt="Twyne about cover"
-          class="absolute top-0 left-6 flex-none rounded-ss-md border-t border-zinc-800 shadow-[0px_24px_24px_0px_black] lg:top-16 lg:left-16 lg:max-w-none lg:rounded-ss-lg"
+          class="absolute top-0 left-6 flex-none rounded-ss-md shadow-[0px_0px_48px_-12px_var(--color-zinc-950)] lg:top-16 lg:left-16 lg:max-w-none lg:rounded-ss-lg"
         />
         <progressive-blur
           class="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-zinc-950 to-transparent"

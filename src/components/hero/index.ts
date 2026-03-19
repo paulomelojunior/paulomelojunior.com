@@ -114,7 +114,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
   render() {
     return html`
       <section
-        class="hero before:content-none sm:before:content-['']"
+        class="hero animate-fade-in before:content-none sm:before:content-['']"
         data-parallax-layers
         data-entrance
       >

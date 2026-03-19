@@ -22,7 +22,7 @@ export class TwyneProposal extends LitElement {
   @property({ type: String }) lang = i18next.language
 
   // Referência para as animações
-  private componentAnimations: gsap.core.Tween[] = []
+  // private componentAnimations: gsap.core.Tween[] = []
 
   connectedCallback() {
     super.connectedCallback()
@@ -32,47 +32,47 @@ export class TwyneProposal extends LitElement {
   disconnectedCallback() {
     super.disconnectedCallback()
     i18next.off('languageChanged', this.handleLanguageChange)
-    this.cleanupAnimations()
+    // this.cleanupAnimations()
   }
 
   private handleLanguageChange = () => {
     this.lang = i18next.language
   }
 
-  private setupComponentAnimations(): void {
-    const componentsImgs = this.renderRoot.querySelectorAll('img')
+  // private setupComponentAnimations(): void {
+  //   const componentsImgs = this.renderRoot.querySelectorAll('img')
 
-    componentsImgs.forEach((img) => {
-      const animation = gsap.from(img, {
-        scrollTrigger: {
-          trigger: img,
-          start: '0% 100%',
-          end: '0% 50%',
-          toggleActions: 'play none none reverse',
-        },
-        scale: 1,
-        opacity: 0,
-        filter: 'blur(1rem)',
-        duration: 1,
-        y: '20%',
-      })
+  //   componentsImgs.forEach((img) => {
+  //     const animation = gsap.from(img, {
+  //       scrollTrigger: {
+  //         trigger: img,
+  //         start: '0% 100%',
+  //         end: '0% 50%',
+  //         toggleActions: 'play none none reverse',
+  //       },
+  //       scale: 1,
+  //       opacity: 0,
+  //       filter: 'blur(1rem)',
+  //       duration: 1,
+  //       y: '20%',
+  //     })
 
-      this.componentAnimations.push(animation)
-    })
-  }
+  //     this.componentAnimations.push(animation)
+  //   })
+  // }
 
-  private cleanupAnimations(): void {
-    this.componentAnimations.forEach((animation) => {
-      if (animation) {
-        animation.kill()
-      }
-    })
-    this.componentAnimations = []
-  }
+  // private cleanupAnimations(): void {
+  //   this.componentAnimations.forEach((animation) => {
+  //     if (animation) {
+  //       animation.kill()
+  //     }
+  //   })
+  //   this.componentAnimations = []
+  // }
 
-  firstUpdated() {
-    this.setupComponentAnimations()
-  }
+  // firstUpdated() {
+  //   this.setupComponentAnimations()
+  // }
 
   private renderProposalList(): unknown {
     const proposalList = i18next.t('twyne.proposal.l1', {

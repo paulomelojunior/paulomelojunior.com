@@ -40,7 +40,7 @@
 
   --tracking-tightest: -0.075em;
 
-  --animate-fade-in: fade-in 0.2s ease-in;
+  --animate-fade-in: fade-in 0.4s ease-in;
 
   @keyframes fade-in {
     0% {
@@ -54,10 +54,6 @@
 
 @utility container {
   margin-inline: auto;
-}
-
-@utility bg-linear-easing {
-  background: linear-gradient(to bottom, black, ease, transparent);
 }
 
 @layer base {
@@ -112,7 +108,7 @@
     position: relative;
   }
 
-  .hero::before {
+  .hero:before {
     position: absolute;
     background: url('imgs/pattern.svg');
     content: '';
@@ -129,7 +125,7 @@
   }
 
   @media (min-width: 1280px) {
-    .hero::before {
+    .hero:before {
       background-attachment: fixed;
     }
   }

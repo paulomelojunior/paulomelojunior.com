@@ -156,11 +156,9 @@ export class TwyneScreens extends LitElement {
 
           <div class="absolute inset-0">
             <div
-              class="sticky -inset-x-4 top-[calc(100dvh-15rem)] isolate flex h-60 items-end justify-center after:absolute after:inset-0 after:z-10 after:bg-linear-to-t after:from-red-950 after:content-['']"
+              class="sticky top-[calc(100dvh-8rem)] isolate flex h-32 items-end justify-center after:absolute after:inset-0 after:z-10 after:content-['']"
             >
-              <progressive-blur></progressive-blur>
-
-              <div class="relative z-20 flex gap-px pb-2">
+              <div class="relative z-20 flex gap-px mb-4 backdrop-blur-md rounded-full shadow-xl shadow-zinc-950/50">
                 <button
                   data-prev
                   class="flex items-center gap-4 rounded-s-full bg-zinc-100/10 py-3 ps-5 pe-4 text-[.75rem] leading-none tracking-[.05em] text-zinc-50 uppercase transition-all hover:bg-zinc-100 hover:text-zinc-950"
@@ -171,7 +169,7 @@ export class TwyneScreens extends LitElement {
                 <span
                   class="flex items-center justify-center bg-zinc-50/5 px-4 font-mono text-[.75rem] leading-none font-medium tracking-[.05em] uppercase"
                 >
-                  ${this.currentIndex + 1} / ${this.screens?.length ?? 3}
+                  ${this.currentIndex + 1} - ${this.screens?.length ?? 3}
                 </span>
 
                 <button
