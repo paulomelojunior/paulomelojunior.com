@@ -194,15 +194,14 @@ var wh=Object.defineProperty;var Ch=(s,e,t)=>e in s?wh(s,e,{enumerable:!0,config
           ${ci(m.t("featured.title"))}
         </h1>
       </div>
-    `}createRenderRoot(){return this}};Jd([L({type:String})],Po.prototype,"lang",2);Po=Jd([ie("projects-header")],Po);var Cm=Object.defineProperty,Sm=Object.getOwnPropertyDescriptor,us=(s,e,t,i)=>{for(var n=i>1?void 0:i?Sm(e,t):e,r=s.length-1,a;r>=0;r--)(a=s[r])&&(n=(i?a(e,t,n):a(n))||n);return i&&n&&Cm(e,t,n),n};let nr=class extends G{constructor(){super(...arguments),this.title="",this.tags="",this.year="2025",this.contentHtml=""}connectedCallback(){super.connectedCallback()}disconnectedCallback(){super.disconnectedCallback()}render(){const e=this.tags.split(",").map(t=>t.trim()).map(t=>D`<span class="text-[.875rem] text-zinc-400">/</span
-          ><span class="text-zinc-50">${t}</span>`);return D`
+    `}createRenderRoot(){return this}};Jd([L({type:String})],Po.prototype,"lang",2);Po=Jd([ie("projects-header")],Po);var Cm=Object.defineProperty,Sm=Object.getOwnPropertyDescriptor,us=(s,e,t,i)=>{for(var n=i>1?void 0:i?Sm(e,t):e,r=s.length-1,a;r>=0;r--)(a=s[r])&&(n=(i?a(e,t,n):a(n))||n);return i&&n&&Cm(e,t,n),n};let nr=class extends G{constructor(){super(...arguments),this.title="",this.tags="",this.year="2025",this.contentHtml=""}connectedCallback(){super.connectedCallback()}disconnectedCallback(){super.disconnectedCallback()}render(){const e=this.tags.split(",").map(t=>t.trim()).map(t=>D`<span class="text-zinc-50">${t}</span>`);return D`
       <div
         class="mb-8 lg:sticky lg:top-24 lg:mb-0 lg:grid lg:items-end lg:gap-8"
       >
         <div
-          class="mb-6 flex flex-wrap gap-2 text-[.875rem] leading-none lg:mb-1"
+          class="mb-6 flex flex-wrap gap-4 text-[.875rem] leading-none lg:mb-1"
         >
-          <span class="text-brand-400"> ${this.year} </span>
+          <span class="text-zinc-50 font-bold"> ${this.year} </span>
           ${e}
         </div>
         <h2
@@ -313,7 +312,7 @@ var wh=Object.defineProperty;var Ch=(s,e,t)=>e in s?wh(s,e,{enumerable:!0,config
               href="/Paulo Melo Jr. - Currículo.pdf"
               target="_blank"
             >
-              ${this.lang==="en"?"Download resume":"Baixar currículo"}
+              ${this.lang==="en"?"Download CV":"Baixar currículo"}
             </a>
             <languages-dropdown></languages-dropdown>
           </div>
@@ -353,7 +352,7 @@ var wh=Object.defineProperty;var Ch=(s,e,t)=>e in s?wh(s,e,{enumerable:!0,config
           class="grid grid-cols-2 gap-2 *:rounded-[.5rem] lg:col-span-2 lg:grid-cols-3 lg:gap-4"
         >
           <img
-            class="border-2 border-zinc-800 mix-blend-screen"
+            class="border border-zinc-900 mix-blend-screen"
             src="${Am}"
             loading="lazy"
           />
@@ -366,7 +365,7 @@ var wh=Object.defineProperty;var Ch=(s,e,t)=>e in s?wh(s,e,{enumerable:!0,config
           />
           <img src="${Lm}" loading="lazy" />
           <img
-            class="border-2 border-zinc-800"
+            class="border border-zinc-900"
             src="${Em}"
             loading="lazy"
           />
@@ -390,12 +389,12 @@ var wh=Object.defineProperty;var Ch=(s,e,t)=>e in s?wh(s,e,{enumerable:!0,config
         <div
           class="grid grid-cols-2 gap-2 *:rounded-[.5rem] lg:col-span-2 lg:gap-4"
         >
-          <img src="${Rm}" loading="lazy" class="border-2 border-zinc-800" />
+          <img src="${Rm}" loading="lazy" class="border border-zinc-900" />
           <img src="${jm}" loading="lazy" />
           <img src="${Im}" loading="lazy" />
           <img src="${Fm}" loading="lazy" />
           <img
-            class="col-span-2 border-2 border-zinc-800"
+            class="col-span-2 border border-zinc-900"
             src="${Nm}"
             loading="lazy"
           />
@@ -456,7 +455,7 @@ var wh=Object.defineProperty;var Ch=(s,e,t)=>e in s?wh(s,e,{enumerable:!0,config
         ></item-header>
         <div class="grid gap-4 *:rounded-[.75rem] lg:col-span-2">
           <div
-            class="group relative aspect-video cursor-pointer overflow-hidden border-2 border-zinc-800 before:absolute before:inset-0 before:transition-colors before:duration-200 hover:before:bg-zinc-950/50 before:hover:opacity-1"
+            class="group relative aspect-video cursor-pointer overflow-hidden border border-zinc-900 before:absolute before:inset-0 before:transition-colors before:duration-200 hover:before:bg-zinc-950/50 before:hover:opacity-1"
             @click=${this.openZoom}
           >
             <img
@@ -466,7 +465,7 @@ var wh=Object.defineProperty;var Ch=(s,e,t)=>e in s?wh(s,e,{enumerable:!0,config
               alt="Ifficient homepage"
             />
             <div
-              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-zinc-100/15 px-5 py-3 text-[1rem] leading-[20px] font-medium text-zinc-50 opacity-0 backdrop-blur transition-all duration-200 group-hover:opacity-100 hover:bg-zinc-100/30"
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-zinc-100/15 px-5 py-3 text-[1rem] leading-none font-medium text-zinc-50 opacity-0 backdrop-blur transition-all duration-200 group-hover:opacity-100 hover:bg-zinc-100/30"
             >
               ${m.t("ifficient.fullView")}
             </div>
@@ -546,7 +545,7 @@ var wh=Object.defineProperty;var Ch=(s,e,t)=>e in s?wh(s,e,{enumerable:!0,config
           <img src="${p0}" loading="lazy" />
           <img src="${f0}" loading="lazy" />
           <img
-            class="col-span-2 border-2 border-zinc-800"
+            class="col-span-2 border border-zinc-900"
             src="${o0}"
             loading="lazy"
           />
@@ -870,7 +869,7 @@ var wh=Object.defineProperty;var Ch=(s,e,t)=>e in s?wh(s,e,{enumerable:!0,config
           target="_blank"
           class="cta-button cta-button--accent flex items-center px-6 py-4 text-[1rem] leading-none"
         >
-          ${this.lang==="en"?"Download my resume":"Baixar meu currículo"}
+          ${this.lang==="en"?"Download my CV":"Baixar meu currículo"}
         </a>
       </div>
     `}renderJourneyItem(s){return s.hide?D`<div class="hidden xl:flex"></div>`:D`
@@ -1948,12 +1947,14 @@ var wh=Object.defineProperty;var Ch=(s,e,t)=>e in s?wh(s,e,{enumerable:!0,config
 
           <div class="absolute inset-0">
             <div
-              class="sticky top-[calc(100dvh-8rem)] isolate flex h-32 items-end justify-center after:absolute after:inset-0 after:z-10 after:content-['']"
+              class="sticky top-[calc(100dvh-72px)] isolate flex translate-y-1/2 justify-center"
             >
-              <div class="relative z-20 flex gap-px mb-4 backdrop-blur-md rounded-full shadow-xl shadow-zinc-950/50">
+              <div
+                class="relative z-20 flex gap-px rounded-full shadow-xl shadow-zinc-950/25 backdrop-blur-md"
+              >
                 <button
                   data-prev
-                  class="flex items-center gap-4 rounded-s-full bg-zinc-100/10 py-3 ps-5 pe-4 text-[.75rem] leading-none tracking-[.05em] text-zinc-50 uppercase transition-all hover:bg-zinc-100 hover:text-zinc-950"
+                  class="flex items-center gap-4 rounded-s-full bg-zinc-100/80 py-3 ps-5 pe-4 text-[.75rem] leading-none tracking-[.05em] uppercase transition-all hover:bg-zinc-50 text-zinc-950"
                 >
                   Prev
                 </button>
@@ -1966,7 +1967,7 @@ var wh=Object.defineProperty;var Ch=(s,e,t)=>e in s?wh(s,e,{enumerable:!0,config
 
                 <button
                   data-next
-                  class="flex items-center gap-4 rounded-e-full bg-zinc-100/10 py-3 ps-4 pe-5 text-[.75rem] leading-none tracking-[.05em] text-zinc-50 uppercase transition-all hover:bg-zinc-100 hover:text-zinc-950"
+                  class="flex items-center gap-4 rounded-e-full bg-zinc-100/80 py-3 ps-4 pe-5 text-[.75rem] leading-none tracking-[.05em] uppercase transition-all hover:bg-zinc-50 text-zinc-950"
                 >
                   Next
                 </button>

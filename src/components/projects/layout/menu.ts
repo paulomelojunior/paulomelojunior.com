@@ -208,7 +208,7 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
               href="/Paulo Melo Jr. - Currículo.pdf"
               target="_blank"
             >
-              ${this.lang === 'en' ? 'Download resume' : 'Baixar currículo'}
+              ${this.lang === 'en' ? 'Download CV' : 'Baixar currículo'}
             </a>
             <languages-dropdown></languages-dropdown>
           </div>

@@ -85,7 +85,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
           target="_blank"
           class="cta-button cta-button--accent flex items-center px-6 py-4 text-[1rem] leading-none"
         >
-          ${this.lang === 'en' ? 'Download my resume' : 'Baixar meu currículo'}
+          ${this.lang === 'en' ? 'Download my CV' : 'Baixar meu currículo'}
         </a>
       </div>
     `

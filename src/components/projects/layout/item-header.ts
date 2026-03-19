@@ -21,8 +21,7 @@ export class ItemHeader extends LitElement {
     const headerList = this.tags.split(',').map((item) => item.trim())
     const headerTags = headerList.map(
       (item) =>
-        html`<span class="text-[.875rem] text-zinc-400">/</span
-          ><span class="text-zinc-50">${item}</span>`
+        html`<span class="text-zinc-50">${item}</span>`
     )
 
     return html`
@@ -30,9 +29,9 @@ export class ItemHeader extends LitElement {
         class="mb-8 lg:sticky lg:top-24 lg:mb-0 lg:grid lg:items-end lg:gap-8"
       >
         <div
-          class="mb-6 flex flex-wrap gap-2 text-[.875rem] leading-none lg:mb-1"
+          class="mb-6 flex flex-wrap gap-4 text-[.875rem] leading-none lg:mb-1"
         >
-          <span class="text-brand-400"> ${this.year} </span>
+          <span class="text-zinc-50 font-bold"> ${this.year} </span>
           ${headerTags}
         </div>
         <h2

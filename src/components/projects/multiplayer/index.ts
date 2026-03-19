@@ -87,7 +87,7 @@ export class ProjectsMultiplayer extends LitElement {
           <img src="${s6}" loading="lazy" />
           <img src="${s5}" loading="lazy" />
           <img
-            class="col-span-2 border-2 border-zinc-800"
+            class="col-span-2 border border-zinc-900"
             src="${p1}"
             loading="lazy"
           />

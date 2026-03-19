@@ -156,12 +156,14 @@ export class TwyneScreens extends LitElement {
 
           <div class="absolute inset-0">
             <div
-              class="sticky top-[calc(100dvh-8rem)] isolate flex h-32 items-end justify-center after:absolute after:inset-0 after:z-10 after:content-['']"
+              class="sticky top-[calc(100dvh-72px)] isolate flex translate-y-1/2 justify-center"
             >
-              <div class="relative z-20 flex gap-px mb-4 backdrop-blur-md rounded-full shadow-xl shadow-zinc-950/50">
+              <div
+                class="relative z-20 flex gap-px rounded-full shadow-xl shadow-zinc-950/25 backdrop-blur-md"
+              >
                 <button
                   data-prev
-                  class="flex items-center gap-4 rounded-s-full bg-zinc-100/10 py-3 ps-5 pe-4 text-[.75rem] leading-none tracking-[.05em] text-zinc-50 uppercase transition-all hover:bg-zinc-100 hover:text-zinc-950"
+                  class="flex items-center gap-4 rounded-s-full bg-zinc-100/80 py-3 ps-5 pe-4 text-[.75rem] leading-none tracking-[.05em] uppercase transition-all hover:bg-zinc-50 text-zinc-950"
                 >
                   Prev
                 </button>
@@ -174,7 +176,7 @@ export class TwyneScreens extends LitElement {
 
                 <button
                   data-next
-                  class="flex items-center gap-4 rounded-e-full bg-zinc-100/10 py-3 ps-4 pe-5 text-[.75rem] leading-none tracking-[.05em] text-zinc-50 uppercase transition-all hover:bg-zinc-100 hover:text-zinc-950"
+                  class="flex items-center gap-4 rounded-e-full bg-zinc-100/80 py-3 ps-4 pe-5 text-[.75rem] leading-none tracking-[.05em] uppercase transition-all hover:bg-zinc-50 text-zinc-950"
                 >
                   Next
                 </button>

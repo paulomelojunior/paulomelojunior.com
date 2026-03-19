@@ -63,7 +63,7 @@ export class ProjectsAllugator extends LitElement {
           class="grid grid-cols-2 gap-2 *:rounded-[.5rem] lg:col-span-2 lg:grid-cols-3 lg:gap-4"
         >
           <img
-            class="border-2 border-zinc-800 mix-blend-screen"
+            class="border border-zinc-900 mix-blend-screen"
             src="${social4}"
             loading="lazy"
           />
@@ -76,7 +76,7 @@ export class ProjectsAllugator extends LitElement {
           />
           <img src="${social5}" loading="lazy" />
           <img
-            class="border-2 border-zinc-800"
+            class="border border-zinc-900"
             src="${social3}"
             loading="lazy"
           />
