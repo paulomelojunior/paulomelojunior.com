@@ -402,18 +402,13 @@ var wh=Object.defineProperty;var Ch=(s,e,t)=>e in s?wh(s,e,{enumerable:!0,config
       </div>
     `}createRenderRoot(){return this}};Qd([L({type:String})],To.prototype,"lang",2);To=Qd([ie("projects-damus")],To);const Vm="/src/e761eb.webp",Bm="/src/140c7b.webp",qm="/src/36a4a4.webp",Wm="/src/ae754e.webp",Ym="/src/492162.webp",Xm="/src/bec54c.webp",Gm="/src/555530.webp",Km="/src/6a0945.webp",Jm="/src/4fb0f0.webp",Zm="/src/52e81e.webp",Qm="/src/f150ed.webp",e0="/src/55a96b.webp",t0="/src/85d489.webp";var i0=Object.defineProperty,n0=Object.getOwnPropertyDescriptor,eh=(s,e,t,i)=>{for(var n=i>1?void 0:i?n0(e,t):e,r=s.length-1,a;r>=0;r--)(a=s[r])&&(n=(i?a(e,t,n):a(n))||n);return i&&n&&i0(e,t,n),n};let Oo=class extends G{constructor(){super(...arguments),this.images=[],this.overlayRafId=0,this.onKeydown=s=>{s.key==="Escape"&&this.close()},this.onBackdropClick=s=>{s.target.classList.contains("zoom-overlay")&&this.close()},this.close=()=>{this.remove()}}connectedCallback(){var s;super.connectedCallback(),(s=window.lenis)==null||s.stop(),document.body.style.overflow="hidden",document.addEventListener("keydown",this.onKeydown)}disconnectedCallback(){var s,e;super.disconnectedCallback(),this.overlayRafId&&cancelAnimationFrame(this.overlayRafId),(s=this.overlayLenis)==null||s.destroy(),this.overlayLenis=void 0,(e=window.lenis)==null||e.start(),document.body.style.overflow="",document.removeEventListener("keydown",this.onKeydown)}firstUpdated(){const s=this.querySelector(".zoom-overlay"),e=this.querySelector(".zoom-content");if(!s||!e)return;this.overlayLenis=new hu({wrapper:s,content:e});const t=i=>{var n;(n=this.overlayLenis)==null||n.raf(i),this.overlayRafId=requestAnimationFrame(t)};this.overlayRafId=requestAnimationFrame(t)}render(){return D`
       <button
-        class="fixed top-5 right-5 z-60 flex h-8 items-center gap-1 rounded-full ps-3 pe-1 text-sm/none leading-none text-zinc-100 uppercase transition-all hover:bg-zinc-100 hover:text-zinc-950 xl:pe-1.5"
+        class="fixed top-5 right-5 z-60 flex h-8 items-center gap-1 rounded-full px-3 pe-2 tracking-wider text-xs/none leading-none text-zinc-100 uppercase transition-all hover:bg-zinc-100 hover:text-zinc-950"
         @click=${this.close}
       >
         Esc
-        <svg class="size-5" stroke-width="1.5" viewBox="0 0 24 24" fill="none">
-          <path
-            d="M6.75827 17.2426L12.0009 12M17.2435 6.75736L12.0009 12M12.0009 12L6.75827 6.75736M12.0009 12L17.2435 17.2426"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
+        <span class="text-2xl/none font-extralight">
+          &times;
+        </span>
       </button>
       <div
         class="zoom-overlay fixed inset-0 z-50 overflow-auto overscroll-contain bg-zinc-50/20 backdrop-blur backdrop-brightness-50"
@@ -455,17 +450,17 @@ var wh=Object.defineProperty;var Ch=(s,e,t)=>e in s?wh(s,e,{enumerable:!0,config
         ></item-header>
         <div class="grid gap-4 *:rounded-[.75rem] lg:col-span-2">
           <div
-            class="group relative aspect-video cursor-pointer overflow-hidden border border-zinc-900 before:absolute before:inset-0 before:transition-colors before:duration-200 hover:before:bg-zinc-950/50 before:hover:opacity-1"
+            class="group relative aspect-video cursor-pointer overflow-hidden border border-zinc-900 bg-zinc-950 transition-colors hover:bg-zinc-900"
             @click=${this.openZoom}
           >
             <img
               id="ifficient-homepage"
-              class="w-full"
+              class="w-full mix-blend-screen"
               src="${Vm}"
               alt="Ifficient homepage"
             />
             <div
-              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-zinc-100/15 px-5 py-3 text-[1rem] leading-none font-medium text-zinc-50 opacity-0 backdrop-blur transition-all duration-200 group-hover:opacity-100 hover:bg-zinc-100/30"
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-zinc-100/15 px-5 py-3 text-[1rem] leading-none font-medium text-zinc-50 opacity-0 backdrop-blur transition-all group-hover:opacity-100 hover:bg-zinc-100/30"
             >
               ${m.t("ifficient.fullView")}
             </div>
@@ -605,7 +600,6 @@ var wh=Object.defineProperty;var Ch=(s,e,t)=>e in s?wh(s,e,{enumerable:!0,config
                   src="${S0}"
                   width="1264"
                   height="720"
-                  loading="lazy"
                   decoding="async"
                   alt="Dark mode mobile dashboard showing analytics overview with graphs, lead count, and campaign metrics on a tilted iPhone screen."
                 />
@@ -614,7 +608,6 @@ var wh=Object.defineProperty;var Ch=(s,e,t)=>e in s?wh(s,e,{enumerable:!0,config
                   src="${$0}"
                   width="1264"
                   height="720"
-                  loading="lazy"
                   decoding="async"
                   alt="Mobile screen in dark mode showcasing an organized campaign list view, with project names, dates, and quick actions."
                 />
@@ -692,7 +685,7 @@ var wh=Object.defineProperty;var Ch=(s,e,t)=>e in s?wh(s,e,{enumerable:!0,config
     `}createRenderRoot(){return this}};ar([L({type:String})],wn.prototype,"url",2);ar([L({type:String})],wn.prototype,"label",2);ar([L({type:String})],wn.prototype,"index",2);ar([L({type:String})],wn.prototype,"target",2);ar([L({type:String})],wn.prototype,"rel",2);wn=ar([ie("footer-link")],wn);var E0=Object.defineProperty,A0=Object.getOwnPropertyDescriptor,rh=(s,e,t,i)=>{for(var n=i>1?void 0:i?A0(e,t):e,r=s.length-1,a;r>=0;r--)(a=s[r])&&(n=(i?a(e,t,n):a(n))||n);return i&&n&&E0(e,t,n),n};let Mo=class extends G{constructor(){super(...arguments),this.lang=m.language,this.handleLanguageChange=()=>{this.lang=m.language}}connectedCallback(){super.connectedCallback(),m.on("languageChanged",this.handleLanguageChange)}disconnectedCallback(){super.disconnectedCallback(),m.off("languageChanged",this.handleLanguageChange)}currentYear(){return new Date().getFullYear()}getRandomQuote(){const s=["Stay hungry, stay foolish.","Get off zero.","No great thing is created suddenly.","Where the mind goes the body will follow.","To define is to limit.","Publish to polish."],e=Math.floor(Math.random()*s.length);return s[e]}initMenuAnimation(){const s=this.querySelector("footer"),e=this.querySelector("#menu"),t=this.querySelectorAll("#menu > *");s&&e&&t.length>0&&oe.from(Array.from(t),{scrollTrigger:{trigger:s,start:"top 50%",end:"top 0%",toggleActions:"play none none reverse"},opacity:0,stagger:.1,y:"5rem"})}firstUpdated(){this.initMenuAnimation()}render(){return D`
       <footer
         id="section-connect"
-        class="footer md:from-brand-800 relative z-10 h-lvh overflow-hidden md:bg-linear-0 md:from-[5rem] md:via-zinc-950 lg:before:content-['']"
+        class="footer md:from-brand-800 relative z-10 h-lvh overflow-hidden md:bg-linear-0 md:from-[5rem] md:via-zinc-950 md:to-zinc-950 lg:before:content-['']"
       >
         <div
           id="footerLinks"

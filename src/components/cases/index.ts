@@ -86,7 +86,6 @@ export class CasesSection extends LitElement {
                   src="${m1}"
                   width="1264"
                   height="720"
-                  loading="lazy"
                   decoding="async"
                   alt="Dark mode mobile dashboard showing analytics overview with graphs, lead count, and campaign metrics on a tilted iPhone screen."
                 />
@@ -95,7 +94,6 @@ export class CasesSection extends LitElement {
                   src="${m2}"
                   width="1264"
                   height="720"
-                  loading="lazy"
                   decoding="async"
                   alt="Mobile screen in dark mode showcasing an organized campaign list view, with project names, dates, and quick actions."
                 />

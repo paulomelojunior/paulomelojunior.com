@@ -11,7 +11,7 @@
 @theme {
   --font-sans: 'Inter', sans-serif;
   --font-mono: 'Geist Mono', monospace;
-  --font-sans--font-feature-settings: 'cv10' on, 'cv06' on, 'cv12' on;
+  --font-sans--font-feature-settings: 'cv10' on, 'cv06' on, 'cv12' on, 'dlig' on, 'ss07' on, 'ss08' on, 'case' on;
 
   --hue: 256;
   --brand: 220;
@@ -25,18 +25,6 @@
   --color-brand-700: oklch(0.3 0.077 var(--brand));
   --color-brand-800: oklch(0.2 0.051 var(--brand));
   --color-brand-900: oklch(0.1 0.026 var(--brand));
-
-  --color-zinc-50: oklch(0.9 0.006 var(--hue));
-  --color-zinc-100: oklch(0.82 0.011 var(--hue));
-  --color-zinc-200: oklch(0.74 0.016 var(--hue));
-  --color-zinc-300: oklch(0.66 0.022 var(--hue));
-  --color-zinc-400: oklch(0.58 0.023 var(--hue));
-  --color-zinc-500: oklch(0.5 0.02 var(--hue));
-  --color-zinc-600: oklch(0.42 0.017 var(--hue));
-  --color-zinc-700: oklch(0.34 0.014 var(--hue));
-  --color-zinc-800: oklch(0.26 0.01 var(--hue));
-  --color-zinc-900: oklch(0.18 0.007 var(--hue));
-  --color-zinc-950: oklch(0.1 0.004 var(--hue));
 
   --tracking-tightest: -0.075em;
 

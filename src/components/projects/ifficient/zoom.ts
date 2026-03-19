@@ -67,18 +67,13 @@ export class ImgZoom extends LitElement {
   render() {
     return html`
       <button
-        class="fixed top-5 right-5 z-60 flex h-8 items-center gap-1 rounded-full ps-3 pe-1 text-sm/none leading-none text-zinc-100 uppercase transition-all hover:bg-zinc-100 hover:text-zinc-950 xl:pe-1.5"
+        class="fixed top-5 right-5 z-60 flex h-8 items-center gap-1 rounded-full px-3 pe-2 tracking-wider text-xs/none leading-none text-zinc-100 uppercase transition-all hover:bg-zinc-100 hover:text-zinc-950"
         @click=${this.close}
       >
         Esc
-        <svg class="size-5" stroke-width="1.5" viewBox="0 0 24 24" fill="none">
-          <path
-            d="M6.75827 17.2426L12.0009 12M17.2435 6.75736L12.0009 12M12.0009 12L6.75827 6.75736M12.0009 12L17.2435 17.2426"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
+        <span class="text-2xl/none font-extralight">
+          &times;
+        </span>
       </button>
       <div
         class="zoom-overlay fixed inset-0 z-50 overflow-auto overscroll-contain bg-zinc-50/20 backdrop-blur backdrop-brightness-50"

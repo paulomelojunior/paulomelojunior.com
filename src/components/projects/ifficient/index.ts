@@ -79,17 +79,17 @@ export class ProjectsIfficient extends LitElement {
         ></item-header>
         <div class="grid gap-4 *:rounded-[.75rem] lg:col-span-2">
           <div
-            class="group relative aspect-video cursor-pointer overflow-hidden border border-zinc-900 before:absolute before:inset-0 before:transition-colors before:duration-200 hover:before:bg-zinc-950/50 before:hover:opacity-1"
+            class="group relative aspect-video cursor-pointer overflow-hidden border border-zinc-900 bg-zinc-950 transition-colors hover:bg-zinc-900"
             @click=${this.openZoom}
           >
             <img
               id="ifficient-homepage"
-              class="w-full"
+              class="w-full mix-blend-screen"
               src="${home}"
               alt="Ifficient homepage"
             />
             <div
-              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-zinc-100/15 px-5 py-3 text-[1rem] leading-none font-medium text-zinc-50 opacity-0 backdrop-blur transition-all duration-200 group-hover:opacity-100 hover:bg-zinc-100/30"
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-zinc-100/15 px-5 py-3 text-[1rem] leading-none font-medium text-zinc-50 opacity-0 backdrop-blur transition-all group-hover:opacity-100 hover:bg-zinc-100/30"
             >
               ${i18next.t('ifficient.fullView')}
             </div>

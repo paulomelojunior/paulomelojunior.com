@@ -67,7 +67,7 @@ export class FooterSection extends LitElement {
     return html`
       <footer
         id="section-connect"
-        class="footer md:from-brand-800 relative z-10 h-lvh overflow-hidden md:bg-linear-0 md:from-[5rem] md:via-zinc-950 lg:before:content-['']"
+        class="footer md:from-brand-800 relative z-10 h-lvh overflow-hidden md:bg-linear-0 md:from-[5rem] md:via-zinc-950 md:to-zinc-950 lg:before:content-['']"
       >
         <div
           id="footerLinks"
