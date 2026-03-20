@@ -1,8 +1,8 @@
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import i18next from '../../store/i18n'
 import { LitElement, html } from 'lit'
-import { customElement, property } from 'lit/decorators.js'
+import { customElement } from 'lit/decorators.js'
+import { AppMixin } from '../../store/app-mixin'
 import a1 from './imgs/a1.png'
 import a2 from './imgs/a2.png'
 import a3 from './imgs/a3.png'
@@ -18,27 +18,7 @@ import b7 from './imgs/b7.png'
 gsap.registerPlugin(ScrollTrigger)
 
 @customElement('twyne-proposal')
-export class TwyneProposal extends LitElement {
-  @property({ type: String }) lang = i18next.language
-
-  // Referência para as animações
-  // private componentAnimations: gsap.core.Tween[] = []
-
-  connectedCallback() {
-    super.connectedCallback()
-    i18next.on('languageChanged', this.handleLanguageChange)
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback()
-    i18next.off('languageChanged', this.handleLanguageChange)
-    // this.cleanupAnimations()
-  }
-
-  private handleLanguageChange = () => {
-    this.lang = i18next.language
-  }
-
+export class TwyneProposal extends AppMixin(LitElement) {
   // private setupComponentAnimations(): void {
   //   const componentsImgs = this.renderRoot.querySelectorAll('img')
 
@@ -75,9 +55,12 @@ export class TwyneProposal extends LitElement {
   // }
 
   private renderProposalList(): unknown {
-    const proposalList = i18next.t('twyne.proposal.l1', {
-      returnObjects: true,
-    }) as string[]
+    const proposalList = this.t(
+      'twyne.proposal.l1' as Parameters<typeof this.t>[0],
+      {
+        returnObjects: true,
+      }
+    ) as string[]
 
     return html`
       <ul
@@ -230,12 +213,12 @@ export class TwyneProposal extends LitElement {
           <h2
             class="mb-10 text-[2rem] leading-none tracking-tighter text-zinc-50 lg:text-[2.5rem] 2xl:text-[3rem]"
           >
-            ${i18next.t('twyne.proposal.t1')}
+            ${this.t('twyne.proposal.t1' as Parameters<typeof this.t>[0])}
           </h2>
           <div class="flex grid-cols-2 flex-col gap-8 lg:grid">
             ${this.renderProposalList()}
             <p class="text-default text-pretty">
-              ${i18next.t('twyne.proposal.p1')}
+              ${this.t('twyne.proposal.p1' as Parameters<typeof this.t>[0])}
             </p>
           </div>
         </div>

@@ -1,8 +1,8 @@
 import gsap from 'gsap'
-import i18next from '../../store/i18n'
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { unsafeHTML } from 'lit/directives/unsafe-html.js'
+import { AppMixin } from '../../store/app-mixin'
 
 import e1 from './imgs/e1.png'
 import e2 from './imgs/e2.png'
@@ -11,28 +11,20 @@ import e4 from './imgs/e4.png'
 import e5 from './imgs/e5.png'
 
 @customElement('mobile-screens')
-export class MobileScreens extends LitElement {
-  // Reativo porque afeta o template
-  @property({ type: String }) lang = i18next.language
+export class MobileScreens extends AppMixin(LitElement) {
   @property({ type: Number }) currentIndex = 0
 
-  // State interno (não reativo)
   private screens!: NodeListOf<HTMLImageElement>
   private updateMobScreens!: () => void
   private abortController = new AbortController()
 
-  // ------------------------
-  // LIFECYCLE
-  // ------------------------
-
   connectedCallback() {
     super.connectedCallback()
-    i18next.on('languageChanged', this.handleLanguageChange)
+    this.abortController = new AbortController()
   }
 
   disconnectedCallback() {
     super.disconnectedCallback()
-    i18next.off('languageChanged', this.handleLanguageChange)
     this.abortController.abort()
   }
 
@@ -41,20 +33,11 @@ export class MobileScreens extends LitElement {
   }
 
   updated(changed: Map<string, unknown>) {
-    // Se o idioma muda e o DOM pode mudar junto, reconecta
     if (changed.has('lang')) {
       this.updateComplete.then(() => {
         this.initCarousel()
       })
     }
-  }
-
-  // ------------------------
-  // HANDLERS
-  // ------------------------
-
-  private handleLanguageChange = () => {
-    this.lang = i18next.language
   }
 
   private handlePrev = () => {
@@ -134,7 +117,7 @@ export class MobileScreens extends LitElement {
           <h2
             class="mb-10 text-center text-[2rem] leading-normal tracking-tighter text-zinc-50 xl:text-[2.5rem] 2xl:text-[3rem]"
           >
-            ${unsafeHTML(i18next.t('twyne.mobile.t1'))}
+            ${unsafeHTML(this.t('twyne.mobile.t1'))}
           </h2>
 
           <div class="mob-carrossel relative overflow-hidden">

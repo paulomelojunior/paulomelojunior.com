@@ -1,27 +1,9 @@
-import i18next from '../../store/i18n'
 import { LitElement, PropertyValues, html } from 'lit'
-import { customElement, property } from 'lit/decorators.js'
-import { ThemeMixin } from '../../store/theme'
+import { customElement } from 'lit/decorators.js'
+import { AppMixin } from '../../store/app-mixin'
 
 @customElement('about-section')
-export class AboutSection extends ThemeMixin(LitElement) {
-  @property({ type: String }) lang = i18next.language
-
-  connectedCallback() {
-    super.connectedCallback()
-    i18next.on('languageChanged', this.handleLanguageChange)
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback()
-    i18next.off('languageChanged', this.handleLanguageChange)
-  }
-
-  private handleLanguageChange = () => {
-    this.lang = i18next.language
-    this.requestUpdate()
-  }
-
+export class AboutSection extends AppMixin(LitElement) {
   protected firstUpdated(_changedProperties: PropertyValues): void {}
 
   render() {
@@ -34,7 +16,7 @@ export class AboutSection extends ThemeMixin(LitElement) {
             <h2
               class="text-[2.5rem] leading-none tracking-tighter text-pretty text-zinc-50 xl:text-[3rem] 2xl:text-[4rem]"
             >
-              ${i18next.t('about.title')}
+              ${this.t('about.title')}
             </h2>
             <div
               class="col-span-2 flex flex-col gap-8 leading-loose xl:text-[1.125rem]"
@@ -46,17 +28,17 @@ export class AboutSection extends ThemeMixin(LitElement) {
                   Who I Am
                 </h3>
                 <p class="mb-8 text-sm/loose text-pretty lg:text-xl/loose">
-                  ${i18next.t('about.p1')}
+                  ${this.t('about.p1')}
                 </p>
                 <p class="mb-2 text-sm/loose text-pretty lg:text-xl/loose">
-                  ${i18next.t('about.p2')}
+                  ${this.t('about.p2')}
                 </p>
               </div>
               <div>
                 <h3
                   class="text-brand-400 font-mono text-[.625rem] font-semibold tracking-widest uppercase"
                 >
-                  ${i18next.t('about.education')}
+                  ${this.t('about.education')}
                 </h3>
                 <ul class="grid gap-y-4 md:grid-cols-3">
                   <li class="mt-3 grid gap-2">
@@ -87,7 +69,7 @@ export class AboutSection extends ThemeMixin(LitElement) {
                 <h3
                   class="text-brand-400 font-mono text-[.625rem] font-semibold tracking-widest uppercase"
                 >
-                  ${i18next.t('about.courses')}
+                  ${this.t('about.courses')}
                 </h3>
                 <ul class="grid gap-y-4 md:grid-cols-3">
                   <li class="mt-3 grid gap-2">
@@ -103,13 +85,13 @@ export class AboutSection extends ThemeMixin(LitElement) {
                         class="hover:text-brand-400 inline-flex underline decoration-zinc-600 underline-offset-4 transition-colors"
                         href="https://credentials.somostera.com/3efd7eaa4fbb5ef1277b1236b0d9f43d"
                       >
-                        ${i18next.t('about.link')}
+                        ${this.t('about.link')}
                       </a>
                     </p>
                   </li>
                   <li class="mt-3 grid gap-2">
                     <h4 class="text-[1.25rem] leading-none text-zinc-50">
-                      ${i18next.t('about.iaBusiness')}
+                      ${this.t('about.iaBusiness')}
                     </h4>
                     <p
                       class="font-mono text-[.625rem] leading-none font-semibold tracking-widest uppercase"
@@ -120,7 +102,7 @@ export class AboutSection extends ThemeMixin(LitElement) {
                         class="hover:text-brand-400 inline-flex underline decoration-zinc-600 underline-offset-4 transition-colors"
                         href="https://credentials.somostera.com/d938e0586c96cd80ff9daef38415fab1"
                       >
-                        ${i18next.t('about.link')}
+                        ${this.t('about.link')}
                       </a>
                     </p>
                   </li>

@@ -1,6 +1,6 @@
-import i18next from '../../../store/i18n'
 import { LitElement, html } from 'lit'
-import { customElement, property } from 'lit/decorators.js'
+import { customElement } from 'lit/decorators.js'
+import { AppMixin } from '../../../store/app-mixin'
 import pic1 from './assets/1.webp'
 import pic2 from './assets/2.webp'
 import pic3 from './assets/3.webp'
@@ -8,25 +8,9 @@ import pic4 from './assets/4.webp'
 import pic5 from './assets/5.webp'
 
 @customElement('projects-juris')
-export class ProjectsJuris extends LitElement {
-  @property({ type: String }) lang = i18next.language
-
-  connectedCallback() {
-    super.connectedCallback()
-    i18next.on('languageChanged', this.handleLanguageChange)
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback()
-    i18next.off('languageChanged', this.handleLanguageChange)
-  }
-
-  private handleLanguageChange = () => {
-    this.lang = i18next.language
-  }
-
+export class ProjectsJuris extends AppMixin(LitElement) {
   private renderDescription() {
-    return `${i18next.t('juris.description1')}`
+    return `${this.t('juris.description1')}`
   }
 
   render() {
@@ -35,16 +19,16 @@ export class ProjectsJuris extends LitElement {
         ${this.renderDescription()}
       </p>
       <p class="text-[.875rem]">
-        ${i18next.t('juris.description2')}
+        ${this.t('juris.description2')}
       </p>
     `
 
     return html`
       <div id="juris" class="grid grid-cols-3 gap-16 py-16">
         <item-header
-          title="${i18next.t('juris.title')}"
-          tags="${i18next.t('juris.tags')}"
-          year="${i18next.t('juris.year')}"
+          title="${this.t('juris.title')}"
+          tags="${this.t('juris.tags')}"
+          year="${this.t('juris.year')}"
           .contentHtml=${contentHtml}
         ></item-header>
         <div class="col-span-2 grid grid-cols-2 gap-4 *:rounded-[.5rem]">

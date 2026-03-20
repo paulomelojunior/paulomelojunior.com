@@ -1,6 +1,6 @@
 import { html, LitElement } from 'lit'
 import { customElement } from 'lit/decorators.js'
-import { ThemeMixin } from '../../store/theme'
+import { AppMixin } from '../../store/app-mixin'
 import './layout/header'
 import './layout/item-header'
 import './layout/menu'
@@ -10,7 +10,7 @@ import './ifficient'
 import './multiplayer'
 
 @customElement('projects-index')
-export class ProjectsIndex extends ThemeMixin(LitElement) {
+export class ProjectsIndex extends AppMixin(LitElement) {
   render() {
     return html`
       <section class="container">

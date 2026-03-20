@@ -1,29 +1,14 @@
 import gsap from 'gsap'
-import i18next from '../../../store/i18n'
 import { LitElement, PropertyValues, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
+import { AppMixin } from '../../../store/app-mixin'
 
 @customElement('projects-screens')
-export class ProjectsScreens extends LitElement {
-  @property({ type: String }) lang = i18next.language
+export class ProjectsScreens extends AppMixin(LitElement) {
   @property({ type: Number }) currentIndex: number = 0
   @property({ type: Array }) screens: NodeListOf<HTMLImageElement> =
     [] as unknown as NodeListOf<HTMLImageElement>
   @property({ type: Function }) updateScreens: () => void = () => {}
-
-  connectedCallback() {
-    super.connectedCallback()
-    i18next.on('languageChanged', this.handleLanguageChange)
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback()
-    i18next.off('languageChanged', this.handleLanguageChange)
-  }
-
-  private handleLanguageChange = () => {
-    this.lang = i18next.language
-  }
 
   protected firstUpdated(_changedProperties: PropertyValues): void {
     const screens = document.querySelectorAll('.carrossel img')

@@ -1,35 +1,12 @@
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
+import { AppMixin } from '../../store/app-mixin'
 import i18next from '../../store/i18n'
 import classNames from 'classnames'
 
 @customElement('languages-dropdown')
-export class LanguagesDropdown extends LitElement {
+export class LanguagesDropdown extends AppMixin(LitElement) {
   @property({ type: Boolean }) langMenu = false
-  @property({ type: String }) lang = i18next.language
-
-  constructor() {
-    super()
-    const savedLang = localStorage.getItem('lang')
-    if (savedLang) {
-      this.lang = savedLang
-      i18next.changeLanguage(savedLang)
-    }
-  }
-
-  connectedCallback() {
-    super.connectedCallback()
-    i18next.on('languageChanged', this.handleLanguageChange)
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback()
-    i18next.off('languageChanged', this.handleLanguageChange)
-  }
-
-  private handleLanguageChange = () => {
-    this.lang = i18next.language
-  }
 
   toggleLangMenu() {
     this.langMenu = !this.langMenu
@@ -52,9 +29,9 @@ export class LanguagesDropdown extends LitElement {
   }
 
   selectLanguage(lang: string) {
-    i18next.changeLanguage(lang)
-    localStorage.setItem('lang', lang)
-    this.lang = lang
+    if (this.lang !== lang) {
+      i18next.changeLanguage(lang)
+    }
     this.langMenu = false
   }
 

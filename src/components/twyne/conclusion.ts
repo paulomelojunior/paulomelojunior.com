@@ -1,31 +1,24 @@
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import i18next from '../../store/i18n'
 import { LitElement, PropertyValues, html } from 'lit'
-import { customElement, property } from 'lit/decorators.js'
+import { customElement } from 'lit/decorators.js'
+import { AppMixin } from '../../store/app-mixin'
 
 gsap.registerPlugin(ScrollTrigger)
 
 @customElement('twyne-conclusion')
-export class TwyneConclusion extends LitElement {
-  @property({ type: String }) lang = i18next.language
-
+export class TwyneConclusion extends AppMixin(LitElement) {
   private signElement?: SVGElement
   private animation?: gsap.core.Tween
 
   connectedCallback() {
     super.connectedCallback()
-    i18next.on('languageChanged', this.handleLanguageChange)
+    this.cleanupAnimation()
   }
 
   disconnectedCallback() {
     super.disconnectedCallback()
-    i18next.off('languageChanged', this.handleLanguageChange)
     this.cleanupAnimation()
-  }
-
-  private handleLanguageChange = () => {
-    this.lang = i18next.language
   }
 
   private setupSignatureAnimation(): void {
@@ -89,17 +82,11 @@ export class TwyneConclusion extends LitElement {
       <h2
         class="mt-16 mb-4 font-mono text-[0.75rem] leading-none font-semibold tracking-[0.05em] text-zinc-400 uppercase"
       >
-        ${i18next.t('twyne.conclusion.t1')}
+        ${this.t('twyne.conclusion.t1')}
       </h2>
-      <p class="text-default text-zinc-50">
-        ${i18next.t('twyne.conclusion.p1')}
-      </p>
-      <p class="text-default text-zinc-50">
-        ${i18next.t('twyne.conclusion.p2')}
-      </p>
-      <p class="text-default text-zinc-50">
-        ${i18next.t('twyne.conclusion.p3')}
-      </p>
+      <p class="text-default text-zinc-50">${this.t('twyne.conclusion.p1')}</p>
+      <p class="text-default text-zinc-50">${this.t('twyne.conclusion.p2')}</p>
+      <p class="text-default text-zinc-50">${this.t('twyne.conclusion.p3')}</p>
     `
   }
 

@@ -1,9 +1,7 @@
-import i18next from '../../store/i18n'
 import { LitElement, PropertyValues, html, nothing } from 'lit'
 import { unsafeHTML } from 'lit/directives/unsafe-html.js'
-import { customElement, property } from 'lit/decorators.js'
-
-import { ThemeMixin } from '../../store/theme'
+import { customElement } from 'lit/decorators.js'
+import { AppMixin } from '../../store/app-mixin'
 
 interface JourneyItem {
   hide: boolean
@@ -16,9 +14,7 @@ interface JourneyItem {
 }
 
 @customElement('journey-section')
-export class JourneySection extends ThemeMixin(LitElement) {
-  @property({ type: String }) lang = i18next.language
-
+export class JourneySection extends AppMixin(LitElement) {
   private get journeyItems(): JourneyItem[] {
     return [
       {
@@ -26,48 +22,33 @@ export class JourneySection extends ThemeMixin(LitElement) {
         custom: 'text-brand-400',
         start: '2019',
         end: '2025',
-        title: i18next.t('journey.t4'),
-        description: i18next.t('journey.p4'),
+        title: this.t('journey.t4'),
+        description: this.t('journey.p4'),
       },
       {
         hide: false,
         start: '2018',
         end: '2019',
-        title: i18next.t('journey.t3'),
-        description: i18next.t('journey.p3'),
-        more: i18next.t('journey.m3'),
+        title: this.t('journey.t3'),
+        description: this.t('journey.p3'),
+        more: this.t('journey.m3'),
       },
       {
         hide: false,
         start: '2016',
         end: '2018',
-        title: i18next.t('journey.t2'),
-        description: i18next.t('journey.p2'),
-        more: i18next.t('journey.m2'),
+        title: this.t('journey.t2'),
+        description: this.t('journey.p2'),
+        more: this.t('journey.m2'),
       },
       {
         hide: false,
         start: '2015',
         end: '2016',
-        title: i18next.t('journey.t1'),
-        description: i18next.t('journey.p1'),
+        title: this.t('journey.t1'),
+        description: this.t('journey.p1'),
       },
     ]
-  }
-
-  connectedCallback() {
-    super.connectedCallback()
-    i18next.on('languageChanged', this.handleLanguageChange)
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback()
-    i18next.off('languageChanged', this.handleLanguageChange)
-  }
-
-  private handleLanguageChange = () => {
-    this.lang = i18next.language
-    this.requestUpdate()
   }
 
   private renderJourneyHeader() {
@@ -75,7 +56,7 @@ export class JourneySection extends ThemeMixin(LitElement) {
       <h2
         class="px-5 text-[2.5rem] leading-none tracking-tighter text-pretty text-zinc-50 xl:px-20 xl:text-[3rem] 2xl:px-32 2xl:text-[4rem]"
       >
-        ${i18next.t('journey.t0')}
+        ${this.t('journey.t0')}
       </h2>
       <div
         class="order-1 flex items-center px-5 lg:order-0 lg:justify-end xl:px-20 2xl:px-32"

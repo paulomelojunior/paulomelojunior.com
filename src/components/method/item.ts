@@ -1,31 +1,14 @@
 // import { gsap } from 'gsap'
-import i18next from '../../store/i18n'
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-
-import { ThemeMixin } from '../../store/theme'
+import { AppMixin } from '../../store/app-mixin'
 
 @customElement('method-item')
-export class MethodItem extends ThemeMixin(LitElement) {
-  @property({ type: String }) lang = i18next.language
+export class MethodItem extends AppMixin(LitElement) {
   @property({ type: String }) index = '000'
-  @property({ type: String }) t = 'Add Title'
+  @property({ type: String }) title = 'Add Title'
   @property({ type: String }) content = 'Add Content'
   @property({ type: Boolean }) open = false
-
-  connectedCallback() {
-    super.connectedCallback()
-    i18next.on('languageChanged', () => {
-      this.lang = i18next.language
-    })
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback()
-    i18next.off('languageChanged', () => {
-      this.lang = i18next.language
-    })
-  }
 
   firstUpdated() {}
 
@@ -40,7 +23,7 @@ export class MethodItem extends ThemeMixin(LitElement) {
         <h2
           class="text-[1.5rem] leading-none tracking-tighter text-zinc-50 xl:text-[2rem]"
         >
-          ${this.t}
+          ${this.title}
         </h2>
       </div>
     `

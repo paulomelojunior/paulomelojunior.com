@@ -1,28 +1,12 @@
 import { gsap } from 'gsap'
-import i18next from '../../store/i18n'
 import { LitElement, html } from 'lit'
-import { customElement, property } from 'lit/decorators.js'
+import { customElement } from 'lit/decorators.js'
+import { AppMixin } from '../../store/app-mixin'
 import m1 from './mockup-1.webp'
 import m2 from './mockup-2.webp'
 
 @customElement('cases-section')
-export class CasesSection extends LitElement {
-  @property({ type: String }) lang = i18next.language
-
-  connectedCallback() {
-    super.connectedCallback()
-    i18next.on('languageChanged', this.handleLanguageChange)
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback()
-    i18next.off('languageChanged', this.handleLanguageChange)
-  }
-
-  private handleLanguageChange = () => {
-    this.lang = i18next.language
-  }
-
+export class CasesSection extends AppMixin(LitElement) {
   private initAnimation() {
     const casesElement = this.querySelector('#cases')
     const casesImages = this.querySelectorAll('#cases .cases')
@@ -76,7 +60,7 @@ export class CasesSection extends LitElement {
               <span
                 class="absolute bottom-0 left-0 flex gap-2 p-8 font-mono text-[.75rem] leading-none font-medium tracking-[.05em] text-zinc-400 uppercase"
               >
-                2025 ${i18next.t('cases.project')}
+                2025 ${this.t('cases.project')}
               </span>
               <div
                 class="pointer-events-none absolute bottom-0 overflow-hidden"
@@ -105,18 +89,18 @@ export class CasesSection extends LitElement {
               <h2
                 class="text-[2.5rem] leading-none tracking-tighter text-zinc-50 2xl:text-[3rem]"
               >
-                ${this.renderTitle(i18next.t('cases.title'))}
+                ${this.renderTitle(this.t('cases.title'))}
               </h2>
               <p
                 class="mt-8 mb-auto text-sm/loose text-pretty 2xl:text-base/loose"
               >
-                ${i18next.t('cases.description')}
+                ${this.t('cases.description')}
               </p>
               <a
-                href="${i18next.t('links.lastProject.url')}"
+                href="${this.t('links.lastProject.url')}"
                 class="cta-button cta-button--accent flex w-full items-center justify-between gap-3 self-center py-4 ps-6"
               >
-                ${i18next.t('cases.cta')}
+                ${this.t('cases.cta')}
                 <svg
                   width="14"
                   height="14"

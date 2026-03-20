@@ -1,27 +1,11 @@
 import { gsap } from 'gsap'
-import i18next from '../../store/i18n'
 import { LitElement, html } from 'lit'
-import { customElement, property } from 'lit/decorators.js'
+import { customElement } from 'lit/decorators.js'
+import { AppMixin } from '../../store/app-mixin'
 import './link'
 
 @customElement('footer-section')
-export class FooterSection extends LitElement {
-  @property({ type: String }) lang = i18next.language
-
-  connectedCallback() {
-    super.connectedCallback()
-    i18next.on('languageChanged', this.handleLanguageChange)
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback()
-    i18next.off('languageChanged', this.handleLanguageChange)
-  }
-
-  private handleLanguageChange = () => {
-    this.lang = i18next.language
-  }
-
+export class FooterSection extends AppMixin(LitElement) {
   private currentYear() {
     return new Date().getFullYear()
   }
@@ -80,23 +64,23 @@ export class FooterSection extends LitElement {
             <span
               class="mx-5 flex h-20 items-center text-zinc-400 transition-colors duration-400 group-hover/item:text-zinc-400 lg:p-0"
             >
-              ${i18next.t('connect.title')}
+              ${this.t('connect.title')}
             </span>
             <footer-link
-              url=${i18next.t('links.github.url')}
-              label=${i18next.t('links.github.label')}
+              url=${this.t('links.github.url')}
+              label=${this.t('links.github.label')}
               index="001"
             ></footer-link>
 
             <footer-link
-              url=${i18next.t('links.linkedin.url')}
-              label=${i18next.t('links.linkedin.label')}
+              url=${this.t('links.linkedin.url')}
+              label=${this.t('links.linkedin.label')}
               index="002"
             ></footer-link>
 
             <footer-link
-              url=${i18next.t('links.email.url')}
-              label=${i18next.t('links.email.label')}
+              url=${this.t('links.email.url')}
+              label=${this.t('links.email.label')}
               index="hello@pmjr.cc"
             ></footer-link>
           </div>

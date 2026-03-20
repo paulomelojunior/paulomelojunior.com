@@ -1,50 +1,15 @@
-import i18next from '../../../store/i18n'
 import { html, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import { ThemeMixin } from '../../../store/theme'
+import { AppMixin } from '../../../store/app-mixin'
 import arrow from './arrow.svg'
 import gsap from 'gsap'
 
 @customElement('projects-menu')
-export class ProjectsMenu extends ThemeMixin(LitElement) {
+export class ProjectsMenu extends AppMixin(LitElement) {
   @property({ type: Boolean }) more = false
-  @property({ type: String }) lang = i18next.language
-
-  constructor() {
-    super()
-    const savedLang = localStorage.getItem('lang')
-    if (savedLang) {
-      this.lang = savedLang
-      i18next.changeLanguage(savedLang)
-    }
-  }
-
-  connectedCallback() {
-    super.connectedCallback()
-    i18next.on('languageChanged', this.handleLanguageChange)
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback()
-    i18next.off('languageChanged', this.handleLanguageChange)
-  }
-
-  private handleLanguageChange = () => {
-    this.lang = i18next.language
-  }
 
   toggleMore() {
     this.more = !this.more
-  }
-
-  toggleLanguage() {
-    const currentLang = i18next.language
-    const newLang = currentLang === 'en' ? 'pt' : 'en'
-
-    i18next.changeLanguage(newLang)
-    localStorage.setItem('lang', newLang)
-
-    this.lang = newLang
   }
 
   changeTheme() {
@@ -129,22 +94,22 @@ export class ProjectsMenu extends ThemeMixin(LitElement) {
               </li>
               <li>
                 <mobile-item
-                  href="${i18next.t('links.github.url')}"
-                  label="${i18next.t('links.github.label')}"
+                  href="${this.t('links.github.url')}"
+                  label="${this.t('links.github.label')}"
                   index="02"
                 ></mobile-item>
               </li>
               <li>
                 <mobile-item
-                  href="${i18next.t('links.linkedin.url')}"
-                  label="${i18next.t('links.linkedin.label')}"
+                  href="${this.t('links.linkedin.url')}"
+                  label="${this.t('links.linkedin.label')}"
                   index="03"
                 ></mobile-item>
               </li>
               <li>
                 <mobile-item
-                  href="${i18next.t('links.email.url')}"
-                  label="${i18next.t('links.email.label')}"
+                  href="${this.t('links.email.url')}"
+                  label="${this.t('links.email.label')}"
                   index="hello@pmjr.cc"
                 ></mobile-item>
               </li>

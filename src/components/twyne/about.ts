@@ -1,28 +1,12 @@
 import { gsap } from 'gsap'
-import i18next from '../../store/i18n'
 import { LitElement, html } from 'lit'
-import { customElement, property } from 'lit/decorators.js'
+import { customElement } from 'lit/decorators.js'
 import { unsafeHTML } from 'lit/directives/unsafe-html.js'
+import { AppMixin } from '../../store/app-mixin'
 import d1 from './imgs/d1.png'
 
 @customElement('twyne-about')
-export class TwyneAbout extends LitElement {
-  @property({ type: String }) lang = i18next.language
-
-  connectedCallback() {
-    super.connectedCallback()
-    i18next.on('languageChanged', this.handleLanguageChange)
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback()
-    i18next.off('languageChanged', this.handleLanguageChange)
-  }
-
-  private handleLanguageChange = () => {
-    this.lang = i18next.language
-  }
-
+export class TwyneAbout extends AppMixin(LitElement) {
   private handleCoverImage() {
     const coverImage = document.querySelector('#cover-image')
     if (!coverImage) return
@@ -55,44 +39,44 @@ export class TwyneAbout extends LitElement {
       ></div>
       <div class="flex flex-col p-6 lg:p-16 lg:pe-0">
         <p class="text-default mb-4 text-balance lg:-mt-2">
-          ${unsafeHTML(i18next.t('twyne.about.p2'))}
+          ${unsafeHTML(this.t('twyne.about.p2'))}
         </p>
         <p class="text-default text-pretty">
-          ${unsafeHTML(i18next.t('twyne.about.p1'))}
+          ${unsafeHTML(this.t('twyne.about.p1'))}
         </p>
         <ul
           class="mt-auto hidden text-[.75rem] leading-none *:border-b *:border-zinc-800 *:py-6 lg:block lg:text-[1rem]"
         >
           <li class="flex justify-between align-baseline">
-            <span> ${i18next.t('twyne.about.details.company')} </span>
+            <span> ${this.t('twyne.about.details.company')} </span>
             <span class="text-right text-zinc-50">
-              ${i18next.t('twyne.about.details.companyValue')}
+              ${this.t('twyne.about.details.companyValue')}
             </span>
           </li>
           <li class="flex justify-between align-baseline">
-            <span> ${i18next.t('twyne.about.details.industry')} </span>
+            <span> ${this.t('twyne.about.details.industry')} </span>
             <span class="text-right text-zinc-50">
-              ${i18next.t('twyne.about.details.industryValue')}
+              ${this.t('twyne.about.details.industryValue')}
             </span>
           </li>
           <li class="flex justify-between align-baseline">
-            <span> ${i18next.t('twyne.about.details.product')} </span>
+            <span> ${this.t('twyne.about.details.product')} </span>
             <span class="text-right text-zinc-50">
-              ${i18next.t('twyne.about.details.productValue')}
+              ${this.t('twyne.about.details.productValue')}
             </span>
           </li>
           <li class="flex justify-between align-baseline">
-            <span> ${i18next.t('twyne.about.details.contributions')} </span>
+            <span> ${this.t('twyne.about.details.contributions')} </span>
             <span
               class="inline-flex gap-2 text-right align-baseline text-zinc-50"
             >
-              <span> ${i18next.t('twyne.about.details.contribution1')} </span>
+              <span> ${this.t('twyne.about.details.contribution1')} </span>
               <span class="text-zinc-400">/</span>
               <span class="hidden xl:flex">
-                ${i18next.t('twyne.about.details.contribution2')}
+                ${this.t('twyne.about.details.contribution2')}
               </span>
               <span class="hidden text-zinc-400 xl:flex">/</span>
-              <span> ${i18next.t('twyne.about.details.contribution3')} </span>
+              <span> ${this.t('twyne.about.details.contribution3')} </span>
             </span>
           </li>
         </ul>

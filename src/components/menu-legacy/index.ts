@@ -1,8 +1,0 @@
-import './item'
-import './container'
-import './buttonLang'
-import './buttonMail'
-import './mobileItem'
-export { MenuItem } from './item'
-export { MenuContainer } from './container'
-export { MobileItem } from './mobileItem'
