@@ -1,26 +1,10 @@
-import i18next from '../../store/i18n'
 import { LitElement, html } from 'lit'
-import { customElement, property } from 'lit/decorators.js'
+import { customElement } from 'lit/decorators.js'
 import { unsafeHTML } from 'lit/directives/unsafe-html.js'
+import { AppMixin } from '../../store/app-mixin'
 
 @customElement('twyne-goal')
-export class TwyneGoal extends LitElement {
-  @property({ type: String }) lang = i18next.language
-
-  connectedCallback() {
-    super.connectedCallback()
-    i18next.on('languageChanged', this.handleLanguageChange)
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback()
-    i18next.off('languageChanged', this.handleLanguageChange)
-  }
-
-  private handleLanguageChange = () => {
-    this.lang = i18next.language
-  }
-
+export class TwyneGoal extends AppMixin(LitElement) {
   render() {
     return html`
       <section id="goal" class="container px-6 py-24 lg:p-24 2xl:p-32">
@@ -31,14 +15,12 @@ export class TwyneGoal extends LitElement {
             <h2
               class="mb-10 text-[2rem] leading-none tracking-tighter text-zinc-50 lg:text-[2.5rem] 2xl:text-[3rem]"
             >
-              ${i18next.t('twyne.goal.t1')}
+              ${this.t('twyne.goal.t1')}
             </h2>
             <p class="text-default mb-8 leading-loose">
-              ${unsafeHTML(i18next.t('twyne.goal.p1'))}
+              ${unsafeHTML(this.t('twyne.goal.p1'))}
             </p>
-            <p class="text-default leading-loose">
-              ${i18next.t('twyne.goal.p2')}
-            </p>
+            <p class="text-default leading-loose">${this.t('twyne.goal.p2')}</p>
           </div>
         </div>
       </section>

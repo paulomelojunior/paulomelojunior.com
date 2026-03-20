@@ -1,6 +1,6 @@
-import i18next from '../../../store/i18n'
 import { LitElement, html } from 'lit'
-import { customElement, property } from 'lit/decorators.js'
+import { customElement } from 'lit/decorators.js'
+import { AppMixin } from '../../../store/app-mixin'
 import p1 from './assets/1.webp'
 import s0 from './assets/social-0.webp'
 import s1 from './assets/social-1.webp'
@@ -14,53 +14,37 @@ import s8 from './assets/social-8.gif'
 import s9 from './assets/social-5.webp'
 
 @customElement('projects-multiplayer')
-export class ProjectsMultiplayer extends LitElement {
-  @property({ type: String }) lang = i18next.language
-
-  connectedCallback() {
-    super.connectedCallback()
-    i18next.on('languageChanged', this.handleLanguageChange)
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback()
-    i18next.off('languageChanged', this.handleLanguageChange)
-  }
-
-  private handleLanguageChange = () => {
-    this.lang = i18next.language
-  }
-
+export class ProjectsMultiplayer extends AppMixin(LitElement) {
   render() {
     const contentHtml = `
       <p class="text-[.875rem]">
-        ${i18next.t('multiplayer.description1')}
+        ${this.t('multiplayer.description1')}
       </p>
       <p class="mb-3 text-[.875rem]">
-        ${i18next.t('multiplayer.description2')}
+        ${this.t('multiplayer.description2')}
       </p>
       <div class="my-3 grid gap-2">
         <h3 class="text-[1.25rem] leading-none text-zinc-50">
-          ${i18next.t('multiplayer.metrics.audience.title')}
+          ${this.t('multiplayer.metrics.audience.title')}
         </h3>
         <p class="text-[.875rem] leading-none font-medium">
-          ${i18next.t('multiplayer.metrics.audience.subtitle')}
+          ${this.t('multiplayer.metrics.audience.subtitle')}
         </p>
       </div>
       <div class="my-3 grid gap-2">
         <h3 class="text-[1.25rem] leading-none text-zinc-50">
-          ${i18next.t('multiplayer.metrics.facebook.title')}
+          ${this.t('multiplayer.metrics.facebook.title')}
         </h3>
         <p class="text-[.875rem] leading-none font-medium">
-          ${i18next.t('multiplayer.metrics.facebook.subtitle')}
+          ${this.t('multiplayer.metrics.facebook.subtitle')}
         </p>
       </div>
       <div class="my-3 grid gap-2">
         <h3 class="text-[1.25rem] leading-none text-zinc-50">
-          ${i18next.t('multiplayer.metrics.youtube.title')}
+          ${this.t('multiplayer.metrics.youtube.title')}
         </h3>
         <p class="text-[.875rem] leading-none font-medium">
-          ${i18next.t('multiplayer.metrics.youtube.subtitle')}
+          ${this.t('multiplayer.metrics.youtube.subtitle')}
         </p>
       </div>
     `
@@ -68,9 +52,9 @@ export class ProjectsMultiplayer extends LitElement {
     return html`
       <div id="multiplayer" class="mx-5 py-8 lg:grid lg:grid-cols-3 lg:py-16">
         <item-header
-          title="${i18next.t('multiplayer.title')}"
-          tags="${i18next.t('multiplayer.tags')}"
-          year="${i18next.t('multiplayer.year')}"
+          title="${this.t('multiplayer.title')}"
+          tags="${this.t('multiplayer.tags')}"
+          year="${this.t('multiplayer.year')}"
           .contentHtml=${contentHtml}
         ></item-header>
         <div

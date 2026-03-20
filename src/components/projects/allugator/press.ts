@@ -1,7 +1,7 @@
 import gsap from 'gsap'
-import i18next from '../../../store/i18n'
 import { LitElement, PropertyValues, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
+import { AppMixin } from '../../../store/app-mixin'
 import press0 from './assets/press-0.png'
 import press2 from './assets/press-2.png'
 import press4 from './assets/press-4.png'
@@ -15,26 +15,11 @@ import press11 from './assets/press-11.png'
 import press12 from './assets/press-12.png'
 
 @customElement('allu-press')
-export class AlluPress extends LitElement {
-  @property({ type: String }) lang = i18next.language
+export class AlluPress extends AppMixin(LitElement) {
   @property({ type: Number }) currentIndex: number = 0
   @property({ type: Array }) screens: NodeListOf<HTMLImageElement> =
     [] as unknown as NodeListOf<HTMLImageElement>
   @property({ type: Function }) updateScreens: () => void = () => {}
-
-  connectedCallback() {
-    super.connectedCallback()
-    i18next.on('languageChanged', this.handleLanguageChange)
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback()
-    i18next.off('languageChanged', this.handleLanguageChange)
-  }
-
-  private handleLanguageChange = () => {
-    this.lang = i18next.language
-  }
 
   protected firstUpdated(_changedProperties: PropertyValues): void {
     const screens = document.querySelectorAll('.carrossel img')

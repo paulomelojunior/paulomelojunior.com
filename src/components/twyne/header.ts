@@ -1,26 +1,10 @@
-import i18next from '../../store/i18n'
 import { LitElement, html } from 'lit'
-import { customElement, property } from 'lit/decorators.js'
+import { customElement } from 'lit/decorators.js'
+import { AppMixin } from '../../store/app-mixin'
 import logo from './imgs/logo.svg'
 
 @customElement('twyne-header')
-export class TwyneHeader extends LitElement {
-  @property({ type: String }) lang = i18next.language
-
-  connectedCallback() {
-    super.connectedCallback()
-    i18next.on('languageChanged', this.handleLanguageChange)
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback()
-    i18next.off('languageChanged', this.handleLanguageChange)
-  }
-
-  private handleLanguageChange = () => {
-    this.lang = i18next.language
-  }
-
+export class TwyneHeader extends AppMixin(LitElement) {
   render() {
     return html`
       <div
@@ -35,7 +19,7 @@ export class TwyneHeader extends LitElement {
           <h1
             class="text-[3rem] leading-none tracking-tighter text-zinc-50 2xl:text-[4rem]"
           >
-            ${i18next.t('twyne.t2')}
+            ${this.t('twyne.t2')}
           </h1>
         </div>
       </div>

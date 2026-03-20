@@ -1,8 +1,8 @@
 import { gsap } from 'gsap'
-import i18next from '../../store/i18n'
 import { LitElement, PropertyValues, html } from 'lit'
-import { customElement, property } from 'lit/decorators.js'
+import { customElement } from 'lit/decorators.js'
 import { unsafeHTML } from 'lit/directives/unsafe-html.js'
+import { AppMixin } from '../../store/app-mixin'
 import e1 from './imgs/e1.png'
 import e2 from './imgs/e2.png'
 import e3 from './imgs/e3.png'
@@ -10,23 +10,7 @@ import e4 from './imgs/e4.png'
 import e5 from './imgs/e5.png'
 
 @customElement('twyne-mobile')
-export class TwyneMobile extends LitElement {
-  @property({ type: String }) lang = i18next.language
-
-  connectedCallback() {
-    super.connectedCallback()
-    i18next.on('languageChanged', this.handleLanguageChange)
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback()
-    i18next.off('languageChanged', this.handleLanguageChange)
-  }
-
-  private handleLanguageChange = () => {
-    this.lang = i18next.language
-  }
-
+export class TwyneMobile extends AppMixin(LitElement) {
   private screensMotion() {
     document
       .querySelectorAll('[data-parallax-layers]')
@@ -75,7 +59,7 @@ export class TwyneMobile extends LitElement {
         <h2
           class="mb-16 text-center text-[2.5rem] leading-normal tracking-tighter text-zinc-50 xl:mb-32 2xl:text-[3rem]"
         >
-          ${unsafeHTML(i18next.t('twyne.mobile.t1'))}
+          ${unsafeHTML(this.t('twyne.mobile.t1'))}
         </h2>
         <div
           id="mobile-images"

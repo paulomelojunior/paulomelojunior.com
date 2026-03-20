@@ -1,51 +1,15 @@
-import i18next from '../../store/i18n'
 import { html, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import { ThemeMixin } from '../../store/theme'
+import { AppMixin } from '../../store/app-mixin'
 import goBack from './imgs/go-back.svg'
 import { gsap } from 'gsap'
 
 @customElement('twyne-menu')
-export class TwyneMenu extends ThemeMixin(LitElement) {
+export class TwyneMenu extends AppMixin(LitElement) {
   @property({ type: Boolean }) more = false
-  @property({ type: String }) lang = i18next.language
-
-  constructor() {
-    super()
-    const savedLang = localStorage.getItem('lang')
-    if (savedLang) {
-      this.lang = savedLang
-      i18next.changeLanguage(savedLang)
-    }
-  }
 
   toggleMore() {
     this.more = !this.more
-  }
-
-  connectedCallback() {
-    super.connectedCallback()
-    i18next.on('languageChanged', this.handleLanguageChange)
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback()
-    i18next.off('languageChanged', this.handleLanguageChange)
-  }
-
-  private handleLanguageChange = () => {
-    this.lang = i18next.language
-  }
-
-  changeLang() {
-    const currentLang = i18next.language
-    const newLang = currentLang === 'en' ? 'pt' : 'en'
-
-    i18next.changeLanguage(newLang)
-    localStorage.setItem('lang', newLang)
-
-    // Atualiza a propriedade lang
-    this.lang = newLang
   }
 
   copyEmail() {
@@ -129,28 +93,28 @@ export class TwyneMenu extends ThemeMixin(LitElement) {
               </li>
               <li>
                 <mobile-item
-                  href="${i18next.t('links.github.url')}"
-                  label="${i18next.t('links.github.label')}"
+                  href="${this.t('links.github.url')}"
+                  label="${this.t('links.github.label')}"
                   index="02"
                 ></mobile-item>
               </li>
               <li>
                 <mobile-item
-                  href="${i18next.t('links.linkedin.url')}"
-                  label="${i18next.t('links.linkedin.label')}"
+                  href="${this.t('links.linkedin.url')}"
+                  label="${this.t('links.linkedin.label')}"
                   index="03"
                 ></mobile-item>
               </li>
               <li>
                 <mobile-item
-                  href="${i18next.t('links.email.url')}"
-                  label="${i18next.t('links.email.label')}"
+                  href="${this.t('links.email.url')}"
+                  label="${this.t('links.email.label')}"
                   index="hello@pmjr.cc"
                 ></mobile-item>
               </li>
               <div class="absolute right-4 bottom-4">
                 <button-lang
-                  @click=${() => this.changeLang()}
+                  @click=${() => this.toggleLanguage()}
                   label=${this.lang === 'pt' ? `PT · BR` : `EN · US`}
                   title="${this.lang === 'en'
                     ? 'Mudar para português'
@@ -191,31 +155,31 @@ export class TwyneMenu extends ThemeMixin(LitElement) {
               <li class="spy-link">
                 <menu-item
                   href="#goal"
-                  label="${i18next.t('twyne.menu.goal')}"
+                  label="${this.t('twyne.menu.goal')}"
                 ></menu-item>
               </li>
               <li class="spy-link">
                 <menu-item
                   href="#proposal"
-                  label="${i18next.t('twyne.menu.proposal')}"
+                  label="${this.t('twyne.menu.proposal')}"
                 ></menu-item>
               </li>
               <li class="spy-link">
                 <menu-item
                   href="#impact"
-                  label="${i18next.t('twyne.menu.impact')}"
+                  label="${this.t('twyne.menu.impact')}"
                 ></menu-item>
               </li>
               <li class="spy-link">
                 <menu-item
                   href="#mobile"
-                  label="${i18next.t('twyne.menu.mobile')}"
+                  label="${this.t('twyne.menu.mobile')}"
                 ></menu-item>
               </li>
               <li class="spy-link">
                 <menu-item
                   href="#conclusion"
-                  label="${i18next.t('twyne.menu.final')}"
+                  label="${this.t('twyne.menu.final')}"
                 ></menu-item>
               </li>
             </ul>
@@ -223,9 +187,9 @@ export class TwyneMenu extends ThemeMixin(LitElement) {
           <div class="hidden items-center justify-end gap-1 lg:flex">
             <a
               class="cta-button px-3.5 pt-2 pb-2.5 text-[.875rem]"
-              href="${i18next.t('links.projects.url')}"
+              href="${this.t('links.projects.url')}"
             >
-              ${i18next.t('featured.button')}
+              ${this.t('featured.button')}
             </a>
             <languages-dropdown></languages-dropdown>
           </div>

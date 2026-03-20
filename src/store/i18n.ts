@@ -6,7 +6,7 @@ import pt from '../language/pt.json'
 i18next.use(LanguageDetector).init({
   fallbackLng: 'en',
   detection: {
-    order: ['navigator', 'htmlTag'],
+    order: ['localStorage', 'navigator', 'htmlTag'],
     caches: ['localStorage'],
   },
   interpolation: {

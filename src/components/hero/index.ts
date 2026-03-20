@@ -1,8 +1,7 @@
 import { gsap } from 'gsap'
-import { customElement, property } from 'lit/decorators.js'
+import { customElement } from 'lit/decorators.js'
 import { LitElement, html } from 'lit'
-import { ThemeMixin } from '../../store/theme'
-import i18next from '../../store/i18n'
+import { AppMixin } from '../../store/app-mixin'
 import arrow from './imgs/arrow.svg'
 import p1x from './imgs/profile-1x.webp'
 import s1 from './imgs/d1.webp'
@@ -11,23 +10,7 @@ import s3 from './imgs/d3.webp'
 import m1 from './imgs/m1.webp'
 
 @customElement('hero-section')
-export class HeroSection extends ThemeMixin(LitElement) {
-  @property({ type: String }) lang = i18next.language
-
-  connectedCallback() {
-    super.connectedCallback()
-    i18next.on('languageChanged', () => {
-      this.lang = i18next.language
-    })
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback()
-    i18next.off('languageChanged', () => {
-      this.lang = i18next.language
-    })
-  }
-
+export class HeroSection extends AppMixin(LitElement) {
   itemEntrance() {
     gsap.from('.hero', {
       paddingTop: 64,
@@ -133,12 +116,12 @@ export class HeroSection extends ThemeMixin(LitElement) {
                 width="64"
                 fetchpriority="high"
                 loading="eager"
-                alt="${i18next.t('hero.picDescription')}"
+                alt="${this.t('hero.picDescription')}"
                 class="size-14 rounded-full bg-zinc-900 outline-4 outline-zinc-950"
               />
               <div class="grid gap-2 leading-none">
                 <span class="text-white 2xl:text-[1.25rem]">
-                  ${i18next.t('hero.name')}
+                  ${this.t('hero.name')}
                 </span>
                 <span
                   class="flex items-center gap-2 text-[.875rem] font-medium 2xl:text-[1rem]"
@@ -151,7 +134,7 @@ export class HeroSection extends ThemeMixin(LitElement) {
                       class="relative m-0.5 inline-flex size-2 rounded-full bg-green-300"
                     ></span>
                   </span>
-                  ${i18next.t('hero.status')}
+                  ${this.t('hero.status')}
                 </span>
               </div>
             </div>
@@ -164,19 +147,19 @@ export class HeroSection extends ThemeMixin(LitElement) {
                 data-split="heading"
                 class="tracking-tightest text-[2.75rem] leading-none font-medium text-balance text-zinc-50 2xl:text-[5rem]"
               >
-                ${i18next.t('hero.title')}
+                ${this.t('hero.title')}
               </h1>
               <h2 class="text-[1.125rem] text-balance 2xl:text-[1.5rem]">
-                ${i18next.t('hero.subtitle')}
+                ${this.t('hero.subtitle')}
               </h2>
             </div>
 
             <div data-entrance-item="1" class="relative flex gap-2">
               <a
-                href="${i18next.t('hero.cta.url')}"
+                href="${this.t('hero.cta.url')}"
                 class="cta-button cta-button--accent flex items-center gap-3 self-center px-6 py-4"
               >
-                ${i18next.t('hero.cta.label')}
+                ${this.t('hero.cta.label')}
               </a>
               <a
                 href="#section-praxis"

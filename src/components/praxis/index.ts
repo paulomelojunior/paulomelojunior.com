@@ -1,28 +1,10 @@
 import { gsap } from 'gsap'
-import i18next from '../../store/i18n'
 import { LitElement, html } from 'lit'
-import { customElement, property } from 'lit/decorators.js'
-
-import { ThemeMixin } from '../../store/theme'
+import { customElement } from 'lit/decorators.js'
+import { AppMixin } from '../../store/app-mixin'
 
 @customElement('praxis-section')
-export class PraxisSection extends ThemeMixin(LitElement) {
-  @property({ type: String }) lang = i18next.language
-
-  connectedCallback() {
-    super.connectedCallback()
-    i18next.on('languageChanged', () => {
-      this.lang = i18next.language
-    })
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback()
-    i18next.off('languageChanged', () => {
-      this.lang = i18next.language
-    })
-  }
-
+export class PraxisSection extends AppMixin(LitElement) {
   firstUpdated() {
     const praxisPath = this.renderRoot.querySelectorAll('.praxis svg')
     const praxisBg = this.renderRoot.querySelector('section > .praxis-bg')
@@ -118,11 +100,9 @@ export class PraxisSection extends ThemeMixin(LitElement) {
                 <h2
                   class="flex items-center text-[1.5rem] leading-16 tracking-tighter text-zinc-50 xl:text-[2rem] xl:leading-24 2xl:text-[2.5rem] 2xl:leading-24"
                 >
-                  ${i18next.t('praxis.t1')}
+                  ${this.t('praxis.t1')}
                 </h2>
-                <p class="text-default text-balance">
-                  ${i18next.t('praxis.p1')}
-                </p>
+                <p class="text-default text-balance">${this.t('praxis.p1')}</p>
               </div>
             </div>
             <div class="praxis">
@@ -144,11 +124,9 @@ export class PraxisSection extends ThemeMixin(LitElement) {
                 <h2
                   class="flex items-center text-[1.5rem] leading-16 tracking-tighter text-zinc-50 xl:text-[2rem] xl:leading-24 2xl:text-[2.5rem] 2xl:leading-24"
                 >
-                  ${i18next.t('praxis.t2')}
+                  ${this.t('praxis.t2')}
                 </h2>
-                <p class="text-default text-balance">
-                  ${i18next.t('praxis.p2')}
-                </p>
+                <p class="text-default text-balance">${this.t('praxis.p2')}</p>
               </div>
             </div>
           </div>

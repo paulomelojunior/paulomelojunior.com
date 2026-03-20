@@ -1,6 +1,6 @@
-import i18next from '../../../store/i18n'
 import { LitElement, html } from 'lit'
-import { customElement, property } from 'lit/decorators.js'
+import { customElement } from 'lit/decorators.js'
+import { AppMixin } from '../../../store/app-mixin'
 import pic1 from './assets/1.webp'
 import pic2 from './assets/2.webp'
 import pic3 from './assets/3.webp'
@@ -8,25 +8,9 @@ import pic4 from './assets/4.webp'
 import pic5 from './assets/5.webp'
 
 @customElement('projects-damus')
-export class ProjectsDamus extends LitElement {
-  @property({ type: String }) lang = i18next.language
-
-  connectedCallback() {
-    super.connectedCallback()
-    i18next.on('languageChanged', this.handleLanguageChange)
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback()
-    i18next.off('languageChanged', this.handleLanguageChange)
-  }
-
-  private handleLanguageChange = () => {
-    this.lang = i18next.language
-  }
-
+export class ProjectsDamus extends AppMixin(LitElement) {
   private renderDescription() {
-    return `${i18next.t('damus.description1')}`
+    return `${this.t('damus.description1')}`
   }
 
   render() {
@@ -35,16 +19,16 @@ export class ProjectsDamus extends LitElement {
         ${this.renderDescription()}
       </p>
       <p class="text-[.875rem]">
-        ${i18next.t('damus.description2')}
+        ${this.t('damus.description2')}
       </p>
     `
 
     return html`
       <div id="damus" class="mx-5 py-8 lg:grid lg:grid-cols-3 lg:py-16">
         <item-header
-          title="${i18next.t('damus.title')}"
-          tags="${i18next.t('damus.tags')}"
-          year="${i18next.t('damus.year')}"
+          title="${this.t('damus.title')}"
+          tags="${this.t('damus.tags')}"
+          year="${this.t('damus.year')}"
           .contentHtml=${contentHtml}
         ></item-header>
         <div

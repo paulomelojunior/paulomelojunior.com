@@ -1,35 +1,27 @@
 import gsap from 'gsap'
-import i18next from '../../store/i18n'
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
+import { AppMixin } from '../../store/app-mixin'
 
 import d0 from '../twyne/imgs/d0.png'
 import d2 from '../twyne/imgs/d2.png'
 import d3 from '../twyne/imgs/d3.png'
 
 @customElement('twyne-screens')
-export class TwyneScreens extends LitElement {
-  // Reativo porque aparece no template
-  @property({ type: String }) lang = i18next.language
+export class TwyneScreens extends AppMixin(LitElement) {
   @property({ type: Number }) currentIndex = 0
 
-  // State interno
   private screens!: NodeListOf<HTMLImageElement>
   private updateScreens!: () => void
   private abortController = new AbortController()
 
-  // ------------------------
-  // LIFECYCLE
-  // ------------------------
-
   connectedCallback() {
     super.connectedCallback()
-    i18next.on('languageChanged', this.handleLanguageChange)
+    this.abortController = new AbortController()
   }
 
   disconnectedCallback() {
     super.disconnectedCallback()
-    i18next.off('languageChanged', this.handleLanguageChange)
     this.abortController.abort()
   }
 
@@ -43,14 +35,6 @@ export class TwyneScreens extends LitElement {
         this.initCarousel()
       })
     }
-  }
-
-  // ------------------------
-  // HANDLERS
-  // ------------------------
-
-  private handleLanguageChange = () => {
-    this.lang = i18next.language
   }
 
   private handlePrev = () => {
@@ -163,7 +147,7 @@ export class TwyneScreens extends LitElement {
               >
                 <button
                   data-prev
-                  class="flex items-center gap-4 rounded-s-full bg-zinc-100/80 py-3 ps-5 pe-4 text-[.75rem] leading-none tracking-[.05em] uppercase transition-all hover:bg-zinc-50 text-zinc-950"
+                  class="flex items-center gap-4 rounded-s-full bg-zinc-100/80 py-3 ps-5 pe-4 text-[.75rem] leading-none tracking-[.05em] text-zinc-950 uppercase transition-all hover:bg-zinc-50"
                 >
                   Prev
                 </button>
@@ -176,7 +160,7 @@ export class TwyneScreens extends LitElement {
 
                 <button
                   data-next
-                  class="flex items-center gap-4 rounded-e-full bg-zinc-100/80 py-3 ps-4 pe-5 text-[.75rem] leading-none tracking-[.05em] uppercase transition-all hover:bg-zinc-50 text-zinc-950"
+                  class="flex items-center gap-4 rounded-e-full bg-zinc-100/80 py-3 ps-4 pe-5 text-[.75rem] leading-none tracking-[.05em] text-zinc-950 uppercase transition-all hover:bg-zinc-50"
                 >
                   Next
                 </button>
