@@ -28,13 +28,6 @@ export class LanguagesDropdown extends AppMixin(LitElement) {
     }
   }
 
-  selectLanguage(lang: string) {
-    if (this.lang !== lang) {
-      i18next.changeLanguage(lang)
-    }
-    this.langMenu = false
-  }
-
   render() {
     return html`
       <div class="relative flex h-12 items-center justify-center">
@@ -55,7 +48,7 @@ export class LanguagesDropdown extends AppMixin(LitElement) {
         >
           <li>
             <button
-              @click=${() => this.selectLanguage('en')}
+              @click=${() => i18next.changeLanguage('en')}
               class=${classNames(
                 'w-full pt-2 pb-2.5 px-4 rounded-full text-[.875rem] leading-none transition-all active:scale-95 duration-[200ms]',
                 this.lang === 'en'
@@ -68,7 +61,7 @@ export class LanguagesDropdown extends AppMixin(LitElement) {
           </li>
           <li>
             <button
-              @click=${() => this.selectLanguage('pt')}
+              @click=${() => i18next.changeLanguage('pt')}
               class=${classNames(
                 'w-full pt-2 pb-2.5 px-4 rounded-full text-[.875rem] leading-none transition-all active:scale-95 duration-[200ms]',
                 this.lang === 'pt'
