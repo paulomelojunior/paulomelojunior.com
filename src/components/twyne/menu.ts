@@ -59,7 +59,7 @@ export class TwyneMenu extends AppMixin(LitElement) {
         toggleActions: 'play none none reverse',
         scrub: 1,
       },
-      outline: '1px solid hsla(0 0 100% / 0.075)',
+      outline: '1px solid hsla(0 0 100% / 0.05)',
       padding: '0 0 0 0',
     })
   }

@@ -16,6 +16,18 @@
   --hue: 256;
   --brand: 220;
 
+  --color-zinc-50: oklch(0.9 0.006 var(--hue));
+  --color-zinc-100: oklch(0.82 0.011 var(--hue));
+  --color-zinc-200: oklch(0.74 0.016 var(--hue));
+  --color-zinc-300: oklch(0.66 0.022 var(--hue));
+  --color-zinc-400: oklch(0.58 0.023 var(--hue));
+  --color-zinc-500: oklch(0.5 0.02 var(--hue));
+  --color-zinc-600: oklch(0.42 0.017 var(--hue));
+  --color-zinc-700: oklch(0.34 0.014 var(--hue));
+  --color-zinc-800: oklch(0.26 0.01 var(--hue));
+  --color-zinc-900: oklch(0.18 0.007 var(--hue));
+  --color-zinc-950: oklch(0.1 0.004 var(--hue));
+
   --color-brand-100: oklch(0.9 0.037 var(--brand));
   --color-brand-200: oklch(0.8 0.077 var(--brand));
   --color-brand-300: oklch(0.7 0.119 var(--brand));
