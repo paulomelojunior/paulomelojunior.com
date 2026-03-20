@@ -1,4 +1,4 @@
-import i18next from '../../i18n'
+import i18next from '../../store/i18n'
 import { LitElement, PropertyValues, html, nothing } from 'lit'
 import { unsafeHTML } from 'lit/directives/unsafe-html.js'
 import { customElement, property } from 'lit/decorators.js'

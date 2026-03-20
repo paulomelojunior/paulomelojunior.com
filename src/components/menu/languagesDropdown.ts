@@ -1,6 +1,6 @@
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import i18next from '../../i18n'
+import i18next from '../../store/i18n'
 import classNames from 'classnames'
 
 @customElement('languages-dropdown')

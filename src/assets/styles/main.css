@@ -88,7 +88,7 @@
 
   /* Noise */
   #noise {
-    @apply pointer-events-none relative top-0 z-50 h-full w-full bg-[url('imgs/noise.avif')] bg-size-[216px_auto] bg-top-left bg-repeat xl:absolute;
+    @apply pointer-events-none relative top-0 z-50 h-full w-full bg-[url('../imgs/noise.avif')] bg-size-[216px_auto] bg-top-left bg-repeat xl:absolute;
   }
 
   /* Hero */
@@ -98,7 +98,7 @@
 
   .hero:before {
     position: absolute;
-    background: url('imgs/pattern.svg');
+    background: url('../imgs/pattern.svg');
     content: '';
     height: 100vh;
     top: -2px;
@@ -122,7 +122,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('imgs/pattern.svg');
+    background-image: url('../imgs/pattern.svg');
     background-repeat: repeat;
     background-position: top right;
     mask-image: radial-gradient(circle at top center, black, transparent 50%);
@@ -137,7 +137,7 @@
     }
 
     .cases-content::before {
-      background-image: url('imgs/pattern.svg');
+      background-image: url('../imgs/pattern.svg');
       background-position: top center;
       background-repeat: repeat;
       content: '';
@@ -215,7 +215,7 @@
   .footer::before {
     position: absolute;
     inset: 0;
-    background: url('imgs/pattern.svg');
+    background: url('../imgs/pattern.svg');
     background-attachment: fixed;
     mask-image: radial-gradient(circle at bottom, white, black 50%);
     mask-mode: luminance;
@@ -232,7 +232,7 @@
     position: absolute;
     inset: 0;
     content: '';
-    background-image: url('imgs/pattern.svg');
+    background-image: url('../imgs/pattern.svg');
     background-attachment: fixed;
     mask-image: radial-gradient(circle at bottom, white, black 50%);
     mask-mode: luminance;
@@ -418,7 +418,7 @@
 
   .mobile-screen {
     border-radius: 2rem;
-    mask-image: url('imgs/mask.png');
+    mask-image: url('../imgs/mask.png');
     mask-mode: luminance;
     mask-size: cover;
     corner-shape: superellipse(1.5);

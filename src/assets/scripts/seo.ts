@@ -1,4 +1,4 @@
-import i18n from './i18n'
+import i18n from '../../store/i18n'
 
 type SeoData = {
   title: string

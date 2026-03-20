@@ -1,5 +1,5 @@
 import { gsap } from 'gsap'
-import i18next from '../../i18n'
+import i18next from '../../store/i18n'
 import { html, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { ThemeMixin } from '../../store/theme'

@@ -1,4 +1,4 @@
-import i18next from '../../../i18n'
+import i18next from '../../../store/i18n'
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import social1 from './assets/social-1.webp'
