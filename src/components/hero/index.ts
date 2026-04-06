@@ -2,8 +2,6 @@ import { gsap } from 'gsap'
 import { customElement } from 'lit/decorators.js'
 import { LitElement, html } from 'lit'
 import { AppMixin } from '../../store/app-mixin'
-import arrow from './imgs/arrow.svg'
-import p1x from './imgs/profile-1x.webp'
 import s1 from './imgs/d1.webp'
 import s2 from './imgs/d2.webp'
 import s3 from './imgs/d3.webp'
@@ -105,21 +103,11 @@ export class HeroSection extends AppMixin(LitElement) {
           class="container flex min-h-[calc(100svh-4rem)] flex-col-reverse pt-12 sm:flex-col sm:justify-between sm:pt-18"
         >
           <div
-            class="relative z-10 mx-5 mb-auto flex flex-col sm:my-auto sm:items-center sm:pt-16 sm:pb-20"
+            class="relative z-10 mx-5 mb-auto flex flex-col sm:my-auto sm:pt-16 sm:pb-20"
             data-parallax-layer="1"
           >
-            <div data-entrance-item="3" class="mb-5 flex items-center gap-4">
-              <img
-                src="${p1x}"
-                sizes="64px"
-                height="64"
-                width="64"
-                fetchpriority="high"
-                loading="eager"
-                alt="${this.t('hero.picDescription')}"
-                class="size-14 rounded-full bg-zinc-900 outline-4 outline-zinc-950"
-              />
-              <div class="grid gap-2 leading-none">
+            <div data-entrance-item="3" class="mb-6 flex items-center gap-4">
+              <div class="flex gap-2 leading-none">
                 <span class="text-white 2xl:text-[1.25rem]">
                   ${this.t('hero.name')}
                 </span>
@@ -141,17 +129,14 @@ export class HeroSection extends AppMixin(LitElement) {
 
             <div
               data-entrance-item="2"
-              class="mb-9 flex flex-col gap-2 md:text-center"
+              class="mb-9 flex flex-col gap-2"
             >
               <h1
                 data-split="heading"
-                class="tracking-tightest text-[2.75rem] leading-none font-medium text-balance text-zinc-50 2xl:text-[5rem]"
+                class="tracking-tighter text-[2.5rem] leading-none font-medium text-balance text-zinc-50 2xl:text-[4rem]"
               >
-                ${this.t('hero.title')}
-              </h1>
-              <h2 class="text-[1.125rem] text-balance 2xl:text-[1.5rem]">
+                ${this.t('hero.title')} <span class="font-normal"> ― </span>
                 ${this.t('hero.subtitle')}
-              </h2>
             </div>
 
             <div data-entrance-item="1" class="relative flex gap-2">
@@ -160,16 +145,6 @@ export class HeroSection extends AppMixin(LitElement) {
                 class="cta-button cta-button--accent flex items-center gap-3 self-center px-6 py-4"
               >
                 ${this.t('hero.cta.label')}
-              </a>
-              <a
-                href="#section-praxis"
-                class="transition-color hidden size-[48px] items-center justify-center rounded-full bg-zinc-900 outline-4 outline-zinc-950 duration-[200ms] hover:bg-zinc-800 active:scale-95"
-                title="Scroll page"
-              >
-                <img
-                  src="${arrow}"
-                  class="-rotate-90 transition-opacity duration-500"
-                />
               </a>
             </div>
           </div>
@@ -187,7 +162,7 @@ export class HeroSection extends AppMixin(LitElement) {
             <div class="hidden bg-zinc-950 xl:col-span-3 xl:block">
               <img
                 data-entrance-item="5"
-                class="aspect-square w-full rounded-tl-lg mask-b-from-50% object-cover object-top sm:mask-r-from-50% sm:mask-b-from-0%"
+                class="aspect-square w-full rounded-t-lg object-cover object-top mask-b-from-75% mask-r-from-50%"
                 src="${s1}"
                 height="384"
                 width="384"
@@ -196,7 +171,7 @@ export class HeroSection extends AppMixin(LitElement) {
             <div class="col-span-8 hidden bg-zinc-950 sm:block xl:col-span-6">
               <img
                 data-entrance-item="4"
-                class="max-h-[432px] w-full rounded-t-lg mask-b-from-75% object-cover object-top"
+                class="max-h-[432px] w-full rounded-t-lg object-cover object-top mask-b-from-75%"
                 src="${s2}"
                 height="432"
                 width="768"
@@ -205,7 +180,7 @@ export class HeroSection extends AppMixin(LitElement) {
             <div class="col-span-4 hidden bg-zinc-950 sm:block xl:col-span-3">
               <img
                 data-entrance-item="5"
-                class="aspect-square w-full rounded-tr-lg mask-b-from-50% mask-l-from-0% object-cover object-top"
+                class="aspect-square w-full rounded-t-lg object-cover object-top mask-b-from-75% mask-l-from-50%"
                 src="${s3}"
                 height="384"
                 width="384"

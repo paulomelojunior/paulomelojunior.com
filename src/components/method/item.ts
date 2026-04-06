@@ -17,14 +17,15 @@ export class MethodItem extends AppMixin(LitElement) {
       <div
         class="${this.open
           ? 'col-span-3 bg-zinc-800'
-          : 'bg-zinc-900'} flex aspect-square h-full flex-col justify-between rounded-[.25rem] p-6 xl:aspect-[2/1] xl:p-12"
+          : 'bg-zinc-900'} flex aspect-square h-full flex-col rounded-[.25rem] p-5 xl:aspect-video xl:p-10"
       >
-        <span class="mb-2 leading-none text-zinc-400"> ${this.index} </span>
+        <span class="mb-2 leading-none text-zinc-500"> ${this.index} </span>
         <h2
-          class="text-[1.5rem] leading-none tracking-tighter text-zinc-50 xl:text-[2rem]"
+          class="mt-auto mb-2 text-[1.5rem] leading-none tracking-tighter text-zinc-50 xl:text-[2rem]"
         >
           ${this.title}
         </h2>
+        <p class="text-default hidden">${this.content}</p>
       </div>
     `
   }

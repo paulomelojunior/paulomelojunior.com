@@ -130,11 +130,11 @@ export class PraxisSection extends AppMixin(LitElement) {
               </div>
             </div>
           </div>
-          <marquee-element
+          <!-- <marquee-element
             reverse
             star="fill-brand-400"
             items="Design Engineering, Product Design, User Experience"
-          ></marquee-element>
+          ></marquee-element> -->
         </div>
       </section>
     `

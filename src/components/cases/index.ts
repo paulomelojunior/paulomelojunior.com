@@ -51,9 +51,6 @@ export class CasesSection extends AppMixin(LitElement) {
       <section id="cases" class="hidden xl:block">
         <div class="container">
           <div
-            class="hidden h-px w-full bg-linear-to-r from-transparent via-zinc-800 to-transparent xl:block"
-          ></div>
-          <div
             class="cases-background relative flex rounded-4xl bg-radial-[circle_at_bottom_center] from-zinc-900 2xl:h-[512px]"
           >
             <div class="hidden w-2/3 justify-center xl:flex">
