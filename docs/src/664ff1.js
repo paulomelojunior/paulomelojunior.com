@@ -352,7 +352,7 @@ var rd=Object.defineProperty;var nd=(s,e,t)=>e in s?rd(s,e,{enumerable:!0,config
           >
             <div data-entrance-item="3" class="mb-6 flex items-center gap-4">
               <div class="flex gap-2 leading-none">
-                <span class="text-white 2xl:text-[1.25rem]">
+                <span class="text-zinc-50 2xl:text-[1.25rem]">
                   ${this.t("hero.name")}
                 </span>
                 <span
@@ -399,7 +399,7 @@ var rd=Object.defineProperty;var nd=(s,e,t)=>e in s?rd(s,e,{enumerable:!0,config
             <div class="col-span-12 block bg-zinc-950 sm:hidden">
               <img
                 data-entrance-item="1"
-                class="aspect-[3/2] w-full rounded-t-4xl mask-b-from-50% object-cover object-center"
+                class="aspect-3/2 w-full rounded-t-4xl mask-b-from-50% object-cover object-center"
                 src="${fm}"
               />
             </div>
@@ -415,7 +415,7 @@ var rd=Object.defineProperty;var nd=(s,e,t)=>e in s?rd(s,e,{enumerable:!0,config
             <div class="col-span-8 hidden bg-zinc-950 sm:block xl:col-span-6">
               <img
                 data-entrance-item="4"
-                class="max-h-[432px] w-full rounded-t-lg object-cover object-top mask-b-from-75%"
+                class="max-h-108 w-full rounded-t-lg object-cover object-top mask-b-from-75%"
                 src="${hm}"
                 height="432"
                 width="768"
@@ -784,7 +784,7 @@ var rd=Object.defineProperty;var nd=(s,e,t)=>e in s?rd(s,e,{enumerable:!0,config
       </div>
     `}createRenderRoot(){return this}};Wh([V({type:Boolean})],xa.prototype,"langMenu",2);xa=Wh([te("languages-dropdown")],xa);var Vm=Object.defineProperty,Bm=Object.getOwnPropertyDescriptor,cs=(s,e,t,i)=>{for(var r=i>1?void 0:i?Bm(e,t):e,n=s.length-1,o;n>=0;n--)(o=s[n])&&(r=(i?o(e,t,r):o(r))||r);return i&&r&&Vm(e,t,r),r};let rn=class extends pe(X){constructor(){super(...arguments),this.index="000",this.title="Add Title",this.content="Add Content",this.open=!1}firstUpdated(){}render(){return z`
       <div
-        class="${this.open?"col-span-3 bg-zinc-800":"bg-zinc-900"} flex aspect-square h-full flex-col rounded-[.25rem] p-5 xl:aspect-video xl:p-10"
+        class="${this.open?"col-span-3 bg-zinc-800":"bg-zinc-900"} flex aspect-square h-full flex-col rounded-sm p-5 xl:aspect-video xl:p-10"
       >
         <span class="mb-2 leading-none text-zinc-500"> ${this.index} </span>
         <h2

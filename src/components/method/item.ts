@@ -17,7 +17,7 @@ export class MethodItem extends AppMixin(LitElement) {
       <div
         class="${this.open
           ? 'col-span-3 bg-zinc-800'
-          : 'bg-zinc-900'} flex aspect-square h-full flex-col rounded-[.25rem] p-5 xl:aspect-video xl:p-10"
+          : 'bg-zinc-900'} flex aspect-square h-full flex-col rounded-sm p-5 xl:aspect-video xl:p-10"
       >
         <span class="mb-2 leading-none text-zinc-500"> ${this.index} </span>
         <h2

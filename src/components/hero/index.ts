@@ -108,7 +108,7 @@ export class HeroSection extends AppMixin(LitElement) {
           >
             <div data-entrance-item="3" class="mb-6 flex items-center gap-4">
               <div class="flex gap-2 leading-none">
-                <span class="text-white 2xl:text-[1.25rem]">
+                <span class="text-zinc-50 2xl:text-[1.25rem]">
                   ${this.t('hero.name')}
                 </span>
                 <span
@@ -155,7 +155,7 @@ export class HeroSection extends AppMixin(LitElement) {
             <div class="col-span-12 block bg-zinc-950 sm:hidden">
               <img
                 data-entrance-item="1"
-                class="aspect-[3/2] w-full rounded-t-4xl mask-b-from-50% object-cover object-center"
+                class="aspect-3/2 w-full rounded-t-4xl mask-b-from-50% object-cover object-center"
                 src="${m1}"
               />
             </div>
@@ -171,7 +171,7 @@ export class HeroSection extends AppMixin(LitElement) {
             <div class="col-span-8 hidden bg-zinc-950 sm:block xl:col-span-6">
               <img
                 data-entrance-item="4"
-                class="max-h-[432px] w-full rounded-t-lg object-cover object-top mask-b-from-75%"
+                class="max-h-108 w-full rounded-t-lg object-cover object-top mask-b-from-75%"
                 src="${s2}"
                 height="432"
                 width="768"
