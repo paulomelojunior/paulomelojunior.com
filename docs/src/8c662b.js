@@ -344,7 +344,7 @@ var rd=Object.defineProperty;var nd=(s,e,t)=>e in s?rd(s,e,{enumerable:!0,config
         data-entrance
       >
         <div
-          class="container flex min-h-[calc(100svh-4rem)] flex-col-reverse pt-12 sm:flex-col sm:justify-between sm:pt-18"
+          class="container flex min-h-[calc(100svh-3rem)] md:min-h-[calc(100svh-4rem)] flex-col-reverse pt-12 sm:flex-col sm:justify-between sm:pt-18"
         >
           <div
             class="relative z-10 mx-5 mb-auto flex flex-col sm:my-auto sm:pt-16 sm:pb-20"
@@ -377,7 +377,7 @@ var rd=Object.defineProperty;var nd=(s,e,t)=>e in s?rd(s,e,{enumerable:!0,config
             >
               <h1
                 data-split="heading"
-                class="tracking-tighter text-[2.5rem] leading-none font-medium text-balance text-zinc-50 2xl:text-[4rem]"
+                class="tracking-tighter text-[2rem] sm:text-[3rem] leading-none font-medium text-balance text-zinc-50 2xl:text-[4rem]"
               >
                 ${this.t("hero.title")} <span class="font-normal"> ― </span>
                 ${this.t("hero.subtitle")}
