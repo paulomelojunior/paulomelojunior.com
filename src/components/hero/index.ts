@@ -133,9 +133,9 @@ export class HeroSection extends AppMixin(LitElement) {
             >
               <h1
                 data-split="heading"
-                class="tracking-tighter text-[2rem] sm:text-[3rem] leading-none font-medium text-balance text-zinc-50 2xl:text-[4rem]"
+                class="tracking-tighter sm:uppercase text-[2rem] sm:text-[3rem] leading-none font-medium text-balance text-zinc-50 2xl:text-[4rem]"
               >
-                ${this.t('hero.title')} <span class="font-normal"> ― </span>
+                ${this.t('hero.title')} <span aria-hidden="true">_</span>
                 ${this.t('hero.subtitle')}
             </div>
 
@@ -149,20 +149,20 @@ export class HeroSection extends AppMixin(LitElement) {
             </div>
           </div>
           <div
-            class="col-span-12 container grid grid-cols-12 items-end"
+            class="col-span-12 container grid grid-cols-12 items-end mask-b-from-75%"
             data-parallax-layer="2"
           >
             <div class="col-span-12 block bg-zinc-950 sm:hidden">
               <img
                 data-entrance-item="1"
-                class="aspect-3/2 w-full rounded-t-4xl mask-b-from-50% object-cover object-center"
+                class="aspect-3/2 w-full rounded-t-4xl object-cover object-center"
                 src="${m1}"
               />
             </div>
             <div class="hidden bg-zinc-950 xl:col-span-3 xl:block">
               <img
                 data-entrance-item="5"
-                class="aspect-square w-full rounded-t-lg object-cover object-top mask-b-from-75% mask-r-from-50%"
+                class="aspect-square w-full rounded-t-lg object-cover object-top mask-r-from-75%"
                 src="${s1}"
                 height="384"
                 width="384"
@@ -171,7 +171,7 @@ export class HeroSection extends AppMixin(LitElement) {
             <div class="col-span-8 hidden bg-zinc-950 sm:block xl:col-span-6">
               <img
                 data-entrance-item="4"
-                class="max-h-108 w-full rounded-t-lg object-cover object-top mask-b-from-75%"
+                class="max-h-108 w-full rounded-t-lg object-cover object-top"
                 src="${s2}"
                 height="432"
                 width="768"
@@ -180,7 +180,7 @@ export class HeroSection extends AppMixin(LitElement) {
             <div class="col-span-4 hidden bg-zinc-950 sm:block xl:col-span-3">
               <img
                 data-entrance-item="5"
-                class="aspect-square w-full rounded-t-lg object-cover object-top mask-b-from-75% mask-l-from-50%"
+                class="aspect-square w-full rounded-t-lg object-cover object-top mask-l-from-75%"
                 src="${s3}"
                 height="384"
                 width="384"

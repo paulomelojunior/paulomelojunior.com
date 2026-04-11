@@ -1,22 +1,11 @@
-@font-face {
-  font-family: 'Geist Mono';
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-  src: url('../fonts/geist-mono.woff2') format('woff2');
-}
-
 @import 'tailwindcss';
 
 @theme {
-  --font-sans: 'Inter', sans-serif;
+  --font-sans: 'Mona Sans', sans-serif;
   --font-mono: 'Geist Mono', monospace;
-  --font-sans--font-feature-settings:
-    'cv10' on, 'cv06' on, 'cv12' on, 'dlig' on, 'ss07' on, 'ss08' on;
-  /* --font-sans--font-feature-settings: 'cv06', 'cv12', 'cv13'; */
 
   --hue: 256;
-  --brand: 220;
+  --brand: 256;
 
   --color-zinc-50: oklch(0.9 0.006 var(--hue));
   --color-zinc-100: oklch(0.82 0.011 var(--hue));
@@ -41,6 +30,8 @@
   --color-brand-900: oklch(0.1 0.026 var(--brand));
 
   --tracking-tightest: -0.075em;
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.025em;
 
   --animate-fade-in: fade-in 0.4s ease-in;
 
@@ -60,7 +51,7 @@
 
 @layer base {
   ::selection {
-    @apply bg-brand-400 text-zinc-950;
+    @apply bg-brand-100 text-zinc-950;
   }
 
   button:not(:disabled),
@@ -77,13 +68,13 @@
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-zinc-900;
+    @apply bg-zinc-950;
     margin-block: 0;
   }
 
   ::-webkit-scrollbar-thumb {
     @apply bg-zinc-800;
-    border: 0 solid var(--color-zinc-900);
+    border: 0 solid var(--color-zinc-950);
   }
 
   ::-webkit-scrollbar-thumb:hover {
@@ -92,7 +83,7 @@
 
   /* Body */
   body {
-    @apply bg-zinc-950 pt-[env(safe-area-inset-top)] tracking-tight text-zinc-300;
+    @apply bg-zinc-950 pt-[env(safe-area-inset-top)] text-zinc-300;
   }
 
   .text-default {
@@ -102,7 +93,7 @@
 
   /* Noise */
   #noise {
-    @apply pointer-events-none relative top-0 z-50 h-full w-full bg-[url('../imgs/noise.avif')] bg-size-[216px_auto] bg-top-left bg-repeat xl:absolute;
+    @apply pointer-events-none absolute top-0 z-50 h-full w-full bg-[url('../imgs/noise.avif')] bg-size-[216px_auto] bg-top-left bg-repeat opacity-5;
   }
 
   /* Hero */

@@ -51,11 +51,11 @@ export class CasesSection extends AppMixin(LitElement) {
       <section id="cases" class="hidden xl:block">
         <div class="container">
           <div
-            class="cases-background relative flex rounded-4xl bg-radial-[circle_at_bottom_center] from-zinc-900 2xl:h-[512px]"
+            class="cases-background relative flex rounded-4xl bg-radial-[circle_at_bottom_center] from-zinc-900 to-zinc-950 2xl:h-128"
           >
             <div class="hidden w-2/3 justify-center xl:flex">
               <span
-                class="absolute bottom-0 left-0 flex gap-2 p-8 font-mono text-[.75rem] leading-none font-medium tracking-[.05em] text-zinc-400 uppercase"
+                class="absolute bottom-0 left-0 flex gap-2 p-8 font-mono text-[.75rem] leading-none tracking-[.05em] text-zinc-400 uppercase"
               >
                 2025 ${this.t('cases.project')}
               </span>

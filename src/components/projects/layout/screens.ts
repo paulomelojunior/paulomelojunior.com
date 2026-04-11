@@ -71,7 +71,7 @@ export class ProjectsScreens extends AppMixin(LitElement) {
               width="1728"
               height="976"
               loading="lazy"
-              class="relative rounded-[.5rem]"
+              class="relative rounded-lg"
               alt="Project screen 1"
             />
             <img
@@ -79,7 +79,7 @@ export class ProjectsScreens extends AppMixin(LitElement) {
               width="1728"
               height="976"
               loading="lazy"
-              class="invisible absolute top-0 left-0 rounded-[.5rem]"
+              class="invisible absolute top-0 left-0 rounded-lg"
               alt="Project screen 2"
             />
             <img
@@ -87,7 +87,7 @@ export class ProjectsScreens extends AppMixin(LitElement) {
               width="1728"
               height="976"
               loading="lazy"
-              class="invisible absolute top-0 left-0 rounded-[.5rem]"
+              class="invisible absolute top-0 left-0 rounded-lg"
               alt="Project screen 3"
             />
           </div>
@@ -104,7 +104,7 @@ export class ProjectsScreens extends AppMixin(LitElement) {
                 </button>
 
                 <span
-                  class="flex items-center justify-center bg-zinc-50/5 px-4 font-mono text-[.75rem] leading-none font-medium tracking-[.05em] uppercase"
+                  class="flex items-center justify-center bg-zinc-50/5 px-4 font-mono text-[.75rem] leading-none tracking-[.05em] uppercase"
                 >
                   ${this.currentIndex + 1} / ${this.screens.length}
                 </span>

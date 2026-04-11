@@ -18,6 +18,7 @@ export class FooterSection extends AppMixin(LitElement) {
       'Where the mind goes the body will follow.',
       'To define is to limit.',
       'Publish to polish.',
+      'Made by human.',
     ]
     const randomIndex = Math.floor(Math.random() * quotes.length)
     return quotes[randomIndex]
@@ -51,7 +52,7 @@ export class FooterSection extends AppMixin(LitElement) {
     return html`
       <footer
         id="section-connect"
-        class="footer md:from-brand-800 relative z-10 h-lvh overflow-hidden md:bg-linear-0 md:from-[5rem] md:via-zinc-950 md:to-zinc-950 lg:before:content-['']"
+        class="footer md:from-brand-800 md:via-brand-900 relative z-10 h-lvh overflow-hidden md:bg-linear-0 md:from-[5rem] md:via-60% md:to-zinc-950 lg:before:content-['']"
       >
         <div
           id="footerLinks"
@@ -86,7 +87,7 @@ export class FooterSection extends AppMixin(LitElement) {
           </div>
         </div>
         <div
-          class="lg:bg-brand-800 absolute inset-x-0 bottom-0 z-50 flex w-full justify-center gap-2 px-5 pt-[10px] pb-[14px] font-mono text-[.625rem] font-semibold tracking-widest uppercase"
+          class="lg:bg-brand-800 absolute inset-x-0 bottom-0 z-50 flex w-full justify-center gap-2 px-5 pt-2.5 pb-3.5 font-mono text-[.625rem] tracking-widest uppercase"
         >
           <span> [c] ${this.currentYear() || '2026'} Paulo Melo Jr. </span>
           <span class="hidden text-zinc-400 md:inline"> / </span>

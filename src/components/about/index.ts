@@ -23,7 +23,7 @@ export class AboutSection extends AppMixin(LitElement) {
             >
               <div>
                 <h3
-                  class="text-brand-400 mb-1 hidden font-mono text-[.625rem] font-semibold tracking-widest uppercase"
+                  class="text-brand-400 mb-1 hidden font-mono text-[.625rem] tracking-widest uppercase"
                 >
                   Who I Am
                 </h3>
@@ -36,7 +36,7 @@ export class AboutSection extends AppMixin(LitElement) {
               </div>
               <div>
                 <h3
-                  class="text-brand-400 font-mono text-[.625rem] font-semibold tracking-widest uppercase"
+                  class="text-brand-400 font-mono text-[.625rem] tracking-widest uppercase"
                 >
                   ${this.t('about.education')}
                 </h3>
@@ -46,7 +46,7 @@ export class AboutSection extends AppMixin(LitElement) {
                       Industrial Design
                     </h4>
                     <p
-                      class="font-mono text-[.625rem] leading-none font-semibold tracking-widest uppercase"
+                      class="font-mono text-[.625rem] leading-none tracking-widest uppercase"
                     >
                       2012 <span class="text-zinc-400">&bull;</span> Escola de
                       Design, UEMG
@@ -57,7 +57,7 @@ export class AboutSection extends AppMixin(LitElement) {
                       Software Development
                     </h4>
                     <p
-                      class="font-mono text-[.625rem] leading-none font-semibold tracking-widest uppercase"
+                      class="font-mono text-[.625rem] leading-none tracking-widest uppercase"
                     >
                       2026 <span class="text-zinc-400">&bull;</span> Univ.
                       Católica de Brasília
@@ -67,7 +67,7 @@ export class AboutSection extends AppMixin(LitElement) {
               </div>
               <div class="pt-3">
                 <h3
-                  class="text-brand-400 font-mono text-[.625rem] font-semibold tracking-widest uppercase"
+                  class="text-brand-400 font-mono text-[.625rem] tracking-widest uppercase"
                 >
                   ${this.t('about.courses')}
                 </h3>
@@ -77,7 +77,7 @@ export class AboutSection extends AppMixin(LitElement) {
                       Digital Product Design
                     </h4>
                     <p
-                      class="font-mono text-[.625rem] leading-none font-semibold tracking-widest uppercase"
+                      class="font-mono text-[.625rem] leading-none tracking-widest uppercase"
                     >
                       2025 <span class="text-zinc-400">&bull;</span> Tera
                       <span class="text-zinc-400">&bull;</span>
@@ -94,7 +94,7 @@ export class AboutSection extends AppMixin(LitElement) {
                       ${this.t('about.iaBusiness')}
                     </h4>
                     <p
-                      class="font-mono text-[.625rem] leading-none font-semibold tracking-widest uppercase"
+                      class="font-mono text-[.625rem] leading-none tracking-widest uppercase"
                     >
                       2025 <span class="text-zinc-400">&bull;</span> Tera
                       <span class="text-zinc-400">&bull;</span>

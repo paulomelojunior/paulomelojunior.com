@@ -167,7 +167,7 @@ export class AlluPress extends AppMixin(LitElement) {
                 </button>
 
                 <span
-                  class="flex items-center justify-center bg-zinc-50/5 px-4 font-mono text-[.75rem] leading-none font-medium tracking-[.05em] text-zinc-50/50 uppercase"
+                  class="flex items-center justify-center bg-zinc-50/5 px-4 font-mono text-[.75rem] leading-none tracking-[.05em] text-zinc-50/50 uppercase"
                 >
                   ${this.currentIndex + 1} / ${this.screens.length}
                 </span>

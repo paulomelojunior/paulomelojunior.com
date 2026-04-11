@@ -60,7 +60,7 @@ export class ProjectsMenu extends AppMixin(LitElement) {
         toggleActions: 'play none none reverse',
         scrub: 1,
       },
-      outline: '1px solid hsla(0 0 100% / 0.05)',
+      outline: '1px solid hsla(0 0 100% / 0.0)',
       padding: '0 0 0 0',
     })
   }
@@ -127,12 +127,12 @@ export class ProjectsMenu extends AppMixin(LitElement) {
           <div class="flex items-center">
             <button
               @click=${() => this.getPreviousPage()}
-              class="ms-2 flex size-8 cursor-pointer items-center justify-center rounded-full opacity-50 transition-all duration-[200ms] hover:bg-zinc-50/10 hover:opacity-100 active:scale-95 active:bg-zinc-50/20"
+              class="ms-2 flex size-8 cursor-pointer items-center justify-center rounded-full opacity-50 transition-all duration-200 hover:bg-zinc-50/10 hover:opacity-100 active:scale-95 active:bg-zinc-50/20"
               title="Go back to homepage"
             >
               <img
                 src="${arrow}"
-                class="transition-all duration-[200ms]"
+                class="transition-all duration-200"
                 alt="Go back"
               />
             </button>

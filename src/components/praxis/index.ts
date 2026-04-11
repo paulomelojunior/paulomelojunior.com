@@ -15,7 +15,7 @@ export class PraxisSection extends AppMixin(LitElement) {
         start: '0 75%',
         end: '0 50%',
         toggleActions: 'play none none reverse',
-        scrub: 1,
+        scrub: 0.5,
       },
       opacity: 0,
       ease: 'none',
@@ -56,7 +56,7 @@ export class PraxisSection extends AppMixin(LitElement) {
   render() {
     return html`
       <section class="relative bg-zinc-950">
-        <div class="praxis-bg absolute inset-0 bg-zinc-900"></div>
+        <div class="praxis-bg absolute inset-0 bg-zinc-900/50"></div>
         <div id="section-praxis" class="absolute -top-12 h-px w-full"></div>
         <div
           class="relative mx-5 h-px bg-linear-to-r from-transparent via-zinc-800 to-transparent"
