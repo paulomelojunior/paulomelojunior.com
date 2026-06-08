@@ -82,7 +82,7 @@ export class FooterSection extends AppMixin(LitElement) {
             <footer-link
               url=${this.t('links.email.url')}
               label=${this.t('links.email.label')}
-              index="hello@pmjr.cc"
+              index="hi@paulomelojunior.com"
             ></footer-link>
           </div>
         </div>

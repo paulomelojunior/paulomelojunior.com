@@ -23,7 +23,11 @@
     "status": "Disponível para contrato",
     "picDescription": "Uma foto de Paulo, um homem barbado com cabelos curtos e escuros. Ele está olhando para a direita com uma expressão pensativa. Ele usa uma camisa simples.",
     "title": "Software designer",
-    "subtitle": "Interações digitais prontas para o futuro",
+    "subtitle": {
+      "prefix": "Interações digitais",
+      "words": ["planejadas", "refinadas", "entregues", "cuidadas"],
+      "suffix": "até o código."
+    },
     "cta": {
       "label": "Ver trabalho mais recente",
       "url": "/last-project"
@@ -254,7 +258,7 @@
     },
     "email": {
       "label": "Email",
-      "url": "mailto:hello@pmjr.cc"
+      "url": "mailto:hi@paulomelojunior.com"
     }
   }
 }

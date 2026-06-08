@@ -17,7 +17,7 @@ export class ProjectsMenu extends AppMixin(LitElement) {
   }
 
   copyEmail() {
-    const email = 'hello@pmjr.cc'
+    const email = 'hi@paulomelojunior.com'
     navigator.clipboard
       .writeText(email)
       .then(() => {
@@ -110,7 +110,7 @@ export class ProjectsMenu extends AppMixin(LitElement) {
                 <mobile-item
                   href="${this.t('links.email.url')}"
                   label="${this.t('links.email.label')}"
-                  index="hello@pmjr.cc"
+                  index="hi@paulomelojunior.com"
                 ></mobile-item>
               </li>
               <div class="absolute right-4 bottom-4">
@@ -139,7 +139,7 @@ export class ProjectsMenu extends AppMixin(LitElement) {
             <mail-button
               @click=${() => this.copyEmail()}
               @mouseleave=${() => this.copyEmailReset()}
-              label="hello@pmjr.cc"
+              label="hi@paulomelojunior.com"
               hover="${this.lang === 'en' ? 'Click to copy' : 'Copiar e-mail'}"
             ></mail-button>
           </div>

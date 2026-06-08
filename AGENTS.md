@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Agentic coding guidelines for pmjr.cc (Paulo Melo Jr. Portfolio)
+Agentic coding guidelines for paulomelojunior.com (Paulo Melo Jr. Portfolio)
 
 ## Project Overview
 

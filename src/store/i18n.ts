@@ -4,8 +4,8 @@ import en from '../language/en.json'
 import pt from '../language/pt.json'
 
 i18next.use(LanguageDetector).init({
-  lng: 'en',
-  fallbackLng: 'en',
+  lng: 'pt',
+  fallbackLng: 'pt',
   nonExplicitSupportedLngs: true,
   detection: {
     order: ['localStorage', 'navigator', 'htmlTag'],

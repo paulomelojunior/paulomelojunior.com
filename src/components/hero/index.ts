@@ -9,6 +9,44 @@ import m1 from './imgs/m1.webp'
 
 @customElement('hero-section')
 export class HeroSection extends AppMixin(LitElement) {
+  private _cycleInterval: ReturnType<typeof setInterval> | null = null
+
+  startWordCycle() {
+    const words = this.t('hero.subtitle.words', { returnObjects: true }) as string[]
+    const el = this.querySelector<HTMLElement>('.word-slot')
+    const h1 = this.querySelector<HTMLElement>('h1')
+    if (!el || !h1 || words.length < 2) return
+  
+    const measure = (word: string) => {
+      const { fontSize, fontFamily, fontWeight, letterSpacing } = window.getComputedStyle(h1)
+      const tmp = Object.assign(document.createElement('span'), {
+        style: `visibility:hidden;position:absolute;white-space:nowrap;font-size:${fontSize};font-family:${fontFamily};font-weight:${fontWeight};letter-spacing:${letterSpacing}`,
+        textContent: word,
+      })
+      document.body.appendChild(tmp)
+      const w = tmp.offsetWidth
+      tmp.remove()
+      return w
+    }
+  
+    el.style.width = `${measure(words[0])}px`
+  
+    let i = 0
+  
+    const animateTo = (word: string) => {
+      gsap.to(el, { width: measure(word), duration: 0.45, ease: 'power3.out' })
+      gsap.to(el, {
+        y: '-110%', opacity: 0, duration: 0.22, ease: 'power2.in',
+        onComplete: () => {
+          el.textContent = word
+          gsap.fromTo(el, { y: '110%', opacity: 0 }, { y: '0%', opacity: 1, duration: 0.45, ease: 'power3.out' })
+        },
+      })
+    }
+  
+    this._cycleInterval = setInterval(() => animateTo(words[++i % words.length]), 3000)
+  }
+  
   itemEntrance() {
     gsap.from('.hero', {
       paddingTop: 64,
@@ -90,6 +128,12 @@ export class HeroSection extends AppMixin(LitElement) {
   firstUpdated() {
     this.itemEntrance()
     this.heroParallax()
+    this.startWordCycle()
+  }
+
+  disconnectedCallback() {
+    super.disconnectedCallback()
+    if (this._cycleInterval) clearInterval(this._cycleInterval)
   }
 
   render() {
@@ -133,10 +177,18 @@ export class HeroSection extends AppMixin(LitElement) {
             >
               <h1
                 data-split="heading"
-                class="tracking-tighter sm:uppercase text-[2rem] sm:text-[3rem] leading-none font-medium text-balance text-zinc-50 2xl:text-[4rem]"
+                class="tracking-tight text-[2rem] sm:text-[3rem] leading-none font-light text-balance text-zinc-200 2xl:text-[4rem]"
               >
-                ${this.t('hero.title')} <span aria-hidden="true">_</span>
-                ${this.t('hero.subtitle')}
+                <span class="text-zinc-50">
+                  ${this.t('hero.title')}
+                </span>
+                <span aria-hidden="true"> — </span>
+                ${this.t('hero.subtitle.prefix')}
+                <span class="word-slot inline-block overflow-hidden align-bottom">
+                  ${(this.t('hero.subtitle.words', { returnObjects: true }) as string[])[0]}
+                </span>
+                ${this.t('hero.subtitle.suffix')}
+              </h1>
             </div>
 
             <div data-entrance-item="1" class="relative flex gap-2">
