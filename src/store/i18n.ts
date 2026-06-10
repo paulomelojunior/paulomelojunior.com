@@ -4,13 +4,15 @@ import en from '../language/en.json'
 import pt from '../language/pt.json'
 
 i18next.use(LanguageDetector).init({
-  lng: 'pt',
   fallbackLng: 'pt',
+  supportedLngs: ['en', 'pt'],
+  load: 'languageOnly',
   nonExplicitSupportedLngs: true,
   detection: {
     order: ['localStorage', 'navigator', 'htmlTag'],
     caches: ['localStorage'],
     lookupLocalStorage: 'i18nextLng',
+    convertDetectedLanguage: (lng) => lng.split('-')[0],
   },
   interpolation: {
     escapeValue: false,
@@ -19,6 +21,8 @@ i18next.use(LanguageDetector).init({
     en: { translation: en },
     pt: { translation: pt },
   },
+}).then(() => {
+  document.documentElement.lang = i18next.language.split('-')[0]
 })
 
 i18next.on('languageChanged', (lng) => {

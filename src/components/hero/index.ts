@@ -10,6 +10,7 @@ import m1 from './imgs/m1.webp'
 @customElement('hero-section')
 export class HeroSection extends AppMixin(LitElement) {
   private _cycleInterval: ReturnType<typeof setInterval> | null = null
+  private _cycleLang = ''
 
   startWordCycle() {
     const words = this.t('hero.subtitle.words', { returnObjects: true }) as string[]
@@ -30,21 +31,22 @@ export class HeroSection extends AppMixin(LitElement) {
     }
   
     el.style.width = `${measure(words[0])}px`
-  
+    el.textContent = words[0]
+
     let i = 0
   
     const animateTo = (word: string) => {
-      gsap.to(el, { width: measure(word), duration: 0.45, ease: 'power3.out' })
+      gsap.to(el, { width: measure(word), duration: 0.4 })
       gsap.to(el, {
-        y: '-110%', opacity: 0, duration: 0.22, ease: 'power2.in',
+        y: '10%', opacity: 0, duration: 0.2,
         onComplete: () => {
           el.textContent = word
-          gsap.fromTo(el, { y: '110%', opacity: 0 }, { y: '0%', opacity: 1, duration: 0.45, ease: 'power3.out' })
+          gsap.fromTo(el, { y: '-10%', opacity: 0 }, { y: '0%', opacity: 1, duration: 0.4 })
         },
       })
     }
   
-    this._cycleInterval = setInterval(() => animateTo(words[++i % words.length]), 3000)
+    this._cycleInterval = setInterval(() => animateTo(words[++i % words.length]), 4000)
   }
   
   itemEntrance() {
@@ -128,6 +130,17 @@ export class HeroSection extends AppMixin(LitElement) {
   firstUpdated() {
     this.itemEntrance()
     this.heroParallax()
+  }
+
+  updated() {
+    if (this.lang === this._cycleLang) return
+    this._cycleLang = this.lang
+    if (this._cycleInterval) {
+      clearInterval(this._cycleInterval)
+      this._cycleInterval = null
+    }
+    const el = this.querySelector<HTMLElement>('.word-slot')
+    if (el) gsap.killTweensOf(el)
     this.startWordCycle()
   }
 
@@ -147,7 +160,7 @@ export class HeroSection extends AppMixin(LitElement) {
           class="container flex min-h-[calc(100svh-3rem)] md:min-h-[calc(100svh-4rem)] flex-col-reverse pt-12 sm:flex-col sm:justify-between sm:pt-18"
         >
           <div
-            class="relative z-10 mx-5 mb-auto flex flex-col sm:my-auto sm:pt-16 sm:pb-20"
+            class="relative z-10 mx-5 mb-auto flex flex-col sm:my-auto sm:pt-16 sm:pb-20 md:max-w-2/3"
             data-parallax-layer="1"
           >
             <div data-entrance-item="3" class="mb-6 flex items-center gap-4">
@@ -173,32 +186,28 @@ export class HeroSection extends AppMixin(LitElement) {
 
             <div
               data-entrance-item="2"
-              class="mb-9 flex flex-col gap-2"
+              class="mb-10 flex flex-col gap-2"
             >
               <h1
                 data-split="heading"
-                class="tracking-tight text-[2rem] sm:text-[3rem] leading-none font-light text-balance text-zinc-200 2xl:text-[4rem]"
+                class="tracking-tight text-[2rem] sm:text-[3rem] leading-none text-balance text-zinc-200 2xl:text-[4rem]"
               >
-                <span class="text-zinc-50">
+                <span class="text-white">
                   ${this.t('hero.title')}
                 </span>
-                <span aria-hidden="true"> — </span>
+                <span aria-hidden="true" class="hidden sm:inline-block"> — </span>
                 ${this.t('hero.subtitle.prefix')}
-                <span class="word-slot inline-block overflow-hidden align-bottom">
-                  ${(this.t('hero.subtitle.words', { returnObjects: true }) as string[])[0]}
-                </span>
+                <span class="word-slot inline-block align-bottom"></span>
                 ${this.t('hero.subtitle.suffix')}
               </h1>
             </div>
-
-            <div data-entrance-item="1" class="relative flex gap-2">
-              <a
-                href="${this.t('hero.cta.url')}"
-                class="cta-button cta-button--accent flex items-center gap-3 self-center px-6 py-4"
-              >
-                ${this.t('hero.cta.label')}
-              </a>
-            </div>
+            <a
+              data-entrance-item="1"
+              href="${this.t('hero.cta.url')}"
+              class="cta-button cta-button--accent flex items-center gap-3 self-start px-6 py-4"
+            >
+              ${this.t('hero.cta.label')}
+            </a>
           </div>
           <div
             class="col-span-12 container grid grid-cols-12 items-end mask-b-from-75%"

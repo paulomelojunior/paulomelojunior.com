@@ -15,7 +15,7 @@ export class TwyneImpact extends AppMixin(LitElement) {
         class="container grid gap-10 px-6 pt-24 xl:px-24 xl:pt-32 2xl:px-32"
       >
         <h2
-          class="text-[2rem] leading-none tracking-tighter text-zinc-50 lg:text-[2.5rem] 2xl:text-[3rem]"
+          class="text-[2rem] leading-none tracking-tight text-zinc-50 lg:text-[2.5rem] 2xl:text-[3rem]"
         >
           ${unsafeHTML(this.t('twyne.impact.t1'))}
         </h2>
@@ -24,7 +24,7 @@ export class TwyneImpact extends AppMixin(LitElement) {
         >
           <div class="grid gap-2 bg-zinc-900 py-12 text-center">
             <h3
-              class="text-[2rem] leading-none font-semibold tracking-tighter text-zinc-50"
+              class="text-[2rem] leading-none font-semibold tracking-tight text-zinc-50"
             >
               ${this.t('twyne.numbers.t1')}
             </h3>
@@ -34,7 +34,7 @@ export class TwyneImpact extends AppMixin(LitElement) {
           </div>
           <div class="grid gap-2 bg-zinc-900 py-12 text-center">
             <h3
-              class="text-[2rem] leading-none font-semibold tracking-tighter text-zinc-50"
+              class="text-[2rem] leading-none font-semibold tracking-tight text-zinc-50"
             >
               ${this.t('twyne.numbers.t2')}
             </h3>
@@ -44,7 +44,7 @@ export class TwyneImpact extends AppMixin(LitElement) {
           </div>
           <div class="grid gap-2 bg-zinc-900 py-12 text-center">
             <h3
-              class="text-[2rem] leading-none font-semibold tracking-tighter text-zinc-50"
+              class="text-[2rem] leading-none font-semibold tracking-tight text-zinc-50"
             >
               ${this.t('twyne.numbers.t3')}
             </h3>

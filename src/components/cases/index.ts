@@ -84,7 +84,7 @@ export class CasesSection extends AppMixin(LitElement) {
               class="cases-content relative flex flex-1 flex-col p-20 xl:aspect-square xl:rounded-r-4xl 2xl:p-24"
             >
               <h2
-                class="text-[2.5rem] leading-none tracking-tighter text-zinc-50 2xl:text-[3rem]"
+                class="text-[2.5rem] leading-none tracking-tight text-zinc-50 2xl:text-[3rem]"
               >
                 ${this.renderTitle(this.t('cases.title'))}
               </h2>

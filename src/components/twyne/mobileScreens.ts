@@ -115,7 +115,7 @@ export class MobileScreens extends AppMixin(LitElement) {
       <section class="relative mt-24 px-2 xl:mt-32">
         <div class="container">
           <h2
-            class="mb-10 text-center text-[2rem] leading-normal tracking-tighter text-zinc-50 xl:text-[2.5rem] 2xl:text-[3rem]"
+            class="mb-10 text-center text-[2rem] leading-normal tracking-tight text-zinc-50 xl:text-[2.5rem] 2xl:text-[3rem]"
           >
             ${unsafeHTML(this.t('twyne.mobile.t1'))}
           </h2>

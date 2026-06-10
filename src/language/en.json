@@ -23,7 +23,11 @@
     "status": "Available for hiring",
     "picDescription": "An image of Paul M., a bearded man with short, dark hair. He is looking to the right with a thoughtful expression. He is wearing a plain t-shirt.",
     "title": "Software designer",
-    "subtitle": "Crafting future-ready digital interactions",
+    "subtitle": {
+      "prefix": "Interactions",
+      "words": ["planned", "refined", "delivered", "crafted"],
+      "suffix": "down to the code."
+    },
     "cta": {
       "label": "Check out my latest work",
       "label_alt1": "See last project",

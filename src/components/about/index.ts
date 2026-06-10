@@ -14,7 +14,7 @@ export class AboutSection extends AppMixin(LitElement) {
             class="grid items-baseline gap-y-8 px-5 pt-16 xl:grid-cols-3 xl:px-20 xl:pt-24 2xl:px-32 2xl:pt-64"
           >
             <h2
-              class="text-[2.5rem] leading-none tracking-tighter text-pretty text-zinc-50 xl:text-[3rem] 2xl:text-[4rem]"
+              class="text-[2.5rem] leading-none tracking-tight text-pretty text-zinc-50 xl:text-[3rem] 2xl:text-[4rem]"
             >
               ${this.t('about.title')}
             </h2>

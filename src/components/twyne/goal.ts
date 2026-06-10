@@ -13,7 +13,7 @@ export class TwyneGoal extends AppMixin(LitElement) {
             class="col-span-2 col-start-2 flex flex-col justify-center xl:aspect-square"
           >
             <h2
-              class="mb-10 text-[2rem] leading-none tracking-tighter text-zinc-50 lg:text-[2.5rem] 2xl:text-[3rem]"
+              class="mb-10 text-[2rem] leading-none tracking-tight text-zinc-50 lg:text-[2.5rem] 2xl:text-[3rem]"
             >
               ${this.t('twyne.goal.t1')}
             </h2>

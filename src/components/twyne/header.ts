@@ -17,7 +17,7 @@ export class TwyneHeader extends AppMixin(LitElement) {
             alt="Twyne"
           />
           <h1
-            class="text-[3rem] leading-none tracking-tighter text-zinc-50 2xl:text-[4rem]"
+            class="text-[3rem] leading-none tracking-tight text-zinc-50 2xl:text-[4rem]"
           >
             ${this.t('twyne.t2')}
           </h1>

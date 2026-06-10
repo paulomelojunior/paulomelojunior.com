@@ -98,7 +98,7 @@ export class PraxisSection extends AppMixin(LitElement) {
               </svg>
               <div class="grid gap-2 xl:gap-0">
                 <h2
-                  class="flex items-center text-[1.5rem] leading-16 tracking-tighter text-zinc-50 xl:text-[2rem] xl:leading-24 2xl:text-[2.5rem] 2xl:leading-24"
+                  class="flex items-center text-[1.5rem] leading-16 tracking-tight text-zinc-50 xl:text-[2rem] xl:leading-24 2xl:text-[2.5rem] 2xl:leading-24"
                 >
                   ${this.t('praxis.t1')}
                 </h2>
@@ -122,7 +122,7 @@ export class PraxisSection extends AppMixin(LitElement) {
               </svg>
               <div class="grid gap-2 xl:gap-0">
                 <h2
-                  class="flex items-center text-[1.5rem] leading-16 tracking-tighter text-zinc-50 xl:text-[2rem] xl:leading-24 2xl:text-[2.5rem] 2xl:leading-24"
+                  class="flex items-center text-[1.5rem] leading-16 tracking-tight text-zinc-50 xl:text-[2rem] xl:leading-24 2xl:text-[2.5rem] 2xl:leading-24"
                 >
                   ${this.t('praxis.t2')}
                 </h2>

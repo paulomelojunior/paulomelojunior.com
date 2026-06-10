@@ -13,7 +13,7 @@
 @theme {
   --font-sans: 'Mona Sans', sans-serif;
   --font-mono: 'Geist Mono', monospace;
-  --default-font-feature-settings: "ss01" on, "ss05" on, "ss06" on, "ss07" on;
+  --default-font-feature-settings: "ss01" on, "ss05" on, "ss06" on, "ss07" on, "ss10" on;
   
   --hue: 256;
   --brand: 256;
@@ -39,10 +39,6 @@
   --color-brand-700: oklch(0.3 0.077 var(--brand));
   --color-brand-800: oklch(0.2 0.051 var(--brand));
   --color-brand-900: oklch(0.1 0.026 var(--brand));
-
-  --tracking-tightest: -0.06em;
-  --tracking-tighter: -0.04em;
-  --tracking-tight: -0.02em;
 
   --animate-fade-in: fade-in 0.4s ease-in;
 

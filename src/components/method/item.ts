@@ -18,7 +18,7 @@ export class MethodItem extends AppMixin(LitElement) {
       >
         <span class="mb-2 leading-none text-zinc-500"> ${this.index} </span>
         <h2
-          class="mt-auto mb-2 text-[1.5rem] leading-none tracking-tighter text-zinc-50 xl:text-[2rem]"
+          class="mt-auto mb-2 text-[1.5rem] leading-none tracking-tight text-zinc-50 xl:text-[2rem]"
         >
           ${this.title}
         </h2>

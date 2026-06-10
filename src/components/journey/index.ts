@@ -54,7 +54,7 @@ export class JourneySection extends AppMixin(LitElement) {
   private renderJourneyHeader() {
     return html`
       <h2
-        class="px-5 text-[2.5rem] leading-none tracking-tighter text-pretty text-zinc-50 xl:px-20 xl:text-[3rem] 2xl:px-32 2xl:text-[4rem]"
+        class="px-5 text-[2.5rem] leading-none tracking-tight text-pretty text-zinc-50 xl:px-20 xl:text-[3rem] 2xl:px-32 2xl:text-[4rem]"
       >
         ${this.t('journey.t0')}
       </h2>
@@ -79,13 +79,13 @@ export class JourneySection extends AppMixin(LitElement) {
     return html`
       <div class="job relative flex flex-col gap-4 px-5 xl:px-20 2xl:px-32">
         <span
-          class="mb-2 font-mono text-[.75rem] leading-none tracking-tighter text-zinc-400"
+          class="mb-2 font-mono text-[.75rem] leading-none tracking-tight text-zinc-400"
         >
           ${item.start} &bull;
           <span class=${item.custom ?? ''}>${item.end}</span>
         </span>
         <h2
-          class="text-[1.5rem] tracking-tighter text-zinc-50 xl:leading-none 2xl:text-[2rem]"
+          class="text-[1.5rem] tracking-tight text-zinc-50 xl:leading-none 2xl:text-[2rem]"
         >
           ${unsafeHTML(item.title)}
         </h2>
