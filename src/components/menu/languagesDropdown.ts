@@ -44,13 +44,13 @@ export class LanguagesDropdown extends AppMixin(LitElement) {
           id="langMenuEl"
           class="${this.langMenu
             ? 'scale-100 blur-none'
-            : 'opacity-0 invisible -translate-y-4 blur-sm'} absolute top-full right-0 mt-2.5 flex flex-col gap-2 rounded-[1.5rem] bg-zinc-900 p-2 font-medium outline-1 outline-zinc-800 transition-all"
+            : 'opacity-0 invisible -translate-y-4 blur-sm'} absolute top-full right-0 mt-2.5 flex flex-col gap-2 rounded-3xl bg-zinc-900 p-2 font-medium outline-1 outline-zinc-800 transition-all"
         >
           <li>
             <button
               @click=${() => i18next.changeLanguage('en')}
               class=${classNames(
-                'w-full pt-2 pb-2.5 px-4 rounded-full text-[.875rem] leading-none transition-all active:scale-95 duration-[200ms]',
+                'flex items-center justify-center w-full h-8 pb-px px-4 rounded-full text-[.875rem] leading-none transition-all active:scale-95 duration-[200ms]',
                 this.lang === 'en'
                   ? 'bg-zinc-100 text-zinc-950 hover:bg-white'
                   : 'hover:bg-zinc-50/10 hover:text-zinc-50'
@@ -63,7 +63,7 @@ export class LanguagesDropdown extends AppMixin(LitElement) {
             <button
               @click=${() => i18next.changeLanguage('pt')}
               class=${classNames(
-                'w-full pt-2 pb-2.5 px-4 rounded-full text-[.875rem] leading-none transition-all active:scale-95 duration-[200ms]',
+                'flex items-center justify-center w-full h-8 pb-px px-4 rounded-full text-[.875rem] leading-none transition-all active:scale-95 duration-[200ms]',
                 this.lang === 'pt'
                   ? 'bg-zinc-100 text-zinc-950 hover:bg-white'
                   : 'hover:bg-zinc-50/10 hover:text-zinc-50'

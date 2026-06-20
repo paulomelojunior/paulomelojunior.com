@@ -53,7 +53,7 @@ export class MenuItem extends LitElement {
 
   render() {
     const baseClasses = classNames(
-      `font-medium relative flex justify-center leading-none pt-2 pb-2.5 px-4 text-zinc-300 text-[.875rem] items-center rounded-full hover:text-zinc-50 hover:bg-zinc-50/10 transition-all duration-[200ms] active:scale-95 active:bg-zinc-50/20`
+      `font-medium relative flex justify-center leading-none h-8 pb-px px-3 text-zinc-300 text-sm items-center rounded-full hover:text-zinc-50 hover:bg-zinc-50/10 transition-all duration-[200ms] active:scale-95 active:bg-zinc-50/20`
     )
 
     return html`<a

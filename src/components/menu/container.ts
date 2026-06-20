@@ -12,7 +12,7 @@ export class MenuContainer extends AppMixin(LitElement) {
   }
 
   copyEmail() {
-    const email = 'hi@paulomelojunior.com'
+    const email = 'hey@paulomelojunior.com'
     navigator.clipboard
       .writeText(email)
       .then(() => {
@@ -27,7 +27,7 @@ export class MenuContainer extends AppMixin(LitElement) {
   }
 
   copyEmailReset() {
-    this.updateText(this.lang === 'en' ? 'Click to copy' : 'Copiar e-mail', 300)
+    this.updateText(this.lang === 'en' ? 'Click to copy my email' : 'Clique para copiar e-mail', 300)
   }
 
   updateText(text: string, delay: number) {
@@ -108,7 +108,7 @@ export class MenuContainer extends AppMixin(LitElement) {
                 <mobile-item
                   href="${this.t('links.email.url')}"
                   label="${this.t('links.email.label')}"
-                  index="hi@paulomelojunior.com"
+                  index="hey@paulomelojunior.com"
                 ></mobile-item>
               </li>
               <div class="absolute right-4 bottom-4">
@@ -125,9 +125,9 @@ export class MenuContainer extends AppMixin(LitElement) {
           <mail-button
             @click=${() => this.copyEmail()}
             @mouseleave=${() => this.copyEmailReset()}
-            label="hi@paulomelojunior.com"
+            label="hey@paulomelojunior.com"
             class="ms-1.5"
-            hover="${this.lang === 'en' ? 'Click to copy' : 'Copiar e-mail'}"
+            hover="${this.lang === 'en' ? 'Click to copy my email' : 'Clique para copiar e-mail'}"
           ></mail-button>
           <button
             class="menu-toggle ${this.more
@@ -167,7 +167,7 @@ export class MenuContainer extends AppMixin(LitElement) {
           </nav>
           <div class="hidden items-center justify-end gap-1 lg:flex">
             <a
-              class="cta-button px-3.5 pt-2 pb-2.5 text-[.875rem]"
+              class="cta-button px-3 h-8 py-0 items-center flex pb-px text-sm leading-none"
               href="${this.t('links.projects.url')}"
             >
               ${this.t('featured.button')}
